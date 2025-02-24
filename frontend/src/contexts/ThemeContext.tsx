@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useEffect, useState } from 'react';
-import { ThemeType } from '@/types/themes';
-import { themes } from '@/config/themes';
+import { createContext, useContext, useEffect, useState } from "react";
+import { ThemeType } from "@/types/themes";
+import { themes } from "@/config/themes";
 
 interface ThemeContextType {
   theme: ThemeType;
@@ -11,13 +11,13 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: 'light',
+  theme: "light",
   setTheme: () => {},
   isLoading: true,
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<ThemeType>('light');
+  const [theme, setTheme] = useState<ThemeType>("dark");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
           });
         });
       } catch (error) {
-        console.error('Failed to apply theme:', error);
+        console.error("Failed to apply theme:", error);
       } finally {
         setIsLoading(false);
       }
