@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from "react";
 import { Space_Grotesk } from 'next/font/google';
-import SendIcon from '@mui/icons-material/Send';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import ThemeSelector from "@/components/themes/ThemeSelector";
+import ChatWindow from '@/components/chat/ChatWindow';
+import ChatInput from '@/components/chat/ChatInput';
+import { useAgentChat } from '@/hooks/useAgentKit';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -12,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export default function Home() {
-  const [message, setMessage] = useState('');
+  const { messages, isLoading, currentResponse, sendMessage } = useAgentChat();
 
   return (
     <div className={`min-h-screen bg-theme-bg-primary text-theme-text-primary transition-all duration-300 ${spaceGrotesk.className}`}>
@@ -35,41 +36,25 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main content with theme-aware styling */}
+      {/* Main content with ChatWindow */}
       <main className="container mx-auto px-4 pt-24 pb-24">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-theme-panel-bg backdrop-blur-xl p-6 rounded-2xl border border-theme-border-primary hover:bg-theme-bg-secondary/20 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-theme-button-primary animate-pulse" />
-              <h2 className="text-xl font-medium tracking-tight text-theme-text-primary">
-                Welcome to Teleos
-              </h2>
-            </div>
-            <p className="text-theme-text-secondary">
-              What do you want to build?
-            </p>
-          </div>
+          <ChatWindow 
+            messages={messages}
+            currentResponse={currentResponse}
+            isLoading={isLoading}
+          />
         </div>
       </main>
 
-      {/* Footer with theme-aware components */}
+      {/* Footer with ChatInput */}
       <footer className="fixed bottom-0 w-full border-t border-theme-border-primary bg-theme-panel-bg backdrop-blur-xl">
         <div className="container mx-auto px-4 py-4">
           <div className="max-w-2xl mx-auto">
-            <div className="relative flex items-center">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Ask me anything..."
-                className="w-full bg-theme-bg-secondary text-sm text-theme-text-primary pl-5 pr-14 py-3 rounded-full border border-theme-border-primary placeholder:text-theme-text-accent focus:outline-none focus:border-theme-button-primary focus:ring-1 focus:ring-theme-button-primary/20 transition-all duration-200"
-              />
-              <button 
-                className="absolute right-2 hover:scale-110 text-theme-text-primary p-2 rounded-full transition-all duration-200"
-              >
-                <SendIcon className="w-4 h-4" />
-              </button>
-            </div>
+            <ChatInput 
+              onSendMessage={sendMessage}
+              isLoading={isLoading}
+            />
             <div className="text-center mt-2 text-[10px] text-theme-text-accent">
               <kbd className="px-1.5 py-0.5 bg-theme-bg-secondary/20 rounded border border-theme-border-secondary">⌘</kbd>
               <span className="mx-1">+</span>

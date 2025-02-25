@@ -10,15 +10,17 @@
   },
   "dependencies": {
     "@coinbase/agentkit": "^0.2.2",
+    "@coinbase/agentkit-langchain": "^0.2.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.5",
     "@mui/material": "^6.4.5",
+    "@swc/helpers": "^0.5.3",
     "framer-motion": "^12.4.7",
+    "langchain": "^0.3.19",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "@swc/helpers": "^0.5.3" 
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
