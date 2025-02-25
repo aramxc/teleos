@@ -11,39 +11,56 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: "light",
+  theme: "dark",
   setTheme: () => {},
-  isLoading: true,
+  isLoading: false,
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<ThemeType>("dark");
-  const [isLoading, setIsLoading] = useState(true);
+  // Start with dark theme for SSR
+  const [mounted, setMounted] = useState(false);
+  const [theme, setThemeState] = useState<ThemeType>("dark");
+  
+  // Only run on client-side
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as ThemeType;
+    if (savedTheme) {
+      setThemeState(savedTheme);
+    }
+    setMounted(true);
+  }, []);
+
+  const setTheme = (newTheme: ThemeType) => {
+    setThemeState(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   useEffect(() => {
-    const applyTheme = () => {
-      setIsLoading(true);
-      const currentTheme = themes[theme];
+    if (!mounted) return;
 
-      try {
-        const root = document.documentElement;
-        Object.entries(currentTheme.colors).forEach(([category, values]) => {
-          Object.entries(values).forEach(([name, value]) => {
-            root.style.setProperty(`--${category}-${name}`, value);
-          });
+    const applyTheme = () => {
+      const currentTheme = themes[theme];
+      const root = document.documentElement;
+      
+      root.setAttribute('data-theme', theme);
+      
+      Object.entries(currentTheme.colors).forEach(([category, values]) => {
+        Object.entries(values).forEach(([name, value]) => {
+          root.style.setProperty(`--${category}-${name}`, value);
         });
-      } catch (error) {
-        console.error("Failed to apply theme:", error);
-      } finally {
-        setIsLoading(false);
-      }
+      });
     };
 
     applyTheme();
-  }, [theme]);
+  }, [theme, mounted]);
+
+  // Prevent hydration mismatch by not rendering theme-dependent UI until mounted
+  if (!mounted) {
+    return <>{children}</>;
+  }
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, isLoading }}>
+    <ThemeContext.Provider value={{ theme, setTheme, isLoading: false }}>
       {children}
     </ThemeContext.Provider>
   );
