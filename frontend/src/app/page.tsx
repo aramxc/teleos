@@ -8,6 +8,7 @@ import ChatWindow from '@/components/chat/ChatWindow';
 import ChatInput from '@/components/chat/ChatInput';
 import { useChatContext } from '@/contexts/ChatContext';
 import SuggestionBubbles from '@/components/chat/InitialSuggestions';
+import WalletConnectionButton from '@/components/wallet/WalletConnectionButton';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -52,7 +53,10 @@ export default function Home() {
               Teleos
             </h1>
           </div>
-          <ThemeSelector />
+          <div className="flex items-center gap-4">
+            <WalletConnectionButton />
+            <ThemeSelector />
+          </div>
         </div>
       </motion.header>
 

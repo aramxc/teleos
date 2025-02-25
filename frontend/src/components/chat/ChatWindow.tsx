@@ -1,4 +1,4 @@
-import { Message } from '@/hooks/useAgentKit';
+import { Message } from '@/hooks/agents/useAgentKit';
 import { useEffect, useRef } from 'react';
 
 type ChatWindowProps = {
