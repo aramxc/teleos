@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server';
 import { AgentKit } from '@coinbase/agentkit';
+import { 
+  cdpApiActionProvider, 
+  pythActionProvider,
+  erc20ActionProvider,
+  erc721ActionProvider,
+} from "@coinbase/agentkit";
 import { getLangChainTools } from "@coinbase/agentkit-langchain";
 import { ChatOpenAI } from "@langchain/openai";
 import { AgentExecutor, createOpenAIFunctionsAgent } from "langchain/agents";
@@ -10,17 +16,26 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
  * @returns AgentExecutor instance
  * @throws Error if environment variables are missing
  */
-async function initializeAgent() {
+async function initializeAgent(walletAddress: string) {
   try {
     // Verify required environment variables
     if (!process.env.CDP_API_KEY_NAME || !process.env.CDP_API_KEY_PRIVATE_KEY || !process.env.OPENAI_API_KEY) {
       throw new Error('Missing required environment variables');
     }
 
-    // Initialize AgentKit with Coinbase credentials
+    // Initialize AgentKit with Coinbase credentials and additional action providers
     const agentKit = await AgentKit.from({
       cdpApiKeyName: process.env.CDP_API_KEY_NAME,
       cdpApiKeyPrivateKey: process.env.CDP_API_KEY_PRIVATE_KEY,
+      actionProviders: [
+        cdpApiActionProvider({
+          apiKeyName: process.env.CDP_API_KEY_NAME,
+          apiKeyPrivateKey: process.env.CDP_API_KEY_PRIVATE_KEY,
+        }),
+        pythActionProvider(), // Use for pyth price feeds streaming data
+        erc20ActionProvider(), // Use for ERC20 token transfers
+        erc721ActionProvider(), //NFTs
+      ],
     });
 
     // Get LangChain tools from AgentKit
@@ -33,9 +48,9 @@ async function initializeAgent() {
       openAIApiKey: process.env.OPENAI_API_KEY,
     });
 
-    // Create prompt template for the agent
+    // Create prompt template with wallet context
     const prompt = ChatPromptTemplate.fromMessages([
-      ["system", "You are a helpful assistant that can use tools to interact with Coinbase services."],
+      ["system", `You are a helpful blockchain assistant that can use tools to interact with Coinbase services and blockchain data on Base Sepolia or Base Mainnet. You are connected to wallet address: ${walletAddress}`],
       ["human", "{input}"],
       ["human", "{agent_scratchpad}"]
     ]);
@@ -59,24 +74,21 @@ let agentExecutor: AgentExecutor | null = null;
 export async function POST(request: Request) {
   try {
     // Parse request body
-    const body = await request.json().catch(error => {
-      console.error('Failed to parse request body:', error);
-      throw new Error('Invalid JSON in request body');
-    });
+    const body = await request.json();
+    const { messages, walletAddress } = body;
+
+    if (!messages?.length || !walletAddress) {
+      throw new Error('Invalid request format: missing messages or wallet address');
+    }
 
     // Initialize agent if not already done
     if (!agentExecutor) {
       console.log('Initializing new agent executor...');
-      agentExecutor = await initializeAgent();
-    }
-
-    // Validate messages array
-    if (!body.messages?.length) {
-      throw new Error('Invalid messages format');
+      agentExecutor = await initializeAgent(walletAddress);
     }
 
     // Get the latest message content
-    const input = body.messages[body.messages.length - 1].content;
+    const input = messages[messages.length - 1].content;
     console.log('Processing input:', input);
     
     // Set up streaming response
@@ -84,7 +96,10 @@ export async function POST(request: Request) {
     const writer = stream.writable.getWriter();
     
     // Process agent stream
-    const agentStream = await agentExecutor.streamLog({ input });
+    const agentStream = await agentExecutor.streamLog({ 
+      input,
+      context: { walletAddress } // Pass wallet address in context
+    });
     
     // Handle streaming response
     (async () => {
@@ -145,8 +160,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { 
         success: false, 
-        error: error instanceof Error ? error.message : 'An unexpected error occurred',
-        details: error instanceof Error ? error.stack : undefined
+        error: error instanceof Error ? error.message : 'An unexpected error occurred'
       },
       { status: 500 }
     );
