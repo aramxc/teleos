@@ -1,0 +1,9 @@
+dist/
+!index.ts
+!character.ts
+
+db.sqlite
+.idea
+.tee-cloud
+
+node_modules
