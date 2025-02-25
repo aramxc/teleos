@@ -16,7 +16,7 @@ export const themes: Record<string, Theme> = {
         dark: '#4B5563',
       },
       border: {
-        primary: 'rgba(209, 213, 219, 0.5)',
+        primary: 'rgba(209, 213, 219, 1)',
         secondary: 'rgba(209, 213, 219, 0.3)',
       },
       panel: {
@@ -27,6 +27,7 @@ export const themes: Record<string, Theme> = {
         primary: '#8B5CF6',
         secondary: '#6D28D9',
         hover: '#7C3AED',
+        accent: '#A78BFA',
       },
     },
   },
@@ -56,6 +57,7 @@ export const themes: Record<string, Theme> = {
         primary: '#3B82F6',
         secondary: '#6B7280',
         hover: '#2563EB',
+        accent: '#1D4ED8',
       },
     },
   },
@@ -85,6 +87,7 @@ export const themes: Record<string, Theme> = {
         primary: '#8B5CF6',
         secondary: '#6D28D9',
         hover: '#7C3AED',
+        accent: '#5B21B6',
       },
     },
   },

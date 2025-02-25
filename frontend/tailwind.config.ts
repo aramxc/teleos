@@ -34,8 +34,15 @@ export default {
             secondary: 'var(--button-secondary)',
             hover: 'var(--button-hover)',
           },
+          'panel-bg': 'var(--panel-background)',
+          'panel-border': 'var(--panel-border)',
         },
       },
+      backgroundColor: {
+        theme: {
+          'bg-secondary': 'var(--background-secondary)',
+        }
+      }
     },
   },
   plugins: [],

@@ -4,13 +4,13 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { themes } from '@/config/themes';
 import { ThemeType } from '@/types/themes';
 import { useState, useRef, useEffect } from 'react';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function ThemeSelector() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -22,42 +22,44 @@ export default function ThemeSelector() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleThemeChange = (key: string) => {
-    setTheme(key as ThemeType);
-    setIsOpen(false);
-  };
+  const ThemeCircle = ({ themeKey }: { themeKey: string }) => (
+    <div 
+      className="w-3 h-3 rounded-full border-2"
+      style={{ 
+        backgroundColor: themes[themeKey].colors.button.primary,
+        borderColor: themes[themeKey].colors.border.primary
+      }} 
+    />
+  );
 
   return (
     <div className="relative z-50" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-theme-panel-bg border border-theme-panel-border hover:border-theme-button-primary transition-colors"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-theme-bg-secondary 
+                 border border-theme-border-primary hover:border-theme-button-primary 
+                 focus:outline-none focus:border-theme-button-primary transition-colors duration-200 relative pr-8"
       >
-        <div className="w-4 h-4 rounded-full border-2" style={{ 
-          backgroundColor: themes[theme].colors.button.primary,
-          borderColor: themes[theme].colors.border.primary 
-        }} />
-        <span className="hidden sm:inline text-theme-text-primary text-sm font-medium">
-          {themes[theme].name}
-        </span>
+        <ThemeCircle themeKey={theme} />
+        <span className="text-sm font-medium text-theme-text-primary">{themes[theme].name}</span>
+        <KeyboardArrowDownIcon className={`w-4 h-4 text-theme-text-accent transition-transform duration-200 absolute right-2 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 md:left-auto md:right-0 top-0 md:top-full ml-12 md:ml-0 md:mt-2 
-                       w-40 py-2 rounded-lg bg-theme-panel-bg border border-theme-panel-border shadow-lg">
+        <div className="absolute right-0 mt-1 w-40 py-2 rounded-lg bg-theme-panel-bg border border-theme-border-primary shadow-lg">
           {Object.entries(themes).map(([key, value]) => (
             <button
               key={key}
-              onClick={() => handleThemeChange(key)}
+              onClick={() => {
+                setTheme(key as ThemeType);
+                setIsOpen(false);
+              }}
               className={`w-full px-4 py-2 text-left text-sm transition-all duration-200
-                hover:bg-theme-button-primary hover:bg-opacity-10
-                ${theme === key ? 'text-theme-button-primary' : 'text-theme-text-primary'}`}
+                hover:bg-theme-button-primary/10
+                ${theme === key ? 'text-theme-button-primary bg-theme-button-primary/20' : 'text-theme-text-primary'}`}
             >
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full border-2" style={{ 
-                  backgroundColor: value.colors.button.primary,
-                  borderColor: value.colors.border.primary 
-                }} />
+                <ThemeCircle themeKey={key} />
                 {value.name}
               </div>
             </button>
