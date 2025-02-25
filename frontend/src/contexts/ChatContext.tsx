@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, ReactNode, useState } from 'react';
-import { useAgentChat } from '@/hooks/useAgentKit';
+import { useAgentChat } from '@/hooks/agents/useAgentKit';
 
 interface ChatContextType extends ReturnType<typeof useAgentChat> {
   isInitialState: boolean;
