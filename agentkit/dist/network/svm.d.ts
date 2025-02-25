@@ -1,0 +1,15 @@
+import { Network } from "./types";
+export declare const SOLANA_MAINNET_NETWORK_ID = "solana-mainnet";
+export declare const SOLANA_TESTNET_NETWORK_ID = "solana-testnet";
+export declare const SOLANA_DEVNET_NETWORK_ID = "solana-devnet";
+export type SOLANA_NETWORK_ID = typeof SOLANA_MAINNET_NETWORK_ID | typeof SOLANA_TESTNET_NETWORK_ID | typeof SOLANA_DEVNET_NETWORK_ID;
+export declare const SOLANA_PROTOCOL_FAMILY = "svm";
+export declare const SOLANA_MAINNET_GENESIS_BLOCK_HASH = "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d";
+export declare const SOLANA_TESTNET_GENESIS_BLOCK_HASH = "4uhcVJyU9pJkvQyS88uRDiswHXSCkY3zQawwpjk2NsNY";
+export declare const SOLANA_DEVNET_GENESIS_BLOCK_HASH = "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG";
+export type SOLANA_CLUSTER = typeof SOLANA_MAINNET_GENESIS_BLOCK_HASH | typeof SOLANA_TESTNET_GENESIS_BLOCK_HASH | typeof SOLANA_DEVNET_GENESIS_BLOCK_HASH;
+export declare const SOLANA_MAINNET_NETWORK: Network;
+export declare const SOLANA_TESTNET_NETWORK: Network;
+export declare const SOLANA_DEVNET_NETWORK: Network;
+export declare const SOLANA_NETWORKS: Record<SOLANA_CLUSTER, Network>;
+export declare const SOLANA_CLUSTER_ID_BY_NETWORK_ID: Record<SOLANA_NETWORK_ID, string>;

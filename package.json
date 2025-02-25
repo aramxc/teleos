@@ -1,0 +1,17 @@
+{
+    "name": "teleos",
+    "private": true,
+    "workspaces": [
+      "frontend",
+      "agentkit"
+    ],
+    "scripts": {
+      "dev": "npm run dev --workspace=frontend",
+      "build": "npm run build --workspace=frontend",
+      "install:all": "npm install"
+    },
+    "devDependencies": {
+      "typescript": "^5.4.5",
+      "turbo": "^2.3.3"
+    }
+  }
