@@ -5,3 +5,5 @@ dist/
 db.sqlite
 .idea
 .tee-cloud
+
+node_modules
