@@ -1,13 +1,30 @@
 "use client";
 
-import { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode, useState } from 'react';
 import { useAgentChat } from '@/hooks/useAgentKit';
 
-const ChatContext = createContext<ReturnType<typeof useAgentChat> | undefined>(undefined);
+interface ChatContextType extends ReturnType<typeof useAgentChat> {
+  isInitialState: boolean;
+  setInitialState: (value: boolean) => void;
+}
+
+const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export function ChatProvider({ children }: { children: ReactNode }) {
   const chat = useAgentChat();
-  return <ChatContext.Provider value={chat}>{children}</ChatContext.Provider>;
+  const [isInitialState, setInitialState] = useState(true);
+
+  return (
+    <ChatContext.Provider 
+      value={{ 
+        ...chat, 
+        isInitialState,
+        setInitialState
+      }}
+    >
+      {children}
+    </ChatContext.Provider>
+  );
 }
 
 export function useChatContext() {
