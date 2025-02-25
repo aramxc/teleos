@@ -50,7 +50,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <TerminalIcon className="w-5 h-5 text-theme-button-primary" />
             <h1 className="text-lg font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-              Teleos
+              _teleos
             </h1>
           </div>
           <div className="flex items-center gap-4">
