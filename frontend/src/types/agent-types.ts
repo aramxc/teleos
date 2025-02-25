@@ -5,6 +5,6 @@ export interface AgentAction {
   
   export interface AgentResponse {
     success: boolean;
-    data?: any;
+    data?: unknown;
     error?: string;
   }
