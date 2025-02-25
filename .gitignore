@@ -1,1 +1,3 @@
+# Ignore .env in root and all subdirectories
 .env
+**/.env
