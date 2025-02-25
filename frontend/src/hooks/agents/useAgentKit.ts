@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useWallet } from '@/contexts/WalletContext';
 
 export type Message = {
   role: 'user' | 'assistant';
@@ -16,13 +17,13 @@ export function useAgentChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentResponse, setCurrentResponse] = useState<string>('');
+  const { address } = useWallet();
 
   const sendMessage = useCallback(async (content: string) => {
     setIsLoading(true);
     setError(null);
     setCurrentResponse('');
     
-    // Add user message immediately
     const userMessage: Message = {
       role: 'user',
       content,
@@ -35,7 +36,8 @@ export function useAgentChat() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          messages: [...messages, userMessage] // Send full message history
+          messages: [...messages, userMessage],
+          walletAddress: address
         })
       });
 
@@ -53,17 +55,15 @@ export function useAgentChat() {
         const { done, value } = await reader.read();
         if (done) break;
 
-        // Decode the chunk
         const chunk = new TextDecoder().decode(value);
         const lines = chunk.split('\n').filter(Boolean);
 
         for (const line of lines) {
           try {
             const parsed = JSON.parse(line);
-            
-            if (parsed.type === 'final_answer' || parsed.type === 'agent_log') {
-              accumulatedResponse += parsed.content + ' ';
-              setCurrentResponse(accumulatedResponse.trim());
+            if (parsed.type === 'agent_log') {
+              accumulatedResponse += parsed.content;
+              setCurrentResponse(accumulatedResponse);
             }
           } catch (e) {
             console.error('Error parsing chunk:', e);
@@ -71,11 +71,10 @@ export function useAgentChat() {
         }
       }
 
-      // Add assistant's complete message
       if (accumulatedResponse) {
         const assistantMessage: Message = {
           role: 'assistant',
-          content: accumulatedResponse.trim(),
+          content: accumulatedResponse,
           timestamp: new Date(),
         };
         setMessages(prev => [...prev, assistantMessage]);
@@ -84,7 +83,6 @@ export function useAgentChat() {
     } catch (err) {
       console.error('Streaming error:', err);
       setError(err instanceof Error ? err.message : 'An error occurred while processing your request');
-      // Add error message to chat
       setMessages(prev => [...prev, {
         role: 'assistant',
         content: 'Sorry, I encountered an error while processing your request.',
@@ -94,7 +92,7 @@ export function useAgentChat() {
       setIsLoading(false);
       setCurrentResponse('');
     }
-  }, [messages]); // Add messages to dependency array
+  }, [messages, address]);
 
   return {
     messages,

@@ -25,13 +25,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden dark" data-theme="dark">
       <head>
         <title>teleos - AI blockchain assistant</title>
         <meta name="description" content="Your AI blockchain assistant" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-theme-bg-primary`}
+        style={{
+          backgroundColor: '#111827', // Dark theme background color
+          color: '#F9FAFB' // Dark theme text color
+        }}
       >
         <ThirdwebProvider>
           <WalletProvider>

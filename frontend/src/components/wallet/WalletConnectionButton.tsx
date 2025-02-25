@@ -23,7 +23,7 @@ export default function WalletConnect() {
       onClick={isConnected ? disconnectWallet : connectWallet}
       disabled={isConnecting}
       className="
-        group
+        group h-9
         px-4 py-1.5
         text-sm font-medium
         bg-gradient-to-r from-theme-button-primary/10 to-theme-button-hover/10
@@ -63,7 +63,7 @@ export default function WalletConnect() {
           />
         </span>
       ) : (
-        "Connect Wallet"
+        "Connect"
       )}
     </button>
   );
