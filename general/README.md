@@ -1,22 +1,11 @@
 # Eliza
 
-## Edit the character files
+## Install dependencies
 
-Open `src/character.ts` to modify the default character. Uncomment and edit.
-
-### Custom characters
-
-To load custom characters instead:
-- Use `pnpm start --characters="path/to/your/character.json"`
-- Multiple character files can be loaded simultaneously
-
-### Add clients
-```
-# in character.ts
-clients: [Clients.TWITTER, Clients.DISCORD],
-
-# in character.json
-clients: ["twitter", "discord"]
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.0.0 sh -
+nvm use 23.3.0
+pnpm i
 ```
 
 ## Duplicate the .env.example template
@@ -28,11 +17,12 @@ cp .env.example .env
 \* Fill out the .env file with your own values.
 
 ### Add login credentials and keys to .env
+
 ```
 DISCORD_APPLICATION_ID="discord-application-id"
 DISCORD_API_TOKEN="discord-api-token"
 ...
-OPENROUTER_API_KEY="sk-xx-xx-xxx"
+ANTHROPIC_API_KEY="sk-xx-xx-xxx"
 ...
 TWITTER_USERNAME="username"
 TWITTER_PASSWORD="password"
@@ -44,7 +34,29 @@ TWITTER_EMAIL="your@email.com"
 ```bash
 pnpm i && pnpm start
 ```
+
 Note: this requires node to be at least version 22 when you install packages and run the agent.
+
+## Edit the character files
+
+Open `src/character.ts` to modify the default character. Uncomment and edit.
+
+### Custom characters
+
+To load custom characters instead:
+
+- Use `pnpm start --characters="path/to/your/character.json"`
+- Multiple character files can be loaded simultaneously
+
+### Add clients
+
+```
+# in character.ts
+clients: [Clients.TWITTER, Clients.DISCORD],
+
+# in character.json
+clients: ["twitter", "discord"]
+```
 
 ## Run with Docker
 
@@ -54,9 +66,9 @@ Note: this requires node to be at least version 22 when you install packages and
 
 ```yaml
 services:
-    eliza:
-        environment:
-            - OPENROUTER_API_KEY=blahdeeblahblahblah
+  eliza:
+    environment:
+      - OPENROUTER_API_KEY=blahdeeblahblahblah
 ```
 
 #### Run the image
@@ -78,9 +90,9 @@ docker buildx build --platform linux/amd64 -t eliza-starter:v1 --load .
 
 ```yaml
 services:
-    eliza:
-        environment:
-            - OPENROUTER_API_KEY=blahdeeblahblahblah
+  eliza:
+    environment:
+      - OPENROUTER_API_KEY=blahdeeblahblahblah
 ```
 
 #### Run the image
