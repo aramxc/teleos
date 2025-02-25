@@ -28,7 +28,8 @@ export default function ChatInput({
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.metaKey && e.key === "Enter") {
+    if (e.key === 'Enter' && !e.shiftKey) {  // Allow shift+enter for new lines
+      e.preventDefault();
       handleSend();
     }
   };

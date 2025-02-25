@@ -20,6 +20,7 @@ export function useAgentChat() {
   const sendMessage = useCallback(async (content: string) => {
     setIsLoading(true);
     setError(null);
+    setCurrentResponse('');
     
     // Add user message immediately
     const userMessage: Message = {
@@ -30,14 +31,19 @@ export function useAgentChat() {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      const response = await fetch('/api/agents/agentKit/stream', {
+      const response = await fetch('/api/agents/agentKit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: [{ content }] })
+        body: JSON.stringify({ 
+          messages: [...messages, userMessage] // Send full message history
+        })
       });
 
-      if (!response.ok) throw new Error('Failed to send message');
-
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+      }
+      
       const reader = response.body?.getReader();
       if (!reader) throw new Error('No reader available');
 
@@ -47,7 +53,7 @@ export function useAgentChat() {
         const { done, value } = await reader.read();
         if (done) break;
 
-        // Decode and parse the chunk
+        // Decode the chunk
         const chunk = new TextDecoder().decode(value);
         const lines = chunk.split('\n').filter(Boolean);
 
@@ -55,12 +61,9 @@ export function useAgentChat() {
           try {
             const parsed = JSON.parse(line);
             
-            if (parsed.chunk.type === 'final_answer') {
-              accumulatedResponse += parsed.chunk.output;
-              setCurrentResponse(accumulatedResponse);
-            } else if (parsed.chunk.type === 'agent_log') {
-              // Optionally handle intermediate steps
-              console.log('Agent thought:', parsed.chunk.log);
+            if (parsed.type === 'final_answer' || parsed.type === 'agent_log') {
+              accumulatedResponse += parsed.content + ' ';
+              setCurrentResponse(accumulatedResponse.trim());
             }
           } catch (e) {
             console.error('Error parsing chunk:', e);
@@ -72,19 +75,26 @@ export function useAgentChat() {
       if (accumulatedResponse) {
         const assistantMessage: Message = {
           role: 'assistant',
-          content: accumulatedResponse,
+          content: accumulatedResponse.trim(),
           timestamp: new Date(),
         };
         setMessages(prev => [...prev, assistantMessage]);
       }
 
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      console.error('Streaming error:', err);
+      setError(err instanceof Error ? err.message : 'An error occurred while processing your request');
+      // Add error message to chat
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: 'Sorry, I encountered an error while processing your request.',
+        timestamp: new Date(),
+      }]);
     } finally {
       setIsLoading(false);
       setCurrentResponse('');
     }
-  }, []);
+  }, [messages]); // Add messages to dependency array
 
   return {
     messages,

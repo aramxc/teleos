@@ -5,95 +5,134 @@ import { ChatOpenAI } from "@langchain/openai";
 import { AgentExecutor, createOpenAIFunctionsAgent } from "langchain/agents";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
-// Initialize AgentKit with your configuration
-const agentKit = await AgentKit.from({
-  cdpApiKeyName: process.env.COINBASE_CDP_API_ID,
-  cdpApiKeyPrivateKey: process.env.COINBASE_CDP_API_SECRET,
-});
-
-// Get LangChain-compatible tools from AgentKit
-const tools = await getLangChainTools(agentKit);
-
-// Initialize the LLM
-const llm = new ChatOpenAI({
-    model: "gpt-4",
-    temperature: 0,
-});
-
-// Create a prompt for the agent
-const prompt = ChatPromptTemplate.fromMessages([
-    ["system", "You are a helpful assistant that can use tools to interact with Coinbase services."],
-    ["human", "{input}"]
-]);
-
-// Create the agent
-const agent = await createOpenAIFunctionsAgent({
-    llm,
-    tools,
-    prompt
-});
-
-// Create the executor
-const agentExecutor = new AgentExecutor({
-    agent,
-    tools,
-});
-
-// API endpoints
-export async function POST(request: Request) {
+/**
+ * Initializes the AgentKit executor with LangChain tools and OpenAI integration
+ * @returns AgentExecutor instance
+ * @throws Error if environment variables are missing
+ */
+async function initializeAgent() {
   try {
-    const { messages } = await request.json();
-    
-    // Convert messages to input format expected by the agent
-    const input = messages[messages.length - 1].content;
-    
-    // Invoke the agent with the input
-    const result = await agentExecutor.invoke({ input });
-    
-    return NextResponse.json({ 
-      success: true, 
-      data: result
+    // Verify required environment variables
+    if (!process.env.CDP_API_KEY_NAME || !process.env.CDP_API_KEY_PRIVATE_KEY || !process.env.OPENAI_API_KEY) {
+      throw new Error('Missing required environment variables');
+    }
+
+    // Initialize AgentKit with Coinbase credentials
+    const agentKit = await AgentKit.from({
+      cdpApiKeyName: process.env.CDP_API_KEY_NAME,
+      cdpApiKeyPrivateKey: process.env.CDP_API_KEY_PRIVATE_KEY,
     });
 
+    // Get LangChain tools from AgentKit
+    const tools = await getLangChainTools(agentKit);
+    
+    // Initialize OpenAI chat model
+    const llm = new ChatOpenAI({
+      modelName: "gpt-4",
+      temperature: 0,
+      openAIApiKey: process.env.OPENAI_API_KEY,
+    });
+
+    // Create prompt template for the agent
+    const prompt = ChatPromptTemplate.fromMessages([
+      ["system", "You are a helpful assistant that can use tools to interact with Coinbase services."],
+      ["human", "{input}"],
+      ["human", "{agent_scratchpad}"]
+    ]);
+
+    // Create and return the agent executor
+    const agent = await createOpenAIFunctionsAgent({ llm, tools, prompt });
+    return new AgentExecutor({ agent, tools, verbose: true });
   } catch (error) {
-    console.error('Agent error:', error);
-    return NextResponse.json(
-      { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'Unknown error' 
-      },
-      { status: 500 }
-    );
+    console.error('Error in initializeAgent:', error);
+    throw error;
   }
 }
 
-// Streaming endpoint
-export async function POST_STREAM(request: Request) {
+// Cache the executor instance for reuse across requests
+let agentExecutor: AgentExecutor | null = null;
+
+/**
+ * POST handler for agent interactions
+ * Implements streaming response for real-time agent feedback
+ */
+export async function POST(request: Request) {
   try {
-    const { messages } = await request.json();
-    const input = messages[messages.length - 1].content;
+    // Parse request body
+    const body = await request.json().catch(error => {
+      console.error('Failed to parse request body:', error);
+      throw new Error('Invalid JSON in request body');
+    });
+
+    // Initialize agent if not already done
+    if (!agentExecutor) {
+      console.log('Initializing new agent executor...');
+      agentExecutor = await initializeAgent();
+    }
+
+    // Validate messages array
+    if (!body.messages?.length) {
+      throw new Error('Invalid messages format');
+    }
+
+    // Get the latest message content
+    const input = body.messages[body.messages.length - 1].content;
+    console.log('Processing input:', input);
     
-    // Create a TransformStream for streaming
+    // Set up streaming response
     const stream = new TransformStream();
     const writer = stream.writable.getWriter();
     
-    // Stream the agent's responses
+    // Process agent stream
     const agentStream = await agentExecutor.streamLog({ input });
     
+    // Handle streaming response
     (async () => {
       try {
         for await (const chunk of agentStream) {
-          await writer.write(
-            new TextEncoder().encode(
-              JSON.stringify({ chunk }) + '\n'
-            )
-          );
+          if ('ops' in chunk) {
+            for (const op of chunk.ops) {
+              // Handle streamed output
+              if (op.path.includes('streamed_output_str') && 'value' in op) {
+                await writer.write(
+                  new TextEncoder().encode(
+                    JSON.stringify({
+                      type: 'agent_log',
+                      content: (op as { value: string }).value
+                    }) + '\n'
+                  )
+                );
+              } 
+              // Handle final output
+              else if (op.path === '/final_output' && 'value' in op) {
+                await writer.write(
+                  new TextEncoder().encode(
+                    JSON.stringify({
+                      type: 'final_answer',
+                      content: (op as { value: { output: string } }).value.output
+                    }) + '\n'
+                  )
+                );
+              }
+            }
+          }
         }
+      } catch (error) {
+        console.error('Streaming error:', error);
+        await writer.write(
+          new TextEncoder().encode(
+            JSON.stringify({
+              type: 'error',
+              content: 'An error occurred while processing your request'
+            }) + '\n'
+          )
+        );
       } finally {
         await writer.close();
       }
     })();
 
+    // Return streaming response
     return new Response(stream.readable, {
       headers: {
         'Content-Type': 'text/event-stream',
@@ -101,13 +140,13 @@ export async function POST_STREAM(request: Request) {
         'Connection': 'keep-alive',
       },
     });
-
   } catch (error) {
-    console.error('Stream error:', error);
+    console.error('Unhandled error in route handler:', error);
     return NextResponse.json(
       { 
         success: false, 
-        error: error instanceof Error ? error.message : 'Unknown error' 
+        error: error instanceof Error ? error.message : 'An unexpected error occurred',
+        details: error instanceof Error ? error.stack : undefined
       },
       { status: 500 }
     );
