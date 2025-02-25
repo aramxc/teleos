@@ -1,7 +1,6 @@
 'use client';
 
-import { useConnect } from "thirdweb/react";
-import { createWallet } from "thirdweb/wallets";
+import { useConnectModal } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 
 const client = createThirdwebClient({
@@ -9,15 +8,11 @@ const client = createThirdwebClient({
 });
 
 export function useWalletConnect() {
-  const { connect, isConnecting, error } = useConnect();
+  const { connect, isConnecting } = useConnectModal();
 
   const connectWallet = async () => {
     try {
-      await connect(async () => {
-        const metamask = createWallet("io.metamask");
-        await metamask.connect({ client });
-        return metamask;
-      });
+      await connect({ client });
     } catch (err) {
       console.error("Failed to connect wallet:", err);
     }
@@ -26,6 +21,6 @@ export function useWalletConnect() {
   return {
     connectWallet,
     isConnecting,
-    error
+    error: null // We can expand this later if needed
   };
 }
