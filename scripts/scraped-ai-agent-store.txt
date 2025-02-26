@@ -2536,5 +2536,107 @@
       "web data collection",
       "data processing"
     ]
+  },
+  {
+    "name": "Cleric",
+    "description": "Cleric is an AI-powered Site Reliability Engineer (SRE) designed to autonomously manage, optimize, and heal software infrastructure. It operates as an AI teammate, capable of investigating and diagnosing production issues without human intervention. Cleric integrates with existing tools and systems, learning from each interaction to improve its performance. Its goal is to free engineers from the toil of production operations, allowing them to focus on development and innovation.",
+    "websiteLink": "https://cleric.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/cleric",
+    "tags": [
+      "site reliability engineering",
+      "infrastructure management",
+      "autonomous monitoring",
+      "incident response",
+      "DevOps",
+      "AI operations",
+      "system optimization"
+    ]
+  },
+  {
+    "name": "Trigger.dev",
+    "description": "Trigger.dev is an open-source platform designed to facilitate the creation and management of background jobs within applications. It allows developers to write workflows using standard asynchronous code, handling tasks such as scheduling, concurrency control, and real-time monitoring. With features like no timeouts, automatic retries, and seamless integration with existing Node.js SDKs, Trigger.dev is particularly suited for AI tasks that require extended execution times. The platform also offers real-time streaming support, making it ideal for applications involving large language models and other AI-driven processes.",
+    "websiteLink": "https://trigger.dev/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/trigger-dev",
+    "tags": [
+      "workflow automation",
+      "background jobs",
+      "developer tools",
+      "AI integration",
+      "real-time monitoring",
+      "open-source"
+    ]
+  },
+  {
+    "name": "ReByte",
+    "description": "ReByte is an AI-driven platform designed to transform data workflows by autonomously writing and executing code. It allows users to integrate and define clean, semantic tables from diverse data sources, build intelligent agents by orchestrating large language models (LLMs), tables, and other tools, and create dynamic, user-centric applications over their data. Key features include metadata enrichment, precise tracking of LLM data usage, and the ability to handle multiple data sources, including local files and cloud data warehouses. ReByte aims to unlock hidden potential in data and automate repetitive tasks, enhancing productivity and efficiency.",
+    "websiteLink": "https://rebyte.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/rebyte",
+    "tags": [
+      "data integration",
+      "workflow automation",
+      "code generation",
+      "LLM orchestration",
+      "data analytics",
+      "productivity tools"
+    ]
+  },
+  {
+    "name": "B2 AI",
+    "description": "B2 AI is redefining the modern workplace by providing AI agents that connect various business tools and data sources. Acting as a command center, B2 AI enables organizations to extract intelligent insights and perform actions across their operational platforms. Key features include advanced large language model (LLM) technology for task automation, privacy-first data controls with configurable role-based access, reliable integrations with popular business tools, and shareable, schedulable AI-powered workflows. B2 AI aims to enhance productivity by seamlessly integrating AI into daily business operations.",
+    "websiteLink": "https://www.b2.work/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/b2-ai",
+    "tags": [
+      "business automation",
+      "workflow integration",
+      "enterprise AI",
+      "data analytics",
+      "productivity tools",
+      "LLM technology",
+      "business intelligence"
+    ]
+  },
+  {
+    "name": "Kwal",
+    "description": "Kwal is an AI-powered voice agent designed to revolutionize the hiring process by conducting interviews that sound remarkably human-like. Operating 24/7, Kwal engages and screens candidates efficiently, utilizing perfect recall and adaptive questioning to ensure no detail is overlooked. It integrates seamlessly with over 45 top Applicant Tracking Systems (ATS), enhancing the recruitment workflow. Key features include multilingual capabilities, comprehensive analytics, noise reduction, call monitoring, and scalability to support up to 1 million concurrent connections. Kwal provides detailed candidate insights, including emotional analysis, and offers customizable voices to align with organizational branding.",
+    "websiteLink": "https://www.kwal.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kwal",
+    "tags": [
+      "recruitment",
+      "voice AI",
+      "interview automation",
+      "applicant tracking",
+      "HR technology",
+      "candidate screening"
+    ]
+  },
+  {
+    "name": "GitLab Duo",
+    "description": "GitLab Duo is an AI-powered solution that integrates advanced artificial intelligence features throughout the entire software development lifecycle. It offers capabilities such as code suggestions, chat assistance, test generation, code explanation, and vulnerability resolution. These features aim to accelerate development processes, enhance code quality, and improve security by automating repetitive tasks and providing intelligent insights. GitLab Duo is designed to help teams ship secure software faster while maintaining control and transparency.",
+    "websiteLink": "https://about.gitlab.com/gitlab-duo/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/gitlab-duo",
+    "tags": [
+      "software development",
+      "AI coding assistant",
+      "code generation",
+      "security",
+      "test automation",
+      "DevOps",
+      "code analysis"
+    ]
+  },
+  {
+    "name": "Cursor",
+    "description": "Cursor is an AI-powered integrated development environment (IDE) designed to enhance developer productivity by integrating advanced artificial intelligence features directly into the coding environment. As a fork of Visual Studio Code, it offers features such as AI-powered code generation, intelligent autocompletion, smart rewrites, and codebase understanding. Cursor supports integration with existing extensions, themes, and keybindings, ensuring a familiar workflow for developers.",
+    "websiteLink": "https://www.cursor.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/cursor",
+    "tags": [
+      "code generation",
+      "IDE",
+      "developer productivity",
+      "AI-powered coding",
+      "software development",
+      "code completion",
+      "codebase understanding"
+    ]
   }
 ]
