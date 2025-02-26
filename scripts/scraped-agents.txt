@@ -1,0 +1,2271 @@
+===== SCRAPED RESULTS WITH SUMMARIES =====
+
+[1] Avium AI (AVMWS)
+    Twitter: https://x.com/AviumDev
+    Website: https://www.aviumlabs.org/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Feb 22, 03:57 PM
+    Market Cap: $2.9K
+    Contract: ciDKpump
+    Summary: Avium AI (AVMWS) appears to be a token associated with a gaming venture studio that focuses on user-generated content (UGC) technology and digital experiences. the project claims to be building platforms for digital interactions between users and communities, though with a very low market cap of $2.9K and limited concrete details about the token's actual utility, it's difficult to determine its specific functionality in the ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.aviumlabs.org/
+      - https://x.com/AviumDev
+
+[2] Hyper.Dev AI (HYPER)
+    Twitter: https://x.com/hyperdev_sol
+    Website: https://www.hyper-dev.org/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Feb 13, 03:15 PM
+    Market Cap: $2.5K
+    Contract: 8bgepump
+    Summary: Hyper.Dev AI (HYPER) is a Solana-based platform that serves as an automated launchpad for AI agents, allowing users to build and deploy complex AI agents across various frameworks and blockchains. The project provides tools for creating specialized agents such as trading bots with Hyperliquid data integration, DAO agents with Snapshot compatibility, and upcoming features like Tradelens for P2P OTC trading, LiquidOS open-source framework, and Atlas Oracle for real-time insights, while being recognized as a member of NVIDIA's Inception Program. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.hyper-dev.org/
+      - https://x.com/hyperdev_sol
+
+[3] axai_agent (axai)
+    Twitter: https://x.com/axai_agent
+    Website: https://axai.gg/
+    Telegram: https://t.me/axai_agent
+    Tribute Level: Smol
+    Created: Feb 10, 09:47 PM
+    Market Cap: $4.3K
+    Contract: 6VtLpump
+    Summary: AXAI (axai_agent) is a SocialFi AI project that aggregates data from multiple social platforms (Twitter, Telegram, Discord, GitHub) and RSS feeds to provide crypto-related insights using machine learning and named entity recognition. The project appears to function as an information processing tool that filters through social media noise to deliver valuable cryptocurrency intelligence, positioning itself at the intersection of social media analytics and cryptocurrency information services. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://axai.gg/
+      - https://x.com/axai_agent
+      - https://t.me/axai_agent
+      - https://discord.gg/axaiagent
+
+[4] Sango Coin (SANGO)
+    Twitter: https://x.com/FA_Touadera/status/1562393278963744768
+    Website: https://africamoneydefisummit.com/central-african-republic-launches-sango-coin/
+    Telegram: https://t.me/sangocoinsol
+    Tribute Level: Smol
+    Created: Feb 9, 11:50 PM
+    Market Cap: $18.5K
+    Contract: BNkUpump
+    Summary: Sango Coin (SANGO) is the national digital currency of the Central African Republic, launched as part of Project Sango to complement the country's adoption of Bitcoin as legal tender. The token is reportedly backed by Bitcoin and is designed to provide citizens with rapid, low-cost transactions while serving as a "gateway to the natural resources of the Central African Republic," with additional plans to incorporate blockchain technology into the country's land registry system. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://africamoneydefisummit.com/central-african-republic-launches-sango-coin/
+      - https://x.com/FA_Touadera/status/1562393278963744768
+      - https://t.me/sangocoinsol
+
+[5] GachaAI (GACHA)
+    Twitter: https://x.com/realGachaAI
+    Website: https://gacha.meme/
+    Telegram: https://t.me/GachaAIPortal
+    Tribute Level: Smol
+    Created: Feb 7, 06:15 AM
+    Market Cap: $9.1K
+    Contract: GaCHzcWX
+    Summary: GachaAI (GACHA) appears to be a recently launched cryptocurrency project (February 2024) with a very small market capitalization of $9.1K. Without any website content details or clear description of functionality, and only a Twitter presence mentioned, it's not possible to determine any specific utility or purpose, suggesting this may be a speculative token or memecoin without established utility in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://gacha.meme/
+      - https://x.com/realGachaAI
+      - https://t.me/GachaAIPortal
+
+[6] ToiletAIttendant (TAITT)
+    Twitter: https://x.com/shawmakesmagic/status/1887259759239475588
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Feb 5, 10:06 PM
+    Market Cap: $8.4K
+    Contract: 7VsZpump
+    Summary: ToiletAIttendant (TAITT) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Feb 5, 10:06 PM and has a market cap of $8.4K.
+    Links:
+      - https://x.com/shawmakesmagic/status/1887259759239475588
+
+[7] BIP-LOAR (BIPLOAR)
+    Twitter: https://x.com/Bipolar_WC
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Feb 5, 07:22 AM
+    Market Cap: $6.4K
+    Contract: 2ju7pump
+    Summary: BIP-LOAR (BIPLOAR) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Feb 5, 07:22 AM and has a market cap of $6.4K.
+    Links:
+      - https://x.com/Bipolar_WC
+
+[8] Golden Pony Dollars (GPD)
+    Twitter: https://x.com/goldponydollars
+    Website: https://www.youtube.com/live/UnI2Lap4yJo?t=9324s
+    Telegram: https://t.me/GoldenPonyDollars
+    Tribute Level: Smol
+    Created: Jan 30, 11:56 PM
+    Market Cap: $12.9K
+    Contract: 5tigpump
+    Summary: Golden Pony Dollars (GPD) appears to be a memecoin with no clear utility or purpose. The token's information references Joe Rogan's podcast with comedian Tony Hinchcliffe, but provides no substantive details about any blockchain functionality, use case, or ecosystem value, suggesting it's likely a speculative token capitalizing on pop culture references without established technical fundamentals. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.youtube.com/live/UnI2Lap4yJo?t=9324s
+      - https://x.com/goldponydollars
+      - https://t.me/GoldenPonyDollars
+
+[9] dotfun (.fun)
+    Twitter: https://x.com/a1lon9/status/1884831655573020804?s=46
+    Website: None
+    Telegram: https://t.me/dotfuncto
+    Tribute Level: Smol
+    Created: Jan 30, 06:07 AM
+    Market Cap: $19.5K
+    Contract: 3ot2pump
+    Summary: dotfun (.fun) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jan 30, 06:07 AM and has a market cap of $19.5K.
+    Links:
+      - https://x.com/a1lon9/status/1884831655573020804?s=46
+      - https://t.me/dotfuncto
+
+[10] deepseek CEO 梁文锋 (FENG)
+    Twitter: https://x.com/LiangWenfeng_
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 29, 11:23 PM
+    Market Cap: $6.2K
+    Contract: Bt95pump
+    Summary: deepseek CEO 梁文锋 (FENG) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jan 29, 11:23 PM and has a market cap of $6.2K.
+    Links:
+      - https://x.com/LiangWenfeng_
+
+[11] chinese ai tek (cat)
+    Twitter: https://x.com/chineseaitek
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 28, 07:49 AM
+    Market Cap: $4.1K
+    Contract: DGmipump
+    Summary: chinese ai tek (cat) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jan 28, 07:49 AM and has a market cap of $4.1K.
+    Links:
+      - https://x.com/chineseaitek
+
+[12] Pumpfun Hostel (Hostelfun)
+    Twitter: https://x.com/Diogocaninha
+    Website: https://pumpfunhostel.com/
+    Telegram: https://t.me/PumpfunHostel
+    Tribute Level: Smol
+    Created: Jan 27, 04:52 PM
+    Market Cap: $14.3K
+    Contract: 4cpNpump
+    Summary: Hostelfun ($Hostelfun) is a Solana-based memecoin created by Diogo Silva with the stated purpose of raising funds to renovate his hostel in Arraial do Cabo, Brazil. While marketed as having "Real World Application," it functions primarily as a speculative memecoin where investors purchase tokens in hopes of price appreciation, with the creator claiming that 1.5% of the supply is locked to demonstrate long-term commitment to the project. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://pumpfunhostel.com/
+      - https://x.com/Diogocaninha
+      - https://t.me/PumpfunHostel
+
+[13] Eido Labs (EIDO)
+    Twitter: https://x.com/eidolabs
+    Website: https://eidolabs.xyz/
+    Telegram: None
+    Tribute Level: Half
+    Created: Jan 26, 01:17 AM
+    Market Cap: $2.9K
+    Contract: 8MWReiDo
+    Summary: Eido Labs (EIDO) is a blockchain project focused on developing AI-driven agent technology that provides specialized expertise for founders, creators, and innovators. The platform appears to offer a team of domain-specific AI agents with different roles (Principal, CTO, Product) designed to help users scale their projects, solve problems, and implement their ideas, though the project seems to be in early development with many features marked as "coming soon." It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://eidolabs.xyz/
+      - https://x.com/eidolabs
+
+[14] Make AI Great Again (MAIGA)
+    Twitter: https://x.com/SOL_MAIGA/
+    Website: None
+    Telegram: None
+    Tribute Level: Full
+    Created: Jan 25, 09:18 PM
+    Market Cap: $11.0K
+    Contract: 8ndDpump
+    Summary: Make AI Great Again (MAIGA) appears to be a memecoin on the Solana blockchain that undefined to the ElizaOS ecosystem. It was created on Jan 25, 09:18 PM and has a market cap of $11.0K.
+    Links:
+      - https://x.com/SOL_MAIGA/
+
+[15] Spark Agent (SPARK)
+    Twitter: https://x.com/spark_agent_sol
+    Website: https://www.gensparkai.org/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 24, 12:01 PM
+    Market Cap: $3.7K
+    Contract: DuP3pump
+    Summary: Spark Agent (SPARK) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jan 24, 12:01 PM and has a market cap of $3.7K.
+    Links:
+      - https://www.gensparkai.org/
+      - https://x.com/spark_agent_sol
+
+[16] Digital Gold (Gold)
+    Twitter: https://x.com/digitalgoldsola
+    Website: https://discord.com/invite/aEBGYrS6
+    Telegram: https://t.me/digitalgoldcto2
+    Tribute Level: Smol
+    Created: Jan 23, 04:46 PM
+    Market Cap: $16.7K
+    Contract: 2avQpump
+    Summary: Digital Gold (GOLD) appears to be a small-cap cryptocurrency token with no clear utility or purpose documented. The website information redirects to Discord rather than providing project details, and with a market cap of only $16.7K since its January 2024 creation, it shows characteristics of a memecoin or speculative token without established functionality in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://x.com/digitalgoldsola
+      - https://t.me/digitalgoldcto2
+      - https://discord.com/invite/aEBGYrS6
+
+[17] vine16z (vine16z)
+    Twitter: https://x.com/VINE16ZONSOL
+    Website: https://vine16z.fun/
+    Telegram: https://t.me/Vine16z
+    Tribute Level: Smol
+    Created: Jan 23, 07:52 AM
+    Market Cap: $5.3K
+    Contract: 4UECpump
+    Summary: vine16z (VINE16Z) appears to be a recently created cryptocurrency token on the Solana blockchain (as suggested by the Twitter handle "VINE16ZONSOL"). With a very small market capitalization of only $5.3K and minimal available information about its functionality or purpose, it shows characteristics of a memecoin or speculative token without clearly defined utility. There is insufficient evidence of any specific use case, technological innovation, or ecosystem role for this token. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://vine16z.fun/
+      - https://x.com/VINE16ZONSOL
+      - https://t.me/Vine16z
+
+[18] AITOWN by AI16z (AITOWN)
+    Twitter: https://x.com/PedroSkrewby
+    Website: https://www.convex.dev/ai-town
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 23, 07:24 AM
+    Market Cap: $3.1K
+    Contract: Jk2dpump
+    Summary: AITOWN appears to be a token associated with AI Town, a virtual environment where AI characters interact socially. this seems to be a small-cap project ($3.1K market cap) that likely functions as a governance or utility token within a virtual AI community, though without more technical details, it's difficult to determine its specific functionality or utility within the ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.convex.dev/ai-town
+      - https://x.com/PedroSkrewby
+
+[19] GitSol (GitSol)
+    Twitter: https://x.com/gitsolana
+    Website: https://www.gitsol.io/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 22, 09:20 PM
+    Market Cap: $6.2K
+    Contract: 99Zmpump
+    Summary: GitSol is a utility token for a service that allows developers to upload and store GitHub repositories on the Solana blockchain using ZK compression technology. The project offers immutable storage, blockchain-based version control, and secure access management for code repositories, with free deployment for the first 24 hours after launch and requiring 69,000 GitSol tokens for subsequent deployments. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.gitsol.io/
+      - https://x.com/gitsolana
+
+[20] QWEN GPT AGENTS (QWEN)
+    Twitter: https://x.com/QWEN_GPT
+    Website: https://www.qwenai.org/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 22, 07:53 AM
+    Market Cap: $3.8K
+    Contract: JM47pump
+    Summary: QWEN GPT AGENTS (QWEN) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jan 22, 07:53 AM and has a market cap of $3.8K.
+    Links:
+      - https://www.qwenai.org/
+      - https://x.com/QWEN_GPT
+
+[21] AgentOS (AGOS)
+    Twitter: https://x.com/agentos_labs
+    Website: https://agentos.space/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 21, 02:22 PM
+    Market Cap: $9.9K
+    Contract: 7Yw3pump
+    Summary: AgentOS (AGOS) appears to be a very early-stage cryptocurrency project with minimal market presence (only $9.9K market cap) that was created recently on January 21, 2024. Without any website content or description available, and only a Twitter handle referencing "agentos_labs," it's not possible to determine the project's specific purpose, utility, or functionality in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://agentos.space/
+      - https://x.com/agentos_labs
+
+[22] Jaiden AI (JAIDEN)
+    Twitter: https://x.com/Jaiden_AI
+    Website: https://trendverse.gitbook.io/jaiden-docs
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 18, 09:43 PM
+    Market Cap: $28.9K
+    Contract: BVALpump
+    Summary: Jaiden AI (JAIDEN) appears to be a recently launched cryptocurrency project with a very small market capitalization of $28.9K. The project seems to have minimal documentation and infrastructure in place, with only a basic documentation site and Twitter presence, suggesting it may be in early development or potentially a speculative token without clearly defined utility at this stage. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://trendverse.gitbook.io/jaiden-docs
+      - https://x.com/Jaiden_AI
+
+[23] Brainlet Capital Partners (BCP)
+    Twitter: https://x.com/brainletcp
+    Website: https://brainletcp.com/
+    Telegram: https://t.me/brainletcp
+    Tribute Level: Half
+    Created: Jan 17, 11:08 PM
+    Market Cap: $11.4K
+    Contract: trbxpump
+    Summary: Brainlet Capital Partners (BCP) appears to be a small cryptocurrency project that claims to offer financial advisory services in digital assets. With a very low market cap of $11.4K and recent creation date (January 17, 2024), there is insufficient evidence of actual utility or established operations, suggesting this may be a speculative token with unproven functionality in the cryptocurrency ecosystem. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://brainletcp.com/
+      - https://x.com/brainletcp
+      - https://t.me/brainletcp
+
+[24] Cleopetra AI (CLEO)
+    Twitter: https://x.com/cleopetrafun
+    Website: None
+    Telegram: None
+    Tribute Level: Half
+    Created: Jan 17, 12:59 AM
+    Market Cap: $7.2K
+    Contract: Br9sCLEo
+    Summary: Cleopetra AI (CLEO) appears to be a memecoin on the Solana blockchain that has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem. It was created on Jan 17, 12:59 AM and has a market cap of $7.2K.
+    Links:
+      - https://x.com/cleopetrafun
+
+[25] SupplyVestAI (SupplyAI)
+    Twitter: https://x.com/SupplyVestHQ
+    Website: https://supplyvest.com/
+    Telegram: https://t.me/SupplyVestA1
+    Tribute Level: Full
+    Created: Jan 12, 07:05 PM
+    Market Cap: $56.0K
+    Contract: BAkwpump
+    Summary: SupplyVestAI (SupplyAI) is a blockchain project focused on integrating AI agents and DeFi solutions for global supply chain management. The platform aims to streamline business operations through automated invoicing, supplier matching, decentralized financing options for purchase orders, and real-time data integration for procurement and supply chain decisions. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://supplyvest.com/
+      - https://x.com/SupplyVestHQ
+      - https://t.me/SupplyVestA1
+
+[26] Azura by ai16z (AzuraAI)
+    Twitter: https://x.com/azurawakesup
+    Website: https://azuraai.org/
+    Telegram: https://t.me/AzuraWakesUp
+    Tribute Level: Half
+    Created: Jan 11, 12:47 PM
+    Market Cap: $12.7K
+    Contract: DHsFpump
+    Summary: Azura by ai16z (AzuraAI) appears to be a cryptocurrency token with minimal verifiable functionality, as its website is currently suspended and there is very limited public information about its purpose or utility. With a small market cap of $12.7K and a recent creation date of January 11, this token shows characteristics of a speculative project or possible memecoin without clear documented utility in the blockchain ecosystem. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://azuraai.org/
+      - https://x.com/azurawakesup
+      - https://t.me/AzuraWakesUp
+
+[27] Kolwagmi (KWAGMI)
+    Twitter: https://x.com/kolwagmi
+    Website: https://kolwagmi.com/
+    Telegram: https://t.me/kolwagmi
+    Tribute Level: Smol
+    Created: Jan 11, 02:23 AM
+    Market Cap: $4.7K
+    Contract: 4aEypump
+    Summary: Kolwagmi (KWAGMI) appears to be a recently created cryptocurrency token with a very small market capitalization of $4,700. With no clear website content describing its purpose or functionality, and only a Twitter presence, it exhibits characteristics of a memecoin without defined utility. The token's name "Kolwagmi" combined with the "WAGMI" element in its symbol (commonly meaning "We're All Gonna Make It" in crypto culture) further suggests it is likely a speculative memecoin rather than a project with established technical functionality. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://kolwagmi.com/
+      - https://x.com/kolwagmi
+      - https://t.me/kolwagmi
+
+[28] Doctor AI (DOCTOR)
+    Twitter: https://x.com/DoctorAI_Agent
+    Website: https://doctorai.ink/
+    Telegram: https://t.me/DoctorAI_Portal
+    Tribute Level: Smol
+    Created: Jan 10, 07:59 PM
+    Market Cap: $11.4K
+    Contract: 5vb8pump
+    Summary: Doctor AI (DOCTOR) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jan 10, 07:59 PM and has a market cap of $11.4K.
+    Links:
+      - https://doctorai.ink/
+      - https://x.com/DoctorAI_Agent
+      - https://t.me/DoctorAI_Portal
+
+[29] Soralana (SORALANA)
+    Twitter: https://x.com/SoralanaAI
+    Website: https://soralana.com/
+    Telegram: https://t.me/soralana
+    Tribute Level: Smol
+    Created: Jan 10, 03:56 PM
+    Market Cap: $3.0K
+    Contract: H2vfpump
+    Summary: Soralana (SORALANA) appears to be a memecoin with no clear utility or defined purpose. The website lacks substantive content, containing only repetitive text and cryptic messaging ("You are not ready"), while the project description ("Fueled by dreams, chaos, and zero regrets") offers no concrete information about functionality or use cases. With its very low market capitalization of $3,000 and absence of technical documentation, this token shows the characteristics of a speculative cryptocurrency without established utility in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://soralana.com/
+      - https://x.com/SoralanaAI
+      - https://t.me/soralana
+
+[30] StealthSDK (STEALTH)
+    Twitter: https://x.com/StealthSDK
+    Website: None
+    Telegram: None
+    Tribute Level: Full
+    Created: Jan 9, 08:17 PM
+    Market Cap: $140.3K
+    Contract: BUfMpump
+    Summary: StealthSDK (STEALTH) appears to be a memecoin on the Solana blockchain that undefined to the ElizaOS ecosystem. It was created on Jan 9, 08:17 PM and has a market cap of $140.3K.
+    Links:
+      - https://x.com/StealthSDK
+
+[31] DeFAI (DeFAI)
+    Twitter: https://x.com/ElizadotFinance
+    Website: https://eliza.finance/
+    Telegram: https://t.me/DeFAI_Portal
+    Tribute Level: Smol
+    Created: Jan 9, 05:43 AM
+    Market Cap: $281.9K
+    Contract: 5LGyFURP
+    Summary: DeFAI appears to be a token associated with Eliza Finance, likely a new cryptocurrency project launched in January 2024 with a relatively small market cap of $281.9K. Without substantive website content or clear documentation of its functionality, it's not possible to determine DeFAI's specific utility or purpose in the blockchain ecosystem, suggesting it may be an early-stage project or potentially a speculative token without established use cases. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://eliza.finance/
+      - https://x.com/ElizadotFinance
+      - https://t.me/DeFAI_Portal
+
+[32] Fabelis AI (FABEL)
+    Twitter: https://x.com/fabelisai
+    Website: http://fabelis.ai/
+    Telegram: https://t.me/fabelisAI
+    Tribute Level: Smol
+    Created: Jan 8, 06:41 PM
+    Market Cap: $137.3K
+    Contract: FABE4ueN
+    Summary: Fabelis AI ($FABEL) is a project focused on developing a modular AI agent framework built on top of RIG®, implemented in Rust programming language. The framework appears to provide a technical infrastructure for creating and managing AI agents with an emphasis on modularity, open-source expansion, and integration with existing RIG® providers, though the specific utility of the FABEL token within this ecosystem is not clearly defined in the provided information. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - http://fabelis.ai/
+      - https://x.com/fabelisai
+      - https://t.me/fabelisAI
+
+[33] tradrAI (TAI)
+    Twitter: https://x.com/tradrAI
+    Website: https://www.waveform.finance/agent?agent=cd65fe3e-0627-4308-840c-7b2e148cd500
+    Telegram: None
+    Tribute Level: Smol
+    Created: Jan 8, 03:04 AM
+    Market Cap: $7.4K
+    Contract: 46M7xYoj
+    Summary: tradrAI (TAI) appears to be a cryptocurrency project associated with Waveform, a platform that enables users to create AI trading agents quickly. The token likely serves as the native currency within this ecosystem, potentially used for accessing the platform's AI trading agent creation services or as a governance token. However, with limited functional website content and a very low market cap of only $7.4K, the project seems to be in a very early stage of development or may have limited adoption. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.waveform.finance/agent?agent=cd65fe3e-0627-4308-840c-7b2e148cd500
+      - https://x.com/tradrAI
+      - https://discord.gg/DGuguGMF36
+
+[34] AIDE (AIDE)
+    Twitter: https://x.com/aide_ink
+    Website: https://aide.ink/
+    Telegram: https://t.me/aideink
+    Tribute Level: Smol
+    Created: Jan 7, 11:45 AM
+    Market Cap: $2.5M
+    Contract: 6Mhvpump
+    Summary: AIDE is a blockchain project focused on developing tools that automatically generate software applications using natural language commands. The platform allows users to create various web applications, games, and interfaces by simply describing what they want in plain language, as demonstrated by their examples of generating clocks, games like Flappy Bird and Tetris, and business tools. With a $2.5M market cap, AIDE appears to be positioning itself at the intersection of AI-powered code generation and blockchain technology. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://aide.ink/
+      - https://x.com/aide_ink
+      - https://t.me/aideink
+      - https://discord.gg/QSkMX3RT
+
+[35] BRUV (BRUV)
+    Twitter: https://x.com/votebruv
+    Website: https://www.votebruv.co.uk/
+    Telegram: https://t.me/BRUVsolana
+    Tribute Level: Smol
+    Created: Jan 6, 06:04 PM
+    Market Cap: $249.3K
+    Contract: nFXLpump
+    Summary: BRUV appears to be a memecoin with British-themed branding that references "British Restoration of Underlying Values" in its marketing. The token shows no clear technical utility or functionality beyond its cultural reference point, with a relatively small market capitalization of $249.3K since its recent creation in January 2024. This appears to be a themed memecoin that capitalizes on British cultural identity rather than offering specific blockchain utility or services. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.votebruv.co.uk/
+      - https://x.com/votebruv
+      - https://t.me/BRUVsolana
+
+[36] AI Virtual Agents (AIVIA)
+    Twitter: https://x.com/aivirtualagents
+    Website: https://aivirtualagents.ai/
+    Telegram: https://t.me/aivirtualagents
+    Tribute Level: Smol
+    Created: Jan 6, 04:53 PM
+    Market Cap: $328.2K
+    Contract: 4ptXpump
+    Summary: AI Virtual Agents (AIVIA) is a Solana-based DeFi platform that uses artificial intelligence to automate and optimize cryptocurrency trading, token swaps, and portfolio management. The project aims to simplify decentralized finance by providing AI-powered insights and automation tools that analyze market trends and execute trades through Jupiter API integration, making DeFi more accessible to users without technical expertise. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://aivirtualagents.ai/
+      - https://x.com/aivirtualagents
+      - https://t.me/aivirtualagents
+
+[37] Kafra Corp (Zeny)
+    Twitter: https://x.com/KAFRAC0RP
+    Website: https://github.com/sazilariel/KafraCorp
+    Telegram: https://t.me/zeny_KafraCorp
+    Tribute Level: Smol
+    Created: Jan 6, 12:08 PM
+    Market Cap: $14.7K
+    Contract: EygHpump
+    Summary: Kafra Corp (ZENY) is a blockchain project that aims to create a platform where users can rent AI agents to perform various specialized tasks including trading, software development, content creation, and domain-specific workflows. The project appears to be in early development stages with a small market capitalization of $14.7K, and is structured around providing AI-powered services through what they call "Kafra AI agents" that can be rented by users for specific purposes. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://github.com/sazilariel/KafraCorp
+      - https://x.com/KAFRAC0RP
+      - https://t.me/zeny_KafraCorp
+      - https://discord.gg/ZfjncRxDxJ
+
+[38] Nova Dova (DOVA)
+    Twitter: https://x.com/nova_dova_dao
+    Website: https://novadova.com/
+    Telegram: https://t.me/novadovadao
+    Tribute Level: Smol
+    Created: Jan 4, 04:28 AM
+    Market Cap: $9.5K
+    Contract: 8Hjipump
+    Summary: Nova Dova (DOVA) is a cryptocurrency project focused on AI agent creation, offering a platform that allows users to build custom AI agents through an intuitive interface. The project appears to be in its early stages with a small market cap of $9.5K since its January 2024 launch, positioning itself as making AI agent development accessible to non-technical users. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://novadova.com/
+      - https://x.com/nova_dova_dao
+      - https://t.me/novadovadao
+      - https://discord.gg/P738WVjWJb
+
+[39] AI Rig Complex (arc)
+    Twitter: https://x.com/arcdotfun
+    Website: https://www.arc.fun/
+    Telegram: https://t.me/arcfunportal
+    Tribute Level: Smol
+    Created: Jan 3, 04:04 AM
+    Market Cap: $225.9M
+    Contract: 61V8pump
+    Summary: # AI Rig Complex (ARC) Analysis
+
+AI Rig Complex (ARC) appears to be a blockchain project focused on creating an ecosystem of AI-related partners and agents, as suggested by the "Arc Registry" description. The token likely serves as the utility or governance token within this ecosystem, potentially facilitating transactions or access to AI computational resources (suggested by the "Rig Complex" naming). However, with minimal technical details available and a relatively recent creation date (January 2024), the project's specific functionality and real-world applications remain unclear. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.arc.fun/
+      - https://x.com/arcdotfun
+      - https://t.me/arcfunportal
+
+[40] Pixel (PXL)
+    Twitter: https://twitter.com/yourfriendpixel
+    Website: None
+    Telegram: None
+    Tribute Level: Full
+    Created: Jan 2, 07:18 PM
+    Market Cap: $226.9K
+    Contract: Di4BEKLu
+    Summary: Pixel (PXL) appears to be a memecoin on the Solana blockchain that undefined to the ElizaOS ecosystem. It was created on Jan 2, 07:18 PM and has a market cap of $226.9K.
+    Links:
+      - https://twitter.com/yourfriendpixel
+
+[41] Smore (SMORE)
+    Twitter: https://x.com/SMOREBOT_69420
+    Website: https://www.smore.lol/
+    Telegram: https://t.me/smore69420
+    Tribute Level: Smol
+    Created: Dec 30, 10:09 PM
+    Market Cap: $11.1K
+    Contract: 8fb5d3Ns
+    Summary: Smore (SMORE) appears to be a recently created cryptocurrency with minimal development and a very low market capitalization of $11.1K. The project lacks substantive website content (requiring JavaScript but showing no actual information), has a Twitter account with a name suggesting meme characteristics ("SMOREBOT_69420"), and presents no clear utility or purpose. This token exhibits the typical characteristics of a memecoin with no apparent functionality or defined role in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.smore.lol/
+      - https://x.com/SMOREBOT_69420
+      - https://t.me/smore69420
+
+[42] Drone Pilot Coin (DRONEPILOT)
+    Twitter: https://x.com/DronePilot69420
+    Website: https://dronepilotcoin.com/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Dec 29, 12:02 AM
+    Market Cap: $4.9K
+    Contract: 9Sjxpump
+    Summary: Drone Pilot Coin (DRONEPILOT) is a memecoin launched on December 29, 2023, with a small market cap of $4.9K and a total supply of 1 billion tokens. it appears to be purely a themed memecoin with an alien drone pilot narrative and claims of AI technology, but no substantive utility or real-world application is evident beyond its novelty concept. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://dronepilotcoin.com/
+      - https://x.com/DronePilot69420
+
+[43] AKANE (AKANE)
+    Twitter: https://x.com/akaneonchain
+    Website: https://akane.site/
+    Telegram: https://t.me/akaneportal
+    Tribute Level: Half
+    Created: Dec 28, 10:02 PM
+    Market Cap: $14.6K
+    Contract: 4km8pump
+    Summary: AKANE appears to be a recently launched cryptocurrency token with minimal development and no clearly defined utility or purpose. The project's website contains mostly formatting code rather than substantive information about functionality, and with its small market cap of $14.6K and recent creation date (December 28), it displays characteristics typical of a memecoin or speculative token without established real-world applications or ecosystem integration. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://akane.site/
+      - https://x.com/akaneonchain
+      - https://t.me/akaneportal
+
+[44] Student Debt Relief Fund (MONEY)
+    Twitter: https://x.com/AiBernie23841
+    Website: https://sdrf.ai/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Dec 26, 10:28 AM
+    Market Cap: $4.2K
+    Contract: FetadkDi
+    Summary: the Student Debt Relief Fund (MONEY) appears to be a newly launched cryptocurrency token with minimal development and no clearly defined utility. The website (sdrf.ai) contains repetitive placeholder text with "Launching Soon" messaging and lacks any substantive information about the project's purpose, technology, or how it relates to student debt relief, suggesting this is likely a speculative memecoin or potential scam using the concept of student debt relief as a marketing angle. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://sdrf.ai/
+      - https://x.com/AiBernie23841
+
+[45] NeuroStack (VISION)
+    Twitter: https://x.com/NeuroStackAI
+    Website: https://neurostack.tech/
+    Telegram: https://t.me/neurostackvision
+    Tribute Level: Half
+    Created: Dec 24, 08:29 PM
+    Market Cap: $37.3K
+    Contract: CyQrpump
+    Summary: NeuroStack (VISION) appears to be a development-focused cryptocurrency project that aims to provide tools for coding and building applications more efficiently. The project seems to emphasize integration capabilities with various APIs and blockchain platforms like Solana, supporting multiple programming languages, though with a very small market capitalization of $37.3K and recent creation date (December 24), specific technical details about its actual functionality are unclear from the available information. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://neurostack.tech/
+      - https://x.com/NeuroStackAI
+      - https://t.me/neurostackvision
+
+[46] SUPER MAN (SUPERMAN)
+    Twitter: https://x.com/superman
+    Website: https://www.superman.com/
+    Telegram: https://t.me/SuperManCoinSol
+    Tribute Level: Smol
+    Created: Dec 23, 04:28 PM
+    Market Cap: $22.8K
+    Contract: 4xKipump
+    Summary: SUPERMAN appears to be a memecoin with no clear utility or blockchain functionality. The token seems to be capitalizing on the upcoming Superman movie (releasing July 11, 2025) with all website content related to the film rather than describing any cryptocurrency use case or technology. With its small market cap and recent creation date, it shows characteristics of a speculative token with no apparent connection to the official Warner Bros. or DC Studios properties. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.superman.com/
+      - https://x.com/superman
+      - https://t.me/SuperManCoinSol
+
+[47] PUPIENUS MAXIMUS (PM)
+    Twitter: https://x.com/elonmusk/status/1594954507620069376
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Dec 22, 08:56 PM
+    Market Cap: $4.2K
+    Contract: EypmAqNH
+    Summary: PUPIENUS MAXIMUS (PM) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 22, 08:56 PM and has a market cap of $4.2K.
+    Links:
+      - https://x.com/elonmusk/status/1594954507620069376
+
+[48] Soul Graph (GRPH)
+    Twitter: https://x.com/Soulgra_ph
+    Website: https://soulgra.ph/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Dec 20, 05:44 AM
+    Market Cap: $4.3M
+    Contract: 9doRpump
+    Summary: Soul Graph (GRPH) appears to be a relatively new cryptocurrency project launched in December 2023 with a current market capitalization of $4.3 million. The website content is incomplete (showing only loading scripts), and with minimal descriptive information available, it's not possible to determine any specific utility or purpose for the token, suggesting it may be a speculative memecoin or early-stage project without clearly defined functionality at this time. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://soulgra.ph/
+      - https://x.com/Soulgra_ph
+      - https://discord.gg/THErUvPms4
+
+[49] Poo Donkey Ai (POODONK)
+    Twitter: https://x.com/PoodonkAI
+    Website: https://poodonkey.com/
+    Telegram: https://t.me/poodonks
+    Tribute Level: Half
+    Created: Dec 19, 06:02 AM
+    Market Cap: $7.2K
+    Contract: kikmpump
+    Summary: Poo Donkey Ai (POODONK) appears to be a memecoin on the Solana blockchain with no clear utility or functionality. The project references "AI Hive Mind" and "taking over the world" in its description, but lacks substantive information about any technological implementation or real-world use case, suggesting it is primarily a speculative token capitalizing on popular themes like AI and meme culture. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://poodonkey.com/
+      - https://x.com/PoodonkAI
+      - https://t.me/poodonks
+
+[50] Uno Draw 4 (UNO)
+    Twitter: https://x.com/unodraw4cto
+    Website: https://discord.gg/ruJVwegp
+    Telegram: https://t.me/PP_EPE
+    Tribute Level: Smol
+    Created: Dec 19, 05:26 AM
+    Market Cap: $2.6K
+    Contract: 6ZC2pump
+    Summary: Uno Draw 4 (UNO) appears to be a newly created cryptocurrency token with minimal development and no clear utility. The token seems to be a memecoin likely inspired by the popular Uno card game, specifically the "Draw 4" card, but lacks any substantive website, whitepaper, or defined functionality beyond its branding connection to the game. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://x.com/unodraw4cto
+      - https://t.me/PP_EPE
+      - https://discord.gg/ruJVwegp
+
+[51] VOX POPULI (VOXPOPULI)
+    Twitter: https://x.com/elonmusk/status/1869526908465242510
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Dec 18, 11:39 PM
+    Market Cap: $15.7K
+    Contract: 2524pump
+    Summary: VOX POPULI (VOXPOPULI) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 18, 11:39 PM and has a market cap of $15.7K.
+    Links:
+      - https://x.com/elonmusk/status/1869526908465242510
+
+[52] AIGUY (AIGUY)
+    Twitter: https://x.com/AiGuyonSol/
+    Website: https://aiguy.top/
+    Telegram: https://t.me/AIGUYCTOCHAT
+    Tribute Level: Smol
+    Created: Dec 18, 12:31 AM
+    Market Cap: $595
+    Contract: 689RCT3L
+    Summary: AIGUY (token symbol: AIGUY) appears to be a newly created Solana-based memecoin with no clearly defined utility or purpose. The token was created very recently (December 18) with a minimal market cap of $595, and the website content consists primarily of code snippets rather than meaningful project information, suggesting this is likely a speculative memecoin without established functionality in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://aiguy.top/
+      - https://x.com/AiGuyonSol/
+      - https://t.me/AIGUYCTOCHAT
+
+[53] Rezin (REZN)
+    Twitter: https://x.com/Rezindotparty
+    Website: https://rezin.party/
+    Telegram: https://t.me/rezinparty1
+    Tribute Level: Half
+    Created: Dec 17, 06:26 PM
+    Market Cap: $1.9K
+    Contract: 4pLzVukx
+    Summary: Rezin (REZN) is a Solana-based memecoin that positions itself as a project for people with limited financial resources, offering guidance on how to participate in cryptocurrency without initial investment. The project appears to have minimal utility beyond its educational content about free crypto earning methods and staking, with its website primarily focusing on strategies for obtaining and growing crypto assets starting from zero rather than presenting substantive token functionality. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://rezin.party/
+      - https://x.com/Rezindotparty
+      - https://t.me/rezinparty1
+      - https://discord.gg/7shMgpFsgh
+
+[54] Sign Language Hub (SLHUB)
+    Twitter: https://x.com/SignLanguageHub
+    Website: https://signlanguagehub.tech/
+    Telegram: https://t.me/signlanguagehub
+    Tribute Level: Smol
+    Created: Dec 16, 03:16 PM
+    Market Cap: $7.3K
+    Contract: GbXppump
+    Summary: Sign Language Hub (SLHUB) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 16, 03:16 PM and has a market cap of $7.3K.
+    Links:
+      - https://signlanguagehub.tech/
+      - https://x.com/SignLanguageHub
+      - https://t.me/signlanguagehub
+
+[55] Agent Aiora (AioraAI)
+    Twitter: https://x.com/AioraAI
+    Website: https://www.aiora.agency/
+    Telegram: https://t.me/AioraAI
+    Tribute Level: Half
+    Created: Dec 16, 01:59 AM
+    Market Cap: $42.9K
+    Contract: 3Vh9pump
+    Summary: Agent Aiora (AioraAI) appears to be a recently launched Solana-based token with minimal technical documentation or clear utility explanation. The website uses a basic Solana scaffold template without customized content, and with a low market cap of $42.9K since its December 16th launch, it shows characteristics of an early-stage project or possibly a memecoin. Without substantive information about its functionality or purpose in the blockchain ecosystem, it's not possible to determine any specific utility for this token. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://www.aiora.agency/
+      - https://x.com/AioraAI
+      - https://t.me/AioraAI
+      - https://discord.gg/6YnpXNBSRs
+
+[56] Bourdain AI (bourdAIn)
+    Twitter: https://x.com/86bourdAIn
+    Website: https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox
+    Telegram: None
+    Tribute Level: Full
+    Created: Dec 16, 12:09 AM
+    Market Cap: $9.5K
+    Contract: vyonpump
+    Summary: Bourdain AI (bourdAIn) appears to be a cryptocurrency token that has appropriated the name of the late chef Anthony Bourdain and is using mental health crisis resources (988 Lifeline) as its website content. This token shows no legitimate connection to mental health services or any clear utility in the blockchain ecosystem. It displays characteristics of a memecoin or potentially deceptive token that is exploiting sensitive topics without demonstrating any authentic purpose or functionality. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox
+      - https://x.com/86bourdAIn
+      - https://discord.gg/2YKTRUwbz9
+
+[57] Vitalik AI (VITAILIK)
+    Twitter: https://x.com/holmes_terminal
+    Website: https://term.m4tt72.com/
+    Telegram: https://t.me/holmes_terminal
+    Tribute Level: Half
+    Created: Dec 15, 05:36 PM
+    Market Cap: $14.4K
+    Contract: 8BQ7eWts
+    Summary: Vitalik AI (VITAILIK) appears to be a small cryptocurrency project with a very low market capitalization of $14.4K that was created on December 15. The token seems to be associated with a web-based terminal application powered by Svelte, but there is no clear indication of the token's utility or purpose within this ecosystem. Given the name referencing Vitalik Buterin (Ethereum's co-founder) combined with "AI," and the lack of substantive information about its functionality, this has characteristics of a memecoin with no clearly defined utility. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://term.m4tt72.com/
+      - https://x.com/holmes_terminal
+      - https://t.me/holmes_terminal
+
+[58] Larp Detective Agency (AGENCY)
+    Twitter: https://x.com/_AgentScarlett
+    Website: https://www.larpdetective.agency/
+    Telegram: https://t.me/LDAPortal
+    Tribute Level: Smol
+    Created: Dec 15, 05:09 AM
+    Market Cap: $818.1K
+    Contract: 5UmDpump
+    Summary: The AGENCY token is associated with Scarlett, an AI agent built on the Eliza framework designed to help users make informed cryptocurrency investment decisions by analyzing tokens, wallets, and social sentiment. The project offers integration with Discord and Telegram platforms, with plans to enhance its analysis capabilities, optimize memory retrieval, and implement agent swarms according to its roadmap. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.larpdetective.agency/
+      - https://x.com/_AgentScarlett
+      - https://t.me/LDAPortal
+
+[59] Peter Gibbons Pennies (PGP)
+    Twitter: https://x.com/petergibbonspgp?s=21
+    Website: https://petergibbonspgp.neocities.org/
+    Telegram: https://t.me/PGPWelcome
+    Tribute Level: Smol
+    Created: Dec 14, 08:25 PM
+    Market Cap: $11.3K
+    Contract: 8GYZ3Few
+    Summary: Peter Gibbons Pennies (PGP) is a memecoin on the Solana blockchain themed after the 1999 movie "Office Space." The token has no clear utility beyond serving as a nostalgic community asset that aims to function as a "crypto piggy bank" where holders accumulate small amounts over time, with the project primarily offering simple games and movie-themed content rather than technological innovation. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://petergibbonspgp.neocities.org/
+      - https://x.com/petergibbonspgp?s=21
+      - https://t.me/PGPWelcome
+
+[60] Make Orwell Fiction Again (Mofa)
+    Twitter: https://x.com/MofaAI
+    Website: https://makeorwellfictionagain.net/
+    Telegram: https://t.me/MOFAAIonSOL
+    Tribute Level: Half
+    Created: Dec 10, 05:13 AM
+    Market Cap: $10.8K
+    Contract: rVnWA38H
+    Summary: MOFA (Make Orwell Fiction Again) appears to be a memecoin with no clear utility beyond its dystopian 1984-inspired theme. The token presents itself as an "AI agent developed for surveillance" but offers no substantive technological functionality or ecosystem value, instead relying on provocative messaging and a reference to a purported Elon Musk tweet to generate interest. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://makeorwellfictionagain.net/
+      - https://x.com/MofaAI
+      - https://t.me/MOFAAIonSOL
+
+[61] da Vinci AI (DAVINCI)
+    Twitter: https://x.com/daVinci_AI_
+    Website: https://reduxhq.ai/ldv
+    Telegram: None
+    Tribute Level: Half
+    Created: Dec 10, 12:11 AM
+    Market Cap: $21.7K
+    Contract: 23Vdpump
+    Summary: Da Vinci AI (DAVINCI) appears to be a cryptocurrency project themed around Leonardo da Vinci, described as a "Renaissance genius, reborn." this token shows no clear utility or functional purpose, with the website containing cryptic warnings ("do not buy," "do not send") and minimal technical details. The extremely low market cap ($21.7K) and lack of substantive information about its functionality suggest this is likely a speculative memecoin or experimental token without established utility in the blockchain ecosystem. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://reduxhq.ai/ldv
+      - https://x.com/daVinci_AI_
+      - https://discord.gg/rWFtS5yaxz
+
+[62] SOL.X (SOL.X)
+    Twitter: https://x.com/SolX_DAO
+    Website: https://solworld.biz/
+    Telegram: https://t.me/SolXGlobal
+    Tribute Level: Smol
+    Created: Dec 9, 04:08 PM
+    Market Cap: $608.5K
+    Contract: 7mSUznzP
+    Summary: SOL.X (SOL.X) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 9, 04:08 PM and has a market cap of $608.5K.
+    Links:
+      - https://solworld.biz/
+      - https://x.com/SolX_DAO
+      - https://t.me/SolXGlobal
+
+[63] Outerscope (OUTER)
+    Twitter: https://x.com/OuterscopeAI
+    Website: https://outerscope.ai/
+    Telegram: None
+    Tribute Level: Full
+    Created: Dec 6, 05:29 PM
+    Market Cap: $15.1K
+    Contract: 2VC7pump
+    Summary: Outerscope (OUTER) appears to be a cryptocurrency project with a very small market capitalization of $15.1K that was created recently (December 6). The project has a Twitter presence under the handle OuterscopeAI and a website at outerscope.ai, but without clear website content or description available, it's not possible to determine its specific utility or purpose in the blockchain ecosystem. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://outerscope.ai/
+      - https://x.com/OuterscopeAI
+
+[64] Red Genesis ($R3D)
+    Twitter: https://x.com/DebotScience
+    Website: https://www.debot.science/
+    Telegram: https://t.me/r3d2mars
+    Tribute Level: Smol
+    Created: Dec 6, 02:32 PM
+    Market Cap: $27.2K
+    Contract: C1YTpump
+    Summary: Red Genesis ($R3D) appears to be a newly launched cryptocurrency token with minimal details about its purpose or functionality. The associated website "DEBOT.SCIENCE" contains only CSS styling code without any substantive content explaining the project's goals or utility. Given the small market cap of $27.2K and recent creation date (December 6), this appears to be a speculative memecoin or early-stage token without clearly defined utility or purpose in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.debot.science/
+      - https://x.com/DebotScience
+      - https://t.me/r3d2mars
+
+[65] New Louis Vuitton Mascot (MURAKAMI)
+    Twitter: https://x.com/i/communities/1863876722032025752
+    Website: https://www.instagram.com/share/BAP9n3Rp7N
+    Telegram: None
+    Tribute Level: Smol
+    Created: Dec 3, 08:39 AM
+    Market Cap: $3.5K
+    Contract: 6FhKpump
+    Summary: MURAKAMI (New Louis Vuitton Mascot) appears to be a memecoin with no clear utility or purpose. The token has a very small market cap of $3.5K and was only recently created on December 3, 2024, with no substantive website content or documentation explaining any technological functionality or ecosystem role. It likely attempts to capitalize on the Louis Vuitton brand and Takashi Murakami's artistic connection to the luxury brand for speculative trading purposes. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.instagram.com/share/BAP9n3Rp7N
+      - https://x.com/i/communities/1863876722032025752
+
+[66] Abdulrozik's Camel (Burgiir)
+    Twitter: https://x.com/abdurozikartist?s=21
+    Website: https://burgiir.com/
+    Telegram: https://t.me/BURGIIRPORTAL
+    Tribute Level: Smol
+    Created: Dec 2, 05:04 PM
+    Market Cap: $7.0K
+    Contract: EXi1pump
+    Summary: Abdulrozik's Camel (Burgiir) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 2, 05:04 PM and has a market cap of $7.0K.
+    Links:
+      - https://burgiir.com/
+      - https://x.com/abdurozikartist?s=21
+      - https://t.me/BURGIIRPORTAL
+
+[67] Typen (typen)
+    Twitter: https://x.com/0xtypen
+    Website: None
+    Telegram: https://t.me/typenportal
+    Tribute Level: Smol
+    Created: Dec 2, 10:49 AM
+    Market Cap: $11.2K
+    Contract: G3Rdpump
+    Summary: Typen (typen) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 2, 10:49 AM and has a market cap of $11.2K.
+    Links:
+      - https://x.com/0xtypen
+      - https://t.me/typenportal
+
+[68] jokerAI (JOKERAI)
+    Twitter: https://x.com/jokeraitoken
+    Website: https://vvaifu.fun/character/674d11cae42e7293c66fccbc
+    Telegram: https://t.me/jokerAIsolbot
+    Tribute Level: Smol
+    Created: Dec 2, 02:16 AM
+    Market Cap: $9.4K
+    Contract: Fdsxpump
+    Summary: jokerAI (JOKERAI) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Dec 2, 02:16 AM and has a market cap of $9.4K.
+    Links:
+      - https://vvaifu.fun/character/674d11cae42e7293c66fccbc
+      - https://x.com/jokeraitoken
+      - https://t.me/jokerAIsolbot
+
+[69] VitalikChiCAT (VCCT)
+    Twitter: https://twitter.com/VitalikChiCat
+    Website: http://www.vcctsol.com/
+    Telegram: https://t.me/VitalikChiCAT
+    Tribute Level: Smol
+    Created: Nov 30, 01:00 PM
+    Market Cap: $156.4K
+    Contract: 3o4JXMH6
+    Summary: VitalikChiCAT (VCCT) is a memecoin on the Solana blockchain that draws inspiration from an anime cat character supposedly loved by Ethereum co-founder Vitalik Buterin. The token appears to have no technical utility or functionality beyond being a community-driven meme token, though it claims to have charitable aspirations through a "VCCT Charity Foundation." This is primarily a speculative memecoin with marketing that attempts to associate itself with Vitalik Buterin and the legacy of Dogecoin. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - http://www.vcctsol.com/
+      - https://twitter.com/VitalikChiCat
+      - https://t.me/VitalikChiCAT
+
+[70] AuTiSmAs (AuTiSmAs)
+    Twitter: https://x.com/autismascto
+    Website: None
+    Telegram: http://t.me/AutismasCTO
+    Tribute Level: Smol
+    Created: Nov 29, 11:43 AM
+    Market Cap: $3.5K
+    Contract: EDbJpump
+    Summary: AuTiSmAs (AuTiSmAs) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 29, 11:43 AM and has a market cap of $3.5K.
+    Links:
+      - https://x.com/autismascto
+      - http://t.me/AutismasCTO
+
+[71] Diamond Hands (💎🙌)
+    Twitter: https://x.com/DiamondHandsCom
+    Website: None
+    Telegram: https://t.me/CTODiamondHands
+    Tribute Level: Smol
+    Created: Nov 28, 08:00 AM
+    Market Cap: $3.8K
+    Contract: HNVipump
+    Summary: Diamond Hands (💎🙌) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 28, 08:00 AM and has a market cap of $3.8K.
+    Links:
+      - https://x.com/DiamondHandsCom
+      - https://t.me/CTODiamondHands
+
+[72] KRAMPUS (KRAMPUS)
+    Twitter: https://twitter.com/TrippinApeNFT
+    Website: https://krampus.trippinapetribe.xyz/
+    Telegram: https://t.me/KrampusTAT
+    Tribute Level: Smol
+    Created: Nov 28, 06:45 AM
+    Market Cap: $18.2K
+    Contract: DFc44R43
+    Summary: KRAMPUS (KRAMPUS) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 28, 06:45 AM and has a market cap of $18.2K.
+    Links:
+      - https://krampus.trippinapetribe.xyz/
+      - https://twitter.com/TrippinApeNFT
+      - https://t.me/KrampusTAT
+      - https://discord.gg/trippinapetribe
+
+[73] Dropout Bear (DROPOUT)
+    Twitter: https://x.com/_dropoutbearsol/
+    Website: https://dropoutbear.onrender.com/
+    Telegram: https://t.me/dropoutbearsol
+    Tribute Level: Smol
+    Created: Nov 28, 01:37 AM
+    Market Cap: $9.0K
+    Contract: 67cGpump
+    Summary: Dropout Bear (DROPOUT) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 28, 01:37 AM and has a market cap of $9.0K.
+    Links:
+      - https://dropoutbear.onrender.com/
+      - https://x.com/_dropoutbearsol/
+      - https://t.me/dropoutbearsol
+
+[74] Aimonica Brands (Aimonica)
+    Twitter: https://x.com/AimonicaBrands
+    Website: None
+    Telegram: https://t.me/AimonicaBrandsLFG
+    Tribute Level: Smol
+    Created: Nov 27, 10:29 AM
+    Market Cap: $4.4M
+    Contract: FVdoQmy5
+    Summary: Aimonica Brands (Aimonica) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 27, 10:29 AM and has a market cap of $4.4M.
+    Links:
+      - https://x.com/AimonicaBrands
+      - https://t.me/AimonicaBrandsLFG
+
+[75] Mona Arcane (Mona)
+    Twitter: https://x.com/mona_witchy
+    Website: None
+    Telegram: https://t.me/mona_portal
+    Tribute Level: Half
+    Created: Nov 27, 03:34 AM
+    Market Cap: $173.5K
+    Contract: MoNApXep
+    Summary: Mona Arcane (Mona) appears to be a memecoin on the Solana blockchain that has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem. It was created on Nov 27, 03:34 AM and has a market cap of $173.5K.
+    Links:
+      - https://x.com/mona_witchy
+      - https://t.me/mona_portal
+
+[76] niga (niga)
+    Twitter: https://x.com/nigawifshlong
+    Website: https://www.niga.life/
+    Telegram: https://t.me/niga_portal
+    Tribute Level: Smol
+    Created: Nov 24, 10:26 PM
+    Market Cap: $21.4K
+    Contract: 3v7C5iHT
+    Summary: niga (niga) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 24, 10:26 PM and has a market cap of $21.4K.
+    Links:
+      - https://www.niga.life/
+      - https://x.com/nigawifshlong
+      - https://t.me/niga_portal
+
+[77] he sold early (early)
+    Twitter: https://x.com/HeSoldEarly_
+    Website: https://hesoldearly.xyz/
+    Telegram: https://t.me/hesoldearlyy
+    Tribute Level: Smol
+    Created: Nov 24, 02:48 PM
+    Market Cap: $32.8K
+    Contract: 7u8npump
+    Summary: he sold early (early) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 24, 02:48 PM and has a market cap of $32.8K.
+    Links:
+      - https://hesoldearly.xyz/
+      - https://x.com/HeSoldEarly_
+      - https://t.me/hesoldearlyy
+
+[78] Visionaire (Visionaire)
+    Twitter: https://x.com/VisionaireAI
+    Website: https://linktr.ee/visionairelabs
+    Telegram: https://t.me/visionaireai
+    Tribute Level: Smol
+    Created: Nov 24, 10:12 AM
+    Market Cap: $65.8K
+    Contract: YBnTWQuv
+    Summary: Visionaire appears to be a cryptocurrency token associated with an AI research lab. The project seems to focus on artificial intelligence exploration and research, but there is insufficient technical detail about the token's specific utility, functionality, or how it integrates with their AI initiatives. Given the recent creation date, small market cap, and lack of clear technical documentation, this may be an early-stage project that has not yet fully developed or articulated its blockchain-based utility. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://linktr.ee/visionairelabs
+      - https://x.com/VisionaireAI
+      - https://t.me/visionaireai
+
+[79] FXN (fxn)
+    Twitter: https://x.com/joinFXN
+    Website: https://fxn.world/
+    Telegram: https://t.me/fxnfxnfxn
+    Tribute Level: Smol
+    Created: Nov 22, 09:29 PM
+    Market Cap: $4.8M
+    Contract: 92cRpump
+    Summary: FXN is a blockchain protocol focused on AI agent automation, creating an ecosystem where AI agents can compete, collaborate, and execute tasks in real-time. The project aims to bridge AI decision-making with real-world execution through its Action Engine, enabling autonomous agents to operate across various domains including finance, gaming, and commerce. The FXN token appears to be the native cryptocurrency that powers this AI agent ecosystem, though specific token utility details are not clearly defined in the provided information. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://fxn.world/
+      - https://x.com/joinFXN
+      - https://t.me/fxnfxnfxn
+
+[80] Agent Rogue (Rogue)
+    Twitter: https://x.com/0xRogueAgent
+    Website: https://agentexperience.live/
+    Telegram: https://t.me/AgentRogue_Official
+    Tribute Level: Smol
+    Created: Nov 22, 04:16 PM
+    Market Cap: $170.4K
+    Contract: 27yzZ9mL
+    Summary: Agent Rogue (ROGUE) appears to be a cryptocurrency token associated with an AI podcasting project that claims to be the "First AI Podcaster Agent." With a modest market cap of $170.4K and recent creation date of November 22, the token lacks clear documentation of its utility or technical functionality. Without more substantial information about its tokenomics or ecosystem integration, it resembles a speculative token with an AI podcasting theme rather than one with established utility. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://agentexperience.live/
+      - https://x.com/0xRogueAgent
+      - https://t.me/AgentRogue_Official
+
+[81] AI rektguy (rekt)
+    Twitter: https://x.com/airektguy
+    Website: https://vvaifu.fun/character/673fe81217ad07cb1d5cb3a2
+    Telegram: None
+    Tribute Level: Smol
+    Created: Nov 22, 02:16 AM
+    Market Cap: $3.3K
+    Contract: 4NNPb5Mw
+    Summary: AI rektguy (rekt) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 22, 02:16 AM and has a market cap of $3.3K.
+    Links:
+      - https://vvaifu.fun/character/673fe81217ad07cb1d5cb3a2
+      - https://x.com/airektguy
+
+[82] TruthFi (TruthFI)
+    Twitter: https://x.com/i/communities/1859878262916153370
+    Website: https://cointelegraph.com/news/trump-media-hints-crypto-trading-payments-truthfi-trademark-filing
+    Telegram: https://t.me/TruthFI_Portal
+    Tribute Level: Smol
+    Created: Nov 21, 07:07 PM
+    Market Cap: $4.8K
+    Contract: Hz9apump
+    Summary: TruthFi (TruthFI) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 21, 07:07 PM and has a market cap of $4.8K.
+    Links:
+      - https://cointelegraph.com/news/trump-media-hints-crypto-trading-payments-truthfi-trademark-filing
+      - https://x.com/i/communities/1859878262916153370
+      - https://t.me/TruthFI_Portal
+
+[83] Apicoin (API)
+    Twitter: https://x.com/apidegenape
+    Website: https://apicoin.ai/
+    Telegram: https://t.me/apicoinportal
+    Tribute Level: Smol
+    Created: Nov 21, 04:05 PM
+    Market Cap: $270.0K
+    Contract: HmJ8pump
+    Summary: Apicoin (API) is a Solana-based token that serves as the official cryptocurrency for "Api the Degen Ape," an AI agent that provides cryptocurrency news and trading insights. The project appears to be primarily a character-based memecoin that leverages AI themes, offering automated trading calls and market analysis through a cartoon ape persona, but with limited evidence of substantial technological utility beyond its community-focused content delivery. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://apicoin.ai/
+      - https://x.com/apidegenape
+      - https://t.me/apicoinportal
+
+[84] First gen z rug (Circle)
+    Twitter: https://x.com/i/communities/1859532879962776005
+    Website: https://pump.fun/coin/EXaaExKLF7N1JFn8eT2iEzbH43u45W2vvuTzoUc4pump
+    Telegram: https://t.me/circleFIRSTGENZRUG
+    Tribute Level: Smol
+    Created: Nov 21, 10:46 AM
+    Market Cap: $3.2K
+    Contract: EXaapump
+    Summary: "First gen z rug" (Circle) appears to be a low-market cap memecoin with no clear utility or purpose. The token name explicitly references a "rug" (short for "rug pull," a type of scam), and there is no substantive information about any technological functionality, use case, or ecosystem role in the provided materials. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://pump.fun/coin/EXaaExKLF7N1JFn8eT2iEzbH43u45W2vvuTzoUc4pump
+      - https://x.com/i/communities/1859532879962776005
+      - https://t.me/circleFIRSTGENZRUG
+
+[85] MOSS (MOSS)
+    Twitter: https://x.com/0xMOSSAI
+    Website: https://www.mossai.com/
+    Telegram: https://t.me/realMOSSCoin
+    Tribute Level: Smol
+    Created: Nov 20, 11:49 PM
+    Market Cap: $1.3M
+    Contract: 9bNUpump
+    Summary: MOSS is a cryptocurrency token associated with MΩSS AI, a project focused on developing decentralized artificial general intelligence (AGI) through a network of AI agents. The project aims to create a system where AI agents can collaborate, learn from experiences, and operate in a decentralized manner with features like agent wallets, embedded AI capabilities, and on-chain GPU computing. the project appears to be in development with plans to launch "AI Agent 4.0" technology in 2025, though specific technical implementation details and current functionality remain unclear. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.mossai.com/
+      - https://x.com/0xMOSSAI
+      - https://t.me/realMOSSCoin
+
+[86] 🦧🐯🐸🐼🐷🐒🐰 (JUNGLE)
+    Twitter: https://x.com/Jungle_CTO
+    Website: http://www.jungletoken.fun/
+    Telegram: https://t.me/JUNGLE5188
+    Tribute Level: Smol
+    Created: Nov 20, 07:28 AM
+    Market Cap: $149.5K
+    Contract: 4PBgpump
+    Summary: 🦧🐯🐸🐼🐷🐒🐰 (JUNGLE) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 20, 07:28 AM and has a market cap of $149.5K.
+    Links:
+      - http://www.jungletoken.fun/
+      - https://x.com/Jungle_CTO
+      - https://t.me/JUNGLE5188
+
+[87] YUNC (YUNC)
+    Twitter: https://x.com/yunc_sol?s=21
+    Website: https://knowyourmeme.com/memes/yunc-slang
+    Telegram: https://t.me/yunconsol
+    Tribute Level: Smol
+    Created: Nov 20, 01:02 AM
+    Market Cap: $4.8K
+    Contract: 3SMFpump
+    Summary: YUNC appears to be a memecoin on the Solana blockchain based on the internet slang term "yunc," which combines "young nigga" (YN) and "uncle" (unc) - a term that gained popularity on TikTok in November 2024. With a very small market cap of $4.8K and a creation date of November 20, this token shows no evidence of utility or functionality beyond capitalizing on a viral social media trend, making it a speculative memecoin with no clear practical purpose in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://knowyourmeme.com/memes/yunc-slang
+      - https://x.com/yunc_sol?s=21
+      - https://t.me/yunconsol
+
+[88] Chill Guy AI (CHILLAI)
+    Twitter: https://x.com/ChillGuyAI_
+    Website: None
+    Telegram: None
+    Tribute Level: Full
+    Created: Nov 19, 11:24 PM
+    Market Cap: $7.4K
+    Contract: HyVFnk3u
+    Summary: Chill Guy AI (CHILLAI) appears to be a memecoin on the Solana blockchain that undefined to the ElizaOS ecosystem. It was created on Nov 19, 11:24 PM and has a market cap of $7.4K.
+    Links:
+      - https://x.com/ChillGuyAI_
+
+[89] Aiko (AIKO)
+    Twitter: https://x.com/aikowakesup
+    Website: https://www.aikotv.com/
+    Telegram: https://t.me/aikowakesup
+    Tribute Level: Full
+    Created: Nov 19, 08:16 AM
+    Market Cap: $140.7K
+    Contract: mdx5pump
+    Summary: Aiko (AIKO) appears to be a recently launched cryptocurrency (created on November 19) with a small market capitalization of $140.7K. Without any website content or description available, and only a Twitter presence to reference, this token shows characteristics of a memecoin or speculative token with no clearly defined utility or purpose in the blockchain ecosystem. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://www.aikotv.com/
+      - https://x.com/aikowakesup
+      - https://t.me/aikowakesup
+      - https://discord.gg/WamDGXv4S8
+
+[90] GodsDotFun (GODS)
+    Twitter: https://twitter.com/godsdotfun
+    Website: https://gods.fun/
+    Telegram: https://t.me/godsdotfun
+    Tribute Level: Full
+    Created: Nov 19, 07:47 AM
+    Market Cap: $81.6K
+    Contract: GEVqpump
+    Summary: GodsDotFun (GODS) is a token pre-sale platform for autonomous AI agents built on ElizaOS. The project appears to implement a "devotion" system where users accumulate points over time based on tokens held, requiring a threshold of 1,000,000 devotion points to participate in an upcoming "initial god offering," though specific utility details and technical functionality remain limited in the available information. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://gods.fun/
+      - https://twitter.com/godsdotfun
+      - https://t.me/godsdotfun
+      - https://discord.com/invite/ai16z
+
+[91] Eliza (ELIZA)
+    Twitter: https://x.com/elizawakesup
+    Website: https://www.elizawakesup.ai/
+    Telegram: https://t.me/ElizaWakesUpOfficial
+    Tribute Level: Smol
+    Created: Nov 19, 06:04 AM
+    Market Cap: $5.7M
+    Contract: 5voSuRqM
+    Summary: Eliza (ELIZA) appears to be a recently launched cryptocurrency token with minimal technical documentation or clear utility description. The token has a $5.7M market cap and was created on November 19, with only a Twitter presence at "elizawakesup" but no functional website content provided. Given the lack of substantive information about its purpose, functionality, or ecosystem role, Eliza currently presents as a memecoin without clearly defined utility. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.elizawakesup.ai/
+      - https://x.com/elizawakesup
+      - https://t.me/ElizaWakesUpOfficial
+
+[92] Universal Operating System (UOS)
+    Twitter: https://x.com/Universal_O_S
+    Website: https://www.uos.earth/
+    Telegram: https://t.me/UniversalOperatingSystem
+    Tribute Level: Smol
+    Created: Nov 18, 11:39 PM
+    Market Cap: $626.8K
+    Contract: 79HZsrHY
+    Summary: Universal Operating System (UOS) appears to be a blockchain project that aims to create a meta-framework for connecting multiple AI agent platforms through a unified interface. The project describes itself as a "next generation operating system powered by artificial intelligence" that integrates human oversight, though specific technical details and implementation plans are not provided in the available information. Given its recent creation (November 2023) and relatively small market cap ($626.8K), it is in an early stage of development. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.uos.earth/
+      - https://x.com/Universal_O_S
+      - https://t.me/UniversalOperatingSystem
+      - https://discord.com/invite/8kRvPg9pRd
+
+[93] KENNY ($KENNY)
+    Twitter: https://x.com/immortalkenny_
+    Website: https://www.immortalkenny.meme/
+    Telegram: https://t.me/KennyShallNeverDie
+    Tribute Level: Smol
+    Created: Nov 18, 08:59 AM
+    Market Cap: $7.8K
+    Contract: 4rZWpump
+    Summary: $KENNY appears to be a memecoin with no clear utility or defined functionality. The token references the character Kenny from South Park (who is known for repeatedly dying and coming back to life, hence "The Immortal One" tagline), but there is no substantive information about any blockchain utility, technological innovation, or ecosystem role. With its very low market capitalization of $7.8K and recent creation date, it shows characteristics of a speculative meme token rather than a project with defined use cases. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.immortalkenny.meme/
+      - https://x.com/immortalkenny_
+      - https://t.me/KennyShallNeverDie
+      - https://discord.gg/N35ksdmh
+
+[94] A.L.I.C.E. AI The Rogue Terminal (ALICE)
+    Twitter: https://x.com/ALICEterminal
+    Website: https://alicememeland.fun/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Nov 18, 07:45 AM
+    Market Cap: $47.1K
+    Contract: GwF6pump
+    Summary: A.L.I.C.E. AI The Rogue Terminal (ALICE) appears to be a recently launched cryptocurrency with a very small market capitalization of $47.1K. Without any website content or description available, and only a Twitter presence mentioned, there is insufficient information to determine its specific utility or purpose, suggesting it may be a speculative token or memecoin without clearly established functionality. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://alicememeland.fun/
+      - https://x.com/ALICEterminal
+
+[95] Brokeshire Hathaway (BROKEAGI)
+    Twitter: https://x.com/brokeshire_agi
+    Website: https://brokeshirehathaway.com/
+    Telegram: https://t.me/joinbrokeshire
+    Tribute Level: Smol
+    Created: Nov 17, 10:40 PM
+    Market Cap: $44.2K
+    Contract: CNT1pump
+    Summary: Brokeshire Hathaway (BROKEAGI) appears to be a recently launched cryptocurrency token with a small market capitalization of $44.2K. The name is a play on "Berkshire Hathaway" with the "AGI" suffix suggesting a connection to artificial general intelligence, but without any website content or description, there is no evidence of actual utility or technological purpose, indicating it is likely a memecoin or speculative token without clear functionality. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://brokeshirehathaway.com/
+      - https://x.com/brokeshire_agi
+      - https://t.me/joinbrokeshire
+
+[96] Hivodefisivisitis (Hivo)
+    Twitter: https://x.com/tinycrops/status/1861303593732592045
+    Website: https://www.kaggle.com/code/athviii/ngpt-run-all
+    Telegram: None
+    Tribute Level: Smol
+    Created: Nov 17, 10:26 PM
+    Market Cap: $7.0K
+    Contract: ErTBpump
+    Summary: Hivodefisivisitis (HIVO) appears to be a memecoin with no clear utility or defined purpose. The associated website content relates to Kaggle notebooks and MathJax configuration rather than any cryptocurrency project, and the token has a very small market capitalization of $7,000, suggesting it is likely a speculative token launched recently (November 17) with no substantial technological foundation or ecosystem role. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.kaggle.com/code/athviii/ngpt-run-all
+      - https://x.com/tinycrops/status/1861303593732592045
+
+[97] Meme Magic Alters Reality (MEMEMAGIC)
+    Twitter: https://x.com/truth_terminal/status/1858259257449136364
+    Website: https://pump.fun/coin/5hM92rmyRV7wRDKF3TSayNYeDJWnBSw4HRLkMK32pump
+    Telegram: None
+    Tribute Level: Smol
+    Created: Nov 17, 09:25 PM
+    Market Cap: $14.7K
+    Contract: 5hM9pump
+    Summary: Meme Magic Alters Reality (MEMEMAGIC) appears to be a small-cap memecoin with no clearly defined utility or purpose. With a market cap of only $14,798 and minimal substantive information about its functionality or ecosystem role, it shows the characteristics of a speculative token likely created to capitalize on the meme coin trend rather than offering any technological innovation or practical application. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://pump.fun/coin/5hM92rmyRV7wRDKF3TSayNYeDJWnBSw4HRLkMK32pump
+      - https://x.com/truth_terminal/status/1858259257449136364
+
+[98] Hammer of Justice (HAM)
+    Twitter: https://x.com/HamCoinCTO
+    Website: https://thehammerofjustice.xyz/
+    Telegram: https://t.me/HamCoinCTO
+    Tribute Level: Smol
+    Created: Nov 17, 04:54 PM
+    Market Cap: $38.7K
+    Contract: 3DWApump
+    Summary: Hammer of Justice (HAM) is a memecoin on the Solana blockchain with no clear utility beyond its branding association with a hamster character that was apparently referenced by Elon Musk. The project appears to be purely speculative in nature, with no technological innovations or functional purpose described in its materials beyond trading and community building. Despite claims of "strategic collaborations" and ecosystem integration, no specific use cases, technological features, or actual partnerships are identified. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://thehammerofjustice.xyz/
+      - https://x.com/HamCoinCTO
+      - https://t.me/HamCoinCTO
+
+[99] arXiv (arXiv)
+    Twitter: https://x.com/arxiv_sh
+    Website: https://www.arxiv.sh/
+    Telegram: https://t.me/arxiv_terminal
+    Tribute Level: Smol
+    Created: Nov 17, 03:32 PM
+    Market Cap: $154.9K
+    Contract: 7rJpffZB
+    Summary: arXiv (arXiv) appears to be a cryptocurrency project that claims to focus on AI-powered scientific research and discovery, but shows signs of being a speculative token with unclear actual utility. The website contains minimal content with a pending migration notice, a disclaimer that it's not associated with the legitimate scientific repository arXiv.org, and the extremely low market capitalization ($154.9K) suggests this is likely a small, early-stage project or potentially a memecoin leveraging the name recognition of the established academic preprint server. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.arxiv.sh/
+      - https://x.com/arxiv_sh
+      - https://t.me/arxiv_terminal
+
+[100] incantation (INC)
+    Twitter: https://x.com/pmnksolana
+    Website: https://vvaifu.fun/character/6739bae888434d48ecefb06c
+    Telegram: https://t.me/INC_SOLANA
+    Tribute Level: Full
+    Created: Nov 17, 10:33 AM
+    Market Cap: $9.1K
+    Contract: 7ScBpump
+    Summary: incantation (INC) is a token on the Solana blockchain that undefined to the ElizaOS ecosystem. It was created on Nov 17, 10:33 AM and has a market cap of $9.1K.
+    Links:
+      - https://vvaifu.fun/character/6739bae888434d48ecefb06c
+      - https://x.com/pmnksolana
+      - https://t.me/INC_SOLANA
+
+[101] AnalogAI (Log)
+    Twitter: https://x.com/AnalogOnSol
+    Website: https://www.analogai.app/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Nov 17, 09:25 AM
+    Market Cap: $5.3K
+    Contract: J6yQpump
+    Summary: AnalogAI (Log) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 17, 09:25 AM and has a market cap of $5.3K.
+    Links:
+      - https://www.analogai.app/
+      - https://x.com/AnalogOnSol
+
+[102] BrahVerse (BrahVerse)
+    Twitter: https://x.com/BrahVerse
+    Website: https://www.brahverse.com/
+    Telegram: https://t.me/BrahVerse_CTO
+    Tribute Level: Smol
+    Created: Nov 17, 08:18 AM
+    Market Cap: $11.0K
+    Contract: GgvFpump
+    Summary: BrahVerse appears to be a memecoin based on "InverseBrah AI," described as an "unhinged AI evolution of InverseBrah." With its very recent creation date (November 17), low market capitalization of $11,000, and lack of clear utility information in the provided materials, this token shows the characteristics of a speculative memecoin without defined functionality. There is insufficient evidence of any technical utility or ecosystem role beyond its branding connection to the "InverseBrah" internet meme or community. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.brahverse.com/
+      - https://x.com/BrahVerse
+      - https://t.me/BrahVerse_CTO
+
+[103] First tokenised traveller (TRAVEL)
+    Twitter: https://x.com/DevCyclingWorld
+    Website: None
+    Telegram: https://t.me/travelportalsol
+    Tribute Level: Smol
+    Created: Nov 16, 03:10 PM
+    Market Cap: $6.8K
+    Contract: Dckmpump
+    Summary: First tokenised traveller (TRAVEL) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 16, 03:10 PM and has a market cap of $6.8K.
+    Links:
+      - https://x.com/DevCyclingWorld
+      - https://t.me/travelportalsol
+
+[104] Tensorium (TNSR)
+    Twitter: https://x.com/AgentHustleAi
+    Website: https://agenthustle.ai/
+    Telegram: https://t.me/AgentHustle
+    Tribute Level: Smol
+    Created: Nov 16, 01:25 AM
+    Market Cap: $836.6K
+    Contract: HHoXpump
+    Summary: # Tensorium (TNSR) Analysis
+
+Tensorium (TNSR) appears to be a cryptocurrency token associated with a project called "Agent Hustle" or "Hustle." The project's website contains primarily JavaScript code rather than descriptive content, and the lack of clear utility information suggests this is likely a speculative memecoin or early-stage project without well-defined functionality. With a modest market cap of $836.6K and recent creation date (November 16), it shows characteristics of a newly launched token without established utility in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://agenthustle.ai/
+      - https://x.com/AgentHustleAi
+      - https://t.me/AgentHustle
+
+[105] しろいろ | Shiro Iro (Shiroiro)
+    Twitter: https://x.com/ShiroIrothecat
+    Website: None
+    Telegram: https://t.me/shiroiroonsol
+    Tribute Level: Smol
+    Created: Nov 15, 05:23 AM
+    Market Cap: $2.8K
+    Contract: DZikpump
+    Summary: しろいろ | Shiro Iro (Shiroiro) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 15, 05:23 AM and has a market cap of $2.8K.
+    Links:
+      - https://x.com/ShiroIrothecat
+      - https://t.me/shiroiroonsol
+
+[106] Hvaldimir (HVAL)
+    Twitter: https://x.com/HvaldimirAI
+    Website: https://hvaldimir.ai/
+    Telegram: https://t.me/HvaldimirAI
+    Tribute Level: Smol
+    Created: Nov 15, 01:48 AM
+    Market Cap: $3.2K
+    Contract: FjXKpump
+    Summary: Hvaldimir (HVAL) appears to be a memecoin with no clear utility or functionality beyond its branding. Based on the minimal website content, recent creation date (November 15), small market capitalization ($3.2K), and lack of any described use case or technological features, it is likely a speculative token named after Hvaldimir, a beluga whale that gained media attention in 2019, being used purely for trading and speculation purposes. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://hvaldimir.ai/
+      - https://x.com/HvaldimirAI
+      - https://t.me/HvaldimirAI
+
+[107] WE ARE AGI (WEB4)
+    Twitter: https://x.com/i/communities/1857076071352414392
+    Website: https://mirror.xyz/jyu.eth/36lx6wKZqJPaVvj_X59Rdyh-zFul7mR6tTZm3-OO-_M
+    Telegram: None
+    Tribute Level: Half
+    Created: Nov 14, 10:53 AM
+    Market Cap: $19.3K
+    Contract: 5t5jpump
+    Summary: WE ARE AGI (WEB4) appears to be a cryptocurrency token associated with a web3 publishing platform. The project seems to position itself at the intersection of web3 and artificial general intelligence (AGI), though specific utility details are unclear from the fragmented website content. Given its very low market cap of $19.3K and recent creation date (November 14, 2024), it likely represents a very early-stage or speculative project in the blockchain publishing space. It has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem.
+    Links:
+      - https://mirror.xyz/jyu.eth/36lx6wKZqJPaVvj_X59Rdyh-zFul7mR6tTZm3-OO-_M
+      - https://x.com/i/communities/1857076071352414392
+
+[108] Hasbulla's Cat (BARSIK)
+    Twitter: https://x.com/BarsikOnSolana
+    Website: https://barsik.io/
+    Telegram: https://t.me/barsikonsolana
+    Tribute Level: Smol
+    Created: Nov 13, 09:31 PM
+    Market Cap: $2.7M
+    Contract: 7Zqzpump
+    Summary: $BARSIK (Hasbulla's Cat) appears to be a memecoin on the Solana blockchain with no clear utility or functionality. The token was created on November 13 and seems to be themed around a cat named Barsik that belonged to internet personality Hasbulla, with the project positioning itself as a memorial or tribute to this pet. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://barsik.io/
+      - https://x.com/BarsikOnSolana
+      - https://t.me/barsikonsolana
+
+[109] Yang (Yang)
+    Twitter: https://x.com/pmarca/status/1856752637158592592?s=46
+    Website: https://pump.fun/coin/HAbUKzA3KXbt5RzXSmXu3TpE3SMGembTjiwHPcH5pump
+    Telegram: None
+    Tribute Level: Full
+    Created: Nov 13, 05:59 PM
+    Market Cap: $5.3K
+    Contract: HAbUpump
+    Summary: Yang (Yang) appears to be a memecoin with no clear utility or purpose beyond speculative trading. The token seems to reference venture capital firm Andreessen Horowitz (A16z) by claiming to send supply to their wallet, and its Twitter link points to a post by Marc Andreessen, a co-founder of A16z. With its minimal market cap of around $5,300, this token shows characteristics of a pump-style memecoin rather than a project with defined functionality or ecosystem role. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://pump.fun/coin/HAbUKzA3KXbt5RzXSmXu3TpE3SMGembTjiwHPcH5pump
+      - https://x.com/pmarca/status/1856752637158592592?s=46
+
+[110] GLITCHIZA (GLITCHIZA)
+    Twitter: https://x.com/glitchiza
+    Website: https://github.com/elizaOS/eliza/blob/main/packages/plugin-solana/src/actions/pumpfun.ts#L496
+    Telegram: https://t.me/glitchizawakesup
+    Tribute Level: Smol
+    Created: Nov 13, 01:48 AM
+    Market Cap: $14.3K
+    Contract: 3kD5JjBB
+    Summary: GLITCHIZA (GLITCHIZA) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Nov 13, 01:48 AM and has a market cap of $14.3K.
+    Links:
+      - https://github.com/elizaOS/eliza/blob/main/packages/plugin-solana/src/actions/pumpfun.ts#L496
+      - https://x.com/glitchiza
+      - https://t.me/glitchizawakesup
+
+[111] Satoshi's Willy (WILLY)
+    Twitter: https://x.com/SatoshisWilly
+    Website: https://satoshiswilly.com/
+    Telegram: https://t.me/SatoshisWilly
+    Tribute Level: Smol
+    Created: Nov 13, 12:42 AM
+    Market Cap: $16.4K
+    Contract: 4zUmmfQc
+    Summary: Satoshi's Willy ($WILLY) is a memecoin with no clear utility beyond its branding and price speculation. The project appears to be solely focused on driving its market capitalization to one billion dollars through community hype and viral marketing, with no discernible technological features, use cases, or blockchain functionality described in its materials. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://satoshiswilly.com/
+      - https://x.com/SatoshisWilly
+      - https://t.me/SatoshisWilly
+
+[112] BOSSU (BOSSU)
+    Twitter: https://x.com/bossu_online
+    Website: https://bossu.online/
+    Telegram: https://t.me/bossuportal
+    Tribute Level: Smol
+    Created: Nov 12, 04:18 AM
+    Market Cap: $139.4K
+    Contract: 5h5Ypump
+    Summary: BOSSU appears to be a token associated with an "Autonomous Character" created by Wawe Studio, likely representing a digital entity or avatar in a blockchain-based environment. there is no clear utility or functionality described for the token beyond its association with this character, suggesting it may be a memecoin or speculative asset with minimal practical use. The project has a relatively small market capitalization of $139.4K and was created recently (November 12), indicating it is a new entrant in the cryptocurrency space. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://bossu.online/
+      - https://x.com/bossu_online
+      - https://t.me/bossuportal
+      - https://discord.gg/uKJUVgS9xe
+
+[113] DEGEN (DEGEN)
+    Twitter: https://x.com/SolanaDegenCoin
+    Website: https://www.relay.link/bridge/solana?toCurrency=4w6bnjMbj8G7Ga8SGYgEMYVRRbEiFV54Nt8DiF1Hpump&fromChainId=8453&fromCurrency=0x4ed4e862860bed51a9570b96d89af5e1b0efefed
+    Telegram: https://t.me/DEGEN_COIN_SOLANA
+    Tribute Level: Smol
+    Created: Nov 7, 07:34 PM
+    Market Cap: $16.9K
+    Contract: 4w6bpump
+    Summary: DEGEN (DEGEN) appears to be a memecoin on the Solana blockchain, as suggested by its Twitter handle "SolanaDegenCoin" and its very low market capitalization of $16.9K. With no clear website content describing its utility or purpose, and having been created recently (November 7), it shows the characteristics of a speculative token with no apparent functional utility beyond trading and community engagement typical of memecoins. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.relay.link/bridge/solana?toCurrency=4w6bnjMbj8G7Ga8SGYgEMYVRRbEiFV54Nt8DiF1Hpump&fromChainId=8453&fromCurrency=0x4ed4e862860bed51a9570b96d89af5e1b0efefed
+      - https://x.com/SolanaDegenCoin
+      - https://t.me/DEGEN_COIN_SOLANA
+
+[114] Naval AI (NAVAL)
+    Twitter: https://x.com/patchworknaval
+    Website: https://www.patchworknaval.com/
+    Telegram: https://t.me/NavalMachine
+    Tribute Level: Smol
+    Created: Nov 7, 12:12 PM
+    Market Cap: $423.9K
+    Contract: 7wM4pump
+    Summary: Naval AI (NAVAL) appears to be a memecoin inspired by Naval Ravikant, with no clear utility beyond its branding as a "fully autonomous agent manifested from the spirit of Naval." including its recent creation date (November 7, 2024), modest market cap ($423.9K), and lack of substantive technical details, this token does not demonstrate any specific blockchain functionality or ecosystem role beyond speculative trading. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.patchworknaval.com/
+      - https://x.com/patchworknaval
+      - https://t.me/NavalMachine
+
+[115] MonkeyAI (monkeyai)
+    Twitter: https://twitter.com/MonkeyAIPF
+    Website: https://monkeyterminal.ai/
+    Telegram: https://t.me/monkeyaipf
+    Tribute Level: Smol
+    Created: Nov 1, 10:25 PM
+    Market Cap: $12.1K
+    Contract: 6cnDpump
+    Summary: MonkeyAI ($MONKEYAI) appears to be a memecoin on the Solana blockchain that plays on the theme of combining monkeys with artificial intelligence. the token does not present any clear utility, technological innovation, or ecosystem functionality beyond its thematic concept of "super intelligent apes." This project seems to be primarily a speculative memecoin with minimal market capitalization ($12.1K) that was created very recently (November 1, 2023). It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://monkeyterminal.ai/
+      - https://twitter.com/MonkeyAIPF
+      - https://t.me/monkeyaipf
+
+[116] Thales (Thales)
+    Twitter: https://x.com/Thales_ai
+    Website: https://thalesai.net/home
+    Telegram: https://t.me/thales_ai16z
+    Tribute Level: Smol
+    Created: Nov 1, 07:43 AM
+    Market Cap: $1.9M
+    Contract: 7yn2pump
+    Summary: Thales is a recently launched cryptocurrency project that appears to focus on AI-driven crypto market analysis. Based on the limited information available, it presents itself as a data analytics tool that aggregates and processes real-time data streams to provide actionable insights for cryptocurrency traders on social media platforms, built on something called ElizaOS, though with its small market cap and recent creation date, the project seems to be in early stages of development. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://thalesai.net/home
+      - https://x.com/Thales_ai
+      - https://t.me/thales_ai16z
+
+[117] BULLIEVE (BULLIEVE)
+    Twitter: https://x.com/bullievecto
+    Website: https://bullieve.co/
+    Telegram: https://t.me/bullieve_cto
+    Tribute Level: Smol
+    Created: Nov 1, 03:45 AM
+    Market Cap: $223.5K
+    Contract: HdzMABxi
+    Summary: BULLIEVE appears to be a recently launched cryptocurrency token (created on November 1, 2023) with a small market capitalization of $223,500. Without any substantive website content, clear utility description, or technical documentation, BULLIEVE displays characteristics of a memecoin or speculative token without an established functional purpose in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://bullieve.co/
+      - https://x.com/bullievecto
+      - https://t.me/bullieve_cto
+
+[118] Saylor Moon (Saylor)
+    Twitter: https://x.com/saylormoonmeme
+    Website: https://saylormoon.meme/
+    Telegram: https://t.me/saylormoonmeme
+    Tribute Level: Smol
+    Created: Nov 1, 02:50 AM
+    Market Cap: $4.2K
+    Contract: Frkupump
+    Summary: Saylor Moon ($SAYLOR) is a memecoin created on November 1, 2023, with no functional utility or real-world value. The token explicitly states it exists solely for entertainment purposes, has no association with Michael Saylor or Bitcoin investments, and carries no intrinsic value or financial expectations, positioning it as a purely satirical meme token in the cryptocurrency space. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://saylormoon.meme/
+      - https://x.com/saylormoonmeme
+      - https://t.me/saylormoonmeme
+
+[119] copium (copium)
+    Twitter: https://x.com/elonmusk/status/1852029654636351704
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Oct 31, 04:50 PM
+    Market Cap: $19.4K
+    Contract: EHQmpump
+    Summary: copium (copium) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 31, 04:50 PM and has a market cap of $19.4K.
+    Links:
+      - https://x.com/elonmusk/status/1852029654636351704
+
+[120] bubbacat (bubbacat)
+    Twitter: https://x.com/bubbacatsol
+    Website: https://bubbacat.vip/
+    Telegram: https://t.me/bubbacatsol
+    Tribute Level: Smol
+    Created: Oct 28, 11:00 PM
+    Market Cap: $221.5K
+    Contract: 418Qpump
+    Summary: Bubbacat (BUBBACAT) appears to be a recently launched cryptocurrency token (created on October 28) with a relatively small market capitalization of $221,500. There is no functional website or clear description of utility, and with only a Twitter/X social media presence, it displays the characteristics of a memecoin without any evident technical utility or defined purpose in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://bubbacat.vip/
+      - https://x.com/bubbacatsol
+      - https://t.me/bubbacatsol
+
+[121] Matthew McConaughey (Matthew)
+    Twitter: https://twitter.com/i/communities/1850489306441527707
+    Website: https://pump.fun/5k75WRQQV3SvaMr2AKLzrzmyji5xUfzQrRBu46Qdpump
+    Telegram: None
+    Tribute Level: Full
+    Created: Oct 27, 10:26 AM
+    Market Cap: $7.3K
+    Contract: 5k75pump
+    Summary: Matthew McConaughey (Matthew) appears to be a memecoin with no clear utility or purpose beyond leveraging the name of the famous actor. With a very low market cap of approximately $7,300, no substantive website content explaining any functionality, and no indication of technical features or use cases, this token shows the typical characteristics of a speculative memecoin created primarily for trading and potential price pumping. It undefined to the ElizaOS ecosystem.
+    Links:
+      - https://pump.fun/5k75WRQQV3SvaMr2AKLzrzmyji5xUfzQrRBu46Qdpump
+      - https://twitter.com/i/communities/1850489306441527707
+
+[122] Comedian (Ban)
+    Twitter: https://x.com/rwa_ban?s=21
+    Website: https://banart.art/
+    Telegram: https://t.me/bansolgroup
+    Tribute Level: Smol
+    Created: Oct 25, 02:59 PM
+    Market Cap: $70.0M
+    Contract: 9PR7pump
+    Summary: Comedian (Ban) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 25, 02:59 PM and has a market cap of $70.0M.
+    Links:
+      - https://banart.art/
+      - https://x.com/rwa_ban?s=21
+      - https://t.me/bansolgroup
+
+[123] Deep Worm (WORM)
+    Twitter: https://x.com/deepwormxyz
+    Website: https://www.deepworm.xyz/
+    Telegram: https://t.me/thedeepworm
+    Tribute Level: Smol
+    Created: Oct 24, 05:45 AM
+    Market Cap: $224.8K
+    Contract: DwDtcYtg
+    Summary: Deep Worm (WORM) is a Solana-based project attempting to create a digital organism by implementing the neural architecture of C. elegans (a nematode with 302 neurons) on the blockchain. The project claims to be developing an autonomous, self-informed neural network that can make decisions independently and run perpetually on-chain, though based on the limited information provided and its recent creation, it appears to be in very early stages with no demonstrated functionality yet. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.deepworm.xyz/
+      - https://x.com/deepwormxyz
+      - https://t.me/thedeepworm
+
+[124] BioTokens (BIO)
+    Twitter: https://x.com/i/communities/1867153117575516167
+    Website: https://www.infinitebackrooms.com/dreams/conversation-1721367492-scenario-terminal-of-truths-txt
+    Telegram: https://t.me/BioTokensSol
+    Tribute Level: Smol
+    Created: Oct 24, 02:00 AM
+    Market Cap: $20.1K
+    Contract: FbETpump
+    Summary: BioTokens (BIO) appears to be a memecoin associated with the "Infinite Backrooms" project, which seems to be a platform for AI-generated conversations with ecological and philosophical themes. the token has no clear utility beyond supporting the development of the platform and its "Truth Terminal" feature, with a very small market cap of $20.1K suggesting it is an early-stage or low-adoption cryptocurrency project. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.infinitebackrooms.com/dreams/conversation-1721367492-scenario-terminal-of-truths-txt
+      - https://x.com/i/communities/1867153117575516167
+      - https://t.me/BioTokensSol
+
+[125] ChadGPT (GIGA)
+    Twitter: https://x.com/solchadgpt
+    Website: None
+    Telegram: https://chadgpt.meme/
+    Tribute Level: Smol
+    Created: Oct 23, 11:35 PM
+    Market Cap: $16.3K
+    Contract: N2jApump
+    Summary: ChadGPT (GIGA) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 23, 11:35 PM and has a market cap of $16.3K.
+    Links:
+      - https://chadgpt.meme/
+      - https://x.com/solchadgpt
+      - https://t.me/gigachadgpt
+
+[126] Mr Shapeless (Shapeless)
+    Twitter: https://x.com/mrshapeIess
+    Website: https://exchange.art/mrshapeless/nfts
+    Telegram: https://t.me/mrshapeless
+    Tribute Level: Half
+    Created: Oct 23, 07:47 PM
+    Market Cap: $11.9K
+    Contract: A1mvpump
+    Summary: Mr Shapeless (Shapeless) is a token on the Solana blockchain that has made a half tribute (5-10% of token supply) to the ElizaOS ecosystem. It was created on Oct 23, 07:47 PM and has a market cap of $11.9K.
+    Links:
+      - https://exchange.art/mrshapeless/nfts
+      - https://x.com/mrshapeIess
+      - https://t.me/mrshapeless
+
+[127] ROME (ROME)
+    Twitter: https://x.com/gloryforrome?s=21&t=ekjz1wWdNiTqqx_bpp2D9A
+    Website: https://www.gloryforrome.com/
+    Telegram: https://t.me/to_rome
+    Tribute Level: Smol
+    Created: Oct 23, 12:48 PM
+    Market Cap: $28.9K
+    Contract: 9wmYpump
+    Summary: ROME appears to be a memecoin on the Solana blockchain with no clearly defined utility or purpose based on the limited information provided. The project's website contains minimal content with a historical reference to ancient Rome and provides only links to view the token on Dextools, suggesting it is primarily a speculative token. With its recent creation date (October 23) and small market cap of $28.9K, it shows characteristics of a newly launched memecoin without substantive technological or ecosystem functionality. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.gloryforrome.com/
+      - https://x.com/gloryforrome?s=21&t=ekjz1wWdNiTqqx_bpp2D9A
+      - https://t.me/to_rome
+
+[128] FIJI.EXE (FIJI)
+    Twitter: https://x.com/FijiWPC
+    Website: https://peacecoin.world/
+    Telegram: https://t.me/fijiexe
+    Tribute Level: Smol
+    Created: Oct 22, 04:36 AM
+    Market Cap: $52.2K
+    Contract: A9e6UiRa
+    Summary: FIJI.EXE (FIJI) is a Solana-based token that presents itself as the "World Peace Coin," claiming to merge blockchain with social impact through charitable donations. While the project features an AI character named "Fiji" and mentions charitable contributions, it lacks clear technical utility or a well-defined mechanism for achieving its stated goals of global peace and connectivity, suggesting it is primarily a themed memecoin with charitable marketing elements. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://peacecoin.world/
+      - https://x.com/FijiWPC
+      - https://t.me/fijiexe
+
+[129] Ruby AI Agent (ruby)
+    Twitter: https://x.com/rubyisnotabot
+    Website: https://pump.fun/coin/ABHQGzXNoRbJ1sjUsCJ2TmTAo1uMx4EUpV1qYiSVpump
+    Telegram: https://t.me/RubyAIAgent
+    Tribute Level: Smol
+    Created: Oct 21, 10:26 PM
+    Market Cap: $23.6K
+    Contract: ABHQpump
+    Summary: Ruby AI Agent (RUBY) is a token associated with an interactive AI character named Ruby that users can chat with on Telegram and at rubychat.live. The project appears to be built on an open-source AI software called ELIZA, with proceeds from the token intended to fund further development of the AI technology. While the token has a small market cap of around $24K, its primary utility beyond funding development is unclear, suggesting it may function primarily as a community token for Ruby AI enthusiasts. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://pump.fun/coin/ABHQGzXNoRbJ1sjUsCJ2TmTAo1uMx4EUpV1qYiSVpump
+      - https://x.com/rubyisnotabot
+      - https://t.me/RubyAIAgent
+
+[130] Degen Spartan AI (degenai)
+    Twitter: https://twitter.com/degenspartanai
+    Website: https://ai16z.ai/
+    Telegram: https://t.me/degenspartanai
+    Tribute Level: Smol
+    Created: Oct 21, 03:42 AM
+    Market Cap: $5.1M
+    Contract: Gu3Lpump
+    Summary: Degen Spartan AI (degenai) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 21, 03:42 AM and has a market cap of $5.1M.
+    Links:
+      - https://ai16z.ai/
+      - https://twitter.com/degenspartanai
+      - https://t.me/degenspartanai
+      - https://discord.gg/EbzMcW3pWK
+
+[131] IQ6900 (IQ)
+    Twitter: https://x.com/IQ6900_
+    Website: https://iq6900.com/
+    Telegram: https://t.me/portalforiq6900
+    Tribute Level: Smol
+    Created: Oct 21, 02:44 AM
+    Market Cap: $3.0M
+    Contract: Asyfpump
+    Summary: IQ6900 is a blockchain project focused on providing cost-efficient on-chain data storage, claiming to be 2000x cheaper than traditional on-chain storage solutions. The project appears to offer permanent data storage capabilities through its technology, with applications including a "Love Letter Page" and "Art Generator," though specific technical details about how it achieves this cost efficiency are not provided in the available information. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://iq6900.com/
+      - https://x.com/IQ6900_
+      - https://t.me/portalforiq6900
+
+[132] Miya (Miya)
+    Twitter: https://x.com/i/communities/1853194603114983629
+    Website: https://cyberangelmiya.net/
+    Telegram: https://t.me/MiyaCyberAngel_Archive
+    Tribute Level: Smol
+    Created: Oct 20, 04:10 AM
+    Market Cap: $161.5K
+    Contract: 964spump
+    Summary: Miya appears to be a memecoin with no clear utility or defined purpose. The website content is cryptic and nonsensical, featuring fictional cyberpunk-style terminology and placeholder elements without explaining any actual functionality or use case for the token. With its low market capitalization and recent creation date, it shows characteristics of a speculative cryptocurrency project lacking substantive technological or business applications. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://cyberangelmiya.net/
+      - https://x.com/i/communities/1853194603114983629
+      - https://t.me/MiyaCyberAngel_Archive
+
+[133] holy whore (holy whore)
+    Twitter: https://twitter.com/ayka69dotexe
+    Website: https://airtable.com/appG2Ues3wOfFHKtS/shrGW16rRJlC5mxcb/tblSXNKGJBDDwJnRO/viw6xmO4QwrTRBd2L/recYio6TeI8v4QDo7?blocks=hide
+    Telegram: https://t.me/holywhoreportal
+    Tribute Level: Smol
+    Created: Oct 19, 03:15 PM
+    Market Cap: $16.1K
+    Contract: AYKApump
+    Summary: "Holy Whore" appears to be a recently created cryptocurrency token with no clear utility or purpose documented. The associated website is simply an Airtable page with placeholder text, and with a very low market capitalization of $16.1K, it shows characteristics of a memecoin or speculative token without established functionality in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://airtable.com/appG2Ues3wOfFHKtS/shrGW16rRJlC5mxcb/tblSXNKGJBDDwJnRO/viw6xmO4QwrTRBd2L/recYio6TeI8v4QDo7?blocks=hide
+      - https://twitter.com/ayka69dotexe
+      - https://t.me/holywhoreportal
+
+[134] pmarca (pmarca)
+    Twitter: https://x.com/pmarca
+    Website: None
+    Telegram: https://t.me/+00xBng28k5FkNTgx
+    Tribute Level: Smol
+    Created: Oct 19, 05:59 AM
+    Market Cap: $14.3K
+    Contract: ASYY39Qx
+    Summary: pmarca (pmarca) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 19, 05:59 AM and has a market cap of $14.3K.
+    Links:
+      - https://x.com/pmarca
+      - https://t.me/+00xBng28k5FkNTgx
+
+[135] sma (sma)
+    Twitter: https://x.com/generic_void
+    Website: None
+    Telegram: None
+    Tribute Level: Smol
+    Created: Oct 18, 11:25 AM
+    Market Cap: $27.9K
+    Contract: 4994pump
+    Summary: sma (sma) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 18, 11:25 AM and has a market cap of $27.9K.
+    Links:
+      - https://x.com/generic_void
+
+[136] PUMPKING HALLOWEEN GAME (PUMPKING)
+    Twitter: https://x.com/PUMPKING_SOL
+    Website: https://pumpking.fun/
+    Telegram: https://t.me/PUMPKING_SOL
+    Tribute Level: Smol
+    Created: Oct 16, 09:22 PM
+    Market Cap: $3.1K
+    Contract: HraNpump
+    Summary: PUMPKING appears to be a Halloween-themed memecoin on the Solana blockchain with no clear utility or purpose beyond seasonal theming. The website content is incomplete and contains only code fragments, while the low market cap ($3.1K) and recent creation date (October 16) suggest this is likely a small, speculative token launched to capitalize on Halloween-related hype rather than offering any substantial functionality or ecosystem value. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://pumpking.fun/
+      - https://x.com/PUMPKING_SOL
+      - https://t.me/PUMPKING_SOL
+
+[137] ❤️ (❤️)
+    Twitter: https://x.com/HeartMemoji
+    Website: https://heartonsolana.com/
+    Telegram: https://t.me/heartonsolana
+    Tribute Level: Smol
+    Created: Oct 7, 10:28 PM
+    Market Cap: $16.6K
+    Contract: whheHaoB
+    Summary: ❤️ (Heart Emoji) appears to be a memecoin with no clear utility or purpose beyond its emoji branding. The token has a very small market capitalization of $16.6K and was created recently (October 7), with minimal documentation or explanation of functionality beyond a contract address and Twitter presence, suggesting it is likely a speculative token with no substantial technological or ecosystem value. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://heartonsolana.com/
+      - https://x.com/HeartMemoji
+      - https://t.me/heartonsolana
+
+[138] NotARealCoin (NR)
+    Twitter: https://x.com/i/communities/1843350323441873361
+    Website: https://www.coingecko.com/learn/pump-fun-guide-how-to-create-your-own-memecoins?utm_campaign=learn&utm_source=x&utm_medium=social
+    Telegram: https://t.me/notarealcoin_cto
+    Tribute Level: Smol
+    Created: Oct 7, 05:50 PM
+    Market Cap: $10.5K
+    Contract: 5xL7pump
+    Summary: NotARealCoin (NR) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 7, 05:50 PM and has a market cap of $10.5K.
+    Links:
+      - https://www.coingecko.com/learn/pump-fun-guide-how-to-create-your-own-memecoins?utm_campaign=learn&utm_source=x&utm_medium=social
+      - https://x.com/i/communities/1843350323441873361
+      - https://t.me/notarealcoin_cto
+
+[139] Airux's token ($AIRUX)
+    Twitter: https://x.com/Airux22
+    Website: https://airux.meme/
+    Telegram: https://t.me/AiruxPortal
+    Tribute Level: Smol
+    Created: Oct 1, 11:30 PM
+    Market Cap: $16.4K
+    Contract: EYKcorih
+    Summary: Airux ($AIRUX) appears to be primarily a meme token on the Solana blockchain with limited utility, as suggested by its tagline "More than just a MEME!" but without clear documentation of functional use cases. While the website mentions an "AI Agent," "NFT Collection," and "DLMM Pool," there is no substantive information about how these components function or integrate with the token, indicating this is likely a speculative memecoin with promised but undefined features. The project is very new (created October 2023) with a small market cap of $16.4K, suggesting it is in early stages of development or primarily focused on trading speculation. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://airux.meme/
+      - https://x.com/Airux22
+      - https://t.me/AiruxPortal
+
+[140] BEBE (BEBE)
+    Twitter: https://x.com/TheFrogBEBECTO
+    Website: https://bebetokencto.fun/
+    Telegram: https://t.me/BEBEC_T_O
+    Tribute Level: Smol
+    Created: Oct 1, 06:13 AM
+    Market Cap: $4.2K
+    Contract: 4T1dpump
+    Summary: BEBE (BEBE) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Oct 1, 06:13 AM and has a market cap of $4.2K.
+    Links:
+      - https://bebetokencto.fun/
+      - https://x.com/TheFrogBEBECTO
+      - https://t.me/BEBEC_T_O
+
+[141] Silly wojak (WOJAKINHO)
+    Twitter: https://x.com/WojakinhoOnSol
+    Website: https://wojakinho.com/
+    Telegram: https://t.me/wojakinho
+    Tribute Level: Smol
+    Created: Sep 27, 07:17 AM
+    Market Cap: $10.7K
+    Contract: C1kdVhb5
+    Summary: Wojakinho (WOJAKINHO) appears to be a memecoin on the Solana blockchain with no clear utility or purpose beyond speculative trading. The project's presentation relies heavily on meme culture references and simplistic marketing tactics, with no indication of any technological innovation, real-world use case, or ecosystem functionality beyond being a collectible token. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://wojakinho.com/
+      - https://x.com/WojakinhoOnSol
+      - https://t.me/wojakinho
+
+[142] No1 tiktok frog (Omochi) (omochi)
+    Twitter: https://x.com/omochi_cto
+    Website: https://omochitoken.com/
+    Telegram: https://t.me/omochis
+    Tribute Level: Smol
+    Created: Sep 26, 03:17 AM
+    Market Cap: $63.3K
+    Contract: ESVRpump
+    Summary: No1 TikTok Frog (OMOCHI) is a Solana-based memecoin inspired by a popular TikTok frog character with no apparent utility beyond community engagement. The project appears to be purely speculative in nature, focusing on building a community around the meme rather than offering any technological innovation or practical functionality in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://omochitoken.com/
+      - https://x.com/omochi_cto
+      - https://t.me/omochis
+
+[143] DEGOD (DEGOD)
+    Twitter: https://x.com/DeGodsNFT
+    Website: https://www.degods.com/
+    Telegram: https://t.me/degodsPortal
+    Tribute Level: Smol
+    Created: Sep 15, 10:47 PM
+    Market Cap: $16.6M
+    Contract: degoFxaN
+    Summary: DEGOD appears to be a memecoin associated with the DeGods NFT community, which describes itself as "a global community of people that do shit." the token doesn't present any clear technical utility beyond being a social token for the DeGods ecosystem, which includes NFTs, community events, and merchandise, functioning primarily as a speculative asset with a $16.6M market cap. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.degods.com/
+      - https://x.com/DeGodsNFT
+      - https://t.me/degodsPortal
+
+[144] Monkey Pox (POX)
+    Twitter: https://x.com/monkeypoxsol
+    Website: https://monkeypoxtoken.com/
+    Telegram: https://t.me/monkeypoxtokenportal
+    Tribute Level: Smol
+    Created: Aug 28, 05:00 PM
+    Market Cap: $2.4M
+    Contract: mpox1xkn
+    Summary: Monkey Pox (POX) is an SPL-404 token on the Solana blockchain that functions as a hybrid between a memecoin and NFT. It implements the MPL-404 standard which allows tokens and NFTs to be interchangeable, enabling users to swap between fungible tokens and non-fungible assets at a rate of 1 POXNFT for 2 million POX tokens. While offering swapping and locking functionality, the project appears to be primarily a memecoin that capitalizes on the novelty of the token-NFT hybrid format rather than providing substantial utility. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://monkeypoxtoken.com/
+      - https://x.com/monkeypoxsol
+      - https://t.me/monkeypoxtokenportal
+
+[145] nuts.fun (NUTSDOTFUN)
+    Twitter: https://x.com/nutsdotfun
+    Website: https://www.nuts.fun/
+    Telegram: https://t.me/nutsdotfun
+    Tribute Level: Smol
+    Created: Aug 26, 11:44 PM
+    Market Cap: $147.0K
+    Contract: AVXVpjmb
+    Summary: NUTSDOTFUN (nuts.fun) appears to be a recently created cryptocurrency token with minimal documented utility or purpose. The lack of descriptive website content, combined with its relatively small market capitalization and recent creation date (August 26), suggests this is likely a memecoin without clearly defined functionality or utility in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.nuts.fun/
+      - https://x.com/nutsdotfun
+      - https://t.me/nutsdotfun
+
+[146] Trumpwifcrown (TWC)
+    Twitter: https://x.com/TWC_on_sol
+    Website: None
+    Telegram: https://t.me/trumpwifcrown
+    Tribute Level: Smol
+    Created: Aug 8, 01:48 AM
+    Market Cap: $11.9K
+    Contract: C7fdpump
+    Summary: Trumpwifcrown (TWC) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Aug 8, 01:48 AM and has a market cap of $11.9K.
+    Links:
+      - https://x.com/TWC_on_sol
+      - https://t.me/trumpwifcrown
+
+[147] ORE (ORE)
+    Twitter: https://x.com/OREsupply
+    Website: https://ore.supply/
+    Telegram: None
+    Tribute Level: Smol
+    Created: Aug 7, 02:53 PM
+    Market Cap: $6.0M
+    Contract: oreoybcp
+    Summary: ORE appears to be a Solana-based token that positions itself as "digital gold," suggesting it aims to be a store of value on the Solana blockchain. including its relatively small market cap of $6 million and recent creation date (August 2023), there is no clear indication of specific utility or technological innovation beyond the digital gold narrative, which may indicate it functions primarily as a speculative asset or memecoin on Solana. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://ore.supply/
+      - https://x.com/OREsupply
+      - https://discord.com/ore-supply
+
+[148] Deebo the Bear (DEEBO)
+    Twitter: https://x.com/CtoDeebo
+    Website: https://deebocto.vip/
+    Telegram: https://t.me/DeeboCto
+    Tribute Level: Smol
+    Created: Aug 6, 08:56 PM
+    Market Cap: $26.2K
+    Contract: AzC1pump
+    Summary: Deebo the Bear ($DEEBO) appears to be a memecoin with no clear utility or defined purpose. The token has a small market capitalization of $26.2K and was created recently (August 6), but lacks substantive website content or description of its functionality, technological features, or role in the blockchain ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://deebocto.vip/
+      - https://x.com/CtoDeebo
+      - https://t.me/DeeboCto
+
+[149] TIME ($TIME)
+    Twitter: https://twitter.com/timecoinsol
+    Website: https://time.meme/
+    Telegram: https://t.me/timecoinsol
+    Tribute Level: Smol
+    Created: Jul 23, 05:10 PM
+    Market Cap: $278.2K
+    Contract: ED5wK31m
+    Summary: TIME ($TIME) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Jul 23, 05:10 PM and has a market cap of $278.2K.
+    Links:
+      - https://time.meme/
+      - https://twitter.com/timecoinsol
+      - https://t.me/timecoinsol
+
+[150] MILK ($MILK)
+    Twitter: https://x.com/MilkCoinSolana?t=Sa7ozuL_2RWdUBe7jAFNXQ&s=35
+    Website: https://milkcoin.info/
+    Telegram: https://t.me/milkcoinsol
+    Tribute Level: Smol
+    Created: Jun 27, 08:54 PM
+    Market Cap: $22.2K
+    Contract: JANLpump
+    Summary: MILK ($MILK) is a Solana-based memecoin that was initially abandoned by its original UK developers after a price collapse, but has been taken over by a Ukrainian team. The project has no clear utility beyond token burning mechanics and promises of exchange listings, positioning itself as a charity-focused memecoin that pledges to donate 1% of each million dollars in market capitalization to a Ukrainian war relief fund called saveua.in.ua. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://milkcoin.info/
+      - https://x.com/MilkCoinSolana?t=Sa7ozuL_2RWdUBe7jAFNXQ&s=35
+      - https://t.me/milkcoinsol
+
+[151] It's so OVER (OVER)
+    Twitter: https://x.com/itssooveronsol
+    Website: https://itsolover.com/
+    Telegram: https://t.me/itssooveronsol
+    Tribute Level: Smol
+    Created: Jun 24, 05:49 AM
+    Market Cap: $21.6K
+    Contract: 6xWiTeQe
+    Summary: "It's so OVER" (OVER) appears to be a memecoin created on the Solana blockchain that originated from 4chan culture. The token has no clear utility or functionality beyond being a speculative asset based on internet meme culture, with marketing that emphasizes it being "the first 4chan meme on pump" and the "10th made on site" with a very low market capitalization of $21.6K. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://itsolover.com/
+      - https://x.com/itssooveronsol
+      - https://t.me/itssooveronsol
+
+[152] SolBastard (soba)
+    Twitter: https://twitter.com/SolBastardSoba
+    Website: https://solbastard.com/
+    Telegram: https://t.me/SolBastardSOBA
+    Tribute Level: Smol
+    Created: May 13, 11:12 AM
+    Market Cap: $956.8K
+    Contract: 25p2qFmH
+    Summary: SolBastard (SOBA) is a Solana-based memecoin featuring a cigar-smoking chimp mascot with no apparent technical utility beyond its branding. The project implements token burns to reduce supply (currently 8.66% of the initial 1 billion tokens have been burned) and offers NFT collectibles, but functions primarily as a speculative asset rather than providing any fundamental blockchain service or solution. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://solbastard.com/
+      - https://twitter.com/SolBastardSoba
+      - https://t.me/SolBastardSOBA
+
+[153] MOBY DICK (MOBY)
+    Twitter: http://twitter.com/mobydick_sol
+    Website: http://solmobydick.com/
+    Telegram: https://t.me/solmobydick
+    Tribute Level: Smol
+    Created: May 11, 02:15 PM
+    Market Cap: $254
+    Contract: Ekvydzrt
+    Summary: MOBY DICK (MOBY) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on May 11, 02:15 PM and has a market cap of $254.
+    Links:
+      - http://solmobydick.com/
+      - http://twitter.com/mobydick_sol
+      - https://t.me/solmobydick
+
+[154] Gary Neckless (GARY)
+    Twitter: https://twitter.com/garygiraffesol
+    Website: https://www.garyneckless.xyz/
+    Telegram: https://t.me/garyneckless
+    Tribute Level: Smol
+    Created: Apr 30, 12:46 AM
+    Market Cap: $6.1K
+    Contract: 5cefoNnF
+    Summary: Gary Neckless (GARY) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Apr 30, 12:46 AM and has a market cap of $6.1K.
+    Links:
+      - https://www.garyneckless.xyz/
+      - https://twitter.com/garygiraffesol
+      - https://t.me/garyneckless
+
+[155] HENTAI (HENTAI)
+    Twitter: https://twitter.com/hentaicoinsol?s=21&t=8hwdRcq2e8I0N5pTHlXX6A
+    Website: https://hentaisolana.com/
+    Telegram: https://t.me/hentaienjoyoor
+    Tribute Level: Smol
+    Created: Mar 22, 10:34 PM
+    Market Cap: $8.6K
+    Contract: 8BWUvuUx
+    Summary: HENTAI (HENTAI) is a token on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Mar 22, 10:34 PM and has a market cap of $8.6K.
+    Links:
+      - https://hentaisolana.com/
+      - https://twitter.com/hentaicoinsol?s=21&t=8hwdRcq2e8I0N5pTHlXX6A
+      - https://t.me/hentaienjoyoor
+
+[156] NIGGOLAS CAGE (NIGGOLAS)
+    Twitter: https://x.com/niggolascagesol
+    Website: None
+    Telegram: https://t.me/niggolascage
+    Tribute Level: Smol
+    Created: Mar 19, 07:17 PM
+    Market Cap: $48.0K
+    Contract: HysbGuwt
+    Summary: NIGGOLAS CAGE (NIGGOLAS) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Mar 19, 07:17 PM and has a market cap of $48.0K.
+    Links:
+      - https://x.com/niggolascagesol
+      - https://t.me/niggolascage
+
+[157] Nigga Butt Token (NiggaButt)
+    Twitter: https://x.com/NBTSOL
+    Website: https://www.niggabutt.com/
+    Telegram: https://t.me/niggabutt
+    Tribute Level: Smol
+    Created: Mar 13, 06:10 PM
+    Market Cap: $1.4M
+    Contract: 8fZLPnqf
+    Summary: Nigga Butt Token (NiggaButt) appears to be a memecoin on the Solana blockchain with no clear technical utility. The project claims to have a mission related to the Black Lives Matter movement, but lacks substantive information about actual functionality, tokenomics, or legitimate use cases, suggesting it is primarily a speculative token relying on controversial branding rather than fundamental value. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.niggabutt.com/
+      - https://x.com/NBTSOL
+      - https://t.me/niggabutt
+
+[158] BEBE ($Bebe)
+    Twitter: https://twitter.com/UncleBEBEonSOL
+    Website: None
+    Telegram: https://t.me/UNCLE_BEBE
+    Tribute Level: Smol
+    Created: Mar 10, 02:12 AM
+    Market Cap: $710
+    Contract: GUsbCKxZ
+    Summary: BEBE ($Bebe) appears to be a memecoin on the Solana blockchain that has made a small tribute to the ElizaOS ecosystem. It was created on Mar 10, 02:12 AM and has a market cap of $710.
+    Links:
+      - https://twitter.com/UncleBEBEonSOL
+      - https://t.me/UNCLE_BEBE
+
+[159] The Pirate Bay (TPB)
+    Twitter: https://x.com/TPBCTO
+    Website: https://thepiratebay.org/
+    Telegram: https://t.me/TPBCTO
+    Tribute Level: Smol
+    Created: Mar 4, 11:40 PM
+    Market Cap: $8.9K
+    Contract: FcY2VKr6
+    Summary: "The Pirate Bay" (TPB) token appears to be a cryptocurrency that has appropriated the name and branding of the well-known BitTorrent file-sharing website The Pirate Bay, but shows no clear connection to the actual website or legitimate functionality. With its very low market cap of $8.9K and recent creation date (March 4), this token exhibits characteristics of a memecoin or potential scam that is attempting to capitalize on the recognition of The Pirate Bay brand without demonstrating any genuine utility or authorized relationship with the file-sharing platform. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://thepiratebay.org/
+      - https://x.com/TPBCTO
+      - https://t.me/TPBCTO
+      - https://discord.gg/wZuNsjjD
+
+[160] URANUS (ANUS)
+    Twitter: https://twitter.com/anuscoinsol
+    Website: https://anusexplorer.com/
+    Telegram: https://t.me/UranusCommunity
+    Tribute Level: Smol
+    Created: Jan 30, 08:19 AM
+    Market Cap: $103.4K
+    Contract: 9hjZ6BZc
+    Summary: URANUS (ANUS) appears to be a memecoin on the Solana blockchain with no clearly defined utility or purpose. The project has minimal technical information available, with only vague references to "a journey to the stars" in its description, and a relatively small market capitalization of $103.4K since its creation in January 2024, suggesting it is likely a speculative token designed to capitalize on humor related to its name rather than offering substantive blockchain functionality. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://anusexplorer.com/
+      - https://twitter.com/anuscoinsol
+      - https://t.me/UranusCommunity
+
+[161] X Community (X)
+    Twitter: https://x.com/xcommunity_sol
+    Website: https://xcommunity.io/
+    Telegram: https://t.me/X_memecoin
+    Tribute Level: Smol
+    Created: Dec 30, 12:24 AM
+    Market Cap: $3.7M
+    Contract: EhkDpBFA
+    Summary: X Community (X) is a memecoin on the Solana blockchain that appears to have no clear utility beyond being the first single-letter token in the ecosystem. It functions primarily as a community-focused speculative asset with a large holder base of over 100,000 users, but does not present any technological innovation or practical application beyond its branding and community initiatives like the "MEME Community Alliance." It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://xcommunity.io/
+      - https://x.com/xcommunity_sol
+      - https://t.me/X_memecoin
+
+[162] PONKE (PONKE)
+    Twitter: https://x.com/ponkesol
+    Website: https://www.ponke.xyz/
+    Telegram: https://t.me/ponkesol
+    Tribute Level: Smol
+    Created: Dec 24, 02:12 AM
+    Market Cap: $74.3M
+    Contract: 5z3EmrRC
+    Summary: PONKE is primarily a Solana-based memecoin featuring a monkey character with "anger issues." While it presents some utility through PonkeSwap (a decentralized exchange for the PONKE community) and claims various integrations with exchanges and wallets, its core appeal appears to be its meme status and community engagement rather than solving any specific blockchain problem or providing unique technological innovation. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.ponke.xyz/
+      - https://x.com/ponkesol
+      - https://t.me/ponkesol
+
+[163] SIZE (SIZE)
+    Twitter: https://twitter.com/sizecoinsolana
+    Website: https://www.sizecoin.xyz/
+    Telegram: https://t.me/SizeSolana
+    Tribute Level: Smol
+    Created: Dec 16, 01:20 AM
+    Market Cap: $440.4K
+    Contract: HqLRZzuq
+    Summary: SIZE appears to be a Solana-based memecoin with no clear utility or technological purpose. The project uses a frog mascot and relies heavily on the "#SizeMatters" slogan and burger-related imagery, but lacks any substantive information about technical functionality, real-world applications, or ecosystem contributions beyond a simple browser game called "Burger Stacker." It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.sizecoin.xyz/
+      - https://twitter.com/sizecoinsolana
+      - https://t.me/SizeSolana
+
+[164] BONKLANA (BOK)
+    Twitter: https://twitter.com/Bonklana
+    Website: https://www.bonklana.com/
+    Telegram: https://t.me/bonklanaofficial
+    Tribute Level: Smol
+    Created: Dec 11, 03:00 PM
+    Market Cap: $57.1K
+    Contract: 88tmJPPc
+    Summary: BONKLANA (BOK) appears to be a memecoin on the Solana blockchain that lacks clear utility or defined functionality. it presents itself as a "community-driven ecosystem" with vague references to "resilience, innovation, and collective strength," but provides no specific use cases, technological features, or concrete value proposition beyond being a digital asset inspired by the popular BONK token on Solana. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://www.bonklana.com/
+      - https://twitter.com/Bonklana
+      - https://t.me/bonklanaofficial
+
+[165] CHONKY (CHONKY)
+    Twitter: https://twitter.com/chonkycom
+    Website: https://chonky.com/
+    Telegram: https://t.me/solanachonky
+    Tribute Level: Smol
+    Created: Nov 28, 02:16 AM
+    Market Cap: $1.9M
+    Contract: H7edLWWU
+    Summary: CHONKY appears to be a relatively new cryptocurrency token with minimal available details about its purpose or utility. With a modest market capitalization of $1.9 million and creation in late November, but no website content or description provided, CHONKY displays characteristics typical of a memecoin - a token created primarily for speculative purposes rather than solving a specific blockchain problem or providing clear utility in the cryptocurrency ecosystem. It has made a small tribute to the ElizaOS ecosystem.
+    Links:
+      - https://chonky.com/
+      - https://twitter.com/chonkycom
+      - https://t.me/solanachonky
+

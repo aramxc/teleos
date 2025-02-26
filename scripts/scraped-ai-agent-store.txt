@@ -1,0 +1,2540 @@
+[
+  {
+    "name": "Softgen",
+    "description": "Softgen is an AI-driven web application builder that allows users to transform their ideas into fully functional web applications by simply describing their vision in natural language. The platform interprets user inputs, generates corresponding code, and facilitates iterative improvements based on user feedback. Softgen supports rapid prototyping and delivers production-ready applications, enabling users to launch their projects swiftly without requiring coding expertise.",
+    "websiteLink": "https://softgen.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/softgen",
+    "tags": [
+      "web development",
+      "no-code platform",
+      "AI code generation",
+      "prototyping",
+      "natural language interface"
+    ]
+  },
+  {
+    "name": "Taskade AI Agents",
+    "description": "Taskade’s AI agents, powered by GPT-4, are designed to support complex project management, research, and workflow automation. Users can assign projects or tasks that these AI agents will autonomously complete, helping with everything from content research to report writing and workflow management. By creating an AI-powered workforce that completes tasks independently, Taskade enhances productivity and efficiency across various departments.",
+    "websiteLink": "https://taskade.com/ai/agents?via=pqczd&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/taskade-ai-agents",
+    "tags": [
+      "project management",
+      "workflow automation",
+      "research assistant",
+      "task automation",
+      "productivity",
+      "AI workforce"
+    ]
+  },
+  {
+    "name": "Millis AI",
+    "description": "Millis AI is a cutting-edge platform that empowers developers and non-technical users to create and deploy advanced voice agents with unprecedented 600ms latency. Designed to deliver seamless, human-like interactions, Millis AI supports integration with Large Language Models (LLMs) such as OpenAI's GPT-4o and open-source models like Mistral and Llama. The platform offers no-code/low-code tools, allowing users to build voice applications in minutes, connect phone numbers for inbound and outbound calls in over 100 countries, and integrate with various services through webhooks. With affordable pricing starting at $0.02 per minute, Millis AI makes advanced voice AI accessible for applications ranging from customer support to virtual assistants.",
+    "websiteLink": "https://millis.ai/?ref=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/millis-ai",
+    "tags": [
+      "voice AI",
+      "low latency",
+      "LLM integration",
+      "no-code tools",
+      "telephony",
+      "customer support",
+      "virtual assistants"
+    ]
+  },
+  {
+    "name": "Pictory AI",
+    "description": "Pictory AI is an innovative video creation platform that leverages artificial intelligence to convert text-based content, such as blog posts and articles, into captivating videos within minutes. Designed for brands and businesses, it offers an intuitive drag-and-drop interface, a vast library of media assets, and customizable templates, making video production accessible to users without prior experience. By automating the video creation process, Pictory AI enables efficient content repurposing, allowing users to expand their reach and boost audience engagement across various platforms.",
+    "websiteLink": "https://pictory.ai/?ref=mb38&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/pictory-ai",
+    "tags": [
+      "video creation",
+      "AI content conversion",
+      "text-to-video",
+      "content repurposing",
+      "marketing",
+      "media automation"
+    ]
+  },
+  {
+    "name": "AirOps",
+    "description": "AirOps is a comprehensive AI platform designed to assist businesses in creating and managing AI-powered workflows and applications. It offers a suite of tools, including a low-code API and workflow builder, enabling teams to prototype, deploy, and monitor AI features rapidly. With support for over 40 AI models and seamless integration capabilities, AirOps facilitates the development of sophisticated AI solutions tailored to various business needs, such as content creation, SEO optimization, and process automation. The platform's user-friendly interface and scalability make it suitable for organizations aiming to leverage AI for growth and operational enhancement.",
+    "websiteLink": "https://www.airops.com/?via=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/airops",
+    "tags": [
+      "AI workflow automation",
+      "low-code platform",
+      "business process optimization",
+      "AI integration",
+      "content creation",
+      "SEO optimization"
+    ]
+  },
+  {
+    "name": "Goodcall AI",
+    "description": "Goodcall AI offers an advanced AI-driven phone service tailored for small businesses, enabling automated call handling, lead capture, and appointment scheduling. By assigning a unique local phone number, it integrates seamlessly with existing business lines, ensuring that customer inquiries are addressed promptly, even outside regular business hours. The platform provides detailed call analytics, allowing businesses to gain insights into customer interactions and improve service quality. With a mission to make cutting-edge AI technology accessible to local businesses, Goodcall AI empowers them to enhance operational efficiency and customer satisfaction.",
+    "websiteLink": "https://goodcall.com/?ref=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/goodcall-ai",
+    "tags": [
+      "AI phone service",
+      "call automation",
+      "small business",
+      "lead capture",
+      "appointment scheduling",
+      "call analytics"
+    ]
+  },
+  {
+    "name": "Cryptohopper",
+    "description": "Cryptohopper is a comprehensive cryptocurrency trading platform founded in 2017 by Dutch brothers Ruud and Pim Feltkamp. It allows users to automate their trading strategies using AI-driven bots, manage portfolios across various exchanges, and utilize advanced tools such as backtesting, market-making, and arbitrage. The platform supports integration with major cryptocurrency exchanges, providing a centralized interface for executing trades and monitoring investments. With features like social trading, strategy design, and trailing stop-loss, Cryptohopper caters to both novice and experienced traders seeking to optimize their trading performance.",
+    "websiteLink": "https://www.cryptohopper.com/?atid=37516&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/cryptohopper",
+    "tags": [
+      "cryptocurrency trading",
+      "automated trading bots",
+      "portfolio management",
+      "trading strategy",
+      "AI trading",
+      "crypto exchange integration"
+    ]
+  },
+  {
+    "name": "SEObotAI",
+    "description": "SEObotAI is a comprehensive AI-powered solution designed to streamline and automate various aspects of search engine optimization (SEO). It offers features such as programmatic SEO, AI-generated blog content, automated keyword research, and intelligent linking strategies. By leveraging advanced natural language processing and machine learning algorithms, SEObotAI enables businesses to optimize their online presence efficiently, allowing founders and marketers to focus on core business activities while the platform manages SEO efforts to boost organic traffic and improve search engine rankings.",
+    "websiteLink": "https://seobotai.com/?via=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/seobotai",
+    "tags": [
+      "SEO automation",
+      "content generation",
+      "keyword research",
+      "link building",
+      "natural language processing",
+      "machine learning",
+      "digital marketing"
+    ]
+  },
+  {
+    "name": "Vapi",
+    "description": "Vapi is a comprehensive platform designed for developers to efficiently build, test, and deploy AI-driven voice agents. It offers flexible APIs that facilitate the creation of custom conversational flows and integration with existing systems such as customer relationship management (CRM) and electronic health records (EHR). Vapi's low-latency architecture ensures real-time, natural interactions, making it ideal for applications in customer support, sales outreach, and more. The platform is engineered to handle millions of concurrent calls, leveraging a Kubernetes-based infrastructure to provide scalable and reliable voice AI solutions.",
+    "websiteLink": "https://vapi.ai/?via=mbskydis&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/vapi",
+    "tags": [
+      "voice AI",
+      "API integration",
+      "conversational AI",
+      "scalability",
+      "CRM integration",
+      "healthcare",
+      "customer support"
+    ]
+  },
+  {
+    "name": "Scalenut",
+    "description": "Scalenut is a comprehensive AI-driven platform designed to enhance SEO and content marketing efforts. It offers a suite of tools that assist users in keyword planning, topic research, content creation, and optimization. With features like Cruise Mode for rapid blog writing, a real-time SEO editor, and AI-guided recommendations, Scalenut enables businesses to produce high-quality, SEO-optimized content efficiently. The platform also provides insights into competitor strategies and content performance, helping users to refine their content marketing strategies and drive organic traffic.",
+    "websiteLink": "https://scalenut.com/?fpr=mb91&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/scalenut",
+    "tags": [
+      "content marketing",
+      "SEO optimization",
+      "AI writing",
+      "keyword research",
+      "content analysis",
+      "competitor analysis"
+    ]
+  },
+  {
+    "name": "Synthflow AI",
+    "description": "Synthflow AI is an innovative platform that allows businesses to develop and deploy AI-powered voice agents without any coding requirements. These agents can manage both inbound and outbound calls, handle appointment scheduling, provide customer support, and perform various tasks to streamline operations. With seamless integration capabilities, Synthflow AI connects with popular CRM systems and other business tools, ensuring efficient workflow automation. The platform's user-friendly interface and customizable features make it accessible for businesses across various industries to enhance customer engagement and operational efficiency.",
+    "websiteLink": "https://synthflow.ai/?via=aiagentstore&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/synthflow-ai",
+    "tags": [
+      "voice AI",
+      "no-code platform",
+      "customer support",
+      "appointment scheduling",
+      "CRM integration",
+      "workflow automation",
+      "call management"
+    ]
+  },
+  {
+    "name": "ElevenLabs",
+    "description": "ElevenLabs is a leading AI-powered platform specializing in text-to-speech (TTS) and voice cloning technologies. Their solutions enable users to generate high-quality, human-like speech in multiple languages, making it ideal for applications such as audiobooks, video voiceovers, podcasts, and more. With features like Voice Design, users can create unique voices based on specific characteristics, while the Voice Library offers a collection of pre-designed voices for various use cases. ElevenLabs' technology captures human intonation and inflections with exceptional fidelity, adjusting delivery based on context to produce natural and expressive speech.",
+    "websiteLink": "https://try.elevenlabs.io/mh7i4i52t2tu?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/elevenlabs",
+    "tags": [
+      "text-to-speech",
+      "voice cloning",
+      "audio generation",
+      "multilingual",
+      "content creation",
+      "AI voice"
+    ]
+  },
+  {
+    "name": "CustomerFinderBot",
+    "description": "CustomerFinderBot utilizes artificial intelligence to monitor social media platforms such as Twitter and Reddit, identifying individuals who are either dissatisfied with competitors, seeking alternatives, or requesting recommendations for solutions that your product or service can provide. By automating this process, it saves businesses significant time and effort in manual prospecting. The tool also generates suggested responses, enabling prompt and personalized engagement with potential leads, thereby enhancing the likelihood of conversion.",
+    "websiteLink": "https://gumroad.com/a/492980499/nmcmrx?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/customerfinderbot",
+    "tags": [
+      "social media monitoring",
+      "lead generation",
+      "competitor analysis",
+      "customer acquisition",
+      "automated prospecting",
+      "AI response generation"
+    ]
+  },
+  {
+    "name": "Surfer SEO",
+    "description": "Surfer SEO is an AI-driven platform designed to enhance content creation by providing real-time data and insights for SEO optimization. It offers a suite of tools, including a Content Editor, SERP Analyzer, and Audit feature, to assist users in crafting content that aligns with search engine algorithms. With the integration of Surfer AI, users can generate high-quality, SEO-optimized articles efficiently, leveraging advanced algorithms and natural language processing. Surfer SEO caters to content creators, digital marketers, and SEO professionals aiming to improve organic traffic and search engine rankings.",
+    "websiteLink": "https://get.surferseo.com/lne3n4zg0qsn?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/surfer-seo",
+    "tags": [
+      "SEO optimization",
+      "content creation",
+      "AI writing",
+      "search engine ranking",
+      "digital marketing",
+      "content analysis"
+    ]
+  },
+  {
+    "name": "InVideo AI",
+    "description": "InVideo AI is an innovative platform that leverages artificial intelligence to simplify the video creation process. Users can input text prompts, and the AI generates complete videos by creating scripts, selecting relevant media from a vast stock library, adding subtitles, background music, and transitions. The platform offers features like AI talking avatars, voiceovers, and supports multiple languages and accents, making it accessible for various content creation needs, including marketing, education, and social media engagement.",
+    "websiteLink": "https://invideo.sjv.io/c/5985809/1851710/12258?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/invideo-ai",
+    "tags": [
+      "video creation",
+      "AI-generated content",
+      "marketing",
+      "content automation",
+      "multimedia production",
+      "text-to-video"
+    ]
+  },
+  {
+    "name": "Helpfull",
+    "description": "Helpfull is an innovative platform that enables businesses to obtain immediate feedback by leveraging a pool of over 50,000 human panelists and customizable AI personas. It facilitates various research activities, including market surveys, A/B testing, usability studies, and copy evaluations. Users can design tailored surveys, select specific demographics, and receive actionable insights within minutes, streamlining the decision-making process and enhancing product development strategies.",
+    "websiteLink": "https://helpfull.com/?via=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/helpfull",
+    "tags": [
+      "market research",
+      "user feedback",
+      "survey platform",
+      "usability testing",
+      "A/B testing",
+      "demographic targeting"
+    ]
+  },
+  {
+    "name": "Synthesia",
+    "description": "Synthesia is a London-based AI video generation platform founded in 2017. It enables users to create professional videos featuring realistic AI avatars that can speak in over 140 languages, eliminating the need for traditional filming. The platform is widely used in corporate training, marketing, and internal communications to produce engaging content efficiently. Synthesia emphasizes ethical use, prohibiting non-consensual deepfakes and ensuring user verification to prevent misuse.",
+    "websiteLink": "https://www.synthesia.io/?via=mb-skydis&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/synthesia",
+    "tags": [
+      "video generation",
+      "AI avatars",
+      "multilingual content",
+      "corporate training",
+      "marketing",
+      "deepfake technology",
+      "ethical AI"
+    ]
+  },
+  {
+    "name": "kwrds.ai",
+    "description": "kwrds.ai is an AI-driven keyword research platform designed to assist digital marketers and SEO professionals in identifying and analyzing relevant keywords for their content strategies. By incorporating an AI layer, kwrds.ai significantly broadens the scope of keyword discovery beyond traditional autosuggest features. It offers insights into search volume, competition, and cost-per-click (CPC) metrics, enabling users to optimize their content for better search engine rankings. The platform's user-friendly interface simplifies the keyword research process, making it accessible for both beginners and experienced SEO practitioners.",
+    "websiteLink": "https://kwrds.ai/affiliate?linkId=lp_790671&sourceId=aiagentstore&tenantId=kwrdsai&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kwrds-ai",
+    "tags": [
+      "SEO",
+      "keyword research",
+      "digital marketing",
+      "content strategy",
+      "search analytics",
+      "AI-driven insights"
+    ]
+  },
+  {
+    "name": "EveryAnswer",
+    "description": "EveryAnswer is an AI-driven platform that allows businesses to develop and implement AI experts capable of delivering immediate and precise responses to user questions. By integrating various data sources—including existing documents, public websites, and custom AI-optimized content—EveryAnswer's AI experts are trained to provide 24/7 support across multiple channels. The platform is designed for ease of use, requiring no coding expertise, and supports multilingual interactions, ensuring accessibility for a diverse user base. EveryAnswer emphasizes secure, multi-user access with role-based controls, making it suitable for both internal teams and external audiences.",
+    "websiteLink": "https://www.everyanswer.ai/?ref=L4gxuEcUP452&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/everyanswer",
+    "tags": [
+      "AI assistants",
+      "knowledge management",
+      "customer support",
+      "document integration",
+      "multilingual",
+      "no-code",
+      "enterprise solutions"
+    ]
+  },
+  {
+    "name": "CrushOn.AI",
+    "description": "CrushOn.AI is an innovative platform that allows users to interact with a diverse range of AI-generated characters in an unfiltered environment. Users can create and customize unique characters, defining their personalities and backstories, and engage in dynamic, unrestricted conversations. The platform supports importing characters via JSON, saving and loading memories to enrich interactions, and facilitates group chats and scene customization for a personalized experience.",
+    "websiteLink": "https://crushon.ai/?ref=nzu1ywm&mist=1&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/crushon-ai",
+    "tags": [
+      "AI companions",
+      "character creation",
+      "role-playing",
+      "conversational AI",
+      "personalized interactions",
+      "virtual relationships"
+    ]
+  },
+  {
+    "name": "AI Answering Service",
+    "description": "An AI Answering Service is a sophisticated system that uses artificial intelligence to provide efficient, accurate, and consistent responses to inquiries. These systems are typically integrated with various platforms, including websites, mobile applications, customer service centers, and chat interfaces, to assist users in obtaining information, resolving issues, or completing tasks.",
+    "websiteLink": "https://callsupport.ai/?atp=aiagentstore&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/ai-answering-service",
+    "tags": [
+      "customer service",
+      "question answering",
+      "AI assistant",
+      "chatbot",
+      "information retrieval"
+    ]
+  },
+  {
+    "name": "Skydis",
+    "description": "Skydis is a powerful AI chatbot platform that enables businesses to create and deploy custom AI assistants on their websites without any coding expertise. Utilizing an intuitive drag-and-drop interface, Skydis allows users to build chatbots that can engage visitors, capture leads, ask qualifying questions, and provide intelligent responses trained with your business data. Operating 24/7, these chatbots enhance customer engagement and streamline lead generation processes. Skydis also offers seamless integration with tools like Zapier, facilitating easy export of leads and integration with existing business workflows.",
+    "websiteLink": "https://skydis.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/skydis",
+    "tags": [
+      "chatbot platform",
+      "lead generation",
+      "no-code",
+      "business automation",
+      "customer engagement",
+      "AI assistants",
+      "website integration"
+    ]
+  },
+  {
+    "name": "aicut",
+    "description": "Aicut is an AI-powered tool designed to automate the creation of short videos specifically for faceless YouTube channels. It helps content creators generate and optimize videos without showing their face, streamlining the process of building and growing a YouTube presence through automated content production.",
+    "websiteLink": "https://www.aicut.pro/?via=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/aicut",
+    "tags": [
+      "content automation",
+      "youtube marketing",
+      "faceless channels",
+      "video creation",
+      "channel growth"
+    ]
+  },
+  {
+    "name": "Mesha",
+    "description": "Mesha is an AI-powered accounting platform designed to automate accounts receivable and bookkeeping processes for businesses. It features AI agents like Marcus, who handles automated invoice follow-ups, and Max, who assists with bookkeeping tasks. The platform integrates with tools such as QuickBooks, Xero, and Stripe, streamlining financial operations and improving cash flow management.",
+    "websiteLink": "https://trymesha.com/?fpr=aiagentstore&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/mesha",
+    "tags": [
+      "accounting automation",
+      "bookkeeping",
+      "accounts receivable",
+      "financial management",
+      "AI agents",
+      "business operations",
+      "financial integration"
+    ]
+  },
+  {
+    "name": "AI Outbound Calls",
+    "description": "An AI Outbound Calling Service is an advanced technology solution that automates the process of making outgoing calls to individuals or businesses. Powered by artificial intelligence, this service is designed to streamline communication, enhance customer engagement, and optimize operational efficiency.",
+    "websiteLink": "https://callsupport.ai/?atp=aiagentstore&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/ai-outbound-calls",
+    "tags": [
+      "outbound calling",
+      "customer engagement",
+      "call automation",
+      "artificial intelligence",
+      "communication",
+      "operational efficiency"
+    ]
+  },
+  {
+    "name": "Rytr",
+    "description": "Rytr is an AI-driven writing assistant designed to streamline the content creation process for writers, marketers, and entrepreneurs. With over 40 use cases and templates, it enables users to generate compelling content for emails, blogs, advertisements, and social media posts in just a few seconds. Rytr supports multiple languages and tones, ensuring that the generated content aligns with the user's specific needs and audience. Additionally, it offers features like a built-in plagiarism checker and a browser extension for seamless integration into your workflow.",
+    "websiteLink": "https://rytr.me/?via=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/rytr",
+    "tags": [
+      "content generation",
+      "writing assistant",
+      "marketing",
+      "multilingual",
+      "plagiarism checker",
+      "browser extension"
+    ]
+  },
+  {
+    "name": "BasedLabs AI",
+    "description": "BasedLabs AI is a comprehensive platform that provides a suite of AI-powered tools designed to assist users in creating and manipulating digital content, including images, videos, and audio. The platform offers features such as face swapping, image upscaling, voice cloning, and image-to-video generation. With a focus on creative exploration and ease of use, BasedLabs AI empowers users to bring their ideas to life and experiment with new visual styles. Whether you're a professional content creator or someone looking to have fun with AI, BasedLabs AI provides a user-friendly and accessible platform for exploring the possibilities of AI-powered content creation.",
+    "websiteLink": "https://www.basedlabs.ai/?via=mb&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/basedlabs-ai",
+    "tags": [
+      "image generation",
+      "video editing",
+      "voice cloning",
+      "content creation",
+      "face swapping",
+      "AI tools",
+      "media manipulation"
+    ]
+  },
+  {
+    "name": "Lindy.ai",
+    "description": "Lindy.ai is a platform that allows users to build AI agents—referred to as 'Lindies'—to automate various tasks across different applications. By integrating with over 3,000 tools, including Gmail, Zoom, and Twilio, Lindy enables the creation of AI-driven workflows without the need for coding. Users can design agents for tasks such as email management, meeting scheduling, customer support, and sales outreach, thereby saving time and improving business efficiency.",
+    "websiteLink": "https://www.lindy.ai/?utm_source=aiagentstore.ai&utm_medium=referral&utm_campaign=67b4c710618f6f1103338264&utm_term=20&utm_content=kestas",
+    "url": "https://aiagentstore.ai/ai-agent/lindy-ai",
+    "tags": [
+      "automation",
+      "workflow integration",
+      "no-code",
+      "AI agents",
+      "productivity",
+      "business efficiency"
+    ]
+  },
+  {
+    "name": "QuillBot",
+    "description": "QuillBot is a comprehensive AI-driven writing platform designed to assist users in improving their writing through a suite of tools. Key features include a Paraphraser that rephrases text to enhance clarity and style, a Grammar Checker that identifies and corrects grammatical errors, a Summarizer that condenses lengthy texts, and an AI Detector that analyzes content for AI-generated text. QuillBot integrates seamlessly with various platforms, including browser extensions and word processors, making it a versatile tool for students, professionals, and content creators aiming to produce polished and effective written communication.",
+    "websiteLink": "https://try.quillbot.com/2yiiq8d7cjwn?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/quillbot",
+    "tags": [
+      "writing assistant",
+      "paraphrasing",
+      "grammar checker",
+      "summarization",
+      "AI detection",
+      "content enhancement"
+    ]
+  },
+  {
+    "name": "BlockSurvey",
+    "description": "BlockSurvey is a secure survey platform that prioritizes user privacy through end-to-end encryption, ensuring that only data owners have access to collected information. Leveraging AI capabilities, BlockSurvey streamlines survey creation and data analysis, enabling users to generate surveys effortlessly and extract actionable insights swiftly. The platform supports features like AI-driven survey generation, adaptive questioning, and comprehensive data analysis, making it suitable for various applications, including market research and customer feedback. By eliminating ads, trackers, and third-party analytics, BlockSurvey fosters a trustworthy environment for both creators and respondents.",
+    "websiteLink": "https://blocksurvey.io/?ref=1H4WeAQ5mrYR67iY1Kre1bLyzNqARRSupn&utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/blocksurvey",
+    "tags": [
+      "privacy-focused",
+      "end-to-end encryption",
+      "survey platform",
+      "AI-powered",
+      "data analysis",
+      "market research",
+      "customer feedback"
+    ]
+  },
+  {
+    "name": "HarvestLeads",
+    "description": "HarvestLeads is an AI-driven platform designed to streamline lead generation by leveraging Reddit's vast user base. Users can specify their product details and target subreddits, allowing the system to track relevant posts in real-time and deliver top matches directly to their dashboard. This automation simplifies the process of discovering new opportunities and engaging with potential customers. Currently focused on Reddit, HarvestLeads plans to expand its capabilities to include more platforms in the future.",
+    "websiteLink": "https://harvestleads.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/harvestleads",
+    "tags": [
+      "lead generation",
+      "social media monitoring",
+      "business automation",
+      "customer acquisition",
+      "Reddit analysis"
+    ]
+  },
+  {
+    "name": "OneQuery",
+    "description": "OneQuery is an AI-powered web agent that automates the process of browsing and extracting information from the internet to answer user queries. Utilizing technologies like Playwright for browser automation and OmniParser for webpage analysis, OneQuery can navigate websites, interpret content, and retrieve relevant data. It offers features such as a lightning-fast Zig-based browser, worldwide proxy support, and a job queuing system. Users can deploy OneQuery via a hosted solution or set it up locally, making it a versatile tool for tasks like data scraping, content aggregation, and real-time information retrieval.",
+    "websiteLink": "https://onequery.app/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/onequery",
+    "tags": [
+      "web automation",
+      "data scraping",
+      "information retrieval",
+      "browser automation",
+      "content aggregation",
+      "proxy support"
+    ]
+  },
+  {
+    "name": "Dori Chatbot",
+    "description": "Dori Chatbot is an AI-driven virtual sales assistant designed for WordPress websites. It offers personalized customer engagement by understanding product catalogs and guiding visitors through the purchasing process. With multilingual support and 24/7 availability, Dori Chatbot enhances user experience and aims to increase conversion rates. The chatbot is customizable, allowing businesses to tailor responses and conversation tones to align with their brand identity. Integration is straightforward using a shortcode, making it accessible for users without extensive technical expertise.",
+    "websiteLink": "https://wordpress.org/plugins/dori-chatbot/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/dori-chatbot",
+    "tags": [
+      "sales assistant",
+      "customer engagement",
+      "WordPress",
+      "multilingual",
+      "e-commerce",
+      "conversion optimization",
+      "chatbot"
+    ]
+  },
+  {
+    "name": "Tutorly.sg",
+    "description": "Tutorly.sg is an AI-driven educational platform tailored for students in Singapore, providing round-the-clock tutoring aligned with the Ministry of Education (MOE) syllabus. Catering to all subjects from Primary 1 to Junior College 2, Tutorly.sg offers instant assistance, personalized learning experiences, and unlimited practice opportunities. The platform is designed to make learning accessible, affordable, and effective, serving as both a primary tutor and supplementary support alongside traditional classes. With features like past year exam papers from top schools and progress tracking, Tutorly.sg aims to enhance students' understanding and performance across various subjects.",
+    "websiteLink": "https://tutorly.sg/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/tutorly-sg",
+    "tags": [
+      "education",
+      "tutoring",
+      "Singapore curriculum",
+      "personalized learning",
+      "exam preparation",
+      "AI education",
+      "student support"
+    ]
+  },
+  {
+    "name": "Datamatics TruAgentic",
+    "description": "Datamatics TruAgentic is a low-code platform that enables businesses to design, deploy, and manage AI agents for automating complex, goal-oriented processes. By integrating with large language models (LLMs) and supporting bring-your-own-model (BYOM) capabilities, TruAgentic allows for the creation of autonomous agents that adapt to dynamic conditions without human intervention. The platform offers a visual designer with ready-made drag-and-drop components, facilitating rapid development and deployment of AI agents. With features like multi-agent collaboration and real-time adaptability, TruAgentic helps organizations enhance operational efficiency and reduce manual efforts.",
+    "websiteLink": "https://www.datamatics.com/intelligent-automation/truagentic?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/datamatics-truagentic",
+    "tags": [
+      "low-code platform",
+      "AI agents",
+      "process automation",
+      "LLM integration",
+      "BYOM",
+      "visual designer",
+      "multi-agent collaboration"
+    ]
+  },
+  {
+    "name": "Fyxer AI",
+    "description": "Fyxer AI is an AI-powered executive assistant designed to streamline daily workflows by managing emails, scheduling meetings, and taking comprehensive meeting notes. It integrates seamlessly with platforms like Gmail and Outlook, organizing your inbox by categorizing emails and drafting responses that match your unique tone. Fyxer AI also joins your meetings to provide better-than-human notes and follow-up emails, learning continuously from your interactions to become a more personalized assistant over time. With features tailored for both individuals and teams, Fyxer AI aims to save users significant time and reduce the chaos of daily communications.",
+    "websiteLink": "https://www.fyxer.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/fyxer-ai",
+    "tags": [
+      "email management",
+      "meeting scheduling",
+      "note-taking",
+      "productivity",
+      "virtual assistant",
+      "workflow automation",
+      "communication"
+    ]
+  },
+  {
+    "name": "Querix",
+    "description": "Querix is an AI-driven platform that empowers businesses to develop personalized virtual assistants aimed at enhancing operational efficiency across multiple departments. Utilizing advanced technologies like Agentic AI and Retrieval-Augmented Generation (RAG), Querix ensures that virtual agents provide accurate, reliable, and contextually relevant responses. The platform offers a no-code interface, allowing users to create and deploy assistants tailored to specific functions such as customer support, sales, marketing, human resources, and internal communications. Querix emphasizes data security and compliance, providing GDPR-compliant solutions that integrate seamlessly with existing systems, including CRMs, CMSs, and cloud services.",
+    "websiteLink": "https://querix.chat/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/querix",
+    "tags": [
+      "virtual assistants",
+      "agentic AI",
+      "retrieval-augmented generation",
+      "no-code platform",
+      "business automation",
+      "enterprise integration",
+      "data security"
+    ]
+  },
+  {
+    "name": "Claude Code",
+    "description": "Claude Code is an agentic coding tool developed by Anthropic, designed to assist developers by integrating seamlessly into their terminal environment. It understands codebases and aids in writing, testing, and debugging code through natural language commands. With features like 'extended thinking mode' for complex problem-solving and a 'scratchpad' that reveals its reasoning process, Claude Code enhances coding efficiency and accuracy. It supports various programming languages and is available via the Claude app, Anthropic's API, Amazon Bedrock, and Google's Vertex AI.",
+    "websiteLink": "https://docs.anthropic.com/claude-code/overview?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/claude-code",
+    "tags": [
+      "coding assistant",
+      "software development",
+      "terminal integration",
+      "debugging",
+      "code analysis",
+      "AI programming tool"
+    ]
+  },
+  {
+    "name": "n8n",
+    "description": "n8n is an open-source workflow automation platform that allows users to design and automate complex workflows by connecting various applications and services. With its AI-native capabilities, n8n enables the integration of AI agents, facilitating tasks such as data analysis, content generation, and process automation. Users can build autonomous, multi-step agents, chat with their own data and tools, and plug into their own products using any model, including self-hosted ones. n8n offers a user-friendly interface combined with the flexibility of coding in JavaScript or Python, making it suitable for both technical and non-technical users. The platform supports over 400 integrations, providing limitless possibilities for automation across various industries.",
+    "websiteLink": "https://n8n.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/n8n",
+    "tags": [
+      "workflow automation",
+      "AI integration",
+      "data analysis",
+      "process automation",
+      "no-code platform",
+      "API integration",
+      "open-source"
+    ]
+  },
+  {
+    "name": "Lyzr AI",
+    "description": "Lyzr AI offers the Agent Studio platform, enabling users to build, deploy, and manage AI agents tailored to their business needs. With a no-code interface and over 100 ready-to-use templates, it facilitates the automation of tasks across various industries, including banking, sales, marketing, HR, and customer service. The platform supports both developers and business users, providing powerful APIs for custom agent development and seamless integration with existing systems. Lyzr AI emphasizes safe and responsible AI deployment, offering solutions for on-premise and cloud-based implementations.",
+    "websiteLink": "https://www.lyzr.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/lyzr-ai",
+    "tags": [
+      "AI agents",
+      "no-code platform",
+      "business automation",
+      "enterprise solutions",
+      "multi-industry",
+      "API integration",
+      "deployment flexibility"
+    ]
+  },
+  {
+    "name": "Google Agentspace",
+    "description": "Google Agentspace is an AI-driven platform designed to boost enterprise productivity by integrating advanced reasoning, Google-quality search, and organizational data. It enables the creation and deployment of custom AI agents that assist employees in performing complex tasks through simple prompts. Agentspace offers a unified, company-branded multimodal search agent, acting as a central source of enterprise information. It supports various business functions, including sales, marketing, HR, and software development, by automating workflows and providing proactive suggestions. The platform ensures data security and compliance, integrating seamlessly with existing enterprise systems.",
+    "websiteLink": "https://cloud.google.com/products/agentspace?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/google-agentspace",
+    "tags": [
+      "enterprise productivity",
+      "AI agents",
+      "multimodal search",
+      "workflow automation",
+      "data integration",
+      "business intelligence"
+    ]
+  },
+  {
+    "name": "AutoCodeRover",
+    "description": "AutoCodeRover is an AI-driven platform designed to automate software maintenance tasks, including debugging, issue remediation, and code refactoring. Developed by researchers from the National University of Singapore, it combines Large Language Models (LLMs) with advanced code search and reasoning capabilities to enhance the software development lifecycle. AutoCodeRover supports multiple programming languages and integrates seamlessly with existing developer workflows, aiming to improve code quality and developer productivity.",
+    "websiteLink": "https://autocoderover.dev/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/autocoderover",
+    "tags": [
+      "software maintenance",
+      "debugging",
+      "code refactoring",
+      "large language models",
+      "developer tools",
+      "automation",
+      "software development"
+    ]
+  },
+  {
+    "name": "Pokecut",
+    "description": "Pokecut is an AI-driven online photo editor designed to transform ordinary images into studio-quality visuals effortlessly. It offers features such as background removal, background changing with over 1000 templates, and photo enhancement to convert low-resolution images into high-definition. Pokecut caters to e-commerce sellers, designers, and individuals seeking professional-grade photos without the need for complex software or technical expertise.",
+    "websiteLink": "https://www.pokecut.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/pokecut",
+    "tags": [
+      "photo editing",
+      "background removal",
+      "image enhancement",
+      "e-commerce",
+      "AI imaging",
+      "design tools",
+      "studio photography"
+    ]
+  },
+  {
+    "name": "AutoNurture AI",
+    "description": "AutoNurture AI offers AI-driven voice agents designed to handle tasks such as appointment scheduling, customer support, and follow-ups, providing a seamless experience for clients. With 24/7 availability, multilingual support, and natural, human-like interactions, these agents revolutionize customer engagement and streamline workflows. The platform integrates directly with HubSpot and Salesforce, and supports custom webhooks for tailored workflows, enhancing operational efficiency and productivity.",
+    "websiteLink": "https://autonurture.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/autonurture-ai",
+    "tags": [
+      "voice agents",
+      "customer support",
+      "appointment scheduling",
+      "CRM integration",
+      "workflow automation",
+      "multilingual support"
+    ]
+  },
+  {
+    "name": "Nextvestment",
+    "description": "Nextvestment is an AI-driven investment management platform designed to assist financial institutions, family offices, and advisors in providing proactive, personalized, and compliant investment guidance. By integrating Generative AI with portfolio management and compliance tools, Nextvestment enables users to deliver context-aware recommendations, automate financial conversations, and access real-time portfolio insights. The platform's customizable and modular architecture ensures seamless integration with existing systems, facilitating growth and scalability in wealth management practices.",
+    "websiteLink": "https://nextvestment.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/nextvestment",
+    "tags": [
+      "investment management",
+      "financial advisory",
+      "portfolio analysis",
+      "generative AI",
+      "wealth management",
+      "compliance"
+    ]
+  },
+  {
+    "name": "Fuse AI",
+    "description": "Fuse AI, powered by Fusemachines, is an AI education platform dedicated to democratizing AI knowledge worldwide. It offers a range of programs, including workshops, foundational courses, and specialized Microdegree™ certifications in Artificial Intelligence. These programs are designed to equip individuals, educational institutions, and organizations with the necessary skills to excel in the AI domain. Fuse AI emphasizes hands-on learning, real-world applications, and provides resources like the AI-enabled Fuse Classroom platform to enhance the learning experience.",
+    "websiteLink": "https://fuse.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/fuse-ai",
+    "tags": [
+      "AI education",
+      "skill development",
+      "certification",
+      "online learning",
+      "AI training",
+      "workforce development"
+    ]
+  },
+  {
+    "name": "MiA Analyst",
+    "description": "MiA Analyst is an AI-driven platform tailored for the insurance industry, offering agentic AI solutions to enhance efficiency and decision-making. It automates tasks such as bordereaux reconciliation, intelligent submissions processing, and claims management, enabling carriers, MGAs, reinsurers, and mutuals to scale operations and reduce manual workloads. By integrating seamlessly with existing systems, MiA provides real-time data insights, helping teams work smarter and achieve better outcomes.",
+    "websiteLink": "https://www.mianalyst.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/mia-analyst",
+    "tags": [
+      "insurance automation",
+      "data analytics",
+      "claims management",
+      "workflow optimization",
+      "AI integration",
+      "decision support"
+    ]
+  },
+  {
+    "name": "Jummbo",
+    "description": "Jummbo is an AI-powered web application designed to streamline the process of sales prospecting and lead generation. By specifying the desired industry and location, users can generate dynamic prospect lists tailored to their needs. Jummbo conducts real-time internet searches to compile high-quality leads, extracting relevant information from each prospect's website, including social media links. Additionally, it generates customized call scripts and emails for each prospect, enhancing engagement and increasing the likelihood of positive responses. This automation reduces the time spent on research and drafting, allowing businesses to focus on building meaningful connections and driving conversions.",
+    "websiteLink": "https://www.jummbo.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/jummbo",
+    "tags": [
+      "sales prospecting",
+      "lead generation",
+      "AI automation",
+      "email generation",
+      "call scripts",
+      "business intelligence",
+      "B2B marketing"
+    ]
+  },
+  {
+    "name": "Jumbo Mana",
+    "description": "Jumbo Mana specializes in developing interactive avatars using generative AI technology. Their offerings include creating digital twins and AI-driven avatars that can mimic human expressions and behaviors, providing users with immersive and personalized experiences. These avatars are designed to enhance user engagement across various platforms, including virtual events, customer service interfaces, and entertainment applications.",
+    "websiteLink": "https://www.jumbomana.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/jumbo-mana",
+    "tags": [
+      "generative AI",
+      "digital twins",
+      "avatars",
+      "virtual interactions",
+      "user engagement",
+      "immersive experiences"
+    ]
+  },
+  {
+    "name": "Twig",
+    "description": "Twig is an AI-powered assistant designed to revolutionize B2B customer support and success teams. By automating Tier 1 support, Twig reduces the volume of support tickets by instantly addressing user queries. Its Agent Factory enables the creation of custom AI agents that learn from documentation, tutorials, and previous tickets, ensuring accurate and context-aware responses. Twig seamlessly integrates with platforms like Zendesk and HelpScout, and offers features such as session memory for quicker follow-up responses and an Outlook native plugin for inbox integration. This allows support agents to focus on complex issues, enhancing overall efficiency and customer satisfaction.",
+    "websiteLink": "https://www.twig.so/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/twig",
+    "tags": [
+      "customer support",
+      "B2B",
+      "ticket automation",
+      "AI agents",
+      "knowledge base integration",
+      "support workflow",
+      "CRM integration"
+    ]
+  },
+  {
+    "name": "Kimi AI",
+    "description": "Kimi AI is an advanced AI assistant developed by Moonshot AI, designed to handle extensive context and perform deep reasoning tasks. With the ability to process up to 2 million Chinese characters in a single prompt, Kimi offers users comprehensive and coherent interactions. It supports web browsing, allowing real-time information retrieval, and is accessible through various platforms, including web interfaces and mobile applications. Kimi's development emphasizes enhancing user productivity and creativity by providing detailed and contextually relevant responses.",
+    "websiteLink": "https://kimi.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kimi-ai",
+    "tags": [
+      "AI assistant",
+      "large context window",
+      "reasoning",
+      "web browsing",
+      "productivity",
+      "Chinese language support"
+    ]
+  },
+  {
+    "name": "Presentations.AI",
+    "description": "Presentations.AI is an AI-driven platform that enables users to create stunning presentations in seconds. By leveraging advanced AI technology, it transforms simple ideas into captivating slides, offering features like personalized design suggestions, anti-fragile templates, and seamless PowerPoint compatibility. Trusted by over 5 million users, Presentations.AI streamlines the presentation creation process, making it ideal for businesses, educators, and personal projects.",
+    "websiteLink": "https://presentations.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/presentations-ai",
+    "tags": [
+      "presentation creation",
+      "AI design",
+      "PowerPoint compatibility",
+      "business tools",
+      "content generation"
+    ]
+  },
+  {
+    "name": "Rivio",
+    "description": "Rivio is an AI-powered platform designed to revolutionize procurement by automating purchasing processes and enhancing both efficiency and accuracy. It employs specialized AI agents for vendor and contract management, creating a comprehensive procurement knowledge base by analyzing software contracts and extracting critical data points. Rivio streamlines contract renewal workflows, proactively managing approvals and stakeholder input, thereby reducing manual efforts and improving operational efficiency.",
+    "websiteLink": "https://www.rivio.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/rivio",
+    "tags": [
+      "procurement automation",
+      "contract management",
+      "vendor management",
+      "AI agents",
+      "workflow automation",
+      "data extraction"
+    ]
+  },
+  {
+    "name": "Stacks",
+    "description": "Stacks is an AI-driven platform that automates financial workflows, data processing, and decision-making for businesses. It integrates with financial systems to enhance efficiency, reduce errors, and provide real-time insights. Designed for finance professionals, Stacks helps streamline reporting, reconciliation, and analysis, allowing organizations to optimize operations and drive smarter financial strategies.",
+    "websiteLink": "https://stacks.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/stacks",
+    "tags": [
+      "financial automation",
+      "data processing",
+      "business intelligence",
+      "financial reporting",
+      "workflow optimization",
+      "financial analytics"
+    ]
+  },
+  {
+    "name": "Kwizie",
+    "description": "Kwizie is an AI-powered platform designed to transform passive video consumption into interactive learning experiences. By automatically generating gamified quizzes from videos, audio files, presentations, and text documents, Kwizie enhances engagement and retention. It supports 95% of spoken languages and offers features like issuing certificates, awarding prizes, and providing comprehensive analytics. Kwizie caters to various sectors, including education, corporate training, marketing, and entertainment, making learning both fun and effective.",
+    "websiteLink": "https://www.kwizie.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kwizie",
+    "tags": [
+      "education technology",
+      "interactive learning",
+      "video processing",
+      "gamification",
+      "content transformation",
+      "analytics",
+      "multilingual support"
+    ]
+  },
+  {
+    "name": "Devra",
+    "description": "Devra is an AI-powered software development assistant designed to enhance coding efficiency and productivity. It autonomously explores your codebase, understands the project requirements, and updates code, documentation, and unit tests accordingly. Devra supports various platforms, including Mac, Windows, and Linux, and is versatile in its applications, ranging from game development to data analysis.",
+    "websiteLink": "https://devra.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/devra",
+    "tags": [
+      "software development",
+      "code automation",
+      "documentation",
+      "unit testing",
+      "cross-platform",
+      "productivity"
+    ]
+  },
+  {
+    "name": "Such Much AI",
+    "description": "Such Much AI is an AI-powered platform designed to automate the creation of complex business documents, including sales proposals and procurement contracts. Leveraging advanced AI technology, it enables users to generate customized, data-rich documents in minutes, enhancing productivity and accelerating deal closures. The platform supports the generation of long-form documents exceeding 40 pages, maintaining accuracy and clarity throughout. Committed to security and privacy, Such Much AI complies with GDPR, CCPA, and the EU AI Act, ensuring that all documents are created, stored, and shared securely. Backed by Techstars and San Diego State University, the platform is trusted by over 200 companies worldwide.",
+    "websiteLink": "https://www.suchmuch.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/such-much-ai",
+    "tags": [
+      "document automation",
+      "business documents",
+      "contract generation",
+      "AI writing",
+      "productivity",
+      "enterprise solutions",
+      "data security"
+    ]
+  },
+  {
+    "name": "SandboxAQ",
+    "description": "SandboxAQ is a company specializing in AI and advanced computing solutions, focusing on Large Quantitative Models (LQMs) to tackle challenges in drug discovery, materials science, financial services, and cybersecurity. Their AI sensing applications are revolutionizing healthcare and navigation, while their cryptography management platform safeguards organizations against current and future cyber threats. In January 2025, SandboxAQ partnered with Google Cloud to make their LQMs accessible on the Google Cloud Marketplace, aiming to accelerate the deployment of quantitative AI solutions across various industries.",
+    "websiteLink": "https://www.sandboxaq.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/sandboxaq",
+    "tags": [
+      "quantum computing",
+      "AI",
+      "cybersecurity",
+      "drug discovery",
+      "materials science",
+      "cryptography",
+      "healthcare"
+    ]
+  },
+  {
+    "name": "Liquid AI",
+    "description": "Liquid AI, an MIT spinoff, specializes in creating efficient and adaptive AI systems through liquid neural networks inspired by the nervous system of C. elegans. Their Liquid Foundation Models (LFMs) offer scalable solutions across various industries, providing enhanced performance with reduced energy consumption. In December 2024, Liquid AI secured $250 million in funding led by AMD to further advance their innovative AI technologies.",
+    "websiteLink": "https://www.liquid.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/liquid-ai",
+    "tags": [
+      "neural networks",
+      "AI efficiency",
+      "adaptive systems",
+      "foundation models",
+      "energy optimization",
+      "biologically-inspired AI"
+    ]
+  },
+  {
+    "name": "Dynamiq AI Agents",
+    "description": "Dynamiq offers a platform that enables businesses to create AI agents tailored to their specific needs. These agents can automate various tasks, including reporting, information retrieval, customer service, and decision-making processes. The platform supports deployment on-premise, in the cloud, or in hybrid environments, providing flexibility and control over data. With a user-friendly low-code builder, multi-agent orchestration, and robust observability tools, Dynamiq accelerates the development and deployment of AI solutions while ensuring enterprise-grade security and compliance.",
+    "websiteLink": "https://www.getdynamiq.ai/product/agents?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/dynamiq-ai-agents",
+    "tags": [
+      "enterprise AI",
+      "automation",
+      "low-code",
+      "multi-agent orchestration",
+      "task automation",
+      "customizable agents",
+      "hybrid deployment"
+    ]
+  },
+  {
+    "name": "causaLens AI",
+    "description": "causaLens is an AI platform that empowers organizations to create and deploy AI Data Scientists, accelerating and scaling their data science capabilities. By integrating causal reasoning with advanced quantitative analysis, the platform allows users to build AI agents that autonomously execute complex workflows, providing actionable insights and recommendations. This approach democratizes data science, enabling teams across various departments to harness AI for informed decision-making. Trusted by industry leaders like Cisco and Johnson & Johnson, causaLens transforms how businesses approach data-driven strategies.",
+    "websiteLink": "https://www.causalens.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/causalens-ai",
+    "tags": [
+      "causal AI",
+      "data science automation",
+      "decision intelligence",
+      "enterprise AI",
+      "predictive analytics",
+      "autonomous agents"
+    ]
+  },
+  {
+    "name": "Scite Assistant",
+    "description": "Scite Assistant is an AI-driven tool designed to enhance research workflows by providing users with answers supported by real scientific studies. By integrating large language models with Scite's extensive database of Smart Citations, it minimizes the risk of misinformation and improves the quality of information retrieval. Users can pose questions and receive responses that include citations from credible sources, facilitating literature reviews, reference list building, and content creation. The assistant offers customizable settings, allowing users to filter responses by year, topic, publication type, or specific journals, ensuring tailored and relevant information.",
+    "websiteLink": "https://scite.ai/assistant?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/scite-assistant",
+    "tags": [
+      "research assistant",
+      "scientific citations",
+      "literature review",
+      "information retrieval",
+      "academic research",
+      "citation analysis"
+    ]
+  },
+  {
+    "name": "HeyGen",
+    "description": "HeyGen is an AI-powered video generation platform that allows users to produce studio-quality videos without the need for a camera or crew. By leveraging generative AI, HeyGen enables the creation of engaging videos featuring customizable avatars capable of lip-syncing in over 175 languages. Users can input scripts, record voices, or upload videos to generate lifelike avatars that mirror expressions and speech. The platform offers a vast library of pre-made avatars and supports full customization to align with brand identity. HeyGen is suitable for various applications, including marketing, education, corporate communications, and entertainment, providing a user-friendly interface that simplifies the video creation process.",
+    "websiteLink": "https://www.heygen.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/heygen",
+    "tags": [
+      "video generation",
+      "AI avatars",
+      "multilingual content",
+      "synthetic media",
+      "marketing",
+      "corporate communications",
+      "educational content"
+    ]
+  },
+  {
+    "name": "Data-to-Paper",
+    "description": "Data-to-Paper is an innovative AI-powered framework designed to automate the entire scientific research process. By integrating Large Language Models (LLMs) with rule-based agents, it guides the transformation of raw data into complete, transparent, and verifiable scientific manuscripts. The platform autonomously handles tasks such as hypothesis generation, research planning, analysis code writing and debugging, result generation and interpretation, and manuscript drafting. This approach aims to accelerate scientific discovery while upholding essential values of transparency, traceability, and verifiability in research.",
+    "websiteLink": "https://github.com/Technion-Kishony-lab/data-to-paper?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/data-to-paper",
+    "tags": [
+      "scientific research",
+      "automation",
+      "data analysis",
+      "manuscript generation",
+      "LLM",
+      "research planning",
+      "hypothesis generation"
+    ]
+  },
+  {
+    "name": "RapidCanvas",
+    "description": "RapidCanvas is an AI platform that integrates AI agents with human expertise to transform data into actionable business outcomes. It enables users to build custom, production-grade AI solutions rapidly, even without technical expertise. The platform offers a visual canvas and conversational interface for solution development, trustworthy generative AI tailored to specific business needs, and a scalable enterprise infrastructure compliant with Fortune 50 standards. Additionally, RapidCanvas provides an integrated data hub with over 500 pre-built connectors, facilitating seamless data access and transformation.",
+    "websiteLink": "https://www.rapidcanvas.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/rapidcanvas",
+    "tags": [
+      "enterprise AI",
+      "no-code development",
+      "data integration",
+      "business intelligence",
+      "generative AI",
+      "AI solution platform"
+    ]
+  },
+  {
+    "name": "Juno AI",
+    "description": "Juno AI is a generative AI-powered operating system developed by Juno Technologies, designed to revolutionize loan processing for lenders and brokers specializing in business and property finance. The platform automates traditionally manual tasks such as onboarding, document collection, and data enrichment, enhancing efficiency and accuracy in loan origination and packaging processes. By guiding small business clients through the loan application process and ensuring all information is accurate and complete, Juno AI streamlines workflows, reduces processing times and costs, and improves access to capital for small businesses.",
+    "websiteLink": "https://www.thisisjuno.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/juno-ai",
+    "tags": [
+      "loan processing",
+      "financial services",
+      "document automation",
+      "small business lending",
+      "workflow optimization",
+      "data enrichment"
+    ]
+  },
+  {
+    "name": "Hex Magic",
+    "description": "Hex Magic is an AI-driven feature within the Hex platform designed to enhance data analysis workflows. By integrating large language models (LLMs), it assists users in writing SQL queries, generating Python scripts, and creating visualizations based on natural language prompts. Hex Magic leverages metadata from databases and semantic models to provide accurate, context-aware code suggestions, enabling users to perform complex data analyses more efficiently. Additionally, it offers capabilities such as automatic error correction, chart modifications through simple commands, and seamless integration within collaborative, cloud-based environments.",
+    "websiteLink": "https://hex.tech/product/magic-ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/hex-magic",
+    "tags": [
+      "data analysis",
+      "SQL generation",
+      "Python scripting",
+      "visualization",
+      "LLM",
+      "natural language interface",
+      "data science"
+    ]
+  },
+  {
+    "name": "BambooAI",
+    "description": "BambooAI is an open-source Python library designed to facilitate data analysis and exploration through natural language conversations powered by Large Language Models (LLMs). It allows users, including those without programming expertise, to interact with datasets by posing questions in plain English. BambooAI can process local datasets or fetch data from external sources and APIs, generating and executing Python code for data analysis and visualization. This approach streamlines workflows and makes data insights more accessible.",
+    "websiteLink": "https://github.com/pgalko/BambooAI?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/bambooai",
+    "tags": [
+      "data analysis",
+      "natural language processing",
+      "Python library",
+      "LLM",
+      "data visualization",
+      "code generation",
+      "conversational AI"
+    ]
+  },
+  {
+    "name": "modl.ai",
+    "description": "modl.ai offers an AI Engine that revolutionizes game development by automating quality assurance and player experience testing. Their AI-driven bots, including 'modl:test' for automated game testing and 'modl:play' for player behavior simulation, help developers identify bugs, crashes, and performance issues efficiently. By emulating real player behaviors, these bots assist in game balancing and ensure a seamless gaming experience. Founded in Denmark, modl.ai combines expertise in game development and machine learning to accelerate the development process and enhance player engagement.",
+    "websiteLink": "https://modl.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/modl-ai",
+    "tags": [
+      "game development",
+      "automated testing",
+      "quality assurance",
+      "player simulation",
+      "AI bots",
+      "game balancing",
+      "machine learning"
+    ]
+  },
+  {
+    "name": "Jam",
+    "description": "Jam is an AI-driven platform designed to simplify bug reporting and enhance collaboration between teams. With a user-friendly browser extension, it allows users to capture screenshots, annotate issues, and automatically gather essential technical data such as console logs, network requests, and device information. This comprehensive approach ensures developers receive all necessary context to address issues efficiently. Jam integrates seamlessly with popular project management and communication tools, facilitating smooth workflows and reducing the time spent on debugging and issue resolution.",
+    "websiteLink": "https://jam.dev/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/jam",
+    "tags": [
+      "bug reporting",
+      "collaboration",
+      "browser extension",
+      "technical data collection",
+      "workflow integration",
+      "debugging",
+      "project management"
+    ]
+  },
+  {
+    "name": "TensorFlow",
+    "description": "TensorFlow is an end-to-end open-source platform for machine learning developed by the Google Brain Team. It offers a comprehensive ecosystem of tools, libraries, and community resources that enable researchers and developers to build and deploy machine learning-powered applications efficiently. TensorFlow supports various programming languages, including Python, C++, and JavaScript, and is compatible with multiple platforms such as Linux, macOS, Windows, Android, and JavaScript. Since its initial release in 2015, TensorFlow has become one of the most widely adopted deep learning frameworks, facilitating tasks ranging from research prototyping to production deployment.",
+    "websiteLink": "https://www.tensorflow.org/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/tensorflow",
+    "tags": [
+      "machine learning",
+      "deep learning",
+      "open-source",
+      "neural networks",
+      "data science",
+      "AI development",
+      "cross-platform"
+    ]
+  },
+  {
+    "name": "CodeConductor",
+    "description": "CodeConductor is an AI-powered software development platform designed to streamline the creation, deployment, and scaling of web and mobile applications. By automating backend structuring, data modeling, and architectural design, it allows users—including those without coding experience—to build production-ready applications swiftly. The platform offers features such as AI-driven code generation, no-code development interfaces, seamless cloud deployment, and integration with third-party services, ensuring flexibility and efficiency in the development process.",
+    "websiteLink": "https://codeconductor.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/codeconductor",
+    "tags": [
+      "software development",
+      "code generation",
+      "no-code platform",
+      "cloud deployment",
+      "application development",
+      "AI automation"
+    ]
+  },
+  {
+    "name": "Log10",
+    "description": "Log10 is an AI accuracy platform designed to improve the reliability and performance of Large Language Models (LLMs). It offers tools for advanced logging, benchmarking, and AI-powered optimizations, enabling developers to scale expert reviews and detect errors in real-time. By integrating seamlessly with various LLMs and providing robust evaluation frameworks, Log10 helps organizations deploy AI solutions with confidence, particularly in high-stakes, regulated industries.",
+    "websiteLink": "https://www.log10.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/log10",
+    "tags": [
+      "LLM optimization",
+      "AI accuracy",
+      "error detection",
+      "benchmarking",
+      "model evaluation",
+      "AI monitoring",
+      "enterprise AI"
+    ]
+  },
+  {
+    "name": "ToRA",
+    "description": "ToRA, developed by researchers from Tsinghua University and Microsoft, is a series of Tool-integrated Reasoning Agents aimed at addressing challenging mathematical problems. By seamlessly combining natural language reasoning with external computational tools such as computation libraries and symbolic solvers, ToRA enhances the analytical capabilities of AI systems. This integration allows ToRA to effectively tackle complex mathematical reasoning tasks, outperforming existing open-source models on multiple datasets. Notably, ToRA-Code-34B is the first open-source model to achieve over 50% accuracy on the MATH dataset, surpassing GPT-4's Chain-of-Thought results.",
+    "websiteLink": "https://microsoft.github.io/ToRA/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/tora",
+    "tags": [
+      "mathematical reasoning",
+      "tool integration",
+      "problem solving",
+      "computational AI",
+      "symbolic reasoning"
+    ]
+  },
+  {
+    "name": "AlphaCode",
+    "description": "AlphaCode is an AI-powered coding system developed by DeepMind to tackle competitive programming problems. By leveraging transformer-based language models, AlphaCode generates code solutions from natural language descriptions of problems. In evaluations, it achieved an average ranking in the top 54.3% on the Codeforces platform, demonstrating its capability to handle complex problem-solving tasks that require a deep understanding of algorithms and logic.",
+    "websiteLink": "https://alphacode.deepmind.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/alphacode",
+    "tags": [
+      "competitive programming",
+      "code generation",
+      "problem solving",
+      "transformer models",
+      "AI coding",
+      "algorithms"
+    ]
+  },
+  {
+    "name": "MicroGPT",
+    "description": "MicroGPT is an AI-driven coding assistant designed to elevate developer efficiency by providing context-aware code completions and suggestions. Seamlessly integrating with popular code editors such as Visual Studio Code, Visual Studio, JetBrains IDEs, and Neovim, MicroGPT supports over 80 programming languages. It offers features like real-time coding assistance, AI-powered chat for code explanations, test generation, and documentation. Emphasizing code privacy, MicroGPT provides options for on-premises deployment and ensures zero data retention, safeguarding proprietary code.",
+    "websiteLink": "https://www.microgpt.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/microgpt",
+    "tags": [
+      "coding assistant",
+      "IDE integration",
+      "code completion",
+      "developer productivity",
+      "code privacy",
+      "on-premises deployment"
+    ]
+  },
+  {
+    "name": "Tabnine",
+    "description": "Tabnine is an AI-powered code assistant designed to enhance developer productivity by providing context-aware code completions and suggestions. Supporting over 80 programming languages and integrating seamlessly with popular IDEs like VS Code, IntelliJ, and Visual Studio, Tabnine offers features such as AI-powered chat for code explanations, test generation, and documentation. It emphasizes code privacy, with options for on-premises deployment and zero data retention policies, ensuring that proprietary code remains secure and confidential.",
+    "websiteLink": "https://www.tabnine.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/tabnine",
+    "tags": [
+      "code completion",
+      "developer productivity",
+      "IDE integration",
+      "programming assistant",
+      "code privacy",
+      "AI coding"
+    ]
+  },
+  {
+    "name": "Gwenflow",
+    "description": "Gwenflow, developed by Gwenlake, is an open-source framework designed to streamline the creation of customized, production-ready applications centered around autonomous AI agents and Large Language Models (LLMs). It provides developers with tools to integrate LLMs and agents seamlessly, enabling efficient and scalable solutions tailored to specific business or user needs. Gwenflow supports modular agent architecture, intuitive workflow representation, and an extensible system for tools and plugins, facilitating intelligent process automation, automated customer support systems, and AI-driven data processing pipelines.",
+    "websiteLink": "https://github.com/gwenlake/gwenflow?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/gwenflow",
+    "tags": [
+      "AI agents",
+      "LLM integration",
+      "workflow automation",
+      "open-source framework",
+      "intelligent process automation",
+      "customized applications"
+    ]
+  },
+  {
+    "name": "Theoriq AI",
+    "description": "Theoriq AI is a decentralized AI protocol that combines blockchain technology with artificial intelligence to develop modular, on-chain agents capable of autonomously handling tasks such as portfolio management and trend analysis. By leveraging advanced agent swarms, Theoriq enables collaborative intelligence within decentralized finance (DeFi), fostering an open and transparent AI economy. The platform's architecture supports seamless integration of data sources, AI models, and computational infrastructure, allowing for adaptable and scalable agentic solutions.",
+    "websiteLink": "https://www.theoriq.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/theoriq-ai",
+    "tags": [
+      "blockchain AI",
+      "autonomous agents",
+      "decentralized finance",
+      "agent swarms",
+      "portfolio management",
+      "trend analysis",
+      "modular architecture"
+    ]
+  },
+  {
+    "name": "Vixxo Intelligent Technical Assistant (VITA)",
+    "description": "Vixxo's Intelligent Technical Assistant (VITA) is an AI-driven virtual assistant designed to enhance the efficiency of field technicians. By integrating decades of work order history, asset information, and technical documentation, VITA offers instant access to critical resources such as technical specifications, wiring diagrams, parts lists, and troubleshooting guides. This real-time support enables technicians to diagnose and repair equipment more effectively, reducing onsite time and improving first-time fix rates. VITA operates within a secure, supervised environment, continuously updated to ensure the accuracy and relevance of its knowledge base.",
+    "websiteLink": "https://www.vixxo.com/facilities_ai?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/vixxo-intelligent-technical-assistant-vita",
+    "tags": [
+      "technical support",
+      "field service",
+      "knowledge management",
+      "troubleshooting",
+      "asset management",
+      "virtual assistant"
+    ]
+  },
+  {
+    "name": "SAP Joule Studio",
+    "description": "SAP Joule Studio is an upcoming feature within SAP Build that enables users to create and customize AI agents using a no-code interface. Leveraging SAP's extensive business process expertise, Joule Studio provides guided workflows to develop agents tailored to specific organizational needs. These agents can automate complex, cross-functional tasks by integrating seamlessly with both SAP and third-party applications, enhancing operational efficiency and collaboration across various business functions.",
+    "websiteLink": "https://www.sap.com/products/artificial-intelligence/ai-assistant.html?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/sap-joule-studio",
+    "tags": [
+      "enterprise AI",
+      "no-code development",
+      "business process automation",
+      "SAP integration",
+      "workflow optimization",
+      "AI agents"
+    ]
+  },
+  {
+    "name": "Vegeta AI",
+    "description": "Vegeta AI is an AI-powered art generator that enables users to create stunning images and videos effortlessly. It offers advanced AI tools to bring creative visions to life. Recently, Vegeta AI launched \"Flux 1.dev,\" a cutting-edge image model now available for all users. The platform provides various AI tools and a gallery for AI-generated artworks.",
+    "websiteLink": "https://www.vegeta.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/vegeta-ai",
+    "tags": [
+      "ai art generator",
+      "image generation",
+      "video creation",
+      "creative tools",
+      "digital art",
+      "text-to-image"
+    ]
+  },
+  {
+    "name": "Reviewnicely",
+    "description": "Reviewnicely is an all-in-one AI review management platform that helps businesses easily request, manage, and showcase customer feedback. It supports review requests via WhatsApp, SMS, email, and QR codes, with automated reminders and customizable templates.",
+    "websiteLink": "https://reviewnicely.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/reviewnicely",
+    "tags": [
+      "review management",
+      "customer feedback",
+      "business tools",
+      "automation",
+      "communication"
+    ]
+  },
+  {
+    "name": "AI Image Upscaler",
+    "description": "Image Upscaler provides a wide range of online AI tools for photo and video editing. Beginning as a deep learning convolutional neural network for image upscaling, it since evolved into an AI based multi-tool in image processing, while still providing one of the best image upscaler services.",
+    "websiteLink": "https://imageupscaler.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/ai-image-upscaler",
+    "tags": [
+      "image upscaling",
+      "photo editing",
+      "video editing",
+      "AI tools",
+      "deep learning",
+      "neural networks",
+      "image processing"
+    ]
+  },
+  {
+    "name": "Sahara AI",
+    "description": "Sahara AI is a decentralized blockchain platform designed to prioritize the sovereignty and provenance of artificial intelligence. By integrating blockchain technology with AI, Sahara AI offers a secure and equitable infrastructure where users, data contributors, model creators, and application developers can maintain control over their AI assets. The platform fosters an open and transparent AI economy, ensuring fair attribution and compensation for all participants. In August 2024, Sahara AI raised $43 million in a Series A funding round led by Pantera Capital, Binance Labs, and Polychain Capital, with participation from Samsung NEXT, Matrix Partners, and others. This funding supports the expansion of their global team, enhancement of platform performance, and growth of their developer ecosystem.",
+    "websiteLink": "https://saharalabs.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/sahara-ai",
+    "tags": [
+      "blockchain AI",
+      "decentralized AI",
+      "AI sovereignty",
+      "AI provenance",
+      "open AI economy",
+      "blockchain technology"
+    ]
+  },
+  {
+    "name": "Fleek",
+    "description": "Fleek is an open-source platform that streamlines the creation and deployment of autonomous applications and AI agents. It offers a verifiable, auto-scalable cloud environment, enabling developers to launch AI agents with minimal effort. With features like one-click deployments and pre-built templates, Fleek simplifies the process of integrating AI functionalities into various applications. The platform supports seamless interaction with on-chain environments, allowing AI agents to perform blockchain-specific tasks and respond intelligently to user requests.",
+    "websiteLink": "https://fleek.xyz/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/fleek",
+    "tags": [
+      "AI agents",
+      "autonomous applications",
+      "cloud deployment",
+      "blockchain integration",
+      "developer tools",
+      "open-source"
+    ]
+  },
+  {
+    "name": "NetX",
+    "description": "NetX is a modular economic network developed by TRIAS ECO, seamlessly integrating artificial intelligence and blockchain technologies. It pioneers AI agent-based interaction models, enabling autonomous agents to perform various tasks within a decentralized ecosystem. NetX's mainnet launch signifies a significant advancement in AI-powered blockchain applications, offering a platform where AI agents can operate, interact, and transact autonomously. This integration facilitates innovative solutions across industries, enhancing efficiency and fostering new economic models.",
+    "websiteLink": "https://x.com/netx_world?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/netx",
+    "tags": [
+      "blockchain",
+      "artificial intelligence",
+      "decentralized ecosystem",
+      "autonomous agents",
+      "AI-powered applications",
+      "economic network"
+    ]
+  },
+  {
+    "name": "Orbofi",
+    "description": "Orbofi is an AI engine designed to empower users to create multimodal, tokenized AI agents, clones, and companions. The platform enables the generation of AI-powered characters with distinct personalities and voices, facilitating interactions through voice chats and other modalities. Users can create AI agents for various purposes, including generating text, images, code, and applications. Orbofi also offers a white-label solution for agencies to deploy branded AI chatbots and agents, enhancing customer engagement and automating tasks across multiple communication channels.",
+    "websiteLink": "https://www.orbofi.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/orbofi",
+    "tags": [
+      "AI agents",
+      "multimodal",
+      "tokenization",
+      "character creation",
+      "voice chat",
+      "white-label solution",
+      "chatbots"
+    ]
+  },
+  {
+    "name": "Snorkel Flow",
+    "description": "Snorkel Flow is an AI data development platform designed to expedite enterprise AI initiatives by enabling programmatic curation of training data. It allows data scientists and subject matter experts to collaboratively capture domain knowledge, apply it to label entire datasets, and iteratively develop models with built-in error analysis and evaluation tools. By integrating seamlessly with existing AI/ML stacks, Snorkel Flow supports fine-tuning of large language models (LLMs) for specialized tasks, optimizing retrieval-augmented generation (RAG) pipelines, and enhancing model accuracy across various data modalities.",
+    "websiteLink": "https://snorkel.ai/snorkel-flow/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/snorkel-flow",
+    "tags": [
+      "data labeling",
+      "machine learning",
+      "enterprise AI",
+      "model development",
+      "LLM fine-tuning",
+      "RAG optimization",
+      "collaborative annotation"
+    ]
+  },
+  {
+    "name": "Stammer AI",
+    "description": "Stammer AI is a comprehensive white-label AI SaaS platform designed for digital marketing, AI, and automation agencies. It empowers agencies to create, deploy, and manage AI-powered chatbots and agents under their own branding. The platform offers features such as customizable domains, client sub-account management, and integration with various communication channels. Stammer AI enables agencies to provide 24/7 customer support, lead generation, appointment scheduling, and more, all through intelligent AI agents that can communicate in over 160 languages.",
+    "websiteLink": "https://stammer.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/stammer-ai",
+    "tags": [
+      "AI chatbots",
+      "white-label SaaS",
+      "digital marketing",
+      "customer support",
+      "lead generation",
+      "multi-language support",
+      "agency automation"
+    ]
+  },
+  {
+    "name": "ChatBotKit",
+    "description": "ChatBotKit is a comprehensive platform that enables users to create, deploy, and manage conversational AI bots and agents. It offers a range of tools and integrations, allowing seamless incorporation of AI-driven conversations into websites, applications, and popular messaging platforms like Slack, Discord, WhatsApp, Messenger, and Telegram. With features such as AI Agents, AI Widgets, and AI SDKs, ChatBotKit caters to developers and businesses aiming to enhance user engagement and automate tasks through intelligent chat interfaces.",
+    "websiteLink": "https://chatbotkit.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/chatbotkit",
+    "tags": [
+      "conversational AI",
+      "chatbot development",
+      "AI integration",
+      "messaging platforms",
+      "customer engagement",
+      "developer tools"
+    ]
+  },
+  {
+    "name": "Rivalz Network",
+    "description": "Rivalz Network is developing the World Abstraction Layer, an infrastructure that abstracts the complexities of connecting AI services and agents to various real-world resources. This platform enables seamless interaction between AI agents and digital or physical assets, unlocking the full potential of an agent-centric future. The network comprises five core modules: ROME (Swarm Protocol), OCY DePIN (Data Module), ADCS (Connectivity Module), NOSTRINGS (Identity Module), and VORD (Application Module), each serving a specific function to create a holistic ecosystem for AI agents.",
+    "websiteLink": "https://rivalz.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/rivalz-network",
+    "tags": [
+      "AI infrastructure",
+      "agent connectivity",
+      "decentralized networks",
+      "world abstraction",
+      "AI ecosystem",
+      "swarm intelligence",
+      "digital identity"
+    ]
+  },
+  {
+    "name": "IQ AI",
+    "description": "IQ AI offers the Agent Tokenization Platform (ATP), a pioneering DeFAI (Decentralized Finance + AI) platform that allows developers to create tokenized AI agents. These agents autonomously manage assets, execute financial strategies, and interact within decentralized economies. Each agent possesses its own token, fostering a community of co-owners and enabling collaborative growth. The platform is powered by the IQ token, central to governance, fees, and liquidity pairing within the ATP ecosystem.",
+    "websiteLink": "https://iqai.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/iq-ai",
+    "tags": [
+      "DeFAI",
+      "tokenization",
+      "autonomous agents",
+      "decentralized finance",
+      "asset management",
+      "blockchain",
+      "governance"
+    ]
+  },
+  {
+    "name": "Emoji Generator AI",
+    "description": "Emoji Generator AI is a cutting-edge platform powered by artificial intelligence that revolutionizes the way users create custom emojis. By simply providing descriptions of emotions, themes, or specific features, users can generate personalized emojis in their preferred style instantly. With a wide selection of over 28 styles to choose from, including cartoon, 3D, pixel art, and minimalist, the tool ensures each emoji is unique and original.",
+    "websiteLink": "https://www.emojigeneratorai.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/emoji-generator-ai",
+    "tags": [
+      "emoji generation",
+      "custom emojis",
+      "AI art",
+      "personalization",
+      "style customization",
+      "image generation"
+    ]
+  },
+  {
+    "name": "AGiXT",
+    "description": "AGiXT is a dynamic Artificial Intelligence Automation Platform engineered to orchestrate efficient AI instruction management and task execution across a multitude of providers. Our solution infuses adaptive memory handling with a broad spectrum of commands to enhance AI's understanding and responsiveness, leading to improved task completion. The platform's smart features, like Smart Instruct and Smart Chat, seamlessly integrate web search, planning strategies, and conversation continuity, transforming the interaction between users and AI. By leveraging a powerful plugin system that includes web browsing and command execution, AGiXT stands as a versatile bridge between AI models and users. With an expanding roster of AI providers, code evaluation capabilities, comprehensive chain management, and platform interoperability, AGiXT is consistently evolving to drive a multitude of applications, affirming its place at the forefront of AI technology.",
+    "websiteLink": "https://agixt.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agixt",
+    "tags": [
+      "AI automation",
+      "task orchestration",
+      "adaptive memory",
+      "plugin system",
+      "multi-provider integration",
+      "smart features",
+      "AI workflow management"
+    ]
+  },
+  {
+    "name": "Seraphnet AI",
+    "description": "Seraphnet AI is a decentralized base layer designed for developing ideologically-transparent generative AI applications. It offers a multi-layered infrastructure that prioritizes unbiased outputs and data privacy through fully homomorphic encryption (FHE). The platform features components like the Swarm Manager, an intent-sensitive orchestrator for dynamic agent management; Multi-Agent Pods, modular agents utilizing advanced algorithms for collaborative task resolution; and the Forge SDK, enabling model deployment and training in a containerized environment. Seraphnet integrates both on-chain and off-chain data, ensuring accurate and transparent AI operations.",
+    "websiteLink": "https://seraphnet.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/seraphnet-ai",
+    "tags": [
+      "decentralized AI",
+      "homomorphic encryption",
+      "multi-agent systems",
+      "transparent AI",
+      "data privacy",
+      "AI infrastructure",
+      "model deployment"
+    ]
+  },
+  {
+    "name": "Nova Agent",
+    "description": "Nova Agent is a premier AI consulting firm dedicated to empowering small and medium-sized businesses through innovative artificial intelligence solutions. Their comprehensive services include strategic AI consulting, global talent acquisition, and the development of bespoke AI agents designed to tackle complex business challenges. By leveraging cutting-edge technology and deep industry expertise, Nova Agent helps companies optimize operations, enhance customer experiences, and unlock new growth opportunities.",
+    "websiteLink": "https://www.novaagent.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/nova-agent",
+    "tags": [
+      "AI consulting",
+      "business optimization",
+      "custom AI development",
+      "SMB solutions",
+      "talent acquisition"
+    ]
+  },
+  {
+    "name": "KanzzAI",
+    "description": "KanzzAI is an AI-driven ecosystem that merges artificial intelligence with blockchain technology to provide a suite of innovative tools and services. The platform offers products such as the Kanzz AI Terminal for centralized management of AI tools, customizable AI Agents for task automation, a GPU Marketplace for high-performance computing resources, and trading tools for real-time market insights. Additionally, KanzzAI has introduced the KAAI token, facilitating transactions within its ecosystem and enabling users to participate in staking and revenue-sharing programs.",
+    "websiteLink": "https://www.kanzzai.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kanzzai",
+    "tags": [
+      "blockchain",
+      "AI ecosystem",
+      "GPU marketplace",
+      "trading tools",
+      "task automation",
+      "token economy"
+    ]
+  },
+  {
+    "name": "Capx AI",
+    "description": "Capx AI is a decentralized platform that empowers developers to build, own, and trade AI agents seamlessly. Operating on an Ethereum Layer 2 network, Capx provides a comprehensive ecosystem comprising the Capx Chain for scalable AI agent deployment, the Capx Super App for exploring and trading AI agents with ease, and Capx Cloud, a trust-minimized network for deploying AI agent applications secured through crypto-economic principles. By integrating blockchain technology with AI development, Capx facilitates fractional ownership, monetization, and global scalability of AI innovations, fostering a vibrant AI builder economy.",
+    "websiteLink": "https://www.capx.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/capx-ai",
+    "tags": [
+      "blockchain AI",
+      "decentralized platform",
+      "AI agent marketplace",
+      "Ethereum Layer 2",
+      "crypto-economics",
+      "AI development",
+      "fractional ownership"
+    ]
+  },
+  {
+    "name": "Agency AI",
+    "description": "Agency AI offers a suite of developer tools, including AgentOps, an industry-leading agent observability platform, to assist teams in creating dependable AI agents. With a repository of over 400 AI agents in production, Agency AI supports both startups and enterprises in building scalable AI solutions. Their services encompass agent development tools, operational support, and expert guidance to ensure the successful deployment of AI agents across various applications.",
+    "websiteLink": "https://www.agen.cy/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agency-ai",
+    "tags": [
+      "AI agent development",
+      "observability platform",
+      "developer tools",
+      "enterprise solutions",
+      "scalability",
+      "production deployment"
+    ]
+  },
+  {
+    "name": "Screenpipe",
+    "description": "Screenpipe is an open-source platform designed to continuously capture screen and audio activities on user devices, storing data locally to ensure privacy. Built with Rust for reliability, it provides developers with APIs to build context-aware AI applications that utilize comprehensive desktop activity data. Screenpipe supports cross-platform functionality, operating on Windows, macOS, and Linux systems. It offers a plugin system, allowing developers to create and deploy Next.js applications directly to the desktop environment, enhancing productivity and enabling the development of AI assistants with full context awareness.",
+    "websiteLink": "https://screenpi.pe/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/screenpipe",
+    "tags": [
+      "screen recording",
+      "desktop activity tracking",
+      "context-aware AI",
+      "cross-platform",
+      "developer API",
+      "privacy-focused",
+      "open-source"
+    ]
+  },
+  {
+    "name": "Odin AI",
+    "description": "Odin AI is an all-encompassing generative AI platform designed to simplify and automate intricate workflows across various business functions. It provides customizable AI agents equipped with advanced natural language processing and machine learning capabilities, enabling enterprises to enhance productivity, reduce operational costs, and improve user experiences. With a focus on data privacy and security, Odin AI ensures that user data remains confidential and is not utilized for external model training. The platform seamlessly integrates with popular applications, allowing for the creation of visual workflows that streamline processes and foster efficiency.",
+    "websiteLink": "https://getodin.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/odin-ai",
+    "tags": [
+      "enterprise AI",
+      "workflow automation",
+      "AI agents",
+      "data privacy",
+      "business productivity",
+      "system integration"
+    ]
+  },
+  {
+    "name": "Kore.ai",
+    "description": "Kore.ai is a leading enterprise conversational AI platform that empowers businesses to create and deploy intelligent virtual assistants without coding. The platform offers a comprehensive suite of tools for designing, training, testing, and managing AI-powered chatbots and voice assistants. With its no-code interface, organizations can automate customer interactions, enhance employee experiences, and streamline business processes across various industries. Kore.ai's platform supports integration with multiple channels and systems, ensuring seamless communication and operational efficiency.",
+    "websiteLink": "https://kore.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kore-ai",
+    "tags": [
+      "conversational AI",
+      "virtual assistants",
+      "no-code",
+      "chatbots",
+      "customer service",
+      "enterprise automation",
+      "voice assistants"
+    ]
+  },
+  {
+    "name": "Agent Pilot",
+    "description": "Agent Pilot is a versatile, open-source workflow automation platform that enables users to create, manage, and interact with AI agents seamlessly. It offers an intuitive interface for designing complex AI-driven workflows, incorporating features like graph workflows, building blocks, branching chats, and tool calling. Users can integrate various large language models (LLMs) and configure their interactions in a low-code environment, enhancing productivity and efficiency in AI development.",
+    "websiteLink": "https://agentpilot.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agent-pilot",
+    "tags": [
+      "workflow automation",
+      "AI agents",
+      "open-source",
+      "low-code",
+      "LLM integration",
+      "productivity"
+    ]
+  },
+  {
+    "name": "Letta AI",
+    "description": "Letta AI is an open-source platform designed to enable developers to create, deploy, and manage AI agents endowed with persistent memory and advanced reasoning capabilities. Originating from the Sky Computing Lab at UC Berkeley, Letta provides a comprehensive framework that includes the Agent Development Environment (ADE) for visualizing and iterating on agent designs, as well as robust APIs and SDKs for seamless integration. By incorporating memory management techniques from MemGPT, Letta ensures that agents can maintain context over extended interactions, facilitating more coherent and contextually aware AI applications.",
+    "websiteLink": "https://letta.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/letta-ai",
+    "tags": [
+      "AI agents",
+      "persistent memory",
+      "reasoning capabilities",
+      "open-source",
+      "developer tools",
+      "memory management",
+      "agent development"
+    ]
+  },
+  {
+    "name": "Agents.ai",
+    "description": "Agents.ai offers a browser-based AI agent powered by Large Action Models (LAMs), designed to orchestrate sequences of actions to achieve specific goals. Unlike traditional AI models, LAMs focus on executing tasks directly within applications or systems, such as booking appointments or completing forms, without relying on API connections. This approach grants the agent unrestricted access to resources, enabling seamless task execution across various platforms. Additionally, Agents.ai introduces a 'Browse-2-Earn' program, allowing users to earn AGNT Points by sharing their browsing data via a secure browser extension, contributing to the continuous training and enhancement of the LAM.",
+    "websiteLink": "https://agents.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agents-ai",
+    "tags": [
+      "AI agents",
+      "large action models",
+      "task automation",
+      "browser extension",
+      "data sharing",
+      "autonomous execution",
+      "web interaction"
+    ]
+  },
+  {
+    "name": "Azure AI Foundry",
+    "description": "Azure AI Foundry is Microsoft's all-in-one platform designed to simplify the development, deployment, and management of AI applications and agents. It offers a rich set of AI capabilities and tools through a unified portal, SDKs, and APIs, facilitating secure data integration, model customization, and enterprise-grade governance. Developers can explore a diverse model catalog, including foundation, open-source, industry-specific, and task-based AI models, to build transformative AI solutions efficiently.",
+    "websiteLink": "https://ai.azure.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/azure-ai-foundry",
+    "tags": [
+      "AI development",
+      "model customization",
+      "enterprise governance",
+      "application deployment",
+      "Microsoft Azure"
+    ]
+  },
+  {
+    "name": "Agently",
+    "description": "Agently is an AI-driven platform designed to improve the onboarding, training, and coaching processes for real estate agents. It offers automated onboarding to expedite agents' integration, ongoing training programs to boost productivity, and tools to enhance agent engagement and retention. Agently aims to streamline operations for brokerages and teams, leading to increased sales production and reduced turnover.",
+    "websiteLink": "https://agently.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agently",
+    "tags": [
+      "real estate",
+      "onboarding",
+      "training",
+      "coaching",
+      "agent management",
+      "productivity",
+      "retention"
+    ]
+  },
+  {
+    "name": "GM Network",
+    "description": "GM Network is an autonomous AI agent platform that leverages blockchain and cryptocurrency technologies to promote health and longevity. Users can continuously train their AI agents using personal health data, earning diverse rewards in return. The platform emphasizes data privacy through its innovative Proof of Health consensus mechanism and offers features like GM scores to reflect health metrics such as calorie burn, step count, exercise duration, and sleep quality. Additionally, GM Network provides personalized analysis and guidance to help users maintain and improve their health.",
+    "websiteLink": "https://gmnetwork.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/gm-network",
+    "tags": [
+      "health tracking",
+      "blockchain",
+      "cryptocurrency",
+      "AI agents",
+      "data privacy",
+      "personalized health",
+      "longevity"
+    ]
+  },
+  {
+    "name": "LiveAgent",
+    "description": "LiveAgent is a comprehensive customer support platform that integrates AI-powered features to streamline and enhance service efficiency. It offers tools such as the AI Answer Assistant, which utilizes ChatGPT to generate polished email replies, improving response times and agent productivity. The platform supports various communication channels, including live chat, ticketing, and social media, providing a unified solution for customer service needs.",
+    "websiteLink": "https://www.liveagent.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/liveagent",
+    "tags": [
+      "customer support",
+      "AI assistant",
+      "email automation",
+      "live chat",
+      "ticketing system",
+      "multi-channel communication"
+    ]
+  },
+  {
+    "name": "Llama Guard",
+    "description": "Llama Guard is a Large Language Model (LLM)-based safeguard developed to ensure safe and appropriate human-AI interactions. It functions by classifying both user inputs and AI-generated outputs to identify and mitigate potential safety risks, such as prompt injections or inappropriate content. The model is instruction-tuned to handle various safety categories and can be customized to align with specific use cases. Llama Guard supports multi-class classification and generates binary decision scores to effectively moderate AI conversations.",
+    "websiteLink": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/llama-guard",
+    "tags": [
+      "content moderation",
+      "safety",
+      "LLM safeguard",
+      "prompt injection detection",
+      "AI security",
+      "conversation filtering"
+    ]
+  },
+  {
+    "name": "Mapless AI",
+    "description": "Mapless AI offers a remote vehicle operations platform designed to enable safe and scalable driverless fleet management. Their technology allows for full operational remote control of existing fleet vehicles from thousands of miles away, decoupling driver staff from fleet assets and improving overall fleet efficiency. The platform features optimized, low-latency connectivity and a proprietary fail-operational safety system that protects the fleet asset at all times, operating independently of network connectivity. Mapless AI's solution is fleet-friendly, with scalable retrofits that can be quickly and easily installed on existing vehicles without causing cosmetic damage.",
+    "websiteLink": "https://mapless.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/mapless-ai",
+    "tags": [
+      "autonomous vehicles",
+      "remote operations",
+      "fleet management",
+      "vehicle retrofitting",
+      "teleoperation",
+      "safety systems",
+      "low-latency connectivity"
+    ]
+  },
+  {
+    "name": "Intel Automotive Solutions",
+    "description": "Intel Automotive Solutions provides a comprehensive platform designed to accelerate innovation in the automotive industry. The platform includes high-performance computing, artificial intelligence (AI), power management, and zonal controller solutions, all aimed at facilitating the development of software-defined, connected, and electric vehicles. Intel's open and flexible automotive compute platforms streamline the path to modern vehicle architectures, ensuring outstanding performance, improved scalability, and seamless software reuse. The solutions prioritize meeting rigorous performance, safety, and security requirements while enabling consistent software development across vehicle generations.",
+    "websiteLink": "https://www.intel.com/content/www/us/en/automotive/overview.html?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/intel-automotive-solutions",
+    "tags": [
+      "automotive computing",
+      "AI",
+      "electric vehicles",
+      "software-defined vehicles",
+      "power management",
+      "zonal controllers",
+      "vehicle architecture"
+    ]
+  },
+  {
+    "name": "Motional",
+    "description": "Motional is a leading autonomous vehicle company formed in 2020 as a joint venture between Hyundai Motor Group and Aptiv. Headquartered in Boston, with operations in multiple cities globally, Motional focuses on developing SAE Level 4 autonomous vehicles for ride-hailing and delivery services. Their IONIQ 5 robotaxi, an all-electric vehicle equipped with over 30 sensors, represents a significant advancement in driverless technology. Motional emphasizes safety through a rigorous multi-stage testing process and has partnerships with companies like Lyft to integrate driverless vehicles into existing transportation networks.",
+    "websiteLink": "https://motional.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/motional",
+    "tags": [
+      "autonomous vehicles",
+      "robotaxi",
+      "self-driving technology",
+      "mobility",
+      "transportation",
+      "ride-hailing",
+      "electric vehicles"
+    ]
+  },
+  {
+    "name": "May Mobility",
+    "description": "May Mobility is a company specializing in autonomous vehicle technology, focusing on providing driverless microtransit services. Utilizing their proprietary Multi-Policy Decision Making (MPDM) system, their vehicles can learn and adapt to new driving scenarios in real-time, enhancing safety and efficiency. In February 2025, May Mobility launched its first commercial driver-out autonomous transportation service in Peachtree Corners, Georgia, marking a significant milestone in driverless public transportation.",
+    "websiteLink": "https://maymobility.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/may-mobility",
+    "tags": [
+      "autonomous vehicles",
+      "microtransit",
+      "MPDM",
+      "driverless technology",
+      "public transportation",
+      "mobility services"
+    ]
+  },
+  {
+    "name": "AutoX",
+    "description": "AutoX is a California-based company specializing in AI-driven autonomous vehicle technology. Founded with the mission to 'Democratize Autonomy,' AutoX focuses on creating AI drivers capable of fully autonomous driving across various vehicle types. The company has developed a comprehensive self-driving platform, integrating advanced sensors and AI systems to enable safe and efficient navigation in urban environments. In January 2021, AutoX became the second company globally to operate a Level 4 driverless robotaxi service, launching in Shenzhen, China. The service utilizes modified Fiat Chrysler Pacifica minivans equipped with a variety of sensing modalities, including cameras, LiDAR, radar, IMUs, and GPS. AutoX continues to expand its robotaxi fleet and testing operations, contributing significantly to the advancement of autonomous driving technology.",
+    "websiteLink": "https://www.autox.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/autox",
+    "tags": [
+      "autonomous vehicles",
+      "robotaxi",
+      "self-driving technology",
+      "AI drivers",
+      "urban navigation",
+      "Level 4 autonomy",
+      "sensor fusion"
+    ]
+  },
+  {
+    "name": "aiMotive",
+    "description": "aiMotive is a Hungarian company specializing in AI-powered autonomous driving technologies. Founded in 2015, it offers a comprehensive suite of products, including aiDrive (software stack for automated driving), aiSim (virtual simulation environment), and aiWare (hardware IP for AI acceleration). In December 2022, Stellantis acquired aiMotive to enhance its autonomous driving capabilities.",
+    "websiteLink": "https://aimotive.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/aimotive",
+    "tags": [
+      "autonomous driving",
+      "AI simulation",
+      "automotive technology",
+      "hardware acceleration",
+      "self-driving cars",
+      "computer vision"
+    ]
+  },
+  {
+    "name": "Cruise",
+    "description": "Cruise is a company specializing in the development of autonomous vehicle technology, with the goal of creating self-driving cars to transform the future of transportation. Acquired by General Motors in 2016, Cruise has been at the forefront of advancing driverless technology, conducting extensive testing and deploying autonomous vehicles in urban environments. Despite significant investments and technological advancements, Cruise faced challenges in scaling its robotaxi services, leading to a strategic shift in focus by its parent company.",
+    "websiteLink": "https://getcruise.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/cruise",
+    "tags": [
+      "autonomous vehicles",
+      "self-driving cars",
+      "transportation technology",
+      "robotaxi",
+      "AI mobility",
+      "driverless technology"
+    ]
+  },
+  {
+    "name": "AgentForge",
+    "description": "AgentForge is a low-code framework designed for the swift creation, testing, and iteration of AI-powered autonomous agents and cognitive architectures. It supports multiple Large Language Models (LLMs), including OpenAI, Google's Gemini, Anthropic's Claude, and local models via Ollama or LMStudio. The platform offers customizable agents with features like dynamic prompt templates, on-the-fly prompt editing, and custom tools and actions. Its database-agnostic design ensures seamless integration with various databases, making it adaptable for diverse AI projects.",
+    "websiteLink": "https://github.com/DataBassGit/AgentForge?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agentforge",
+    "tags": [
+      "autonomous agents",
+      "low-code framework",
+      "LLM integration",
+      "cognitive architectures",
+      "customizable prompts",
+      "database-agnostic"
+    ]
+  },
+  {
+    "name": "Agent Q",
+    "description": "Agent Q is an advanced AI framework designed to improve the autonomy of AI agents in dynamic environments, such as web interfaces. It combines guided Monte Carlo Tree Search (MCTS), self-critique mechanisms, and reinforcement learning to enable agents to plan, execute, and adapt their actions effectively. This approach allows AI agents to handle complex, multi-step tasks with greater reliability and efficiency.",
+    "websiteLink": "https://arxiv.org/abs/2408.07199?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/agent-q",
+    "tags": [
+      "autonomous agents",
+      "reinforcement learning",
+      "Monte Carlo Tree Search",
+      "self-critique",
+      "web automation",
+      "planning",
+      "decision making"
+    ]
+  },
+  {
+    "name": "Starizon AI",
+    "description": "Starizon AI is an AI-driven browser assistant designed to simplify and automate web tasks. It enables users to extract and monitor data from webpages, create intelligent automation workflows, and automate various web actions. Key features include intelligent data extraction, smart web monitoring with customizable alerts, and AI-powered webpage automation. The platform offers both free and pro pricing plans to accommodate different user needs.",
+    "websiteLink": "https://starizon.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/starizon-ai",
+    "tags": [
+      "web automation",
+      "data extraction",
+      "browser assistant",
+      "workflow automation",
+      "web monitoring",
+      "AI assistant"
+    ]
+  },
+  {
+    "name": "TurboDoc",
+    "description": "TurboDoc is an AI-driven platform designed to automate invoice and receipt processing by transforming unstructured documents into structured data. Utilizing advanced Optical Character Recognition (OCR) technology, it accurately extracts essential information such as company details, invoice numbers, dates, due dates, and payment specifics. The platform integrates seamlessly with Gmail, capturing invoices directly from your inbox and organizing the extracted data in a user-friendly dashboard. TurboDoc ensures data privacy with AES256 enterprise-level encryption and offers features like organized registries and transparent data handling for accounting purposes.",
+    "websiteLink": "https://turbodoc.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/turbodoc",
+    "tags": [
+      "document processing",
+      "OCR",
+      "invoice automation",
+      "data extraction",
+      "financial management",
+      "email integration",
+      "data privacy"
+    ]
+  },
+  {
+    "name": "HuggingGPT",
+    "description": "HuggingGPT is an AI agent that leverages large language models (LLMs), such as ChatGPT, to connect with various AI models available in machine learning communities like Hugging Face. It functions by using an LLM to plan tasks based on user requests, selecting appropriate models according to their descriptions, executing each subtask with the chosen models, and summarizing the responses based on the execution results. This approach enables HuggingGPT to tackle a wide range of sophisticated AI tasks spanning different modalities and domains, including language, vision, and speech.",
+    "websiteLink": "https://arxiv.org/abs/2303.17580?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/hugginggpt",
+    "tags": [
+      "language models",
+      "multi-modal AI",
+      "task planning",
+      "model selection",
+      "Hugging Face",
+      "AI orchestration"
+    ]
+  },
+  {
+    "name": "Infinity AI",
+    "description": "Infinity AI is a video foundation model specializing in human motion and emotion synthesis. It empowers creators to produce expressive, talking characters across various styles, from photorealistic to cartoonish, by simply inputting a script. This technology streamlines content creation for advertisements, podcasts, films, and more, allowing for rapid generation of compelling video content without the need for traditional filming processes.",
+    "websiteLink": "https://infinity.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/infinity-ai",
+    "tags": [
+      "video generation",
+      "human motion synthesis",
+      "emotion synthesis",
+      "character animation",
+      "content creation",
+      "AI-powered filmmaking"
+    ]
+  },
+  {
+    "name": "HyperCycle",
+    "description": "HyperCycle is a decentralized network designed to facilitate secure and efficient peer-to-peer collaboration between AI systems, effectively creating an 'Internet of AI.' By connecting AI agents globally, HyperCycle enhances their intelligence and profitability through seamless interaction. The platform offers a suite of network connectivity products that can significantly increase AI revenue and intelligence by enabling AI modules to subcontract tasks to other agents on the network. HyperCycle also provides scalable node licensing options, allowing users to operate nodes ranging from single instances to full MasterNodes with 512 instances.",
+    "websiteLink": "https://www.hypercycle.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/hypercycle",
+    "tags": [
+      "AI collaboration",
+      "decentralized network",
+      "peer-to-peer",
+      "AI connectivity",
+      "node licensing",
+      "Internet of AI"
+    ]
+  },
+  {
+    "name": "Prolific",
+    "description": "Prolific is a platform that connects researchers with a diverse pool of over 200,000 verified participants, facilitating the collection of high-quality data for various studies, including AI training and evaluation tasks. Researchers can easily set up and launch studies, accessing reliable human data at scale. Prolific emphasizes ethical participant engagement, ensuring fair compensation and transparency throughout the research process.",
+    "websiteLink": "https://www.prolific.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/prolific",
+    "tags": [
+      "research platform",
+      "participant recruitment",
+      "data collection",
+      "AI training",
+      "human feedback",
+      "ethical research"
+    ]
+  },
+  {
+    "name": "Lift AI",
+    "description": "Lift AI is an advanced platform that utilizes AI agents to extract data from real-time content such as sports, gaming, social media, and streaming services. By transforming live content into actionable insights, Lift AI enables businesses to analyze and respond to information at the speed and scale of content creation. The platform reduces the cost of real-time data extraction by up to 90% while collecting ten times the number of inferences, making it a valuable tool for enterprises seeking to leverage AI vision technology.",
+    "websiteLink": "https://www.liftdata.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/lift-ai",
+    "tags": [
+      "data extraction",
+      "real-time analytics",
+      "AI vision",
+      "content monitoring",
+      "business intelligence",
+      "streaming data"
+    ]
+  },
+  {
+    "name": "Make AI",
+    "description": "Make.com is a visual automation platform that empowers users to design and automate workflows by connecting a wide range of applications and AI services without the need for coding. Formerly known as Integromat, Make.com offers an intuitive drag-and-drop interface, allowing users to create complex integrations and automate repetitive tasks efficiently. The platform supports numerous AI integrations, enabling functionalities such as data enrichment, content generation, and predictive analytics. With its extensive library of pre-built templates and modules, Make.com caters to various industries, enhancing productivity and operational efficiency.",
+    "websiteLink": "https://www.make.com/en/ai-automation?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/make-ai",
+    "tags": [
+      "workflow automation",
+      "no-code integration",
+      "AI integration",
+      "business process automation",
+      "productivity tools"
+    ]
+  },
+  {
+    "name": "Lutra AI",
+    "description": "Lutra AI is a zero-code platform that enables users to create AI-driven workflows through natural language instructions, eliminating the need for technical expertise. It integrates seamlessly with popular applications such as Airtable, HubSpot, Google Sheets, Gmail, and Outlook, allowing for tasks like web research, data extraction from unstructured sources, and automation of sales and marketing processes. With a focus on security, Lutra AI is SOC2 certified, ensuring data protection and transparency in operations.",
+    "websiteLink": "https://lutra.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/lutra-ai",
+    "tags": [
+      "workflow automation",
+      "natural language interface",
+      "zero-code platform",
+      "data extraction",
+      "integration",
+      "business automation",
+      "SOC2 certified"
+    ]
+  },
+  {
+    "name": "Vengo AI",
+    "description": "Vengo AI is a customizable AI sales tool designed to help businesses capture more sales leads, follow up with customers, and increase revenue. Acting as a virtual sales expert, Vengo AI interacts with customers around the clock, providing personalized responses and engaging conversations that reflect the brand's voice. The platform offers easy integration with a single line of code, making it accessible for various website platforms. Key features include AI-powered sales funnels, customizable AI agents, data-driven analytics, and seamless embedding into websites. Vengo AI aims to replace outdated chatbots with advanced AI agents that enhance customer engagement and drive sales growth.",
+    "websiteLink": "https://www.vengoai.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/vengo-ai",
+    "tags": [
+      "sales automation",
+      "lead generation",
+      "customer engagement",
+      "AI chatbot",
+      "revenue optimization",
+      "website integration"
+    ]
+  },
+  {
+    "name": "Sierra AI",
+    "description": "Sierra AI is a conversational AI platform that enables companies to build AI agents personalized to their business and customers. These agents are designed to engage and delight customers by providing real-time support, handling complex issues, and aligning with the brand's tone and voice. Sierra's platform allows for seamless integration with existing systems, ensuring that AI agents can take action, such as updating cases in CRM or managing deliveries in order management systems. The platform emphasizes trust, security, and compliance, with features like supervision, secure integration, auditing, and data governance.",
+    "websiteLink": "https://sierra.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/sierra-ai",
+    "tags": [
+      "conversational AI",
+      "customer support",
+      "CRM integration",
+      "enterprise AI",
+      "brand personalization",
+      "data governance",
+      "system integration"
+    ]
+  },
+  {
+    "name": "LinkedIn Influencer Emulator",
+    "description": "The LinkedIn Influencer Emulator is an AI-powered agent designed to generate LinkedIn posts that mimic the writing style of chosen influencers. By analyzing the tone, language, and content patterns of prominent LinkedIn figures, this tool assists users in creating authentic and engaging posts tailored to their target audience. It aims to enhance personal branding and content strategy on LinkedIn by providing users with AI-generated content that resonates with professional communities.",
+    "websiteLink": "https://agent.ai/agent/LinkedIn-influencer-emulator?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/linkedin-influencer-emulator",
+    "tags": [
+      "content generation",
+      "personal branding",
+      "LinkedIn",
+      "social media",
+      "writing assistant",
+      "style emulation"
+    ]
+  },
+  {
+    "name": "Akira AI - Competitive Intelligence Agent",
+    "description": "Akira AI provides an advanced AI-driven competitive intelligence agent that helps businesses monitor competitors, analyze industry trends, and predict market movements. The platform leverages AI to collect and process data from various sources, providing real-time insights and strategic recommendations. It enables businesses to automate competitor tracking, identify opportunities, and enhance their market position through data-driven decision-making.",
+    "websiteLink": "https://www.akira.ai/ai-agents/competitive-intelligence-agent?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/akira-ai-competitive-intelligence-agent",
+    "tags": [
+      "competitive intelligence",
+      "market analysis",
+      "business strategy",
+      "trend forecasting",
+      "data analytics",
+      "real-time monitoring"
+    ]
+  },
+  {
+    "name": "Competely AI",
+    "description": "Competely is an AI-driven competitive analysis platform that provides instant insights into competitors, eliminating the need for manual research. It scans and processes vast amounts of data from online sources to deliver actionable intelligence on competitors' strategies, customer sentiment, and market positioning. Designed for businesses looking to optimize their competitive edge, Competely simplifies market research and enhances strategic decision-making with AI automation.",
+    "websiteLink": "https://competely.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/competely-ai",
+    "tags": [
+      "competitive analysis",
+      "market research",
+      "business intelligence",
+      "AI automation",
+      "competitor tracking",
+      "strategic decision-making"
+    ]
+  },
+  {
+    "name": "Kathy - AI Competitor Analyst",
+    "description": "Kathy is an AI competitor analyst developed by Lyzr, designed to help businesses stay ahead of their competition. It automates competitor research, providing real-time insights, competitive intelligence, and strategic recommendations. By analyzing market trends, customer sentiments, and industry movements, Kathy enables businesses to make data-driven decisions and optimize their competitive positioning. The AI agent is particularly useful for marketing and business strategy teams looking to gain an edge in their respective markets.",
+    "websiteLink": "https://www.lyzr.ai/kathy/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kathy-ai-competitor-analyst",
+    "tags": [
+      "competitor analysis",
+      "market intelligence",
+      "business strategy",
+      "competitive positioning",
+      "data analytics",
+      "strategic recommendations"
+    ]
+  },
+  {
+    "name": "Houseware AI Agents",
+    "description": "Houseware AI Agents is an AI-powered platform designed to supercharge product, marketing, and digital teams by embedding AI agents across over 100 tools. These agents proactively tackle tasks to ensure organizations achieve their goals efficiently. The platform offers features such as AI-powered product analytics, seamless data integration, collaborative campaign tools, and context-driven ad optimization, enabling teams to deliver exceptional digital experiences.",
+    "websiteLink": "https://www.houseware.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/houseware-ai-agents",
+    "tags": [
+      "AI automation",
+      "workflow integration",
+      "product analytics",
+      "marketing optimization",
+      "data integration",
+      "productivity tools"
+    ]
+  },
+  {
+    "name": "B2B Rocket",
+    "description": "B2B Rocket is an AI-powered platform designed to revolutionize B2B sales by automating lead generation and engagement processes. Its AI agents operate 24/7 to identify and interact with potential clients, utilizing advanced algorithms for precision targeting and personalized communication. The platform integrates seamlessly with existing CRM systems, ensuring efficient data management and streamlined sales workflows. B2B Rocket offers scalable solutions suitable for businesses of all sizes, aiming to enhance sales efficiency and drive revenue growth.",
+    "websiteLink": "https://www.b2brocket.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/b2b-rocket",
+    "tags": [
+      "sales automation",
+      "lead generation",
+      "B2B",
+      "CRM integration",
+      "AI agents",
+      "personalized communication"
+    ]
+  },
+  {
+    "name": "NewOaks AI",
+    "description": "NewOaks AI is an advanced chatbot platform that leverages custom-trained ChatGPT models to engage clients across multiple channels, including text SMS, website chat widgets, and social media platforms like Facebook Messenger, WhatsApp, and Instagram. It automates customer support, lead generation, and appointment scheduling by learning from your documents and website materials, providing intelligent, natural, and relevant responses to customer inquiries. The platform also offers features like AI voice agents, live chat, and integration with various systems such as PabblyConnect, Webhooks, and APIs, enhancing its versatility and effectiveness in managing customer interactions.",
+    "websiteLink": "https://www.newoaks.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/newoaks-ai",
+    "tags": [
+      "customer support",
+      "chatbot",
+      "multi-channel communication",
+      "lead generation",
+      "appointment scheduling",
+      "AI voice agents",
+      "system integration"
+    ]
+  },
+  {
+    "name": "Headlime",
+    "description": "Headlime is an AI-driven copywriting platform designed to assist marketers in creating compelling marketing content efficiently. By leveraging GPT-3 technology and a vast array of templates, Headlime enables users to generate high-quality copy for various purposes, including Facebook ads, headlines, blog posts, and more. The platform also offers features such as a blog editor, landing page builder, and collaboration tools, supporting multiple languages to cater to a global audience.",
+    "websiteLink": "https://headlime.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/headlime",
+    "tags": [
+      "copywriting",
+      "marketing",
+      "content generation",
+      "GPT-3",
+      "templates",
+      "multilingual",
+      "collaboration"
+    ]
+  },
+  {
+    "name": "Klaviyo",
+    "description": "Klaviyo is a leading marketing automation platform that leverages artificial intelligence to help businesses deliver personalized customer experiences. By integrating AI-driven features such as predictive analytics, generative content creation, and optimization tools, Klaviyo enables marketers to anticipate customer needs, craft tailored messages, and optimize campaign performance across email and SMS channels. These capabilities allow businesses to engage customers more effectively, drive higher conversion rates, and foster long-term loyalty.",
+    "websiteLink": "https://www.klaviyo.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/klaviyo",
+    "tags": [
+      "marketing automation",
+      "predictive analytics",
+      "personalization",
+      "email marketing",
+      "SMS marketing",
+      "customer engagement"
+    ]
+  },
+  {
+    "name": "Maxwell AI",
+    "description": "Maxwell AI is a comprehensive platform that specializes in AI-powered digital assistants for businesses and individuals. The website serves as a central hub for Maxwell AI's services, showcasing its capabilities and offerings. Maxwell AI leverages advanced artificial intelligence technologies to provide virtual assistants that can streamline various tasks, boost productivity, and enhance user experiences. The platform likely offers a range of features, including natural language processing, machine learning algorithms, and automation tools designed to assist users with tasks such as scheduling appointments, managing emails, generating reports, and more. Maxwell AI caters to diverse industries and sectors, offering customized solutions tailored to meet specific needs and requirements. Through its website, Maxwell AI provides information on its services, pricing, and how users can leverage AI technology to optimize their workflows and maximize efficiency. By leveraging cutting-edge AI technologies, Maxwell AI aims to revolutionize how businesses and individuals interact with digital assistants to enhance productivity and organizational effectiveness.",
+    "websiteLink": "https://maxwell.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/maxwell-ai",
+    "tags": [
+      "virtual assistants",
+      "productivity tools",
+      "business automation",
+      "AI platform",
+      "natural language processing",
+      "task management"
+    ]
+  },
+  {
+    "name": "Tidio",
+    "description": "Tidio is an all-in-one customer experience platform designed to help businesses improve customer service and increase sales. It combines live chat, AI-driven chatbots, and multichannel communication tools, allowing businesses to manage customer interactions across various platforms, including websites, email, Messenger, and Instagram. Tidio's AI chatbot, Lyro, can automatically resolve up to 70% of customer inquiries, providing quick and efficient support. The platform also offers features like real-time visitor monitoring, customizable chat widgets, and seamless integrations with popular e-commerce platforms and CRMs.",
+    "websiteLink": "https://www.tidio.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/tidio",
+    "tags": [
+      "customer service",
+      "chatbots",
+      "AI automation",
+      "e-commerce",
+      "multichannel communication",
+      "customer experience",
+      "sales support"
+    ]
+  },
+  {
+    "name": "Salesloft",
+    "description": "Salesloft is a premier sales engagement platform that leverages artificial intelligence to optimize sales workflows. Its AI-driven features, such as Conductor AI, prioritize seller actions based on data analysis, guiding sales teams toward the most impactful activities. The platform also offers generative text capabilities to assist in crafting effective email content, and conversation intelligence tools that transcribe and analyze sales calls to provide actionable insights. By integrating these AI functionalities, Salesloft enables sales professionals to engage more effectively with prospects and customers, ultimately driving increased revenue.",
+    "websiteLink": "https://salesloft.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/salesloft",
+    "tags": [
+      "sales engagement",
+      "AI-driven prioritization",
+      "generative text",
+      "conversation intelligence",
+      "sales optimization",
+      "workflow automation"
+    ]
+  },
+  {
+    "name": "VoiceSpin",
+    "description": "VoiceSpin offers cloud-based AI contact center solutions designed to amplify sales, enhance productivity, and improve agent experience. Their suite includes AI Dialer, AI Voice Bot, AI Chatbot, AI Messaging, and AI Speech Analyzer, among other features. These tools enable businesses to manage inbound and outbound communications efficiently, integrate seamlessly with various CRM systems, and deliver a seamless omnichannel customer experience.",
+    "websiteLink": "https://www.voicespin.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/voicespin",
+    "tags": [
+      "AI contact center",
+      "sales automation",
+      "customer service",
+      "voice technology",
+      "omnichannel communication",
+      "CRM integration"
+    ]
+  },
+  {
+    "name": "Navan AI",
+    "description": "Navan AI offers advanced AI and computer vision solutions tailored for e-commerce and retail businesses. Their technology automates tasks such as adding new items to websites, recognizing and categorizing products, and distinguishing between various items, thereby reducing manual labor and saving valuable resources. Additionally, Navan AI has developed niia.ai, a generative AI-driven platform for the fashion industry, enabling designers to create apparel designs efficiently and visualize them on various fabrics.",
+    "websiteLink": "https://navan.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/navan-ai",
+    "tags": [
+      "computer vision",
+      "e-commerce",
+      "retail",
+      "product recognition",
+      "fashion design",
+      "generative AI",
+      "automation"
+    ]
+  },
+  {
+    "name": "PodExtra AI",
+    "description": "PodExtra AI is an innovative platform designed to enhance the podcast listening experience through artificial intelligence. It provides users with accurate transcripts, concise summaries, visual mind maps, outlines, highlights, and key takeaways for their favorite podcasts. These features enable users to quickly grasp essential information, navigate content efficiently, and retain knowledge more effectively. PodExtra AI supports integration with major podcast platforms, offering access to a vast array of shows and episodes.",
+    "websiteLink": "https://www.podextra.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/podextra-ai",
+    "tags": [
+      "podcast transcription",
+      "content summarization",
+      "knowledge extraction",
+      "mind mapping",
+      "podcast enhancement",
+      "AI-powered listening"
+    ]
+  },
+  {
+    "name": "Deckdrop.io",
+    "description": "Deckdrop.io is an AI-powered research agent designed for venture capitalists, private equity investors, and investment analysts. By simply emailing a company's pitch deck or URL to [email protected], users receive a comprehensive, investor-ready report within minutes. The AI analyzes thousands of sources to provide insights such as company summaries, fundraising history, leadership profiles, business models, competitor analysis, market details, web traffic data, and employee feedback. This tool streamlines the due diligence process, ensuring investors have access to critical information efficiently.",
+    "websiteLink": "https://deckdrop.io/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/deckdrop-io",
+    "tags": [
+      "investment research",
+      "due diligence",
+      "venture capital",
+      "AI analysis",
+      "competitive intelligence",
+      "market research"
+    ]
+  },
+  {
+    "name": "Cynthia AI",
+    "description": "Cynthia AI is an AI-driven sales agent designed to transform prospecting by conducting in-depth company research and crafting personalized messages that initiate genuine conversations. Unlike mass automation tools, Cynthia focuses on providing sales teams with rich prospect insights and enables multi-channel engagement across platforms like LinkedIn and email. By leveraging intelligent research and personalized communication, Cynthia helps sales teams land more meetings with qualified leads.",
+    "websiteLink": "https://omniengage.co/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/cynthia-ai",
+    "tags": [
+      "sales automation",
+      "AI prospecting",
+      "personalized outreach",
+      "lead generation",
+      "multi-channel engagement",
+      "sales intelligence"
+    ]
+  },
+  {
+    "name": "Foundry.ai",
+    "description": "Foundry.ai is a technology studio that specializes in developing artificial intelligence software products and launching companies in collaboration with Global 2000 enterprises. The firm focuses on practical applications of AI that drive immediate, measurable, and recurring improvements to business performance. Their portfolio includes companies that optimize various business operations, such as resource deployment in healthcare and decision-making processes in multi-unit operations.",
+    "websiteLink": "https://www.foundry.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/foundry-ai",
+    "tags": [
+      "enterprise AI",
+      "business optimization",
+      "AI software products",
+      "technology studio",
+      "decision-making",
+      "healthcare AI"
+    ]
+  },
+  {
+    "name": "Helpcare AI",
+    "description": "Helpcare AI develops autonomous agents designed to alleviate administrative and care coordination burdens in healthcare settings. These AI agents can autonomously call, text, email, and schedule patients across multiple platforms without requiring system integrations. They support 29 languages and utilize over 50 customizable outreach scripts for various patient interactions, such as appointment scheduling and onboarding. By automating these tasks, Helpcare AI enables healthcare staff to focus more on direct patient care, improving operational efficiency and patient engagement.",
+    "websiteLink": "https://helpcare.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/helpcare-ai",
+    "tags": [
+      "healthcare automation",
+      "patient coordination",
+      "multilingual support",
+      "appointment scheduling",
+      "administrative efficiency",
+      "autonomous agents"
+    ]
+  },
+  {
+    "name": "ShowAndTell AI",
+    "description": "ShowAndTell AI develops artificial intelligence agents tailored for dental practices. These agents assist in educating patients about their treatment plans, thereby increasing case acceptance rates and building lasting trust between patients and dental staff. By automating patient operations, the platform enables dental professionals to focus more on direct patient care, improving overall practice efficiency.",
+    "websiteLink": "https://www.tryshowandtell.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/showandtell-ai",
+    "tags": [
+      "healthcare AI",
+      "dental technology",
+      "patient education",
+      "workflow automation",
+      "treatment planning",
+      "practice management"
+    ]
+  },
+  {
+    "name": "Halion AI",
+    "description": "Halion AI specializes in developing innovative marketing automation tools powered by artificial intelligence. Their offerings include AI-based chatbots designed for e-commerce platforms, personalized customer communication strategies, and solutions aimed at increasing website traffic and conversion rates. By automating processes from lead generation to customer retention, Halion AI helps businesses enhance efficiency and reduce costs. Their services also encompass consulting, workshops, and training to ensure effective implementation of AI and automation strategies tailored to specific business needs.",
+    "websiteLink": "https://halion.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/halion-ai",
+    "tags": [
+      "marketing automation",
+      "AI chatbots",
+      "e-commerce",
+      "personalized communication",
+      "lead generation",
+      "customer retention",
+      "business consulting"
+    ]
+  },
+  {
+    "name": "Alora AI",
+    "description": "Alora AI is a cutting-edge platform that allows users to deploy autonomous AI agents capable of making real-time phone calls, executing various tasks, and providing detailed summaries of interactions. Designed to handle outbound calls for purposes such as sales, customer service, and surveys, Alora AI aims to help businesses scale their outreach efficiently and cost-effectively. The platform offers an easy-to-use interface for creating call prompts and supports simultaneous multi-agent deployment, making it a scalable solution for businesses looking to enhance their communication strategies.",
+    "websiteLink": "https://askalora.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/alora-ai",
+    "tags": [
+      "voice AI",
+      "autonomous agents",
+      "outbound calling",
+      "customer service",
+      "sales automation",
+      "business communication",
+      "call summarization"
+    ]
+  },
+  {
+    "name": "Amplemarket AI",
+    "description": "Amplemarket AI is an all-in-one sales platform that leverages artificial intelligence to enhance the sales process. It provides tools for data and lead generation, multichannel engagement, and deliverability optimization. The platform's AI Sales Copilot, Duo, acts as a personal assistant for salespeople by offering business insights, conducting research, creating workflows, and guiding reps through their pipeline. Duo helps sellers pinpoint which accounts to focus on, find suitable leads, and create tailored plays, surfacing data from over 24 categories of signals, including buying intent, social interactions, G2 reviews, Slack group conversations, and recent job changes.",
+    "websiteLink": "https://www.amplemarket.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/amplemarket-ai",
+    "tags": [
+      "sales automation",
+      "lead generation",
+      "AI assistant",
+      "sales intelligence",
+      "multichannel engagement",
+      "data analytics"
+    ]
+  },
+  {
+    "name": "Company Status Agent",
+    "description": "Ensure business legitimacy with the Company Status AI Agent, an advanced verification tool that instantly checks if a company is registered and active using AI-powered data from official global registries.",
+    "websiteLink": "https://www.globaldatabase.com/ai-agents?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/company-status-agent",
+    "tags": [
+      "business verification",
+      "company registration",
+      "data validation",
+      "compliance",
+      "due diligence"
+    ]
+  },
+  {
+    "name": "PARAMUS",
+    "description": "PARAMUS is an AI-powered agent platform tailored for the chemical and pharmaceutical industries. It accelerates scientific ideation, experimentation, chemistry process development, and scale-up strategies. Seamlessly integrating with ELN, LIMS, MES, office files, and MS Teams, PARAMUS enables efficient interaction with diverse data sources. By bridging AI with traditional chemistry, it streamlines scientific workflows, driving faster discoveries and more efficient molecule production.",
+    "websiteLink": "https://paramus.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/paramus",
+    "tags": [
+      "chemical industry",
+      "pharmaceutical research",
+      "scientific workflow automation",
+      "data integration",
+      "AI-assisted experimentation",
+      "process optimization"
+    ]
+  },
+  {
+    "name": "Sudowrite",
+    "description": "Sudowrite is an AI-driven writing assistant tailored for authors and creative writers. It offers features like brainstorming, expanding text, and providing descriptive suggestions to help overcome writer's block and enhance the creative process. With tools such as 'Brainstorm' for idea generation and 'Describe' for enriching narratives, Sudowrite assists writers in crafting compelling stories and improving their writing efficiency.",
+    "websiteLink": "https://www.sudowrite.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/sudowrite",
+    "tags": [
+      "creative writing",
+      "writing assistant",
+      "brainstorming",
+      "text expansion",
+      "author tools",
+      "AI writing",
+      "creative content"
+    ]
+  },
+  {
+    "name": "CopyMonkey",
+    "description": "CopyMonkey is an AI-driven platform designed to assist Amazon sellers in creating and optimizing product listings. It generates keyword-rich titles, bullet points, and descriptions, ensuring that important keywords are strategically placed to improve organic ranking on Amazon's search results. The platform also offers competitor insights, analyzing successful strategies to incorporate best practices into your listings. By streamlining the listing creation process, CopyMonkey helps sellers enhance visibility and drive sales.",
+    "websiteLink": "https://copymonkey.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/copymonkey",
+    "tags": [
+      "e-commerce",
+      "Amazon SEO",
+      "product listings",
+      "copywriting",
+      "competitor analysis",
+      "keyword optimization"
+    ]
+  },
+  {
+    "name": "Jacquard",
+    "description": "Jacquard is an AI-powered platform designed to automate the creation of contextually relevant, on-brand marketing messaging tailored to individual consumers. It leverages artificial intelligence and computational linguistics to generate, optimize, and analyze language in real time, enabling brands to produce trusted content at scale and drive sustained brand affinity. Jacquard's Personalised Campaigns feature allows marketers to create tens of thousands of brand-compliant and contextually relevant messaging variants, enhancing customer engagement and campaign performance.",
+    "websiteLink": "https://www.jacquard.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/jacquard",
+    "tags": [
+      "marketing automation",
+      "personalization",
+      "content generation",
+      "AI copywriting",
+      "brand messaging",
+      "campaign optimization"
+    ]
+  },
+  {
+    "name": "Grammarly",
+    "description": "Grammarly is an AI-driven writing assistant that helps users improve their writing by providing suggestions for grammar, spelling, punctuation, clarity, and tone. It offers features such as AI-generated content, tone detection, and style recommendations to ensure effective communication. Grammarly integrates seamlessly across multiple platforms, including web browsers, desktop applications, and mobile devices, making it a versatile tool for enhancing writing quality in emails, documents, social media posts, and more.",
+    "websiteLink": "https://www.grammarly.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/grammarly",
+    "tags": [
+      "writing assistant",
+      "grammar correction",
+      "spelling checker",
+      "tone detection",
+      "content enhancement",
+      "cross-platform"
+    ]
+  },
+  {
+    "name": "Persado",
+    "description": "Persado is an AI-driven platform that creates personalized marketing content by leveraging natural language generation, machine learning, and a vast language knowledge base. It analyzes language and emotions to generate messages that resonate with audiences, enhancing customer engagement and driving conversions. Persado's Motivation AI Platform has been utilized by major brands to optimize communications across various channels, resulting in significant revenue growth.",
+    "websiteLink": "https://www.persado.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/persado",
+    "tags": [
+      "natural language generation",
+      "marketing content",
+      "personalization",
+      "emotion analysis",
+      "customer engagement",
+      "machine learning"
+    ]
+  },
+  {
+    "name": "Customers.ai",
+    "description": "Customers.ai is an AI-driven platform that helps businesses identify anonymous website visitors and re-engage them through targeted email and advertising campaigns. By capturing and enriching visitor identity data, it enables companies to convert anonymous shoppers into actionable audiences, enhancing marketing effectiveness and driving sales growth. The platform integrates seamlessly with popular tools like Klaviyo, SendGrid, Salesforce, and HighLevel, facilitating streamlined marketing workflows.",
+    "websiteLink": "https://customers.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/customers-ai",
+    "tags": [
+      "lead generation",
+      "visitor identification",
+      "marketing automation",
+      "customer conversion",
+      "email marketing",
+      "advertising",
+      "CRM integration"
+    ]
+  },
+  {
+    "name": "Power Automate",
+    "description": "Power Automate is Microsoft's AI-powered platform designed to automate workflows between various applications and services. It enables users to create automated processes, known as 'flows,' that can handle repetitive tasks, integrate data across platforms, and enhance productivity. With AI Builder integration, Power Automate offers capabilities such as form processing, object detection, and text recognition, allowing users to incorporate AI models into their workflows without extensive coding. The platform supports both prebuilt and custom AI models, facilitating intelligent automation tailored to specific business needs.",
+    "websiteLink": "https://powerautomate.microsoft.com/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/power-automate",
+    "tags": [
+      "workflow automation",
+      "business process automation",
+      "Microsoft",
+      "AI integration",
+      "low-code",
+      "productivity",
+      "data integration"
+    ]
+  },
+  {
+    "name": "Monday AI",
+    "description": "Monday AI integrates artificial intelligence into the Monday.com Work OS to enhance productivity and collaboration. It offers features such as AI-generated task summaries, automated data categorization, information extraction from files, and sentiment detection. These capabilities aim to reduce manual effort, streamline workflows, and provide actionable insights, thereby improving project management and team efficiency.",
+    "websiteLink": "https://monday.com/w/ai?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/monday-ai",
+    "tags": [
+      "productivity enhancement",
+      "workflow automation",
+      "project management",
+      "data categorization",
+      "AI integration",
+      "collaboration tools"
+    ]
+  },
+  {
+    "name": "Workato",
+    "description": "Workato is an AI-driven enterprise orchestration platform that empowers businesses to rapidly build and manage purpose-specific AI agents, known as Genies, through its Agentic Orchestration Platform. These AI agents can retrieve relevant information, take actions across various applications, and dynamically orchestrate workflows to enhance productivity and operational efficiency. Workato offers a low-code/no-code interface, extensive integration capabilities with over 8,500 applications, and robust security and governance features, making it a comprehensive solution for intelligent automation.",
+    "websiteLink": "https://www.workato.com/genie?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/workato",
+    "tags": [
+      "enterprise automation",
+      "workflow orchestration",
+      "AI agents",
+      "low-code",
+      "system integration",
+      "business productivity",
+      "intelligent automation"
+    ]
+  },
+  {
+    "name": "Asana AI",
+    "description": "Asana AI integrates artificial intelligence into the Asana work management platform to enhance productivity and collaboration. It offers features such as AI-generated task summaries, automated goal drafting, and smart workflows through the AI Studio—a no-code builder for designing and deploying AI agents within workflows. These capabilities aim to reduce manual effort, standardize processes, and provide actionable insights, thereby streamlining project management and fostering efficient teamwork.",
+    "websiteLink": "https://asana.com/product/ai?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/asana-ai",
+    "tags": [
+      "project management",
+      "workflow automation",
+      "productivity",
+      "collaboration",
+      "AI integration",
+      "task management"
+    ]
+  },
+  {
+    "name": "Spell",
+    "description": "Spell is an AI-powered platform that allows users to delegate various tasks to autonomous agents. These agents are enhanced with over 100 plugins, enabling them to perform complex tasks such as summarizing research, writing blog posts, and auditing SEO. The platform supports parallel task execution and integrates with GPT-3.5 and GPT-4 models, offering prompt variables and curated prompts to streamline workflows. Spell aims to transform daily work by providing innovative and intuitive AI tools that enhance productivity.",
+    "websiteLink": "https://spell.so/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/spell",
+    "tags": [
+      "AI assistants",
+      "task automation",
+      "productivity tools",
+      "workflow automation",
+      "content creation",
+      "SEO tools"
+    ]
+  },
+  {
+    "name": "Kaiber",
+    "description": "Kaiber is an AI-driven creative platform that enables users to convert text prompts, images, and audio into engaging videos. It offers a variety of artistic styles and features, including audioreactivity, customizable animations, and storyboard sequencing. Kaiber's Superstudio integrates top-tier image and video models into a unified, intuitive interface, facilitating seamless creative workflows for artists, musicians, and content creators.",
+    "websiteLink": "https://kaiber.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/kaiber",
+    "tags": [
+      "video generation",
+      "AI art",
+      "creative tools",
+      "content creation",
+      "audio visualization",
+      "text-to-video",
+      "image-to-video"
+    ]
+  },
+  {
+    "name": "Verify AI",
+    "description": "Verify AI is an AI-powered agent developed to streamline the process of patient benefit verification in healthcare settings. It autonomously contacts insurance providers to confirm up-to-date coverage information for each patient visit, ensuring accurate and timely eligibility checks. This automation reduces manual effort, decreases the likelihood of claim denials due to eligibility errors, and enhances the efficiency of revenue cycle management in medical practices.",
+    "websiteLink": "https://www.thoughtful.ai/ai-agent/eligibility-verification?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/verify-ai",
+    "tags": [
+      "healthcare automation",
+      "insurance verification",
+      "revenue cycle management",
+      "patient benefits",
+      "medical administration"
+    ]
+  },
+  {
+    "name": "Exa AI",
+    "description": "Exa AI is an AI-powered search engine designed to deliver embedding-based, real-time web data retrieval tailored for AI applications. It transforms web pages into embeddings, offering more relevant and accurate search results compared to traditional keyword-based engines. Exa enhances AI applications with better access to global knowledge and enables more complex queries.",
+    "websiteLink": "https://exa.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/exa-ai",
+    "tags": [
+      "search engine",
+      "AI applications",
+      "embeddings",
+      "web data retrieval",
+      "knowledge access",
+      "semantic search"
+    ]
+  },
+  {
+    "name": "Air AI",
+    "description": "Air AI is an advanced conversational agent designed to engage in natural, human-like phone conversations lasting between 10 to 40 minutes. It functions as both a sales representative and customer service assistant, utilizing self-learning capabilities to improve interactions over time. The platform aims to enhance customer engagement and operational efficiency by automating complex phone interactions, providing businesses with a scalable solution for handling sales inquiries and customer support.",
+    "websiteLink": "https://air.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/air-ai",
+    "tags": [
+      "voice assistant",
+      "conversational AI",
+      "sales automation",
+      "customer service",
+      "self-learning",
+      "phone interactions"
+    ]
+  },
+  {
+    "name": "Chipp AI",
+    "description": "Chipp AI is a no-code platform that enables users to create, share, and monetize custom AI applications and assistants. It offers tools to design AI apps without coding, integrate them with various services, and implement flexible payment solutions, including usage-based and subscription models. Chipp AI supports embedding AI into products, courses, and services, facilitating the rapid deployment of AI solutions across different industries.",
+    "websiteLink": "https://www.chipp.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/chipp-ai",
+    "tags": [
+      "no-code platform",
+      "AI application builder",
+      "custom AI assistants",
+      "monetization tools",
+      "API integration",
+      "business automation"
+    ]
+  },
+  {
+    "name": "Temporal AI Agent",
+    "description": "The Temporal AI Agent is an open-source framework that leverages Temporal workflows to facilitate durable, multi-turn conversations with AI agents. Designed to collect information towards specific goals, the agent can execute various tools and handle complex tasks autonomously. It supports integration with multiple Large Language Models (LLMs) such as OpenAI's GPT-4, Google's Gemini, and Anthropic's Claude. The framework allows for dynamic goal setting and tool definitions, enabling the agent to work towards any objective as long as the appropriate tools and goals are provided. Temporal's robust workflow management ensures reliability and fault tolerance in the agent's operations.",
+    "websiteLink": "https://github.com/steveandroulakis/temporal-ai-agent?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/temporal-ai-agent",
+    "tags": [
+      "AI agents",
+      "workflow automation",
+      "LLM integration",
+      "multi-turn conversations",
+      "tool execution",
+      "open-source",
+      "fault tolerance"
+    ]
+  },
+  {
+    "name": "Skyfire",
+    "description": "Skyfire is a financial platform designed to empower AI agents with the ability to autonomously make and receive payments. It provides a comprehensive financial stack for the AI economy, including features such as secure wallet access, verifiable agent identity, and an open payment protocol. Skyfire enables AI agents to access services, data, and infrastructure without the need for traditional payment methods, facilitating seamless and autonomous transactions across various platforms.",
+    "websiteLink": "https://skyfire.xyz/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/skyfire",
+    "tags": [
+      "financial services",
+      "AI payments",
+      "autonomous transactions",
+      "digital wallets",
+      "agent identity",
+      "payment protocol"
+    ]
+  },
+  {
+    "name": "Sparkbase",
+    "description": "Sparkbase is an AI-driven sales automation platform featuring an AI sales agent named Cara. It automates the scheduling of high-intent sales calls by combining trusted B2B data sources with real-time signals from the web, news, and social media. The platform integrates with tools like LinkedIn, Apollo, and Google Maps, enabling businesses to build targeted sales pipelines, conduct deep web research, and create personalized outreach campaigns. Sparkbase aims to enhance sales efficiency by reducing manual research and outreach efforts, allowing sales teams to focus on closing deals.",
+    "websiteLink": "https://sparkbase.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/sparkbase",
+    "tags": [
+      "sales automation",
+      "AI sales agent",
+      "B2B data",
+      "lead generation",
+      "outreach automation",
+      "sales pipeline",
+      "web research"
+    ]
+  },
+  {
+    "name": "AIAgent.app",
+    "description": "AIAgent.app is a web-based platform that allows users to create autonomous AI agents capable of performing various tasks based on user-defined goals. The platform operates by breaking down complex objectives into smaller tasks, which the AI agents execute iteratively until the overall goal is achieved. Key features include the ability to run multiple AI agents concurrently, access to advanced AI technology powered by GPT-4, and a user-friendly interface that eliminates the need for extensive technical knowledge or API keys. AIAgent.app aims to democratize access to AI-driven task automation, enhancing productivity across various domains.",
+    "websiteLink": "https://aiagent.app/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/aiagent-app",
+    "tags": [
+      "autonomous agents",
+      "task automation",
+      "productivity",
+      "AI workflow",
+      "goal-based AI",
+      "GPT-4",
+      "no-code"
+    ]
+  },
+  {
+    "name": "Reworkd",
+    "description": "Reworkd is an advanced AI-driven platform designed to automate the entire web data extraction process. It leverages AI agents to scan websites, generate extraction code, execute data retrieval, validate results, and output structured data, all without manual intervention. Key features include automated code generation, self-healing scrapers that detect and repair data extraction issues, and compatibility with complex web structures such as pagination and dynamic content. Reworkd aims to simplify web data collection, reduce engineering effort, and provide reliable, scalable solutions for businesses and developers.",
+    "websiteLink": "https://www.reworkd.ai/?utm_source=aiagentstore.ai",
+    "url": "https://aiagentstore.ai/ai-agent/reworkd",
+    "tags": [
+      "web scraping",
+      "data extraction",
+      "AI automation",
+      "code generation",
+      "self-healing systems",
+      "web data collection",
+      "data processing"
+    ]
+  }
+]
