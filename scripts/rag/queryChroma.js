@@ -1,6 +1,6 @@
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChromaClient } from "chromadb";
-import { CHROMA_CONFIG } from "./chromaConfig.js";
+import { CHROMA_CONFIG } from "../../frontend/chromaConfig.js";
 import { identifyRelevantSources } from "./documentUtils.js";
 import dotenv from "dotenv";
 import path from "path";

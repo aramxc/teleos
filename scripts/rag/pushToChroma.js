@@ -1,7 +1,7 @@
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChromaClient } from "chromadb";
-import { CHROMA_CONFIG } from "./chromaConfig.js";
+import { CHROMA_CONFIG } from "../../frontend/chromaConfig.js";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -18,13 +18,13 @@ dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 // Define the UTILS array with a single utility for reading the scraped file
 const UTILS = [
   {
-    name: "scraped-ai-agent-store",
+    name: "ai-agent-store-data",
     util: {
       get: async () => {
         try {
           const filePath = path.resolve(
             __dirname,
-            "../scraped-ai-agent-store.txt"
+            "../ai-agent-store-data.txt"
           );
           console.log(`Reading file from: ${filePath}`);
           const content = await fs.readFile(filePath, "utf8");

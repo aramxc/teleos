@@ -306,10 +306,16 @@ async function scrapeAgentDetails(url, browser) {
       // Use detailed description if available, otherwise use the short description
       const finalDescription = detailedDescription || description;
 
+      // Extract the logo image URL
+      const altText = `${name} logo`;
+      const logoImg = document.querySelector(`img[alt="${altText}"]`);
+      const logoUrl = logoImg ? logoImg.src : "";
+
       return {
         name,
         description: finalDescription,
         websiteLink,
+        icon: logoUrl,
       };
     });
 
@@ -319,6 +325,11 @@ async function scrapeAgentDetails(url, browser) {
     // Log the extracted website link
     console.log(
       `Extracted website link for ${agentDetails.name}: ${agentDetails.websiteLink}`
+    );
+
+    // Log the extracted icon URL
+    console.log(
+      `Extracted icon URL for ${agentDetails.name}: ${agentDetails.icon}`
     );
 
     // If description exists, extract tags using Claude

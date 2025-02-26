@@ -2,7 +2,7 @@ import "server-only";
 import { NextRequest, NextResponse } from "next/server";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { getChromaClient } from "@/lib/chromaClient";
-import { CHROMA_CONFIG } from "@/../../frontend/chromaConfig";
+import { CHROMA_CONFIG } from "@/chromaConfig";
 
 // Function to query ChromaDB
 async function queryChromaDB(queryText: string, numResults: number = 10) {
@@ -37,10 +37,6 @@ async function queryChromaDB(queryText: string, numResults: number = 10) {
     // Process each result
     const parsedResults = results.documents[0].map(
       (doc: string | null, index: number) => {
-        const metadata = results.metadatas?.[0][index] || null;
-        const distance = results.distances?.[0][index] || 0;
-        const relevanceScore = 1 - distance;
-
         // Parse the JSON content
         let parsedContent;
         try {
