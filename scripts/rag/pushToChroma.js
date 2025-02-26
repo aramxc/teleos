@@ -68,14 +68,67 @@ async function loadContent() {
 
 async function splitDocuments(documents) {
   console.log("Splitting documents...");
-  const textSplitter = new RecursiveCharacterTextSplitter({
-    chunkSize: 1000,
-    chunkOverlap: 0,
-  });
 
-  const texts = await textSplitter.splitDocuments(documents);
-  console.log(`Split into ${texts.length} chunks`);
-  return texts;
+  const allChunks = [];
+
+  for (const document of documents) {
+    try {
+      console.log(
+        `Splitting document from source: ${document.metadata.source}`
+      );
+
+      // Try to parse the content as JSON
+      let jsonContent;
+      try {
+        jsonContent = JSON.parse(document.pageContent);
+
+        // Check if it's an array
+        if (!Array.isArray(jsonContent)) {
+          console.log(
+            "JSON content is not an array, treating as a single object"
+          );
+          jsonContent = [jsonContent];
+        }
+      } catch (error) {
+        console.warn(
+          `Content is not valid JSON, falling back to text splitter: ${error.message}`
+        );
+        // Fall back to the text splitter for non-JSON content
+        const textSplitter = new RecursiveCharacterTextSplitter({
+          chunkSize: 1000,
+          chunkOverlap: 0,
+        });
+
+        const textChunks = await textSplitter.splitDocuments([document]);
+        allChunks.push(...textChunks);
+        continue;
+      }
+
+      // Process each object in the JSON array as a separate chunk
+      jsonContent.forEach((item, index) => {
+        allChunks.push({
+          pageContent: JSON.stringify(item, null, 2),
+          metadata: {
+            ...document.metadata,
+            chunk_id: index,
+            total_chunks: jsonContent.length,
+          },
+        });
+      });
+
+      console.log(
+        `Split JSON array into ${jsonContent.length} individual object chunks`
+      );
+    } catch (error) {
+      console.error(
+        `Error splitting document from ${document.metadata.source}:`,
+        error
+      );
+    }
+  }
+
+  console.log(`Split into ${allChunks.length} total chunks`);
+  return allChunks;
 }
 
 /**
@@ -261,7 +314,7 @@ async function addToChroma(chunks) {
     console.log("Content verification completed");
 
     console.log("All documents added. Testing query...");
-    const testQuery = "What events are happening on Feb 25th?";
+    const testQuery = "Show me some marketing agents";
     const queryEmbedding = await embedding.embedQuery(testQuery);
 
     const results = await collection.query({
@@ -271,8 +324,7 @@ async function addToChroma(chunks) {
 
     console.log("Test query results:", {
       query: testQuery,
-      nResults: results.documents[0].length,
-      firstResult: results.documents[0][0]?.substring(0, 100),
+      nResults: results.documents,
     });
 
     return true;
