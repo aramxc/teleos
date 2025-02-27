@@ -11,6 +11,7 @@
   "dependencies": {
     "@coinbase/agentkit": "^0.2.2",
     "@coinbase/agentkit-langchain": "^0.2.2",
+    "@elizaos/core": "^0.25.8",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.5",
@@ -20,14 +21,17 @@
     "@xenova/transformers": "^2.17.2",
     "chromadb": "^1.10.4",
     "@types/react-slick": "^0.23.13",
+    "dayjs": "^1.11.13",
     "framer-motion": "^12.4.7",
     "langchain": "^0.3.19",
+    "lucide-react": "^0.476.0",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.4",
+    "tailwind-merge": "^3.0.2",
     "thirdweb": "^5.89.0"
   },
   "devDependencies": {
