@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
 import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
-import AgentCard from './AgentCard';
-import { mockAgentResponses } from './mockData';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import AgentCardCarousel from './AgentCardCarousel';
+import AgentCard from "./AgentCard";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import AgentCardCarousel from "./AgentCardCarousel";
 
 type ChatWindowProps = {
   messages: Message[];
@@ -31,9 +30,13 @@ export default function ChatWindow({
   const renderMessage = (content: string) => {
     try {
       const jsonContent = JSON.parse(content);
-      if (Array.isArray(jsonContent)) {
-        return <AgentCardCarousel agents={jsonContent} />;
-      } else if (jsonContent.name && jsonContent.description && jsonContent.tags) {
+      if (Array.isArray(jsonContent.results)) {
+        return <AgentCardCarousel agents={jsonContent.results} />;
+      } else if (
+        jsonContent.name &&
+        jsonContent.description &&
+        jsonContent.tags
+      ) {
         return <AgentCard agent={jsonContent} />;
       }
     } catch {
@@ -43,12 +46,12 @@ export default function ChatWindow({
   };
 
   // Check if currentResponse is already in messages
-  const shouldShowCurrentResponse = currentResponse && 
-    !messages.some(msg => msg.content === currentResponse);
+  const shouldShowCurrentResponse =
+    currentResponse && !messages.some((msg) => msg.content === currentResponse);
 
   return (
     <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8">
-      {mockAgentResponses.map((message, index) => {
+      {messages.map((message, index) => {
         const isCarousel = (() => {
           try {
             const content = JSON.parse(message.content);
@@ -62,18 +65,16 @@ export default function ChatWindow({
           <div
             key={index}
             className={`flex ${
-              message.role === 'user' 
-                ? 'justify-end' 
-                : 'justify-center w-full'
+              message.role === "user" ? "justify-end" : "justify-center w-full"
             }`}
           >
             <div
               className={`${
-                message.role === 'user'
-                  ? 'max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
-                  : isCarousel 
-                    ? 'w-full' // Remove border and background for carousel
-                    : 'w-full max-w-[85%] sm:max-w-[75%] bg-theme-panel-bg border border-theme-border-primary'
+                message.role === "user"
+                  ? "max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white"
+                  : isCarousel
+                  ? "w-full" // Remove border and background for carousel
+                  : "w-full max-w-[85%] sm:max-w-[75%] bg-theme-panel-bg border border-theme-border-primary"
               } rounded-lg p-3`}
             >
               {renderMessage(message.content)}
@@ -81,7 +82,7 @@ export default function ChatWindow({
           </div>
         );
       })}
-      
+
       {shouldShowCurrentResponse && (
         <div className="flex justify-center">
           <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary/50">
@@ -89,9 +90,9 @@ export default function ChatWindow({
           </div>
         </div>
       )}
-      
+
       {isLoading && !currentResponse && <MessageLoading />}
-      
+
       {error && (
         <div className="flex justify-center">
           <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 bg-red-100 border border-red-300 text-red-700">

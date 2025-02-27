@@ -24,7 +24,7 @@ export const useElizaApi = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading] = useState(false);
   const [error] = useState<Error | null>(null);
-  const [currentResponse, setCurrentResponse] = useState("");
+  const [currentResponse, setCurrentResponse] = useState<string>("");
 
   // Helper function for API requests
   const fetchApi = async (endpoint: string, options: RequestInit = {}) => {
@@ -52,17 +52,17 @@ export const useElizaApi = () => {
   /**
    * Send a message to Eliza
    * @param agentId - ID of the agent to message
-   * @param content - Message content
+   * @param message - Message content
    */
-  const sendMessage = async (agentId: string, content: string) => {
+  const sendMessage = async (agentId: string, message: string) => {
     try {
       // Add user message to chat
-      setMessages((prev) => [...prev, { role: "user", content }]);
+      setMessages((prev) => [...prev, { role: "user", content: message }]);
       setCurrentResponse("");
 
       // Use JSON instead of FormData
       const requestBody = {
-        text: content,
+        text: message,
         user: "user",
       };
 
@@ -73,7 +73,7 @@ export const useElizaApi = () => {
       const { text, user } = response[0];
       setCurrentResponse(text);
       setMessages((prev) => [...prev, { role: user, content: text }]);
-      return text;
+      return true;
     } catch (err) {
       console.error("Failed to send message:", err);
       throw err;
