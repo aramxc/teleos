@@ -29,6 +29,91 @@ body {
   padding: 0;
 }
 
+.center-carousel {
+  margin: 0 auto;
+  max-width: 100vw;
+  position: relative;
+  padding: 0 10px !important;
+  overflow: visible !important;
+}
+
+.center-carousel .slick-slide {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  transform: scale(0.85);
+}
+
+.center-carousel .slick-center {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fix navigation arrows */
+.slick-prev,
+.slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 500 !important;
+  background: var(--panel-background) !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.slick-prev {
+  left: -20px !important;
+}
+
+.slick-next {
+  right: -20px !important;
+}
+
+/* Ensure arrows are visible */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px !important;
+  opacity: 1 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Center the track */
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Remove borders */
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide > div {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Update dots positioning and styling */
+.slick-dots {
+  position: absolute !important;
+  bottom: 0px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: -20px -20px !important;
+  list-style: none !important;
+}
+
+.slick-dots li {
+  margin: 0 4px !important;
+}
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 6px;
@@ -131,4 +216,18 @@ body {
 .fade-in {
   opacity: 1;
   transition: opacity 0.3s ease-in;
+}
+
+@media (min-width: 768px) {
+  .center-carousel {
+    padding: 0 80px !important;
+  }
+  
+  .slick-prev {
+    left: 0 !important;
+  }
+  
+  .slick-next {
+    right: 0 !important;
+  }
 }

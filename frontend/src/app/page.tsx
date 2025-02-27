@@ -35,7 +35,7 @@ export default function Home() {
     <div className={`min-h-screen bg-theme-bg-primary text-theme-text-primary transition-all duration-300 ${spaceGrotesk.className}`}>
       {/* Background gradients */}
       <div className="fixed inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-accent opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-accent opacity-20 z-0" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(167,139,250,0.15),transparent_50%)]" />
       </div>
 

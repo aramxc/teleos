@@ -1,6 +1,12 @@
 import { Message } from "@/hooks/agents/useAgentKit";
 import { useEffect, useRef } from "react";
 import MessageLoading from "./MessageLoading";
+import AgentCard from './AgentCard';
+import { mockAgentResponses } from './mockData';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import AgentCardCarousel from './AgentCardCarousel';
 
 type ChatWindowProps = {
   messages: Message[];
@@ -22,23 +28,40 @@ export default function ChatWindow({
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, currentResponse]);
 
+  const renderMessage = (content: string) => {
+    try {
+      const jsonContent = JSON.parse(content);
+      if (Array.isArray(jsonContent)) {
+        return <AgentCardCarousel agents={jsonContent} />;
+      } else if (jsonContent.name && jsonContent.description && jsonContent.tags) {
+        return <AgentCard agent={jsonContent} />;
+      }
+    } catch {
+      // If content is not JSON, render as regular text
+      return content;
+    }
+  };
+
   return (
-    <div className="flex-1 overflow-y-auto p-4 space-y-4 max-w-3xl mx-auto">
-      {messages.map((message, index) => (
+    <div className="flex-1 overflow-y-auto overflow-x-hidden h-full space-y-8">
+      {mockAgentResponses.map((message, index) => (
         <div
           key={index}
           className={`flex ${
-            message.role === "user" ? "justify-end" : "justify-start"
+            message.role === 'user' 
+              ? 'justify-end' 
+              : 'justify-center w-full'  // Center all assistant responses
           }`}
         >
           <div
-            className={`max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words ${
-              message.role === "user"
-                ? "bg-theme-button-primary text-white"
-                : "bg-theme-panel-bg border border-theme-border-primary"
-            }`}
+            className={`${
+              message.role === 'user'
+                ? 'max-w-[85%] sm:max-w-[75%] bg-theme-button-primary text-white'
+                : 'w-full bg-transparent relative'  // Added relative positioning
+            } rounded-lg p-3`}
+            style={{ zIndex: 1 }} // Ensure message content stays below carousel arrows
           >
-            {message.content}
+            {renderMessage(message.content)}
           </div>
         </div>
       ))}
