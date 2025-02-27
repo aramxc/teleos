@@ -1,3 +1,5 @@
+// UNUSED
+
 import "server-only";
 import { NextRequest, NextResponse } from "next/server";
 import { OpenAIEmbeddings } from "@langchain/openai";
