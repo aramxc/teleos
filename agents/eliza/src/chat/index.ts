@@ -18,7 +18,7 @@ async function handleUserInput(input, agentId) {
   }
 
   try {
-    const serverPort = parseInt(settings.SERVER_PORT || "3000");
+    const serverPort = parseInt(settings.SERVER_PORT || "3001");
 
     const response = await fetch(
       `http://localhost:${serverPort}/${agentId}/message`,

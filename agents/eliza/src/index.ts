@@ -22,6 +22,7 @@ import {
 } from "./config/index.ts";
 import { initializeDatabase } from "./database/index.ts";
 import { noneAction } from "./actions/none.ts";
+import { findAgents } from "./actions/findAgents/findAgents.ts";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -55,7 +56,7 @@ export function createAgent(
     character,
     plugins: [].filter(Boolean),
     providers: [],
-    actions: [noneAction],
+    actions: [noneAction, findAgents],
     services: [],
     managers: [],
     cacheManager: cache,
