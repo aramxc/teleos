@@ -39,9 +39,9 @@ export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
 
   return (
     <>
-      <div className="bg-theme-panel-bg border border-theme-border-primary rounded-lg 
+      <div className="bg-theme-panel-bg border border-theme-border-primary rounded-lg shadow-lg
       p-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02] h-[400px] flex flex-col
-      min-w-[200px] sm:min-w-[300px] mt-4 mb-4 relative">
+      min-w-[200px] sm:min-w-[320px] mt-4 mb-4 relative">
         <div className="flex flex-col h-full">
           <h3 className="text-lg font-semibold mb-2">{agent.name}</h3>
           <Code className="mb-4" />

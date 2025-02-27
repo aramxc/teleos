@@ -21,48 +21,44 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     centerMode: true,
+    centerPadding: '20%',
     focusOnSelect: true,
-    centerPadding: '0',
     className: "center-carousel",
     responsive: [
       {
         breakpoint: 4000,
         settings: {
-          slidesToShow: 3,
-          centerPadding: '0',
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '20%',
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          centerPadding: '0',
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '15%',
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          centerPadding: '0',
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 3,
-          centerPadding: '0',
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '25%',
         }
       }
     ]
   };
 
   return (
-    <div className="w-full relative px-8 sm:px-12 md:px-16 lg:px-20">
-      <div className="max-w-[1200px] mx-auto">
+    <div className="w-full relative">
+      <div className="w-full">
         <Slider {...settings}>
           {agents.map((agent, index) => (
             <div key={index} className="px-2">

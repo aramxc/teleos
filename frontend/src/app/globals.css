@@ -30,29 +30,39 @@ body {
 }
 
 .center-carousel {
-  margin: 0 auto;
-  max-width: 100%;
+  margin: 0 -20px;
+  width: calc(100% + 40px) !important;
   position: relative;
   padding: 0 !important;
   overflow: visible !important;
 }
 
 .center-carousel .slick-slide {
-  opacity: 0.3;
+  opacity: 0.5;
   transition: all 0.3s ease;
-  transform: scale(0.85);
-  padding: 0 4px;
-}
-
-.center-carousel .slick-center {
-  opacity: 1;
-  transform: scale(1);
+  transform: scale(0.9);
+  padding: 0;
+  z-index: 1;
 }
 
 .center-carousel .slick-track {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.center-carousel .slick-current {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Ensure side slides are partially visible and centered */
+.center-carousel .slick-list {
+  overflow: visible !important;
+  padding: 0 20% !important;
 }
 
 /* Navigation arrows */
@@ -70,11 +80,11 @@ body {
 }
 
 .slick-prev {
-  left: -20px !important;
+  left: -12px !important;
 }
 
 .slick-next {
-  right: -20px !important;
+  right: -12px !important;
 }
 
 .slick-prev:before,
@@ -111,18 +121,14 @@ body {
   color: var(--text-primary) !important;
 }
 
-/* Ensure consistent sizing across breakpoints */
-@media (max-width: 640px) {
+/* Update media queries */
+@media (max-width: 768px) {
   .center-carousel .slick-slide {
-    padding: 0 2px;
+    transform: scale(0.9);
   }
   
-  .slick-prev {
-    left: -12px !important;
-  }
-  
-  .slick-next {
-    right: -12px !important;
+  .center-carousel .slick-current {
+    transform: scale(1);
   }
 }
 
@@ -232,20 +238,16 @@ body {
 
 @media (min-width: 1024px) {
   .center-carousel {
-    padding: 0 40px !important;
-    max-width: 1200px !important;
-  }
-  
-  .center-carousel .slick-slide {
-    padding: 0;
+    padding: 0 !important;
+    width: 100% !important;
   }
   
   .slick-prev {
-    left: 0px !important;
+    left: -20px !important;
   }
   
   .slick-next {
-    right: 0px !important;
+    right: -20px !important;
   }
 }
 

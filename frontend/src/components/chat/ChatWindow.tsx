@@ -48,30 +48,43 @@ export default function ChatWindow({
 
   return (
     <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8">
-      {mockAgentResponses.map((message, index) => (
-        <div
-          key={index}
-          className={`flex ${
-            message.role === 'user' 
-              ? 'justify-end' 
-              : 'justify-center w-full'
-          }`}
-        >
+      {mockAgentResponses.map((message, index) => {
+        const isCarousel = (() => {
+          try {
+            const content = JSON.parse(message.content);
+            return Array.isArray(content);
+          } catch {
+            return false;
+          }
+        })();
+
+        return (
           <div
-            className={`${
-              message.role === 'user'
-                ? 'max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
-                : 'w-full max-w-[85%] sm:max-w-[75%] bg-theme-panel-bg border border-theme-border-primary'
-            } rounded-lg p-3`}
+            key={index}
+            className={`flex ${
+              message.role === 'user' 
+                ? 'justify-end' 
+                : 'justify-center w-full'
+            }`}
           >
-            {renderMessage(message.content)}
+            <div
+              className={`${
+                message.role === 'user'
+                  ? 'max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
+                  : isCarousel 
+                    ? 'w-full' // Remove border and background for carousel
+                    : 'w-full max-w-[85%] sm:max-w-[75%] bg-theme-panel-bg border border-theme-border-primary'
+              } rounded-lg p-3`}
+            >
+              {renderMessage(message.content)}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
       
       {shouldShowCurrentResponse && (
         <div className="flex justify-center">
-          <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary">
+          <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary/50">
             {renderMessage(currentResponse)}
           </div>
         </div>
