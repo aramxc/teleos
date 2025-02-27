@@ -56,7 +56,7 @@ const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => 
             <div className="flex items-center gap-3">
               <Code className="text-2xl text-theme-button-primary" />
               <div>
-                <Typography variant="h5" className="text-base font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+                <Typography variant="h5" className="text-base font-lg tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
                   {title}
                 </Typography>
                 {tags && (

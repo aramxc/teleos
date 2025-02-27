@@ -220,67 +220,91 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
   );
 
   const renderReviewContent = () => (
-    <Stack spacing={3} className="text-theme-text-primary">
-      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
-        <Typography variant="h6" className="mb-3 text-sm font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-          Campaign Details
-        </Typography>
-        
-        <Stack spacing={2}>
-          <div className="flex items-center justify-between text-sm">
-            <Typography className="text-theme-text-secondary">Duration</Typography>
-            <Typography className="text-theme-text-primary">
-              {requirements.duration} days
-            </Typography>
-          </div>
-          
-          <div className="flex items-center justify-between text-sm">
-            <Typography className="text-theme-text-secondary">Frequency</Typography>
-            <Typography className="text-theme-text-primary">
-              {requirements.frequency} posts per {requirements.frequencyUnit}
-            </Typography>
-          </div>
-          
-          <div className="flex items-center justify-between text-sm">
-            <Typography className="text-theme-text-secondary">Photo Option</Typography>
-            <Typography className="text-theme-text-primary capitalize">
-              {requirements.photoOption}
-            </Typography>
-          </div>
-          
-          <div className="flex items-center justify-between text-sm">
-            <Typography className="text-theme-text-secondary">Creativity Level</Typography>
-            <Typography className="text-theme-text-primary">
-              {requirements.creativity}%
-            </Typography>
-          </div>
-        </Stack>
-      </div>
+    <Stack spacing={3} className="text-theme-text-primary h-full">
+      {/* Welcome section */}
+      <Typography className="text-2xl font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+        Review & Confirm
+      </Typography>
 
-      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-3 border border-theme-border-primary">
-        <Typography variant="h6" className="text-right mb-0 text-sm font-medium tracking-tight">
-          Total Price: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">{calculateTotalPrice()} USDC</span>
-        </Typography>
-      </div>
+      <Stack spacing={3} className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
+        {/* Info Container */}
+        <div className="space-y-3">
+          <Typography className="text-theme-text-secondary text-lg">
+            You are about to hire <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent font-medium">{agent.name}</span> for a social media campaign.
+          </Typography>
+          
+          <div className="space-y-2 text-sm text-theme-text-secondary">
+            <p>✨ Your content will be generated using advanced AI models</p>
+            <p>🔄 Posts will be automatically scheduled and published</p>
+            <p>⚡ You can modify or cancel the campaign at any time</p>
+            <p>🛡️ 100% money-back guarantee if you&apos;re not satisfied</p>
+          </div>
+        </div>
 
-      <div className="flex justify-between gap-3">
-        <Button
-          variant="outlined"
-          size="medium"
-          onClick={handleBack}
-          className="flex-1 border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
-        >
-          Back
-        </Button>
-        <Button
-          variant="contained"
-          size="medium"
-          className="flex-1 bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
-          onClick={handlePayClick}
-        >
-          {address ? 'Pay Now' : 'Connect Wallet'}
-        </Button>
-      </div>
+        {/* Campaign Details */}
+        <div>
+          <Typography variant="h6" className="mb-3 text-sm font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+            Campaign Details
+          </Typography>
+          
+          <Stack spacing={2}>
+            <div className="flex items-center justify-between text-sm">
+              <Typography className="text-theme-text-secondary">Duration</Typography>
+              <Typography className="text-theme-text-primary">
+                {requirements.duration} days
+              </Typography>
+            </div>
+            
+            <div className="flex items-center justify-between text-sm">
+              <Typography className="text-theme-text-secondary">Frequency</Typography>
+              <Typography className="text-theme-text-primary">
+                {requirements.frequency} posts per {requirements.frequencyUnit}
+              </Typography>
+            </div>
+            
+            <div className="flex items-center justify-between text-sm">
+              <Typography className="text-theme-text-secondary">Photo Option</Typography>
+              <Typography className="text-theme-text-primary capitalize">
+                {requirements.photoOption}
+              </Typography>
+            </div>
+            
+            <div className="flex items-center justify-between text-sm">
+              <Typography className="text-theme-text-secondary">Creativity Level</Typography>
+              <Typography className="text-theme-text-primary">
+                {requirements.creativity}%
+              </Typography>
+            </div>
+          </Stack>
+        </div>
+
+        {/* Price */}
+        <div className="bg-theme-panel-bg/50 backdrop-blur-xl rounded-lg p-3 border border-theme-border-primary">
+          <Typography variant="h6" className="text-right mb-0 text-sm font-medium tracking-tight">
+            Total Price: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">{calculateTotalPrice()} USDC</span>
+          </Typography>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex justify-between gap-3">
+          <Button
+            variant="outlined"
+            size="medium"
+            onClick={handleBack}
+            className="flex-1 border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
+          >
+            Back
+          </Button>
+          <Button
+            variant="contained"
+            size="medium"
+            className="flex-1 bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
+            onClick={handlePayClick}
+          >
+            {address ? 'Pay Now' : 'Connect Wallet'}
+          </Button>
+        </div>
+      </Stack>
     </Stack>
   );
 
@@ -291,35 +315,36 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
       title={agent.name}
       tags={agent.tags}
     >
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.div
-          key={step}
-          custom={direction}
-          variants={slideVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-          className="absolute w-full"
-        >
-          {step === 'requirements' ? renderRequirementsContent() : renderReviewContent()}
-        </motion.div>
-      </AnimatePresence>
+      <div className="relative flex items-center justify-center h-full overflow-hidden">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={step}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 }
+            }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
+              }
+            }}
+            className="absolute inset-0 w-full px-4"
+          >
+            {step === 'requirements' ? renderRequirementsContent() : renderReviewContent()}
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </BaseModal>
   );
 });
