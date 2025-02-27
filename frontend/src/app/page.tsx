@@ -9,9 +9,9 @@ import ChatInput from "@/components/chat/ChatInput";
 import { useChatContext } from "@/contexts/ChatContext";
 import SuggestionBubbles from "@/components/chat/InitialSuggestions";
 import WalletConnectionButton from "@/components/wallet/WalletConnectionButton";
-import { apiClient } from "./api/agents/eliza/route";
-import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+// import { apiClient } from "./api/agents/eliza/route";
+// import { useQuery } from "@tanstack/react-query";
+// import { useEffect, useState } from "react";
 import ConnectionStatus from "@/components/chat/ConnectionStatus";
 
 const spaceGrotesk = Space_Grotesk({
@@ -20,19 +20,19 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export default function Home() {
-  const query = useQuery({
-    queryKey: ["agents"],
-    queryFn: () => apiClient.getAgents(),
-    refetchInterval: 5_000,
-  });
+  // const query = useQuery({
+  //   queryKey: ["agents"],
+  //   queryFn: () => apiClient.getAgents(),
+  //   refetchInterval: 5_000,
+  // });
 
-  const [agentId, setAgentId] = useState<string | null>(null);
+  // const [agentId, setAgentId] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (query.agents) {
-      setAgentId(query.agents[0].id);
-    }
-  }, [query.agents]);
+  // useEffect(() => {
+  //   if (query.agents) {
+  //     setAgentId(query.agents[0].id);
+  //   }
+  // }, [query.agents]);
 
   const {
     messages,
@@ -95,16 +95,14 @@ export default function Home() {
           alignItems: isInitialState ? "center" : "flex-start",
         }}
         transition={{ duration: 0.5 }}
-        className={`container mx-auto px-4 ${
-          !isInitialState && "pt-20 pb-32"
-        } relative z-10`}
+        className={`container mx-auto px-4 width:[80%] ${!isInitialState && 'pt-20 pb-32'} relative`}
       >
         <div className="w-full max-w-2xl mx-auto relative">
           <motion.div
             initial={{ y: 0 }}
             animate={{ y: isInitialState ? 0 : "24px" }}
             transition={{ duration: 0.5 }}
-            className="relative z-20"
+            className="relative z-10"
           >
             {isInitialState ? (
               <motion.div

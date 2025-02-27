@@ -43,23 +43,23 @@ export default function ChatWindow({
   };
 
   return (
-    <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full space-y-8">
+    <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8">
       {mockAgentResponses.map((message, index) => (
         <div
           key={index}
           className={`flex ${
             message.role === 'user' 
               ? 'justify-end' 
-              : 'justify-center w-full'  // Center all assistant responses
+              : 'justify-center w-full'
           }`}
         >
           <div
             className={`${
               message.role === 'user'
-                ? 'max-w-[85%] sm:max-w-[75%] bg-theme-button-primary text-white'
-                : 'w-full bg-transparent relative'  // Added relative positioning
+                ? 'max-w-[85%] sm:max-w-[75%]  shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
+                : 'w-full bg-transparent relative'
             } rounded-lg p-3`}
-            style={{ zIndex: 1 }} // Ensure message content stays below carousel arrows
+            style={{ zIndex: 1 }}
           >
             {renderMessage(message.content)}
           </div>

@@ -31,6 +31,13 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
 
     responsive: [
       {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '0',
+        }
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
@@ -55,36 +62,9 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
   };
 
   return (
-    <div className="w-screen -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32">
+    <div className="w-screen -mx-7 sm:-mx-8 lg:-mx-60">
       <div className="px-12 sm:px-16 md:px-24 lg:px-40">
         <div className="max-h-[340px] mb-16 w-full relative">
-          <style jsx global>{`
-            .slick-prev,
-            .slick-next {
-              width: 40px;
-              height: 40px;
-              z-index: 10;
-            }
-            .slick-prev {
-              left: -40px !important;
-            }
-            .slick-next {
-              right: -40px !important;
-            }
-            .slick-prev:before,
-            .slick-next:before {
-              font-size: 40px;
-              opacity: 0.7;
-            }
-            @media (max-width: 640px) {
-              .slick-prev {
-                left: -30px !important;
-              }
-              .slick-next {
-                right: -30px !important;
-              }
-            }
-          `}</style>
           <Slider {...settings}>
             {agents.map((agent, index) => (
               <div key={index} className="px-2">

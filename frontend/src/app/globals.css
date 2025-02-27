@@ -106,19 +106,30 @@ body {
 /* Update dots positioning and styling */
 .slick-dots {
   position: absolute !important;
-  bottom: 0px !important;
+  bottom: center !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   width: auto !important;
-  display: flex !important;
+  display: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  margin: -20px -20px !important;
+  margin: 0 !important;
   list-style: none !important;
+  z-index: 1 !important;
 }
 
 .slick-dots li {
   margin: 0 4px !important;
+}
+
+.slick-dots li button:before {
+  color: var(--text-primary) !important;
+  opacity: 0.3 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: var(--text-primary) !important;
 }
 
 /* Custom scrollbar styles */
@@ -232,14 +243,66 @@ body {
   }
   
   .center-carousel .slick-slide {
-    padding: 0 20px;
+    padding: 0;
   }
   
   .slick-prev {
-    left: -20px !important;
+    left: 0px !important;
   }
   
   .slick-next {
-    right: -20px !important;
+    right: 0px !important;
+  }
+}
+
+/* Carousel slide styles */
+.slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  scale: 0.9;
+}
+
+.slick-current {
+  opacity: 1;
+  scale: 1;
+}
+
+/* Navigation arrows */
+.slick-prev,
+.slick-next {
+  width: 20px !important;
+  height: 20px !important;
+  z-index: 50 !important;
+}
+
+.slick-prev {
+  left: -40px !important;
+}
+
+.slick-next {
+  right: -20px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px !important;
+  opacity: 0.7 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Track alignment */
+.center-carousel .slick-track {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .slick-prev {
+    left: -30px !important;
+  }
+  .slick-next {
+    right: -30px !important;
   }
 }
