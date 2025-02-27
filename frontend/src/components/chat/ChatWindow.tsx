@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
-import AgentCard from "./agentDisplay/AgentCard";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import AgentCardCarousel from "./agentDisplay/AgentCardCarousel";
+import AgentCard from './agentDisplay/AgentCard';
+// import { mockAgentResponses } from './mockData';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import AgentCardCarousel from './agentDisplay/AgentCardCarousel';
 
 type ChatWindowProps = {
   messages: Message[];
