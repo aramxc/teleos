@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { Code, NextPlan } from "@mui/icons-material";
-import { Fade } from '@mui/material';
-import RequirementsModal from '../modals/RequirementsModal';
-import ReviewModal from '../modals/ReviewModal';
-import { AgentRequirements } from '../modals/RequirementsModal';
+import AgentConfigModal from '../modals/AgentModals';
 
 interface Agent {
   name: string;
@@ -20,22 +17,7 @@ interface AgentCardProps {
 
 export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
   const agent = { ...initialAgent, price: 10 };
-  const [currentModal, setCurrentModal] = useState<'requirements' | 'review' | null>(null);
-  const [requirements, setRequirements] = useState<AgentRequirements | null>(null);
-
-  const handleRequirementsContinue = (reqs: AgentRequirements) => {
-    setRequirements(reqs);
-    setTimeout(() => setCurrentModal('review'), 50);
-  };
-
-  const handleBack = () => {
-    setTimeout(() => setCurrentModal('requirements'), 50);
-  };
-
-  const handleClose = () => {
-    setCurrentModal(null);
-    setTimeout(() => setRequirements(null), 300);
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -70,37 +52,18 @@ export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
               </a>
               <NextPlan 
                 className="cursor-pointer rounded-full text-theme-button-primary shadow-lg border border-theme-border-primary hover:text-theme-button-hover transition-colors"
-                onClick={() => setCurrentModal('requirements')}
+                onClick={() => setIsModalOpen(true)}
               />
             </div>
           </div>
         </div>
       </div>
 
-      <Fade in={currentModal === 'requirements'} timeout={300}>
-        <div style={{ display: currentModal === 'requirements' ? 'block' : 'none' }}>
-          <RequirementsModal
-            open={currentModal === 'requirements'}
-            onClose={handleClose}
-            agent={agent}
-            onContinue={handleRequirementsContinue}
-          />
-        </div>
-      </Fade>
-
-      <Fade in={currentModal === 'review'} timeout={300}>
-        <div style={{ display: currentModal === 'review' ? 'block' : 'none' }}>
-          {requirements && (
-            <ReviewModal
-              open={currentModal === 'review'}
-              onClose={handleClose}
-              agent={agent}
-              requirements={requirements}
-              onBack={handleBack}
-            />
-          )}
-        </div>
-      </Fade>
+      <AgentConfigModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        agent={agent}
+      />
     </>
   );
 }

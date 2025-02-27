@@ -1,5 +1,6 @@
 import { useState, memo } from 'react';
 import { Typography, Slider, TextField, Select, MenuItem, FormControl, InputLabel, Button, Stack } from '@mui/material';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useWallet } from '../../contexts/WalletContext';
 import BaseModal from './BaseModal';
 
@@ -37,17 +38,50 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
     creativity: 50
   });
 
-  const handleRequirementChange = (field: keyof AgentRequirements, value: any) => {
+  const handleRequirementChange = (
+    field: keyof AgentRequirements, 
+    value: number | string
+  ) => {
     setRequirements(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleContinue = () => {
-    setStep('review');
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0
+    })
   };
 
-  const handleBack = () => {
-    setStep('requirements');
+  const swipeConfidenceThreshold = 10000;
+  const swipePower = (offset: number, velocity: number) => {
+    return Math.abs(offset) * velocity;
   };
+
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  const paginate = (newDirection: number) => {
+    if ((page === 0 && newDirection === -1) || (page === 1 && newDirection === 1)) return;
+    setPage([page + newDirection, newDirection]);
+    if (newDirection === 1) {
+      setStep('review');
+    } else {
+      setStep('requirements');
+    }
+  };
+
+  // Update handlers to use paginate
+  const handleContinue = () => paginate(1);
+  const handleBack = () => paginate(-1);
 
   const calculateTotalPrice = () => {
     const daysMultiplier = requirements.frequencyUnit === 'day' ? 1 
@@ -155,7 +189,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
           </Typography>
           <Slider
             value={requirements.creativity}
-            onChange={(_, value) => handleRequirementChange('creativity', value)}
+            onChange={(_, value) => handleRequirementChange('creativity', Array.isArray(value) ? value[0] : value)}
             aria-label="Creativity"
             valueLabelDisplay="auto"
             sx={{
@@ -257,7 +291,35 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
       title={agent.name}
       tags={agent.tags}
     >
-      {step === 'requirements' ? renderRequirementsContent() : renderReviewContent()}
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.div
+          key={step}
+          custom={direction}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 }
+          }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1);
+            }
+          }}
+          className="absolute w-full"
+        >
+          {step === 'requirements' ? renderRequirementsContent() : renderReviewContent()}
+        </motion.div>
+      </AnimatePresence>
     </BaseModal>
   );
 });
