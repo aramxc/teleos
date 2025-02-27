@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
-import { apiClient } from "@/app/api/agents/eliza/route";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./Tooltip";
 import { Activity } from "lucide-react";
@@ -12,10 +11,28 @@ export default function ConnectionStatus() {
     queryKey: ["status"],
     queryFn: async () => {
       const start = performance.now();
-      const data = await apiClient.getAgents();
-      const end = performance.now();
-      setQueryTime(end - start);
-      return data;
+      try {
+        // Make a simpler health check request instead of fetching all agents
+        const response = await fetch("/api/agents/health", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        
+        if (!response.ok) {
+          throw new Error("Health check failed");
+        }
+        
+        const data = await response.json();
+        const end = performance.now();
+        setQueryTime(end - start);
+        return data;
+      } catch (error) {
+        const end = performance.now();
+        setQueryTime(end - start);
+        throw error;
+      }
     },
     refetchInterval: 5_000,
     retry: 1,
