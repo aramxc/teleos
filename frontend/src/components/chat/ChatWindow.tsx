@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
 import AgentCard from './AgentCard';
-// import { mockAgentResponses } from './mockData';
+import { mockAgentResponses } from './mockData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -42,9 +42,13 @@ export default function ChatWindow({
     }
   };
 
+  // Check if currentResponse is already in messages
+  const shouldShowCurrentResponse = currentResponse && 
+    !messages.some(msg => msg.content === currentResponse);
+
   return (
     <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8">
-      {messages.map((message, index) => (
+      {mockAgentResponses.map((message, index) => (
         <div
           key={index}
           className={`flex ${
@@ -57,7 +61,7 @@ export default function ChatWindow({
             className={`${
               message.role === 'user'
                 ? 'max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
-                : 'w-full bg-transparent relative'
+                : 'w-full max-w-[85%] sm:max-w-[75%] bg-theme-panel-bg border border-theme-border-primary'
             } rounded-lg p-3`}
           >
             {renderMessage(message.content)}
@@ -65,8 +69,8 @@ export default function ChatWindow({
         </div>
       ))}
       
-      {currentResponse && (
-        <div className="flex justify-start">
+      {shouldShowCurrentResponse && (
+        <div className="flex justify-center">
           <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary">
             {renderMessage(currentResponse)}
           </div>
