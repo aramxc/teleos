@@ -16,6 +16,9 @@ const __dirname = dirname(__filename);
 // Load environment variables from .env file (one directory up)
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
+// Maximum number of consecutive connection errors before terminating
+const MAX_CONSECUTIVE_ERRORS = 3;
+
 async function scrapeAIAgentStore() {
   const browser = await puppeteer.launch({
     headless: "new",
@@ -77,6 +80,9 @@ async function scrapeAIAgentStore() {
     let updatedAgents = [...existingAgents];
     let newAgentsCount = 0;
 
+    // Track consecutive connection errors
+    let consecutiveConnectionErrors = 0;
+
     // Add index tracking and printing
     for (let i = 0; i < newAgents.length; i++) {
       const agent = newAgents[i];
@@ -89,6 +95,9 @@ async function scrapeAIAgentStore() {
       try {
         const agentDetails = await scrapeAgentDetails(agent.url, browser);
         if (agentDetails) {
+          // Reset consecutive error counter on success
+          consecutiveConnectionErrors = 0;
+
           // Add the new agent to our working copy
           updatedAgents.push(agentDetails);
           newAgentsCount++;
@@ -115,6 +124,47 @@ async function scrapeAIAgentStore() {
           }:`,
           error.message
         );
+
+        // Check if this is a connection error
+        if (
+          error.message.includes("Protocol error: Connection closed") ||
+          error.message.includes("net::ERR_") ||
+          error.message.includes("Navigation timeout") ||
+          error.message.includes("Target closed") ||
+          error.message.includes("Connection terminated")
+        ) {
+          consecutiveConnectionErrors++;
+          console.warn(
+            `Connection error detected. Consecutive errors: ${consecutiveConnectionErrors}/${MAX_CONSECUTIVE_ERRORS}`
+          );
+
+          if (consecutiveConnectionErrors >= MAX_CONSECUTIVE_ERRORS) {
+            console.error(
+              `Too many consecutive connection errors (${consecutiveConnectionErrors}). Terminating script.`
+            );
+
+            // Save current progress before exiting
+            fs.writeFileSync(
+              outputPath,
+              JSON.stringify(updatedAgents, null, 2)
+            );
+            console.log(
+              `Saved current progress with ${updatedAgents.length} agents before terminating.`
+            );
+
+            // Exit the script with an error code
+            process.exit(1);
+          }
+
+          // Add a longer delay after connection errors to allow recovery
+          console.log(
+            "Adding a longer delay (10 seconds) to recover from connection error..."
+          );
+          await new Promise((resolve) => setTimeout(resolve, 10000));
+        } else {
+          // Reset counter for non-connection errors
+          consecutiveConnectionErrors = 0;
+        }
       }
 
       // Optional: Add a small delay between requests to avoid rate limiting
