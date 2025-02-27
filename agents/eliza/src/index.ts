@@ -122,7 +122,7 @@ const checkPortAvailable = (port: number): Promise<boolean> => {
 
 const startAgents = async () => {
   const directClient = new DirectClient();
-  let serverPort = parseInt(settings.SERVER_PORT || "3000");
+  let serverPort = parseInt(settings.SERVER_PORT || "3001");
   const args = parseArguments();
 
   let charactersArg = args.characters || args.character;
