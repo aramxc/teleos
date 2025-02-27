@@ -8,6 +8,7 @@ import { ThirdwebProvider } from "thirdweb/react";
 import { WalletProvider } from "@/contexts/WalletContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/chat/Tooltip";
+import { AgentProvider } from "@/contexts/AgentContext";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -45,7 +46,9 @@ export default function RootLayout({
             <TooltipProvider delayDuration={0}>
               <WalletProvider>
                 <ThemeProvider>
-                  <ChatProvider>{children}</ChatProvider>
+                  <AgentProvider>
+                    <ChatProvider>{children}</ChatProvider>
+                  </AgentProvider>
                 </ThemeProvider>
               </WalletProvider>
             </TooltipProvider>

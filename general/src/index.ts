@@ -21,7 +21,7 @@ import {
   parseArguments,
 } from "./config/index.ts";
 import { initializeDatabase } from "./database/index.ts";
-
+import { noneAction } from "./actions/none.ts";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -55,7 +55,7 @@ export function createAgent(
     character,
     plugins: [].filter(Boolean),
     providers: [],
-    actions: [],
+    actions: [noneAction],
     services: [],
     managers: [],
     cacheManager: cache,
