@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import { type UUID, type Character } from "@elizaos/core";
 
-const BASE_URL = process.env.NEXT_PUBLIC_ELIZA_URL ?? 'http://localhost:8000';
+const BASE_URL = process.env.NEXT_PUBLIC_ELIZA_URL ?? 'http://localhost:3001';
 
 export interface Message {
   role: 'user' | 'assistant';
@@ -22,51 +22,32 @@ export interface Message {
  */
 export const useElizaApi = () => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+  const [isLoading] = useState(false);
+  const [error] = useState<Error | null>(null);
   const [currentResponse, setCurrentResponse] = useState('');
 
   // Helper function for API requests
-  const fetchApi = async <T>({ 
-    url, 
-    method = 'GET', 
-    body = null 
-  }: {
-    url: string;
-    method?: string;
-    body?: BodyInit | null;
-  }): Promise<T> => {
-    setIsLoading(true);
-    setError(null);
+  const fetchApi = async (endpoint: string, options: RequestInit = {}) => {
+    const defaultHeaders = {
+      'Content-Type': 'application/json',
+    };
 
-    try {
-      // Prepare request options
-      const options: RequestInit = {
-        method,
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        } as Record<string, string>
-      };
+    const url = `${BASE_URL}${endpoint}`;
+    console.log('Fetching from:', url); // Debug log
 
-      // Handle FormData vs JSON body
-      if (body) {
-        options.body = body instanceof FormData 
-          ? (delete (options.headers as Record<string, string>)['Content-Type'], body)
-          : JSON.stringify(body);
-      }
+    const response = await fetch(url, {
+      ...options,
+      headers: {
+        ...defaultHeaders,
+        ...options.headers,
+      },
+    });
 
-      // Make request
-      const response = await fetch(`${BASE_URL}${url}`, options);
-      if (!response.ok) throw new Error(await response.text());
-
-      return await response.json();
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('Unknown error'));
-      throw err;
-    } finally {
-      setIsLoading(false);
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
     }
+
+    return response.json();
   };
 
   /**
@@ -84,8 +65,7 @@ export const useElizaApi = () => {
       formData.append('text', content);
       formData.append('user', 'user');
 
-      const { response } = await fetchApi<{ response: string }>({
-        url: `/${agentId}/message`,
+      const { response } = await fetchApi(`/${agentId}/message`, {
         method: 'POST',
         body: formData
       });
@@ -95,6 +75,7 @@ export const useElizaApi = () => {
       setCurrentResponse('');
       return response;
     } catch (err) {
+      console.error('Failed to send message:', err);
       throw err;
     }
   };
