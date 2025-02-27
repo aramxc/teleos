@@ -9,6 +9,7 @@ interface Agent {
   websiteLink: string;
   tags: string[];
   icon: string;
+  price: number;
 }
 
 interface AgentCardCarouselProps {
@@ -25,24 +26,65 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
     arrows: true,
     centerMode: true,
     focusOnSelect: true,
-    centerPadding: '60px',
+    centerPadding: '0',
     className: "center-carousel",
+
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
-          centerPadding: '40px',
-          arrows: true,
+          centerPadding: '25%',
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '15%',
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0',
         }
       }
     ]
   };
 
   return (
-    <div className="w-screen -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32 mb-8">
-      <div className="px-4 sm:px-8 md:px-16 lg:px-32 mr-6 relative">
-        <div className="max-h-[340px] mb-16">
+    <div className="w-screen -mx-4 sm:-mx-8 md:-mx-16 lg:-mx-32">
+      <div className="px-12 sm:px-16 md:px-24 lg:px-40">
+        <div className="max-h-[340px] mb-16 w-full relative">
+          <style jsx global>{`
+            .slick-prev,
+            .slick-next {
+              width: 40px;
+              height: 40px;
+              z-index: 10;
+            }
+            .slick-prev {
+              left: -40px !important;
+            }
+            .slick-next {
+              right: -40px !important;
+            }
+            .slick-prev:before,
+            .slick-next:before {
+              font-size: 40px;
+              opacity: 0.7;
+            }
+            @media (max-width: 640px) {
+              .slick-prev {
+                left: -30px !important;
+              }
+              .slick-next {
+                right: -30px !important;
+              }
+            }
+          `}</style>
           <Slider {...settings}>
             {agents.map((agent, index) => (
               <div key={index} className="px-2">

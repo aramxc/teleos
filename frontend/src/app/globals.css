@@ -41,11 +41,17 @@ body {
   opacity: 0.3;
   transition: all 0.3s ease;
   transform: scale(0.85);
+  padding: 0 10px;
 }
 
 .center-carousel .slick-center {
   opacity: 1;
   transform: scale(1);
+}
+
+.center-carousel .slick-track {
+  display: flex;
+  align-items: center;
 }
 
 /* Fix navigation arrows */
@@ -77,6 +83,7 @@ body {
   font-size: 24px !important;
   opacity: 1 !important;
   color: var(--text-primary) !important;
+  z-index: 500 !important;
 }
 
 /* Center the track */
@@ -218,16 +225,21 @@ body {
   transition: opacity 0.3s ease-in;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .center-carousel {
-    padding: 0 80px !important;
+    padding: 0 40px !important;
+    max-width: 1200px !important;
+  }
+  
+  .center-carousel .slick-slide {
+    padding: 0 20px;
   }
   
   .slick-prev {
-    left: 0 !important;
+    left: -20px !important;
   }
   
   .slick-next {
-    right: 0 !important;
+    right: -20px !important;
   }
 }

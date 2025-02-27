@@ -20,7 +20,7 @@ export const themes: Record<string, Theme> = {
         secondary: 'rgba(209, 213, 219, 0.3)',
       },
       panel: {
-        background: 'rgba(249, 250, 251, 0.97)',
+        background: 'rgba(249, 250, 251, 1)',
         border: 'rgba(209, 213, 219, 0.8)',
       },
       button: {
@@ -50,7 +50,7 @@ export const themes: Record<string, Theme> = {
         secondary: 'rgba(75, 85, 99, 0.3)',
       },
       panel: {
-        background: 'rgba(17, 24, 39, 0.7)',
+        background: 'rgba(17, 24, 39, 1)',
         border: 'rgba(75, 85, 99, 0.8)',
       },
       button: {
@@ -80,7 +80,7 @@ export const themes: Record<string, Theme> = {
         secondary: 'rgba(51, 65, 85, 0.3)',
       },
       panel: {
-        background: 'rgba(30, 27, 46, 0.7)',
+        background: 'rgba(30, 27, 46, 1)',
         border: 'rgba(51, 65, 85, 0.8)',
       },
       button: {
