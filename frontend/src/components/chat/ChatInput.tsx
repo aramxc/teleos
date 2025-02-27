@@ -16,9 +16,9 @@ export default function ChatInput() {
     const trimmedMessage = message.trim();
     if (trimmedMessage && !isLoading) {
       try {
-        await sendMessage(trimmedMessage);
         setMessage("");
         setInitialState(false);
+        await sendMessage(trimmedMessage);
       } catch (err) {
         console.error("Error sending message:", err);
       }
@@ -26,7 +26,7 @@ export default function ChatInput() {
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSend();
     }

@@ -22,7 +22,7 @@ export interface Message {
  */
 export const useElizaApi = () => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error] = useState<Error | null>(null);
   const [currentResponse, setCurrentResponse] = useState<string>("");
 
@@ -57,6 +57,7 @@ export const useElizaApi = () => {
   const sendMessage = async (agentId: string, message: string) => {
     try {
       // Add user message to chat
+      setIsLoading(true);
       setMessages((prev) => [...prev, { role: "user", content: message }]);
       setCurrentResponse("");
 
@@ -73,6 +74,7 @@ export const useElizaApi = () => {
       const { text, user } = response[0];
       setCurrentResponse(text);
       setMessages((prev) => [...prev, { role: user, content: text }]);
+      setIsLoading(false);
       return true;
     } catch (err) {
       console.error("Failed to send message:", err);

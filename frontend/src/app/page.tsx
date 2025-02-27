@@ -36,8 +36,8 @@ export default function Home() {
   ];
 
   const handleSuggestionClick = (suggestion: string) => {
-    sendMessage(suggestion);
     setInitialState(false);
+    sendMessage(suggestion);
   };
 
   return (
@@ -79,7 +79,9 @@ export default function Home() {
           alignItems: isInitialState ? "center" : "flex-start",
         }}
         transition={{ duration: 0.5 }}
-        className={`container mx-auto px-4 width:[80%] ${!isInitialState && 'pt-20 pb-32'} relative`}
+        className={`container mx-auto px-4 width:[80%] ${
+          !isInitialState && "pt-20 pb-32"
+        } relative`}
       >
         <div className="w-full max-w-2xl mx-auto relative">
           <motion.div
