@@ -28,5 +28,15 @@ export interface Theme {
       hover: string;
       accent: string;
     };
+    chat: {
+      userBubble: {
+        background: string;
+        gradient: string;
+      };
+      agentBubble: {
+        background: string;
+        gradient: string;
+      };
+    };
   };
 }

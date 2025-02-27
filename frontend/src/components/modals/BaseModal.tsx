@@ -52,11 +52,11 @@ const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => 
         {/* Content Container */}
         <div className="relative z-10 flex flex-col h-full">
           {/* Header - Fixed height */}
-          <div className="flex justify-between items-start p-4 pb-2">
+          <div className="flex justify-between items-start p-3 pb-2">
             <div className="flex items-center gap-3">
               <Code className="text-2xl text-theme-button-primary" />
               <div>
-                <Typography variant="h5" className="text-base font-lg tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+                <Typography variant="h5" className="text-xl font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
                   {title}
                 </Typography>
                 {tags && (
@@ -64,7 +64,7 @@ const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => 
                     {tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-0.5 text-[10px] rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white"
+                        className="px-2 py-0.5 text-xs rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white"
                       >
                         {tag}
                       </span>

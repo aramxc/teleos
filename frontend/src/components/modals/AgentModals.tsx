@@ -124,152 +124,193 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
   };
 
   const renderRequirementsContent = () => (
-    <>
+    <Stack spacing={3} className="h-full flex flex-col">
       <Typography className="text-theme-text-secondary mb-4">
         {agent.description}
       </Typography>
 
-      <Stack spacing={3} className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
-        <TextField
-          value={requirements.duration}
-          onChange={(e) => handleRequirementChange('duration', Number(e.target.value))}
-          autoFocus
-          fullWidth
-          type="number"
-          label="Campaign Duration (days)"
-          InputProps={{ 
-            inputProps: { min: 1 },
-            sx: { color: 'var(--text-primary)' }
-          }}
-          sx={inputStyles}
-        />
-
-        <div className="flex gap-4">
+      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary flex-1">
+        <Stack spacing={3}>
           <TextField
-            value={requirements.frequency}
-            onChange={(e) => handleRequirementChange('frequency', Number(e.target.value))}
+            value={requirements.duration}
+            onChange={(e) => handleRequirementChange('duration', Number(e.target.value))}
+            autoFocus
+            fullWidth
             type="number"
-            label="Frequency of Posts"
+            label="Campaign Duration (days)"
             InputProps={{ 
               inputProps: { min: 1 },
               sx: { color: 'var(--text-primary)' }
             }}
             sx={inputStyles}
-            className="flex-1"
           />
-          <FormControl sx={inputStyles} className="min-w-[120px]">
-            <InputLabel>Per</InputLabel>
+
+          <div className="flex gap-4">
+            <TextField
+              value={requirements.frequency}
+              onChange={(e) => handleRequirementChange('frequency', Number(e.target.value))}
+              type="number"
+              label="Frequency of Posts"
+              InputProps={{ 
+                inputProps: { min: 1 },
+                sx: { color: 'var(--text-primary)' }
+              }}
+              sx={inputStyles}
+              className="flex-1"
+            />
+            <FormControl sx={inputStyles} className="min-w-[120px]">
+              <InputLabel>Per</InputLabel>
+              <Select
+                value={requirements.frequencyUnit}
+                onChange={(e) => handleRequirementChange('frequencyUnit', e.target.value)}
+                label="Per"
+              >
+                <MenuItem value="minute">Minute</MenuItem>
+                <MenuItem value="hour">Hour</MenuItem>
+                <MenuItem value="day">Day</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+
+          <FormControl sx={inputStyles}>
+            <InputLabel>Photo Options</InputLabel>
             <Select
-              value={requirements.frequencyUnit}
-              onChange={(e) => handleRequirementChange('frequencyUnit', e.target.value)}
-              label="Per"
+              value={requirements.photoOption}
+              onChange={(e) => handleRequirementChange('photoOption', e.target.value)}
+              label="Photo Options"
             >
-              <MenuItem value="minute">Minute</MenuItem>
-              <MenuItem value="hour">Hour</MenuItem>
-              <MenuItem value="day">Day</MenuItem>
+              <MenuItem value="generate">Generate AI Photos</MenuItem>
+              <MenuItem value="upload">Upload Own Photos</MenuItem>
             </Select>
           </FormControl>
-        </div>
 
-        <FormControl sx={inputStyles}>
-          <InputLabel>Photo Options</InputLabel>
-          <Select
-            value={requirements.photoOption}
-            onChange={(e) => handleRequirementChange('photoOption', e.target.value)}
-            label="Photo Options"
-          >
-            <MenuItem value="generate">Generate AI Photos</MenuItem>
-            <MenuItem value="upload">Upload Own Photos</MenuItem>
-          </Select>
-        </FormControl>
+          <div>
+            <Typography className="text-theme-text-primary mb-2 font-medium tracking-tight">
+              Creativity Level: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">{requirements.creativity}%</span>
+            </Typography>
+            <Slider
+              value={requirements.creativity}
+              onChange={(_, value) => handleRequirementChange('creativity', Array.isArray(value) ? value[0] : value)}
+              aria-label="Creativity"
+              valueLabelDisplay="auto"
+              sx={{
+                color: 'var(--button-primary)',
+                '& .MuiSlider-thumb': {
+                  backgroundColor: 'var(--text-primary)',
+                },
+                '& .MuiSlider-track': {
+                  backgroundColor: 'var(--button-primary)',
+                },
+                '& .MuiSlider-rail': {
+                  backgroundColor: 'var(--border-primary)',
+                },
+              }}
+            />
+          </div>
 
-        <div>
-          <Typography className="text-theme-text-primary mb-2 font-medium tracking-tight">
-            Creativity Level: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">{requirements.creativity}%</span>
-          </Typography>
-          <Slider
-            value={requirements.creativity}
-            onChange={(_, value) => handleRequirementChange('creativity', Array.isArray(value) ? value[0] : value)}
-            aria-label="Creativity"
-            valueLabelDisplay="auto"
-            sx={{
-              color: 'var(--button-primary)',
-              '& .MuiSlider-thumb': {
-                backgroundColor: 'var(--text-primary)',
-              },
-              '& .MuiSlider-track': {
-                backgroundColor: 'var(--button-primary)',
-              },
-              '& .MuiSlider-rail': {
-                backgroundColor: 'var(--border-primary)',
-              },
-            }}
-          />
-        </div>
+          <div>
+            <Typography className="text-theme-text-primary mb-2 font-medium tracking-tight">
+              Tone: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">50%</span>
+            </Typography>
+            <Slider
+              defaultValue={50}
+              valueLabelDisplay="auto"
+              sx={{
+                color: 'var(--button-primary)',
+                '& .MuiSlider-thumb': {
+                  backgroundColor: 'var(--text-primary)',
+                },
+                '& .MuiSlider-track': {
+                  backgroundColor: 'var(--button-primary)',
+                },
+                '& .MuiSlider-rail': {
+                  backgroundColor: 'var(--border-primary)',
+                },
+              }}
+            />
+          </div>
+        </Stack>
+      </div>
 
-        <Button
-          variant="contained"
-          size="medium"
-          className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
-          onClick={handleContinue}
-        >
-          Continue to Review
-        </Button>
-      </Stack>
-    </>
+      <Button
+        variant="contained"
+        size="medium"
+        className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white mt-auto"
+        onClick={handleContinue}
+      >
+        Continue to Review
+      </Button>
+    </Stack>
   );
 
   const renderReviewContent = () => (
-    <Stack spacing={3} className="text-theme-text-primary h-full">
-      {/* Welcome section */}
-      <Typography className="text-2xl font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-        Review & Confirm
-      </Typography>
+    <Stack spacing={2} className="text-theme-text-primary h-full flex flex-col justify-between">
+      {/* Top section with welcome text */}
+      <div>
+        <Typography className="mt-4 mb-6 text-theme-text-secondary text-xl">
+          You are about to hire{' '}
+          <a 
+            href={agent.websiteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent font-medium hover:opacity-80 transition-opacity"
+          >
+            {agent.name}
+          </a>
+          {' '}for a social media campaign, below are the details!
+        </Typography>
 
-      <Stack spacing={3} className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
-        {/* Info Container */}
-        <div className="space-y-3">
-          <Typography className="text-theme-text-secondary text-lg">
-            You are about to hire <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent font-medium">{agent.name}</span> for a social media campaign.
+        <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
+          <Typography variant="h6" className="mb-3 text-sm font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+            Timeline
           </Typography>
           
-          <div className="space-y-2 text-sm text-theme-text-secondary">
-            <p>✨ Your content will be generated using advanced AI models</p>
-            <p>🔄 Posts will be automatically scheduled and published</p>
-            <p>⚡ You can modify or cancel the campaign at any time</p>
-            <p>🛡️ 100% money-back guarantee if you&apos;re not satisfied</p>
-          </div>
+          <Stack spacing={2}>
+            <div className="flex items-center justify-between text-base">
+              <Typography className="text-theme-text-secondary">Estimated Start</Typography>
+              <Typography className="text-theme-text-primary">
+                Within 24 hours
+              </Typography>
+            </div>
+            
+            <div className="flex items-center justify-between text-base">
+              <Typography className="text-theme-text-secondary">Campaign Length</Typography>
+              <Typography className="text-theme-text-primary">
+                {requirements.duration} days
+              </Typography>
+            </div>
+        
+          </Stack>
         </div>
 
-        {/* Campaign Details */}
-        <div>
+        <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary mt-3">
           <Typography variant="h6" className="mb-3 text-sm font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
             Campaign Details
           </Typography>
           
           <Stack spacing={2}>
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center justify-between text-base">
               <Typography className="text-theme-text-secondary">Duration</Typography>
               <Typography className="text-theme-text-primary">
                 {requirements.duration} days
               </Typography>
             </div>
             
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center justify-between text-base">
               <Typography className="text-theme-text-secondary">Frequency</Typography>
               <Typography className="text-theme-text-primary">
                 {requirements.frequency} posts per {requirements.frequencyUnit}
               </Typography>
             </div>
             
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center justify-between text-base">
               <Typography className="text-theme-text-secondary">Photo Option</Typography>
               <Typography className="text-theme-text-primary capitalize">
                 {requirements.photoOption}
               </Typography>
             </div>
             
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center justify-between text-base">
               <Typography className="text-theme-text-secondary">Creativity Level</Typography>
               <Typography className="text-theme-text-primary">
                 {requirements.creativity}%
@@ -277,19 +318,20 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
             </div>
           </Stack>
         </div>
+      </div>
 
-        {/* Price */}
-        <div className="bg-theme-panel-bg/50 backdrop-blur-xl rounded-lg p-3 border border-theme-border-primary">
-          <Typography variant="h6" className="text-right mb-0 text-sm font-medium tracking-tight">
+      {/* Bottom section with price and actions */}
+      <div className="mt-auto">
+        <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary mb-3">
+          <Typography variant="h6" className="text-right mb-0 text-lg font-medium tracking-tight">
             Total Price: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">{calculateTotalPrice()} USDC</span>
           </Typography>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex justify-between gap-3">
           <Button
             variant="outlined"
-            size="medium"
+            size="large"
             onClick={handleBack}
             className="flex-1 border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
           >
@@ -297,14 +339,14 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
           </Button>
           <Button
             variant="contained"
-            size="medium"
+            size="large"
             className="flex-1 bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
             onClick={handlePayClick}
           >
             {address ? 'Pay Now' : 'Connect Wallet'}
           </Button>
         </div>
-      </Stack>
+      </div>
     </Stack>
   );
 

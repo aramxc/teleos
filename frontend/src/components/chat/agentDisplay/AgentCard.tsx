@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Code, NextPlan } from "@mui/icons-material";
-import AgentConfigModal from '../modals/AgentModals';
+import AgentConfigModal from '../../modals/AgentModals';
 
 interface Agent {
   name: string;

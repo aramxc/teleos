@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
-import AgentCard from "./AgentCard";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import AgentCardCarousel from "./AgentCardCarousel";
+import AgentCard from './agentDisplay/AgentCard';
+import { mockAgentResponses } from './mockData';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import AgentCardCarousel from './agentDisplay/AgentCardCarousel';
 
 type ChatWindowProps = {
   messages: Message[];
@@ -64,18 +65,20 @@ export default function ChatWindow({
         return (
           <div
             key={index}
-            className={`flex ${
-              message.role === "user" ? "justify-end" : "justify-center w-full"
-            }`}
+            className={`${
+              message.role === 'user' 
+                ? 'justify-end' 
+                : 'justify-start'
+            } flex w-full`}
           >
             <div
               className={`${
-                message.role === "user"
-                  ? "max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white"
-                  : isCarousel
-                  ? "w-full" // Remove border and background for carousel
-                  : "w-full max-w-[85%] sm:max-w-[75%] bg-theme-panel-bg border border-theme-border-primary"
-              } rounded-lg p-3`}
+                message.role === 'user'
+                  ? 'max-w-[85%] sm:max-w-[75%] bg-gradient-to-r from-theme-chat-userBubble-background to-theme-button-hover text-theme-text-secondary shadow-lg rounded-2xl border border-black/20'
+                  : isCarousel 
+                    ? 'w-full' // No styling for carousel
+                    : 'inline-block max-w-[85%] sm:max-w-[75%] bg-gradient-to-br from-theme-chat-agentBubble-background via-theme-bg-accent/70 to-theme-bg-accent/60 backdrop-blur-sm rounded-2xl border border-black/20'
+              } ${!isCarousel ? 'shadow-[0_8px_16px_-6px_rgba(0,0,0,0.2)] p-4' : ''}`}
             >
               {renderMessage(message.content)}
             </div>
