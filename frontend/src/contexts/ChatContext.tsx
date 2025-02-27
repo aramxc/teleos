@@ -1,29 +1,40 @@
 "use client";
 
 import { createContext, useContext, ReactNode, useState } from 'react';
-import { Message, useAgentChat } from '@/hooks/agents/useAgentKit';
+import { Message, useElizaApi } from '@/hooks/agents/useEliza';
 
-
-interface ChatContextType extends ReturnType<typeof useAgentChat> {
+interface ChatContextType {
+  messages: Message[];
+  currentResponse: string;
+  isLoading: boolean;
+  error: Error | null;
   isInitialState: boolean;
   setInitialState: (value: boolean) => void;
-  messages: Message[];
   sendMessage: (content: string) => Promise<void>;
-  isLoading: boolean;
 }
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export function ChatProvider({ children }: { children: ReactNode }) {
-  const chat = useAgentChat();
+  const { messages, currentResponse, isLoading, error, sendMessage } = useElizaApi();
   const [isInitialState, setInitialState] = useState(true);
   
   return (
     <ChatContext.Provider 
       value={{ 
-        ...chat,
+        messages,
+        currentResponse,
+        isLoading,
+        error,
         isInitialState,
         setInitialState,
+        sendMessage: async (content: string) => {
+          try {
+            await sendMessage('default', content);
+          } catch (error) {
+            console.error("Error sending message:", error);
+          }
+        },
       }}
     >
       {children}

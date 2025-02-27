@@ -1,8 +1,8 @@
-import { Message } from "@/hooks/agents/useAgentKit";
 import { useEffect, useRef } from "react";
+import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
 import AgentCard from './AgentCard';
-import { mockAgentResponses } from './mockData';
+// import { mockAgentResponses } from './mockData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,7 +12,7 @@ type ChatWindowProps = {
   messages: Message[];
   currentResponse: string;
   isLoading: boolean;
-  error?: string | null;
+  error?: Error | null;
 };
 
 export default function ChatWindow({
@@ -44,7 +44,7 @@ export default function ChatWindow({
 
   return (
     <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8">
-      {mockAgentResponses.map((message, index) => (
+      {messages.map((message, index) => (
         <div
           key={index}
           className={`flex ${
@@ -56,37 +56,29 @@ export default function ChatWindow({
           <div
             className={`${
               message.role === 'user'
-                ? 'max-w-[85%] sm:max-w-[75%]  shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
+                ? 'max-w-[85%] sm:max-w-[75%] shadow-lg border border-theme-border-primary bg-theme-button-primary text-white'
                 : 'w-full bg-transparent relative'
             } rounded-lg p-3`}
-            style={{ zIndex: 1 }}
           >
             {renderMessage(message.content)}
           </div>
         </div>
       ))}
-      {/* {console.log({ isLoading, currentResponse })} */}
-      {isLoading &&
-        (currentResponse ? (
-          <div className="flex justify-start">
-            <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary">
-              {currentResponse}
-              <span className="inline-block w-2 h-4 ml-1 bg-theme-text-primary animate-pulse">
-                |
-              </span>
-            </div>
+      
+      {currentResponse && (
+        <div className="flex justify-start">
+          <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary">
+            {renderMessage(currentResponse)}
           </div>
-        ) : (
-          <div className="flex justify-start">
-            <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 whitespace-pre-wrap break-words bg-theme-panel-bg border border-theme-border-primary">
-              <MessageLoading />
-            </div>
-          </div>
-        ))}
+        </div>
+      )}
+      
+      {isLoading && !currentResponse && <MessageLoading />}
+      
       {error && (
         <div className="flex justify-center">
           <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 bg-red-100 border border-red-300 text-red-700">
-            {error}
+            {error.message}
           </div>
         </div>
       )}

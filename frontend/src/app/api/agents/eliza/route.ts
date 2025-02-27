@@ -9,12 +9,12 @@ interface FetcherOptions {
   headers?: HeadersInit;
 }
 
-const fetcher = async ({
+const fetcher = async <T>({
   url,
   method,
   body,
   headers,
-}: FetcherOptions): Promise<any> => {
+}: FetcherOptions): Promise<T> => {
   const options: RequestInit = {
     method: method ?? "GET",
     headers: headers
@@ -65,11 +65,11 @@ interface ApiClient {
     agentId: string,
     message: string,
     selectedFile?: File | null
-  ) => Promise<any>;
-  getAgents: () => Promise<any>;
+  ) => Promise<Response>;
+  getAgents: () => Promise<Response>;
   getAgent: (agentId: string) => Promise<{ id: UUID; character: Character }>;
   tts: (agentId: string, text: string) => Promise<Blob>;
-  whisper: (agentId: string, audioBlob: Blob) => Promise<any>;
+  whisper: (agentId: string, audioBlob: Blob) => Promise<Response>;
 }
 
 export const apiClient: ApiClient = {
@@ -92,8 +92,8 @@ export const apiClient: ApiClient = {
     });
   },
   getAgents: () => fetcher({ url: "/agents" }),
-  getAgent: (agentId: string): Promise<{ id: UUID; character: Character }> =>
-    fetcher({ url: `/agents/${agentId}` }),
+  getAgent: (agentId: string) =>
+    fetcher<{ id: UUID; character: Character }>({ url: `/agents/${agentId}` }),
   tts: (agentId: string, text: string) =>
     fetcher({
       url: `/${agentId}/tts`,

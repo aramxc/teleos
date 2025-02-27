@@ -9,9 +9,6 @@ import ChatInput from "@/components/chat/ChatInput";
 import { useChatContext } from "@/contexts/ChatContext";
 import SuggestionBubbles from "@/components/chat/InitialSuggestions";
 import WalletConnectionButton from "@/components/wallet/WalletConnectionButton";
-// import { apiClient } from "./api/agents/eliza/route";
-// import { useQuery } from "@tanstack/react-query";
-// import { useEffect, useState } from "react";
 import ConnectionStatus from "@/components/chat/ConnectionStatus";
 
 const spaceGrotesk = Space_Grotesk({
@@ -20,24 +17,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export default function Home() {
-  // const query = useQuery({
-  //   queryKey: ["agents"],
-  //   queryFn: () => apiClient.getAgents(),
-  //   refetchInterval: 5_000,
-  // });
-
-  // const [agentId, setAgentId] = useState<string | null>(null);
-
-  // useEffect(() => {
-  //   if (query.agents) {
-  //     setAgentId(query.agents[0].id);
-  //   }
-  // }, [query.agents]);
-
   const {
     messages,
     isLoading,
     currentResponse,
+    error,
     sendMessage,
     isInitialState,
     setInitialState,
@@ -124,6 +108,7 @@ export default function Home() {
                 messages={messages}
                 currentResponse={currentResponse}
                 isLoading={isLoading}
+                error={error}
               />
             )}
           </motion.div>
@@ -141,13 +126,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 py-4">
           <div className="max-w-2xl mx-auto relative z-50">
-            <ChatInput
-              onSendMessage={(message) => {
-                sendMessage(message);
-                setInitialState(false);
-              }}
-              isLoading={isLoading}
-            />
+            <ChatInput />
             <div className="flex items-center justify-center p-2">
               <ConnectionStatus />
             </div>

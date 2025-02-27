@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/app/api/agents/eliza/route";
 import { useState } from "react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./Tooltip";
 import { Activity } from "lucide-react";
 
 export default function ConnectionStatus() {
