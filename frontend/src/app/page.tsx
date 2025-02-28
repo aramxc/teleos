@@ -12,8 +12,9 @@ import WalletConnectionButton from "@/components/wallet/WalletConnectionButton";
 import ConnectionStatus from "@/components/chat/ConnectionStatus";
 import { useEffect, useState } from "react";
 import { useModal } from "@/contexts/ModalContext";
-import Link from "next/link";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { UploadAgentForm } from "@/components/forms/UploadAgentForm";
+
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -32,8 +33,8 @@ export default function Home() {
   } = useChatContext();
 
   const { isModalOpen } = useModal();
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showUploadForm, setShowUploadForm] = useState(false);
 
   const suggestions = [
     "What can Teleos do?",
@@ -94,13 +95,16 @@ export default function Home() {
 
             {isDropdownOpen && (
               <div className="absolute top-full left-0 mt-2 w-48 rounded-md shadow-lg bg-theme-panel-bg border border-theme-border-primary">
-                <Link
-                  href="/upload-agent"
-                  className="block px-4 py-2 text-sm text-theme-text-primary hover:bg-theme-bg-secondary transition-colors"
-                  onClick={() => setIsDropdownOpen(false)}
+                <button
+                  onClick={() => {
+                    setShowUploadForm(true);
+                    setIsDropdownOpen(false);
+                    setInitialState(false);
+                  }}
+                  className="block w-full text-left px-4 py-2 text-sm text-theme-text-primary hover:bg-theme-bg-secondary transition-colors"
                 >
-                  Upload Contract
-                </Link>
+                  Submit an Agent!
+                </button>
               </div>
             )}
           </div>
@@ -115,43 +119,49 @@ export default function Home() {
       <motion.main
         initial={{ height: "100vh", display: "flex", alignItems: "center" }}
         animate={{
-          height: isInitialState ? "100vh" : "100%",
-          alignItems: isInitialState ? "center" : "flex-start",
+          height: isInitialState && !showUploadForm ? "100vh" : "100%",
+          alignItems: isInitialState && !showUploadForm ? "center" : "flex-start",
         }}
         transition={{ duration: 0.5 }}
         className={`container mx-auto px-4 width:[80%] ${
-          !isInitialState && "pt-20 pb-32"
+          (!isInitialState || showUploadForm) && "pt-20 pb-32"
         } relative`}
       >
         <div className="w-full max-w-2xl mx-auto relative">
           <motion.div
-            initial={{ y: 0 }}
-            animate={{ y: isInitialState ? 0 : "24px" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="relative z-10"
           >
-            {isInitialState ? (
-              <motion.div
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="text-center pointer-events-auto"
-              >
-                <h1 className="text-2xl font-medium mb-4 text-theme-text-primary">
-                  How can I help you with the blockchain today?
-                </h1>
-                <SuggestionBubbles
-                  suggestions={suggestions}
-                  onSelect={handleSuggestionClick}
-                />
-              </motion.div>
+            {showUploadForm ? (
+              <UploadAgentForm onCancel={() => setShowUploadForm(false)} />
             ) : (
-              <ChatWindow
-                messages={messages}
-                currentResponse={currentResponse}
-                isLoading={isLoading}
-                error={error}
-              />
+              <>
+                {isInitialState ? (
+                  <motion.div
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="text-center pointer-events-auto"
+                  >
+                    <h1 className="text-2xl font-medium mb-4 text-theme-text-primary">
+                      How can I help you with the blockchain today?
+                    </h1>
+                    <SuggestionBubbles
+                      suggestions={suggestions}
+                      onSelect={handleSuggestionClick}
+                    />
+                  </motion.div>
+                ) : (
+                  <ChatWindow
+                    messages={messages}
+                    currentResponse={currentResponse}
+                    isLoading={isLoading}
+                    error={error}
+                  />
+                )}
+              </>
             )}
           </motion.div>
         </div>
@@ -163,15 +173,19 @@ export default function Home() {
         animate={{ y: isInitialState ? 0 : "0" }}
         transition={{ duration: 0.5 }}
         className={`fixed bottom-0 w-full ${
-          !isInitialState && "border-t border-theme-border-primary"
+          (!isInitialState || showUploadForm) && "border-t border-theme-border-primary"
         } bg-theme-panel-bg backdrop-blur-xl z-50`}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="max-w-2xl mx-auto relative z-50">
-            <ChatInput />
-            <div className="flex items-center justify-center p-2">
-              <ConnectionStatus />
-            </div>
+            {!showUploadForm && (
+              <>
+                <ChatInput />
+                <div className="flex items-center justify-center p-2">
+                  <ConnectionStatus />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </motion.footer>

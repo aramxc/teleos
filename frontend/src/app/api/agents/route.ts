@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseClient } from "@/lib/supabaseClient";
-import { pushToChroma } from "@/app/utils/pushToChroma";
+// import { pushToChroma } from "@/app/utils/pushToChroma";
 
 // Define the AI Agent interface
 interface AIAgent {
@@ -73,15 +73,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Update ChromaDB with the new agent data
-    try {
-      await pushToChroma();
-      console.log("Successfully updated ChromaDB with new agent data");
-    } catch (chromaError) {
-      console.error("Error updating ChromaDB:", chromaError);
-      // We don't fail the request if ChromaDB update fails
-      // The agent was successfully created in Supabase
-    }
+    // // Update ChromaDB with the new agent data
+    // try {
+    //   await pushToChroma();
+    //   console.log("Successfully updated ChromaDB with new agent data");
+    // } catch (chromaError) {
+    //   console.error("Error updating ChromaDB:", chromaError);
+    //   // We don't fail the request if ChromaDB update fails
+    //   // The agent was successfully created in Supabase
+    // }
 
     // Return the created agent
     return NextResponse.json(
