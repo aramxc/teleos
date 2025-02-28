@@ -23,6 +23,7 @@ COPY chromaConfig.js ./
 # Copy the rest of the application code
 COPY ./src ./src
 COPY ./characters ./characters
+COPY ./lib ./lib
 COPY ./.env ./
 
 # Install dependencies and build the project
@@ -50,6 +51,7 @@ COPY --from=builder /app/dist /app/dist
 COPY --from=builder /app/tsconfig.json /app/
 COPY --from=builder /app/pnpm-lock.yaml /app/
 COPY --from=builder /app/chromaConfig.js /app/
+COPY --from=builder /app/lib /app/lib
 
 EXPOSE 3000
 # Set the command to run the application
