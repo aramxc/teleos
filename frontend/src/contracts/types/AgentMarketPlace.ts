@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import AgentMarketplaceABI from "../abis/AgentMarketplace.json";
+import AgentMarketPlaceABI from "../abis/AgentMarketPlace.json";
 import { AGENT_MARKETPLACE_ADDRESS } from "../addresses/contracts";
 
 export const getAgentMarketplaceContract = (
@@ -8,7 +8,7 @@ export const getAgentMarketplaceContract = (
 ) => {
   return new ethers.Contract(
     AGENT_MARKETPLACE_ADDRESS[network],
-    AgentMarketplaceABI,
+    AgentMarketPlaceABI,
     provider
   );
 };
