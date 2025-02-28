@@ -1,9 +1,7 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect } from 'react';
-import { useWalletConnect } from '@/hooks/wallets/useWalletConnect';
-import { useWalletDisconnect } from '@/hooks/wallets/useWalletDisconnect';
-import { useActiveAccount, useActiveWalletChain } from 'thirdweb/react';
+import { createContext, useContext, useState } from 'react';
+import { coinbaseProvider } from '@/lib/coinbaseWallet';
 
 interface WalletState {
   address: string | null;
@@ -37,29 +35,48 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
     chainId: null,
     ensName: null,
   });
+  const [isConnecting, setIsConnecting] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
 
-  const { connectWallet, isConnecting, error } = useWalletConnect();
-  const { disconnectWallet } = useWalletDisconnect();
-  const account = useActiveAccount();
-  const chain = useActiveWalletChain();
+  const connectWallet = async () => {
+    setIsConnecting(true);
+    try {
+      if (!coinbaseProvider) {
+        throw new Error('Coinbase Wallet provider not initialized');
+      }
 
-  useEffect(() => {
-    if (account) {
-      setState({
-        address: account.address || null,
-        isConnected: true,
-        chainId: chain?.id || null,
-        ensName: null,
-      });
-    } else {
-      setState({
-        address: null,
-        isConnected: false,
-        chainId: null,
-        ensName: null,
-      });
+      const accounts = await coinbaseProvider.request({ 
+        method: 'eth_requestAccounts' 
+      }) as string[];
+      
+      if (accounts[0]) {
+        const chainId = await coinbaseProvider.request({ 
+          method: 'eth_chainId' 
+        }) as string;
+
+        setState({
+          address: accounts[0],
+          isConnected: true,
+          chainId: parseInt(chainId, 16),
+          ensName: null,
+        });
+      }
+    } catch (err) {
+      console.error('Failed to connect Coinbase wallet:', err);
+      setError(err instanceof Error ? err : new Error('Failed to connect wallet'));
+    } finally {
+      setIsConnecting(false);
     }
-  }, [account, chain]);
+  };
+
+  const disconnectWallet = async () => {
+    setState({
+      address: null,
+      isConnected: false,
+      chainId: null,
+      ensName: null,
+    });
+  };
 
   const value = {
     ...state,
