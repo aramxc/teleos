@@ -3,7 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import dotenv from "dotenv";
-import { getSupabaseAdmin } from "../lib/supabase.js";
+import { createClient } from "@supabase/supabase-js";
 
 // Get the equivalent of __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -106,7 +106,9 @@ async function uploadData() {
     console.log(`Uploading ${agentsData.length} agents to Supabase...`);
 
     // Get admin client to bypass RLS
-    const supabase = getSupabaseAdmin();
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_KEY;
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
     const { data, error } = await supabase
       .from("ai_agents")

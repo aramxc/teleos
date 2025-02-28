@@ -7,13 +7,15 @@ import { createClient } from "@supabase/supabase-js";
  * @returns {Object} Supabase client instance
  */
 export function getSupabaseClient({ admin = false } = {}) {
-  const supabaseUrl =
-    process.env.NEXT_PUBLIC_SUPABASE_URL ||
-    "https://fhpalhrqtzjomhidzllt.supabase.co";
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 
   // Choose the appropriate key based on whether admin access is requested
   const supabaseKey = process.env.SUPABASE_KEY;
 
+  if (!supabaseUrl) {
+    console.error(`Missing NEXT_PUBLIC_SUPABASE_URL environment variable`);
+    throw new Error(`Missing NEXT_PUBLIC_SUPABASE_URL environment variable`);
+  }
   if (!supabaseKey) {
     console.error(`Missing SUPABASE_KEY environment variable`);
     throw new Error(`Missing SUPABASE_KEY environment variable`);
