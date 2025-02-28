@@ -460,7 +460,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
                   </Button>
                   <PayWithCBWallet 
                     amount={calculateTotalPrice()} 
-                    agentId={agent.id}
+                    agentId={agent.id || ''}
                     onSuccess={(txHash) => {
                       console.log(`Agent purchased! Transaction: ${txHash}`);
                       onClose();
