@@ -43,7 +43,7 @@ const BaseModal = ({ open, onClose, title, icon, children, className }: BaseModa
             {title}
             </Typography>
           </div>
-          <IconButton onClick={onClose} className="text-theme-text-primary hover:text-theme-text-secondary">
+          <IconButton onClick={onClose} className="text-theme-button-primary hover:text-theme-text-secondary">
             <CloseIcon />
           </IconButton>
         </div>

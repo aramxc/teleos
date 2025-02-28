@@ -11,8 +11,9 @@ import {
   Stack,
 } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useWallet } from '../../contexts/WalletContext';
+
 import BaseModal from './BaseModal';
+import { PayWithCBWallet } from '@/components/wallet/PayWithCBWallet';
 
 export interface AgentRequirements {
   duration: number;
@@ -59,7 +60,7 @@ const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-slate-800/80 to-slate-900/80 text-theme-text-primary border border-slate-700/50 whitespace-nowrap shadow-lg shadow-black/20 backdrop-blur-sm hover:from-slate-800/90 hover:to-slate-900/90 transition-all duration-200"
+              className="px-2 py-1 text-xs rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-theme-border-primary"
             >
               {tag}
             </span>
@@ -120,7 +121,7 @@ const AgentInfoModal = memo(function AgentInfoModal({ open, onClose, onHire, age
 const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }: AgentConfigModalProps) {
   const [currentStep, setCurrentStep] = useState<ModalStep>('info');
   const [direction, setDirection] = useState(0);
-  const { address, connectWallet } = useWallet();
+ 
   
   useEffect(() => {
     if (!open) {
@@ -151,13 +152,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
     return agent.price * requirements.duration * postsPerDay;
   };
 
-  const handlePayClick = async () => {
-    if (!address) {
-      await connectWallet();
-      return;
-    }
-    // Handle payment logic here
-  };
+ 
 
   const inputStyles = {
     '& .MuiInputLabel-root': {
@@ -480,13 +475,17 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
                   >
                     Back
                   </Button>
-                  <Button
-                    variant="contained"
-                    onClick={handlePayClick}
-                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
-                  >
-                    {address ? 'Pay Now' : 'Connect Wallet'}
-                  </Button>
+                  <PayWithCBWallet 
+                    amount={calculateTotalPrice()} 
+                    onSuccess={() => {
+                      // Handle successful payment
+                      onClose();
+                    }}
+                    onError={(error) => {
+                      // Handle payment error
+                      console.error('Payment failed:', error);
+                    }}
+                  />
                 </div>
               </Stack>
             )}
