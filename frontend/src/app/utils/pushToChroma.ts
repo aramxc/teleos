@@ -55,6 +55,7 @@ export async function pushToChroma(agent: Agent): Promise<boolean> {
         embeddingFunction: embedding,
       });
       console.log("Found existing collection");
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
       // Collection doesn't exist, create it
       console.log("Creating new collection");

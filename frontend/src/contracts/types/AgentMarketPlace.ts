@@ -1,6 +1,6 @@
-import { ethers } from 'ethers';
-import AgentMarketplaceAbi from '../abis/AgentMarketplace.json';
-import { AGENT_MARKETPLACE_ADDRESS } from '../addresses/contracts';
+import { ethers } from "ethers";
+import AgentMarketplaceABI from "../abis/AgentMarketplace.json";
+import { AGENT_MARKETPLACE_ADDRESS } from "../addresses/contracts";
 
 export const getAgentMarketplaceContract = (
   provider: ethers.Provider,
@@ -8,7 +8,7 @@ export const getAgentMarketplaceContract = (
 ) => {
   return new ethers.Contract(
     AGENT_MARKETPLACE_ADDRESS[network],
-    AgentMarketplaceAbi,
+    AgentMarketplaceABI,
     provider
   );
 };
