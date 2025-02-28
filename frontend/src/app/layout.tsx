@@ -9,6 +9,7 @@ import { WalletProvider } from "@/contexts/WalletContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/chat/Tooltip";
 import { AgentProvider } from "@/contexts/AgentContext";
+import { ModalProvider } from "@/contexts/ModalContext";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -47,7 +48,9 @@ export default function RootLayout({
               <WalletProvider>
                 <ThemeProvider>
                   <AgentProvider>
-                    <ChatProvider>{children}</ChatProvider>
+                    <ModalProvider>
+                      <ChatProvider>{children}</ChatProvider>
+                    </ModalProvider>
                   </AgentProvider>
                 </ThemeProvider>
               </WalletProvider>

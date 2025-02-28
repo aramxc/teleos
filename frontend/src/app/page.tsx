@@ -10,6 +10,8 @@ import { useChatContext } from "@/contexts/ChatContext";
 import SuggestionBubbles from "@/components/chat/InitialSuggestions";
 import WalletConnectionButton from "@/components/wallet/WalletConnectionButton";
 import ConnectionStatus from "@/components/chat/ConnectionStatus";
+import { useEffect } from "react";
+import { useModal } from "@/contexts/ModalContext";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -27,6 +29,8 @@ export default function Home() {
     setInitialState,
   } = useChatContext();
 
+  const { isModalOpen } = useModal();
+
   const suggestions = [
     "What can Teleos do?",
     "Deploy an ERC-20 Token",
@@ -40,9 +44,21 @@ export default function Home() {
     sendMessage(suggestion);
   };
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
   return (
     <div
-      className={`min-h-screen bg-theme-bg-primary text-theme-text-primary transition-all duration-300 ${spaceGrotesk.className}`}
+      className={`min-h-screen bg-theme-bg-primary text-theme-text-primary transition-all duration-300 ${spaceGrotesk.className} ${isModalOpen ? 'overflow-hidden' : ''}`}
     >
       {/* Background gradients */}
       <div className="fixed inset-0">
@@ -110,7 +126,7 @@ export default function Home() {
                 messages={messages}
                 currentResponse={currentResponse}
                 isLoading={isLoading}
-                error={error}
+                error={error ? new Error(error) : null}
               />
             )}
           </motion.div>
