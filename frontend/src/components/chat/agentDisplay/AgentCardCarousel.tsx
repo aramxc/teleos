@@ -18,14 +18,14 @@ interface AgentCardCarouselProps {
 
 export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     centerMode: true,
-    centerPadding: '20%',
+    centerPadding: '0',
     focusOnSelect: true,
     className: "center-carousel",
     responsive: [
@@ -50,14 +50,14 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          centerPadding: '25%',
+          centerPadding: '0',
         }
       }
     ]
   };
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative mx-4">
       <div className="w-full">
         <Slider {...settings}>
           {agents.map((agent, index) => (

@@ -34,11 +34,12 @@ const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => 
       style={{ position: 'fixed', zIndex: 200 }}
     >
       <Box 
-        className="relative bg-theme-bg-primary/90 backdrop-blur-xl
-          border border-theme-border-primary rounded-lg w-[95%] h-[90%] max-w-md" 
+        className="relative bg-theme-bg-primary backdrop-blur-xl
+          border border-theme-border-primary/20 rounded-lg w-[95%] h-[95%] md:w-[90%] max-w-xl" 
         sx={{ 
           position: 'relative',
-          height: { xs: '600px', sm: '580px' }, // Fixed height for mobile and desktop
+          height: { xs: '90vh', sm: '580px' }, // Adjusted height for mobile
+          maxHeight: { xs: '90vh', sm: '80vh' }, // Added max height constraint
           display: 'flex',
           flexDirection: 'column'
         }}
@@ -50,7 +51,7 @@ const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => 
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 flex flex-col h-full">
+        <div className="relative z-200 flex flex-col h-full">
           {/* Header - Fixed height */}
           <div className="flex justify-between items-start p-3 pb-2">
             <div className="flex items-center gap-3">
@@ -83,7 +84,14 @@ const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => 
           </div>
 
           {/* Scrollable Content Area */}
-          <div className="flex-1 overflow-y-auto px-4 pb-4 scrollbar-thin scrollbar-thumb-theme-border-primary scrollbar-track-transparent">
+          <div className="flex-1 overflow-y-auto px-4 pb-4 
+            scrollbar-thin scrollbar-thumb-theme-border-primary 
+            scrollbar-track-transparent hover:scrollbar-thumb-theme-border-secondary
+            [&::-webkit-scrollbar]:w-1.5
+            [&::-webkit-scrollbar-thumb]:rounded-full
+            [&::-webkit-scrollbar-thumb]:bg-theme-border-primary
+            [&::-webkit-scrollbar-thumb:hover]:bg-theme-border-secondary
+            [&::-webkit-scrollbar-track]:bg-transparent">
             {children}
           </div>
         </div>

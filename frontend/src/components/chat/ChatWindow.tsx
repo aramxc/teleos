@@ -52,7 +52,7 @@ export default function ChatWindow({
         const isCarousel = (() => {
           try {
             const content = JSON.parse(message.content);
-            return Array.isArray(content);
+            return Array.isArray(content.results);
           } catch {
             return false;
           }
@@ -63,14 +63,14 @@ export default function ChatWindow({
             key={index}
             className={`${
               message.role === "user" ? "justify-end" : "justify-start"
-            } flex w-full`}
+            } flex ${isCarousel ? 'w-screen -mx-4 md:-mx-8 lg:-mx-16' : 'w-full'}`}
           >
             <div
               className={`${
                 message.role === "user"
                   ? "max-w-[85%] sm:max-w-[75%] bg-gradient-to-r from-theme-chat-userBubble-background to-theme-button-hover text-theme-text-secondary shadow-lg rounded-2xl border border-black/20"
                   : isCarousel
-                  ? "w-full" // No styling for carousel
+                  ? "w-full md:w-[95%] lg:w-[90%]"
                   : "inline-block max-w-[85%] sm:max-w-[75%] bg-gradient-to-br from-theme-chat-agentBubble-background via-theme-bg-accent/70 to-theme-bg-accent/60 backdrop-blur-sm rounded-2xl border border-black/20"
               } ${
                 !isCarousel

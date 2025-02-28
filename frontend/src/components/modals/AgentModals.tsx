@@ -125,9 +125,20 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
 
   const renderRequirementsContent = () => (
     <Stack spacing={3} className="h-full flex flex-col">
-      <Typography className="text-theme-text-secondary mb-4">
-        {agent.description}
-      </Typography>
+      {/* Description with custom scrollbar - max 3 lines on mobile before scrolling */}
+      <div className="max-h-[4.5em] overflow-y-auto text-theme-text-secondary mb-4
+        scrollbar-thin scrollbar-thumb-theme-border-primary 
+        scrollbar-track-transparent hover:scrollbar-thumb-theme-border-secondary
+        [&::-webkit-scrollbar]:w-1.5
+        [&::-webkit-scrollbar-thumb]:rounded-full
+        [&::-webkit-scrollbar-thumb]:bg-theme-border-primary
+        [&::-webkit-scrollbar-thumb:hover]:bg-theme-border-secondary
+        [&::-webkit-scrollbar-track]:bg-transparent
+        md:max-h-none md:overflow-y-visible">
+        <Typography>
+          {agent.description}
+        </Typography>
+      </div>
 
       <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary flex-1">
         <Stack spacing={3}>

@@ -30,11 +30,12 @@ body {
 }
 
 .center-carousel {
-  margin: 0 -20px;
-  width: calc(100% + 40px) !important;
+  margin: 0 auto;
+  width: 100% !important;
   position: relative;
   padding: 0 !important;
   overflow: visible !important;
+  z-index: 10;
 }
 
 .center-carousel .slick-slide {
@@ -43,14 +44,14 @@ body {
   transform: scale(0.9);
   padding: 0;
   z-index: 1;
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .center-carousel .slick-track {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
 
 .center-carousel .slick-current {
@@ -62,7 +63,8 @@ body {
 /* Ensure side slides are partially visible and centered */
 .center-carousel .slick-list {
   overflow: visible !important;
-  padding: 0 20% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
 }
 
 /* Navigation arrows */
@@ -77,14 +79,17 @@ body {
   position: absolute !important;
   transform: translateY(-50%) !important;
   top: 50% !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  display: block !important;
 }
 
 .slick-prev {
-  left: -12px !important;
+  left: 10px !important;
 }
 
 .slick-next {
-  right: -12px !important;
+  right: 10px !important;
 }
 
 .slick-prev:before,
@@ -94,41 +99,61 @@ body {
   color: var(--text-primary) !important;
 }
 
-/* Dots styling */
-.slick-dots {
-  position: absolute !important;
-  bottom: -30px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  text-align: center !important;
-}
-
-.slick-dots li {
-  margin: 0 4px !important;
-}
-
-.slick-dots li button:before {
-  font-size: 8px !important;
-  color: var(--text-primary) !important;
-  opacity: 0.3 !important;
-}
-
-.slick-dots li.slick-active button:before {
-  opacity: 1 !important;
-  color: var(--text-primary) !important;
-}
-
-/* Update media queries */
-@media (max-width: 768px) {
-  .center-carousel .slick-slide {
-    transform: scale(0.9);
+/* Update media queries for better centering on larger screens */
+@media (min-width: 769px) {
+  .center-carousel .slick-list {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    max-width: 1200px;
+  }
+  
+  .center-carousel .slick-slide > div {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
   }
   
   .center-carousel .slick-current {
+    opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .center-carousel .slick-track {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .center-carousel .slick-slide > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-carousel .slick-list {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .slick-prev {
+    left: 50px !important;
+  }
+  
+  .slick-next {
+    right: 50px !important;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 10px !important;
+  }
+  
+  .slick-next {
+    right: 10px !important;
   }
 }
 
@@ -234,21 +259,6 @@ body {
 .fade-in {
   opacity: 1;
   transition: opacity 0.3s ease-in;
-}
-
-@media (min-width: 1024px) {
-  .center-carousel {
-    padding: 0 !important;
-    width: 100% !important;
-  }
-  
-  .slick-prev {
-    left: -20px !important;
-  }
-  
-  .slick-next {
-    right: -20px !important;
-  }
 }
 
 /* Carousel slide styles */

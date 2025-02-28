@@ -71,9 +71,17 @@ export const useElizaApi = () => {
         method: "POST",
         body: JSON.stringify(requestBody),
       });
-      const { text, user } = response[0];
-      setCurrentResponse(text);
-      setMessages((prev) => [...prev, { role: user, content: text }]);
+      
+      // Handle all messages in the response array
+      for (const msg of response) {
+        const { text, user } = msg;
+        // Wrap array results in {results: [...]} format
+        const content = text.startsWith('[') ? JSON.stringify({ results: JSON.parse(text) }) : text;
+        
+        setCurrentResponse(content);
+        setMessages((prev) => [...prev, { role: user, content }]);
+      }
+
       setIsLoading(false);
       return true;
     } catch (err) {
