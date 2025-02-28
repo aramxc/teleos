@@ -1,7 +1,7 @@
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChromaClient } from "chromadb";
-import { CHROMA_CONFIG } from "../../frontend/chromaConfig.js";
+import { CHROMA_CONFIG } from "../../chromaConfig.js";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Load environment variables from .env file (one directory up)
-dotenv.config({ path: path.resolve(__dirname, "../../.env") });
+dotenv.config({ path: path.resolve(__dirname, "../../.env.local") });
 
 // Define the UTILS array with a single utility for reading the scraped file
 const UTILS = [
@@ -219,6 +219,13 @@ async function addToChroma(chunks) {
       collection = await client.createCollection({
         name: CHROMA_CONFIG.collectionName,
         metadata: CHROMA_CONFIG.collectionMetadata,
+        embeddingFunction: {
+          dimensionality: testEmbedding.length,
+        },
+        hnsw: {
+          ef_construction: 200,
+          M: 16,
+        },
       });
     }
 
@@ -314,18 +321,60 @@ async function addToChroma(chunks) {
     console.log("Content verification completed");
 
     console.log("All documents added. Testing query...");
-    const testQuery = "Show me some marketing agents";
+    const testQuery = "Show me some agents";
     const queryEmbedding = await embedding.embedQuery(testQuery);
 
-    const results = await collection.query({
-      queryEmbeddings: [queryEmbedding],
-      nResults: 3,
-    });
+    try {
+      // First try a simple get operation to confirm documents are accessible
+      console.log("Testing direct document retrieval...");
+      const allDocs = await collection.get({
+        include: ["documents"],
+      });
+      console.log(`Collection contains ${allDocs.ids.length} documents`);
 
-    console.log("Test query results:", {
-      query: testQuery,
-      nResults: results.documents,
-    });
+      // Try a query with minimal parameters first
+      console.log("Testing basic query...");
+      const basicResults = await collection.query({
+        queryEmbeddings: [queryEmbedding],
+        nResults: 1,
+        include: ["documents"],
+      });
+      console.log("Basic query successful");
+
+      // Now try the full query
+      console.log("Testing full query...");
+      const results = await collection.query({
+        queryEmbeddings: [queryEmbedding],
+        nResults: 2,
+        include: ["documents", "metadatas", "distances"],
+        parameters: {
+          ef: 100,
+        },
+      });
+
+      console.log("Test query results:", {
+        query: testQuery,
+        numResults: results.documents[0].length,
+        results: results.documents[0],
+      });
+    } catch (error) {
+      console.error("Error during query testing:", error);
+      console.log("Attempting fallback query with different parameters...");
+
+      try {
+        // Try an alternative query approach with embeddings
+        const fallbackResults = await collection.query({
+          queryEmbeddings: [queryEmbedding],
+          nResults: 1,
+          include: ["documents"],
+        });
+        console.log("Fallback query successful:", {
+          numResults: fallbackResults.documents[0].length,
+        });
+      } catch (fallbackError) {
+        console.error("Fallback query also failed:", fallbackError);
+      }
+    }
 
     return true;
   } catch (error) {

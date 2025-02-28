@@ -1,6 +1,6 @@
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { ChromaClient } from "chromadb";
-import { CHROMA_CONFIG } from "../../frontend/chromaConfig.js";
+import { CHROMA_CONFIG } from "../../chromaConfig.js";
 import { identifyRelevantSources } from "./documentUtils.js";
 import dotenv from "dotenv";
 import path from "path";
@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Load environment variables from .env file (one directory up)
-dotenv.config({ path: path.resolve(__dirname, "../../.env") });
+dotenv.config({ path: path.resolve(__dirname, "../../.env.local") });
 
 async function queryChroma() {
   // Get the query from command line arguments
