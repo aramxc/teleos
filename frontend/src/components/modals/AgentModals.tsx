@@ -52,20 +52,11 @@ interface InfoModalProps {
 type ModalStep = 'info' | 'requirements' | 'review';
 
 const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
-  const [showAll, setShowAll] = useState(false);
-  
-  // Show 6 tags by default (2 rows of 3)
-  const visibleTags = showAll ? tags : tags.slice(0, 6);
-  const hiddenCount = tags.length - 6;
-
   return (
     <div className="py-2">
-      <Typography className="text-sm text-theme-text-secondary mb-3">
-        Features
-      </Typography>
-      <div className="relative">
-        <div className={`flex flex-wrap gap-2 ${!showAll ? 'max-h-[4.5rem]' : ''} overflow-hidden`}>
-          {visibleTags.map((tag, index) => (
+      <div className="overflow-x-auto md:overflow-x-visible pb-2">
+        <div className="flex flex-nowrap md:flex-wrap gap-2">
+          {tags.map((tag, index) => (
             <span
               key={index}
               className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-slate-800/80 to-slate-900/80 text-theme-text-primary border border-slate-700/50 whitespace-nowrap shadow-lg shadow-black/20 backdrop-blur-sm hover:from-slate-800/90 hover:to-slate-900/90 transition-all duration-200"
@@ -74,15 +65,6 @@ const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
             </span>
           ))}
         </div>
-        
-        {!showAll && tags.length > 6 && (
-          <button
-            onClick={() => setShowAll(true)}
-            className="absolute bottom-0 right-0 px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-slate-800/90 to-slate-900/90 text-theme-text-primary border border-slate-700/50 whitespace-nowrap shadow-lg shadow-black/20 backdrop-blur-sm hover:from-slate-800/95 hover:to-slate-900/95 transition-all duration-200"
-          >
-            +{hiddenCount} more
-          </button>
-        )}
       </div>
     </div>
   );
@@ -116,35 +98,10 @@ const AgentInfoModal = memo(function AgentInfoModal({ open, onClose, onHire, age
               </div>
 
               <TagsSection tags={agent.tags} />
-
-              {agent.websiteLink && (
-                <div className="pt-2">
-                  <a
-                    href={agent.websiteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
-                  >
-                    Visit Website
-                    <svg 
-                      className="ml-2 w-4 h-4" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              )}
             </div>
             
-            <div className="flex justify-between mt-auto">
+            <div className="flex items-center justify-between mt-auto">
+              
               <Button
                 variant="contained"
                 onClick={onHire}
@@ -236,7 +193,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
           <TextField
             value={requirements.duration}
             onChange={(e) => handleRequirementChange('duration', Number(e.target.value))}
-            autoFocus
+            autoComplete="off"
             fullWidth
             type="number"
             label="Campaign Duration (days)"
@@ -421,9 +378,9 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
           <motion.div
             key={currentStep}
             custom={direction}
-            initial={{ x: 1000, opacity: 0 }}
+            initial={{ x: direction > 0 ? 1000 : -1000, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -1000, opacity: 0 }}
+            exit={{ x: direction > 0 ? -1000 : 1000, opacity: 0 }}
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 }
@@ -440,35 +397,32 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
                   </div>
 
                   <TagsSection tags={agent.tags} />
-
-                  {agent.websiteLink && (
-                    <div className="pt-2">
-                      <a
-                        href={agent.websiteLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
-                      >
-                        Visit Website
-                        <svg 
-                          className="ml-2 w-4 h-4" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth={2} 
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  )}
                 </div>
                 
-                <div className="flex justify-end mt-auto">
+                <div className="flex items-center justify-between mt-auto">
+                  {agent.websiteLink && (
+                    <a
+                      href={agent.websiteLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
+                    >
+                      Visit Website
+                      <svg 
+                        className="ml-2 w-4 h-4" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </a>
+                  )}
                   <Button
                     variant="contained"
                     onClick={() => {
@@ -488,7 +442,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
                   {renderRequirementsContent()}
                 </div>
                 
-                <div className="flex justify-between mt-auto">
+                <div className="flex items-center justify-between mt-auto">
                   <Button
                     variant="outlined"
                     onClick={() => {
@@ -515,12 +469,12 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
             {currentStep === 'review' && (
               <Stack spacing={3} className="h-full flex flex-col justify-between">
                 {renderReviewContent()}
-                <div className="flex justify-between mt-auto">
+                <div className="flex items-center justify-between mt-auto">
                   <Button
                     variant="outlined"
                     onClick={() => {
                       setDirection(-1);
-                      setCurrentStep('info');
+                      setCurrentStep('requirements');
                     }}
                     className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
                   >

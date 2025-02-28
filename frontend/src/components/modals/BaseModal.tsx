@@ -8,14 +8,15 @@ interface BaseModalProps {
   title: string;
   icon?: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-const BaseModal = ({ open, onClose, title, icon, children }: BaseModalProps) => {
+const BaseModal = ({ open, onClose, title, icon, children, className }: BaseModalProps) => {
   return (
     <Modal
       open={open}
       onClose={onClose}
-      className="flex items-center justify-center"
+      className={`flex items-center justify-center ${className || ''}`}
       slotProps={{
         backdrop: {
           style: { 
@@ -26,9 +27,9 @@ const BaseModal = ({ open, onClose, title, icon, children }: BaseModalProps) => 
       }}
     >
       <Box 
-        className="relative bg-theme-bg-primary backdrop-blur-xl
-          border border-slate-700 rounded-lg w-[95%] md:w-[90%] max-w-xl
-          h-[90vh] sm:h-[580px] flex flex-col"
+        className={`relative bg-theme-bg-primary backdrop-blur-xl
+          border border-slate-700 rounded-lg w-[95%] md:w-[700px] lg:w-[800px]
+          h-[90vh] sm:h-[650px] md:h-[700px] flex flex-col`}
       >
         {/* Header */}
         <div className="flex justify-between items-center p-4">
