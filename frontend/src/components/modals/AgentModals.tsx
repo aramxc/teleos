@@ -1,9 +1,18 @@
-import { useState, memo } from 'react';
-import { Typography, Slider, TextField, Select, MenuItem, FormControl, InputLabel, Button, Stack, Tooltip } from '@mui/material';
+import { useState, memo, useEffect } from 'react';
+import { 
+  Button,
+  Typography,
+  Slider,
+  TextField,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Stack,
+} from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useWallet } from '../../contexts/WalletContext';
 import BaseModal from './BaseModal';
-
 
 export interface AgentRequirements {
   duration: number;
@@ -21,10 +30,9 @@ interface AgentConfigModalProps {
     description: string;
     tags: string[];
     websiteLink: string;
-  
+    icon: string;
     price: number;
   };
-  onBack: () => void;
 }
 
 interface InfoModalProps {
@@ -41,129 +49,128 @@ interface InfoModalProps {
   };
 }
 
-const slideVariants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? 1000 : -1000,
-    opacity: 0
-  }),
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1
-  },
-  exit: (direction: number) => ({
-    zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
-    opacity: 0
-  })
-};
+type ModalStep = 'info' | 'requirements' | 'review';
 
-const AgentInfoModal = memo(function AgentInfoModal({ open, onClose, onHire, agent }: InfoModalProps) {
-  const handleHire = () => {
-    onHire();
-  };
+const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
+  const [showAll, setShowAll] = useState(false);
+  
+  // Show 6 tags by default (2 rows of 3)
+  const visibleTags = showAll ? tags : tags.slice(0, 6);
+  const hiddenCount = tags.length - 6;
 
   return (
-    <BaseModal open={open} onClose={onClose} title={agent.name} icon={agent.icon}>
-      <AnimatePresence mode="wait">
-        {open && (
-          <motion.div
-            key="info-modal"
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
-            }}
-            className="h-full flex flex-col"
+    <div className="py-2">
+      <Typography className="text-sm text-theme-text-secondary mb-3">
+        Features
+      </Typography>
+      <div className="relative">
+        <div className={`flex flex-wrap gap-2 ${!showAll ? 'max-h-[4.5rem]' : ''} overflow-hidden`}>
+          {visibleTags.map((tag, index) => (
+            <span
+              key={index}
+              className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-slate-800/80 to-slate-900/80 text-theme-text-primary border border-slate-700/50 whitespace-nowrap shadow-lg shadow-black/20 backdrop-blur-sm hover:from-slate-800/90 hover:to-slate-900/90 transition-all duration-200"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        
+        {!showAll && tags.length > 6 && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="absolute bottom-0 right-0 px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-slate-800/90 to-slate-900/90 text-theme-text-primary border border-slate-700/50 whitespace-nowrap shadow-lg shadow-black/20 backdrop-blur-sm hover:from-slate-800/95 hover:to-slate-900/95 transition-all duration-200"
           >
-            {/* Main Content Area */}
-            <div className="flex-1 overflow-y-auto flex flex-col justify-end">
-              <Stack spacing={3}>
-                {/* Wrap everything in the styled container */}
-                <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
-                  <Stack spacing={3}>
-                    {/* Description Panel */}
-                    <Typography className="text-theme-text-secondary text-base">
-                      {agent.description}
-                    </Typography>
+            +{hiddenCount} more
+          </button>
+        )}
+      </div>
+    </div>
+  );
+});
 
-                    {/* Tags Panel */}
-                    <div className="flex justify-center">
-                      <div className="flex flex-wrap gap-2">
-                        {agent.tags.slice(0, 3).map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-slate-700/50 whitespace-nowrap"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                        {agent.tags.length > 3 && (
-                          <Tooltip 
-                            title={
-                              <div className="flex flex-wrap gap-2 p-2">
-                                {agent.tags.slice(3).map((tag, index) => (
-                                  <span
-                                    key={index}
-                                    className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-theme-border-primary whitespace-nowrap"
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            }
-                            arrow
-                            placement="top"
-                          >
-                            <span className="px-4 py-1.5 text-sm rounded-full bg-theme-bg-accent text-theme-text-secondary border border-theme-border-primary cursor-pointer hover:bg-theme-bg-accent/80">
-                              +{agent.tags.length - 3} more
-                            </span>
-                          </Tooltip>
-                        )}
-                      </div>
-                    </div>
-                  </Stack>
-                </div>
-              </Stack>
-            </div>
+const AgentInfoModal = memo(function AgentInfoModal({ open, onClose, onHire, agent }: InfoModalProps) {
+  return (
+    <BaseModal 
+      open={open} 
+      onClose={onClose} 
+      title={agent.name}
+      icon={agent.icon}
+    >
+      <div className="relative flex items-center justify-center h-full overflow-hidden">
+        <motion.div
+          initial={{ x: 0, opacity: 1 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -1000, opacity: 0 }}
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 }
+          }}
+          className="absolute inset-0 w-full px-4"
+        >
+          <Stack spacing={3} className="h-full flex flex-col justify-between">
+            <div className="flex-1 space-y-6">
+              <div className="bg-theme-panel-bg backdrop-blur-xl shadow-lg rounded-lg p-6 border border-theme-border-primary shadow-xl shadow-black/10">
+                <Typography className="text-theme-text-secondary">
+                  {agent.description}
+                </Typography>
+              </div>
 
-            {/* Bottom Actions - Fixed at bottom */}
-            <div className="flex justify-between p-4 border-t border-theme-border-primary bg-theme-panel-bg/30 backdrop-blur-sm mt-4">
+              <TagsSection tags={agent.tags} />
+
               {agent.websiteLink && (
-                <Button
-                  variant="outlined"
-                  href={agent.websiteLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
-                >
-                  Visit Website
-                </Button>
+                <div className="pt-2">
+                  <a
+                    href={agent.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
+                  >
+                    Visit Website
+                    <svg 
+                      className="ml-2 w-4 h-4" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </a>
+                </div>
               )}
+            </div>
+            
+            <div className="flex justify-between mt-auto">
               <Button
                 variant="contained"
-                onClick={handleHire}
+                onClick={onHire}
                 className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
               >
                 Hire Now
               </Button>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </Stack>
+        </motion.div>
+      </div>
     </BaseModal>
   );
 });
 
-const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent, onBack }: AgentConfigModalProps) {
-  const [currentStep, setCurrentStep] = useState<'requirements' | 'review'>('requirements');
+const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }: AgentConfigModalProps) {
+  const [currentStep, setCurrentStep] = useState<ModalStep>('info');
   const [direction, setDirection] = useState(0);
   const { address, connectWallet } = useWallet();
   
-  // Requirements state
+  useEffect(() => {
+    if (!open) {
+      setTimeout(() => setCurrentStep('info'), 200);
+    }
+  }, [open]);
+
   const [requirements, setRequirements] = useState<AgentRequirements>({
     duration: 1,
     frequency: 1,
@@ -221,6 +228,9 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent, 
 
   const renderRequirementsContent = () => (
     <Stack spacing={2} className="h-full flex flex-col">
+      <Typography className="mt-4 mb-6 text-theme-text-secondary text-xl">
+        Set your base requirements.
+        </Typography>
       <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary flex-1">
         <Stack spacing={3}>
           <TextField
@@ -331,7 +341,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent, 
       {/* Top section with welcome text */}
       <div>
         <Typography className="mt-4 mb-6 text-theme-text-secondary text-xl">
-         How does everything
+         Check over your details and confirm.
         </Typography>
 
         {/* Campaign Details */}
@@ -411,23 +421,80 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent, 
           <motion.div
             key={currentStep}
             custom={direction}
-            variants={slideVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
+            initial={{ x: 1000, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -1000, opacity: 0 }}
             transition={{
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 }
             }}
             className="absolute inset-0 w-full px-4"
           >
+            {currentStep === 'info' && (
+              <Stack spacing={3} className="h-full flex flex-col justify-between">
+                <div className="flex-1 space-y-6">
+                  <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-theme-border-primary shadow-xl shadow-black/10">
+                    <Typography className="text-theme-text-secondary">
+                      {agent.description}
+                    </Typography>
+                  </div>
+
+                  <TagsSection tags={agent.tags} />
+
+                  {agent.websiteLink && (
+                    <div className="pt-2">
+                      <a
+                        href={agent.websiteLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
+                      >
+                        Visit Website
+                        <svg 
+                          className="ml-2 w-4 h-4" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="flex justify-end mt-auto">
+                  <Button
+                    variant="contained"
+                    onClick={() => {
+                      setDirection(1);
+                      setCurrentStep('requirements');
+                    }}
+                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
+                  >
+                    Continue
+                  </Button>
+                </div>
+              </Stack>
+            )}
             {currentStep === 'requirements' && (
-              <Stack spacing={3} className="h-full flex flex-col">
-                {renderRequirementsContent()}
+              <Stack spacing={3} className="h-full flex flex-col justify-between">
+                <div className="flex-1">
+                  {renderRequirementsContent()}
+                </div>
+                
                 <div className="flex justify-between mt-auto">
                   <Button
                     variant="outlined"
-                    onClick={onBack}
+                    onClick={() => {
+                      setDirection(-1);
+                      setCurrentStep('info');
+                    }}
                     className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
                   >
                     Back
@@ -446,14 +513,14 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent, 
               </Stack>
             )}
             {currentStep === 'review' && (
-              <Stack spacing={3} className="h-full flex flex-col">
+              <Stack spacing={3} className="h-full flex flex-col justify-between">
                 {renderReviewContent()}
                 <div className="flex justify-between mt-auto">
                   <Button
                     variant="outlined"
                     onClick={() => {
                       setDirection(-1);
-                      setCurrentStep('requirements');
+                      setCurrentStep('info');
                     }}
                     className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
                   >

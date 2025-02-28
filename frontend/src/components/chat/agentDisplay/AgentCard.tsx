@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
-import { AgentInfoModal, AgentConfigModal } from '../../modals/AgentModals';
+import { AgentConfigModal } from '../../modals/AgentModals';
 import Image from 'next/image';
 import { useModal } from '../../../contexts/ModalContext';
 
@@ -20,20 +20,16 @@ interface AgentCardProps {
 export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
   const agent = { ...initialAgent, price: 10 };
   const { setModalOpen } = useModal();
-  const [modalType, setModalType] = useState<'info' | 'config' | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (type: 'info' | 'config') => {
-    setModalType(type);
+  const openModal = () => {
+    setIsModalOpen(true);
     setModalOpen(true);
   };
 
   const closeModal = () => {
-    setModalType(null);
+    setIsModalOpen(false);
     setModalOpen(false);
-  };
-
-  const handleHire = () => {
-    setModalType('config');
   };
 
   // Helper function to get first sentence
@@ -81,7 +77,7 @@ export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
               {remainingTags > 0 && (
                 <span
                   className="px-2 py-1 text-xs rounded-full bg-theme-bg-accent text-theme-text-secondary border border-theme-border-primary cursor-pointer hover:bg-theme-bg-accent/80"
-                  onClick={() => openModal('info')}
+                  onClick={() => openModal()}
                 >
                   +{remainingTags} more
                 </span>
@@ -98,30 +94,18 @@ export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
               </a>
               <KeyboardDoubleArrowRight 
                 className="cursor-pointer rounded-full text-theme-button-primary shadow-lg border0.5 border-slate hover:text-theme-button-hover transition-colors"
-                onClick={() => openModal('info')}
+                onClick={openModal}
               />
             </div>
           </div>
         </div>
       </div>
 
-      {modalType === 'info' && (
-        <AgentInfoModal
-          open={true}
-          onClose={closeModal}
-          onHire={handleHire}
-          agent={agent}
-        />
-      )}
-
-      {modalType === 'config' && (
-        <AgentConfigModal
-          open={true}
-          onClose={closeModal}
-          onBack={() => setModalType('info')}
-          agent={agent}
-        />
-      )}
+      <AgentConfigModal
+        open={isModalOpen}
+        onClose={closeModal}
+        agent={agent}
+      />
     </>
   );
 }

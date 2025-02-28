@@ -39,7 +39,7 @@ const BaseModal = ({ open, onClose, title, icon, children }: BaseModalProps) => 
               </div>
             )}
             <Typography className="text-xl font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-              {title}
+            {title}
             </Typography>
           </div>
           <IconButton onClick={onClose} className="text-theme-text-primary hover:text-theme-text-secondary">

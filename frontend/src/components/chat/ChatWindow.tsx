@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
 import AgentCard from './agentDisplay/AgentCard';
-// import { mockAgentResponses } from './mockData';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
