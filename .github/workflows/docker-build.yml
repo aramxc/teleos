@@ -62,3 +62,7 @@ jobs:
         run: |
           docker push 438465133266.dkr.ecr.us-east-2.amazonaws.com/teleos:latest
           docker push 438465133266.dkr.ecr.us-east-2.amazonaws.com/teleos:${{ steps.get-tag.outputs.TAG }}
+
+      - name: Force new ECS deployment
+        run: |
+          aws ecs update-service --cluster teleos-cluster --service teleos-agent-service --force-new-deployment --region us-east-2
