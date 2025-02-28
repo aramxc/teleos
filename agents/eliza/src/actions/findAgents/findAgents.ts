@@ -10,18 +10,15 @@ import {
   HandlerCallback,
 } from "@elizaos/core";
 import { getAgentCategoryTemplate } from "./getAgentCategoryTemplate.ts";
-import { queryAgents } from "../../utils/fileDB";
+import { queryChromaDB } from "../../utils/chromaDB.ts";
 
 export const findAgents: Action = {
   name: "FIND_AGENTS",
   similes: ["AGENT_LOOKUP", "AGENT_SEARCH", "AGENT_FIND"],
   suppressInitialMessage: true,
-  
   // Simple validation - always returns true for now
   validate: async (_runtime: IAgentRuntime, _message: Memory) => true,
-  
   description: "Search and return AI agents based on user query parameters",
-  
   handler: async (
     runtime: IAgentRuntime,
     message: Memory,
@@ -29,67 +26,35 @@ export const findAgents: Action = {
     _options: { [key: string]: unknown },
     callback: HandlerCallback
   ): Promise<boolean> => {
-    try {
-      let currentState = state || (await runtime.composeState(message));
-      currentState = await runtime.updateRecentMessageState(currentState);
-
-      const searchContext = composeContext({
-        state: currentState,
-        template: getAgentCategoryTemplate,
-      });
-
-      const searchParams = await generateMessageResponse({
-        runtime: runtime,
-        context: searchContext,
-        modelClass: ModelClass.SMALL,
-      });
-
-      console.log("Search params:", searchParams);
-
-      if (!searchParams?.category) {
-        callback({
-          text: "Please specify a category to search for agents",
-          action: "FIND_AGENTS"
-        });
-        return true;
-      }
-
-      const results = await queryAgents(
-        searchParams.category as string,
-        (searchParams.numResults as number) || 10
-      );
-
-      if (!results?.results?.length) {
-        callback({
-          text: `No agents found for category: ${searchParams.category}`,
-          action: "FIND_AGENTS"
-        });
-        return true;
-      }
-
-      // First send the results
-      await callback({
-        text: JSON.stringify({
-          results: results
-        }),
-        action: "FIND_AGENTS"
-      });
-
-      // Then send a follow-up message
-      await callback({
-        text: `I've found ${results.results.length} agents that fit your criteria. Do any of these look good?`,
-        action: "FIND_AGENTS"
-      });
-
-      return true;
-    } catch (error) {
-      console.error("Error in findAgents:", error);
-      callback({
-        text: `Error searching for agents: ${error.message}`,
-        action: "FIND_AGENTS"
-      });
-      return true;
+    let currentState: State = state;
+    if (!currentState) {
+      currentState = (await runtime.composeState(message)) as State;
     }
+    currentState = await runtime.updateRecentMessageState(currentState);
+
+    const categoryContext = composeContext({
+      state: currentState,
+      template: getAgentCategoryTemplate,
+    });
+
+    const response = await generateMessageResponse({
+      runtime: runtime,
+      context: categoryContext,
+      modelClass: ModelClass.SMALL,
+    });
+
+    if (response.category) {
+      const numResults = response.numResults || 10;
+      const results = await queryChromaDB(
+        response.category as string,
+        numResults as number
+      );
+      callback({
+        text: JSON.stringify(results),
+        action: "FIND_AGENTS",
+      });
+    }
+    return true;
   },
 
   // Example interactions for training
