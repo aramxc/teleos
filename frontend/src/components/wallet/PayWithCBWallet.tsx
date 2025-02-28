@@ -1,14 +1,23 @@
 import { Button } from '@mui/material';
 import { useWallet } from '@/contexts/WalletContext';
 import { coinbaseProvider } from '@/lib/coinbaseWallet';
+import { ethers } from 'ethers';
+import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
+import { AGENT_MARKETPLACE_ADDRESS } from '@/contracts/addresses/contracts';
 
 interface PayWithCBWalletProps {
   amount: number;
-  onSuccess?: () => void;
+  agentId: string;
+  onSuccess?: (txHash: string) => void;
   onError?: (error: Error) => void;
 }
 
-export function PayWithCBWallet({ amount, onSuccess, onError }: PayWithCBWalletProps) {
+export function PayWithCBWallet({ 
+  amount, 
+  agentId,
+  onSuccess, 
+  onError 
+}: PayWithCBWalletProps) {
   const { address, connectWallet } = useWallet();
 
   const handlePayment = async () => {
@@ -18,27 +27,40 @@ export function PayWithCBWallet({ amount, onSuccess, onError }: PayWithCBWalletP
         return;
       }
 
-      // Convert amount to Wei (assuming USDC with 6 decimals)
+      // Get contract instance
+      const network = process.env.NODE_ENV === 'development' ? 'localhost' : 'baseSepolia';
+      const ethersProvider = new ethers.BrowserProvider(coinbaseProvider);
+      const contract = getAgentMarketplaceContract(ethersProvider, network);
+
+      // First approve USDC spending
+      const usdcAddress = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
       const amountInWei = BigInt(amount * 1_000_000).toString();
 
-      // Example USDC contract address on Base
-      const usdcAddress = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
+      // USDC approve function
+      const usdcContract = new ethers.Contract(
+        usdcAddress,
+        ['function approve(address spender, uint256 amount) returns (bool)'],
+        ethersProvider
+      );
 
-      // Create the transaction
-      const transactionParameters = {
-        to: usdcAddress,
-        from: address,
-        value: amountInWei,
-        // You'll need the proper USDC transfer method here
-        data: "0xa9059cbb..." // This would be the encoded transfer method
-      };
+      // Approve marketplace contract to spend USDC
+      const approveTx = await usdcContract.approve(
+        AGENT_MARKETPLACE_ADDRESS[network],
+        amountInWei
+      );
+      await approveTx.wait();
 
-      const txHash = await coinbaseProvider.request({
-        method: 'eth_sendTransaction',
-        params: [transactionParameters],
-      });
+      // Purchase agent through marketplace
+      const purchaseTx = await contract.purchaseAgent(agentId);
+      const receipt = await purchaseTx.wait();
 
-      onSuccess?.();
+      const txHash = receipt.transactionHash;
+      
+      // Base Sepolia block explorer URL
+      const explorerUrl = `https://sepolia.basescan.org/tx/${txHash}`;
+      console.log('Transaction submitted:', explorerUrl);
+
+      onSuccess?.(txHash);
       return txHash;
     } catch (error) {
       console.error('Payment failed:', error);

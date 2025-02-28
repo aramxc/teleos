@@ -1,0 +1,19 @@
+{
+  "name": "@teleos/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network baseSepolia",
+    "copy-abi": "ts-node scripts/copy-abi.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "hardhat": "^2.22.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

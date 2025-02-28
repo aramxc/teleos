@@ -3,22 +3,14 @@ import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 import { AgentConfigModal } from '../../modals/AgentModals';
 import Image from 'next/image';
 import { useModal } from '../../../contexts/ModalContext';
-
-interface Agent {
-  name: string;
-  description: string;
-  websiteLink: string;
-  tags: string[];
-  icon: string;
-  price: number;
-}
-
+import TagBubble from '@/components/shared/TagBubble';
+import { Agent } from '@/types/agents';
 interface AgentCardProps {
   agent: Agent;
 }
 
 export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
-  const agent = { ...initialAgent, price: 10 };
+  const agent = { ...initialAgent, price: 10, address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '' };
   const { setModalOpen } = useModal();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -67,12 +59,7 @@ export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
             <hr className="pb-6 border-theme-border-primary"/>
             <div className="flex flex-wrap gap-2 mb-4">
               {visibleTags.map((tag: string, index: number) => (
-                <span
-                  key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-theme-border-primary"
-                >
-                  {tag}
-                </span>
+                <TagBubble key={index} tag={tag} />
               ))}
               {remainingTags > 0 && (
                 <span

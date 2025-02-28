@@ -14,6 +14,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import BaseModal from './BaseModal';
 import { PayWithCBWallet } from '@/components/wallet/PayWithCBWallet';
+import TagBubble from '@/components/shared/TagBubble';
+import { Agent } from '@/types/agents';
 
 export interface AgentRequirements {
   duration: number;
@@ -26,28 +28,14 @@ export interface AgentRequirements {
 interface AgentConfigModalProps {
   open: boolean;
   onClose: () => void;
-  agent: {
-    name: string;
-    description: string;
-    tags: string[];
-    websiteLink: string;
-    icon: string;
-    price: number;
-  };
+  agent: Agent;
 }
 
 interface InfoModalProps {
   open: boolean;
   onClose: () => void;
   onHire: () => void;
-  agent: {
-    name: string;
-    description: string;
-    tags: string[];
-    websiteLink: string;
-    icon: string;
-    price: number;
-  };
+  agent: Agent;
 }
 
 type ModalStep = 'info' | 'requirements' | 'review';
@@ -58,12 +46,7 @@ const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
       <div className="overflow-x-auto md:overflow-x-visible pb-2">
         <div className="flex flex-nowrap md:flex-wrap gap-2">
           {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="px-2 py-1 text-xs rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-theme-border-primary"
-            >
-              {tag}
-            </span>
+            <TagBubble key={index} tag={tag} />
           ))}
         </div>
       </div>
@@ -477,13 +460,13 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
                   </Button>
                   <PayWithCBWallet 
                     amount={calculateTotalPrice()} 
-                    onSuccess={() => {
-                      // Handle successful payment
+                    agentId={agent.id}
+                    onSuccess={(txHash) => {
+                      console.log(`Agent purchased! Transaction: ${txHash}`);
                       onClose();
                     }}
                     onError={(error) => {
-                      // Handle payment error
-                      console.error('Payment failed:', error);
+                      console.error('Purchase failed:', error);
                     }}
                   />
                 </div>

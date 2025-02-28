@@ -3,19 +3,28 @@
   "private": true,
   "workspaces": [
     "frontend",
-    "agents/eliza"
+    "agents/eliza",
+    "contracts"
   ],
   "scripts": {
-    "dev": "concurrently -n \"frontend,agent\" --colors \"blue,green\" \"npm run dev:frontend\" \"npm run dev:eliza\"",
+    "dev": "concurrently -n \"contracts,frontend,agent\" --colors \"yellow,blue,green\" \"npm run dev:contracts\" \"npm run dev:frontend\" \"npm run dev:eliza\"",
     "dev:frontend": "npm run dev --workspace=frontend",
     "dev:eliza": "npm run start --workspace=agents/eliza -- --characters=\"characters/aria.character.json\"",
+    "dev:contracts": "cd contracts && npm run compile && npm run copy-abi && npm run deploy:local",
     "build": "turbo run build",
-    "install:all": "npm install && cd agents/eliza && pnpm install"
+    "install:all": "npm install && cd agents/eliza && pnpm install",
+    "compile": "cd contracts && npx hardhat compile",
+    "copy-abi": "cd contracts && npm run scripts/copy-abi",
+    "deploy:local": "cd contracts && npx hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "concurrently": "^8.2.2",
+    "hardhat": "^2.22.19",
     "turbo": "^2.3.3",
-    "concurrently": "^8.2.2"
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.1"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

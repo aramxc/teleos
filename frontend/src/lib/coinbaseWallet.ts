@@ -2,7 +2,7 @@ import { createCoinbaseWalletSDK } from '@coinbase/wallet-sdk';
 
 export const coinbaseWallet = createCoinbaseWalletSDK({
     appName: "Teleos",
-    appChainIds: [84532], // base sepolia
+    appChainIds: [84532, 1337], // Base Sepolia and localhost
 
     preference: {
         options: "smartWalletOnly",

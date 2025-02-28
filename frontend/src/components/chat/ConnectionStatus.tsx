@@ -22,8 +22,6 @@ export default function ConnectionStatus() {
     retry: 1,
     refetchOnWindowFocus: "always",
   });
-
-  console.log(query);
   const connected = query?.isSuccess && !query?.isError;
   const isLoading = query?.isRefetching || query?.isPending;
 
