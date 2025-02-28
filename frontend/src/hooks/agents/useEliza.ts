@@ -23,7 +23,7 @@ export interface Message {
 export const useElizaApi = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error] = useState<Error | null>(null);
+  const [error] = useState<string | null>(null);
   const [currentResponse, setCurrentResponse] = useState<string>("");
 
   // Helper function for API requests
@@ -71,13 +71,15 @@ export const useElizaApi = () => {
         method: "POST",
         body: JSON.stringify(requestBody),
       });
-      
+
       // Handle all messages in the response array
       for (const msg of response) {
         const { text, user } = msg;
         // Wrap array results in {results: [...]} format
-        const content = text.startsWith('[') ? JSON.stringify({ results: JSON.parse(text) }) : text;
-        
+        const content = text.startsWith("[")
+          ? JSON.stringify({ results: JSON.parse(text) })
+          : text;
+
         setCurrentResponse(content);
         setMessages((prev) => [...prev, { role: user, content }]);
       }

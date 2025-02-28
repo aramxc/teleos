@@ -1,18 +1,18 @@
 import { useEffect, useRef } from "react";
 import { Message } from "@/hooks/agents/useEliza";
 import MessageLoading from "./MessageLoading";
-import AgentCard from './agentDisplay/AgentCard';
+import AgentCard from "./agentDisplay/AgentCard";
 // import { mockAgentResponses } from './mockData';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import AgentCardCarousel from './agentDisplay/AgentCardCarousel';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import AgentCardCarousel from "./agentDisplay/AgentCardCarousel";
 
 type ChatWindowProps = {
   messages: Message[];
   currentResponse: string;
   isLoading: boolean;
-  error?: Error | null;
+  error?: string | null;
 };
 
 export default function ChatWindow({
@@ -63,7 +63,9 @@ export default function ChatWindow({
             key={index}
             className={`${
               message.role === "user" ? "justify-end" : "justify-start"
-            } flex ${isCarousel ? 'w-screen -mx-4 md:-mx-8 lg:-mx-16' : 'w-full'}`}
+            } flex ${
+              isCarousel ? "w-screen -mx-4 md:-mx-8 lg:-mx-16" : "w-full"
+            }`}
           >
             <div
               className={`${
