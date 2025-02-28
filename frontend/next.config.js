@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { isServer }) => {
+  images: {
+    domains: ['firebasestorage.googleapis.com'],
+  },
+  webpack: (config) => {
     // Handle binary modules by marking them as external
     config.externals = [
       ...(config.externals || []),

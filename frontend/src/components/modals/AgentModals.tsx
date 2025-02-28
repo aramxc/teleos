@@ -1,8 +1,9 @@
 import { useState, memo } from 'react';
-import { Typography, Slider, TextField, Select, MenuItem, FormControl, InputLabel, Button, Stack } from '@mui/material';
+import { Typography, Slider, TextField, Select, MenuItem, FormControl, InputLabel, Button, Stack, Tooltip } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useWallet } from '../../contexts/WalletContext';
 import BaseModal from './BaseModal';
+
 
 export interface AgentRequirements {
   duration: number;
@@ -20,13 +21,146 @@ interface AgentConfigModalProps {
     description: string;
     tags: string[];
     websiteLink: string;
+  
+    price: number;
+  };
+  onBack: () => void;
+}
+
+interface InfoModalProps {
+  open: boolean;
+  onClose: () => void;
+  onHire: () => void;
+  agent: {
+    name: string;
+    description: string;
+    tags: string[];
+    websiteLink: string;
     icon: string;
     price: number;
   };
 }
 
-const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }: AgentConfigModalProps) {
-  const [step, setStep] = useState<'requirements' | 'review'>('requirements');
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0
+  })
+};
+
+const AgentInfoModal = memo(function AgentInfoModal({ open, onClose, onHire, agent }: InfoModalProps) {
+  const handleHire = () => {
+    onHire();
+  };
+
+  return (
+    <BaseModal open={open} onClose={onClose} title={agent.name} icon={agent.icon}>
+      <AnimatePresence mode="wait">
+        {open && (
+          <motion.div
+            key="info-modal"
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 }
+            }}
+            className="h-full flex flex-col"
+          >
+            {/* Main Content Area */}
+            <div className="flex-1 overflow-y-auto flex flex-col justify-end">
+              <Stack spacing={3}>
+                {/* Wrap everything in the styled container */}
+                <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
+                  <Stack spacing={3}>
+                    {/* Description Panel */}
+                    <Typography className="text-theme-text-secondary text-base">
+                      {agent.description}
+                    </Typography>
+
+                    {/* Tags Panel */}
+                    <div className="flex justify-center">
+                      <div className="flex flex-wrap gap-2">
+                        {agent.tags.slice(0, 3).map((tag, index) => (
+                          <span
+                            key={index}
+                            className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-slate-700/50 whitespace-nowrap"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {agent.tags.length > 3 && (
+                          <Tooltip 
+                            title={
+                              <div className="flex flex-wrap gap-2 p-2">
+                                {agent.tags.slice(3).map((tag, index) => (
+                                  <span
+                                    key={index}
+                                    className="px-4 py-1.5 text-sm rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white border border-theme-border-primary whitespace-nowrap"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                            }
+                            arrow
+                            placement="top"
+                          >
+                            <span className="px-4 py-1.5 text-sm rounded-full bg-theme-bg-accent text-theme-text-secondary border border-theme-border-primary cursor-pointer hover:bg-theme-bg-accent/80">
+                              +{agent.tags.length - 3} more
+                            </span>
+                          </Tooltip>
+                        )}
+                      </div>
+                    </div>
+                  </Stack>
+                </div>
+              </Stack>
+            </div>
+
+            {/* Bottom Actions - Fixed at bottom */}
+            <div className="flex justify-between p-4 border-t border-theme-border-primary bg-theme-panel-bg/30 backdrop-blur-sm mt-4">
+              {agent.websiteLink && (
+                <Button
+                  variant="outlined"
+                  href={agent.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
+                >
+                  Visit Website
+                </Button>
+              )}
+              <Button
+                variant="contained"
+                onClick={handleHire}
+                className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
+              >
+                Hire Now
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </BaseModal>
+  );
+});
+
+const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent, onBack }: AgentConfigModalProps) {
+  const [currentStep, setCurrentStep] = useState<'requirements' | 'review'>('requirements');
+  const [direction, setDirection] = useState(0);
   const { address, connectWallet } = useWallet();
   
   // Requirements state
@@ -44,44 +178,6 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
   ) => {
     setRequirements(prev => ({ ...prev, [field]: value }));
   };
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
-  };
-
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-  };
-
-  const [[page, direction], setPage] = useState([0, 0]);
-
-  const paginate = (newDirection: number) => {
-    if ((page === 0 && newDirection === -1) || (page === 1 && newDirection === 1)) return;
-    setPage([page + newDirection, newDirection]);
-    if (newDirection === 1) {
-      setStep('review');
-    } else {
-      setStep('requirements');
-    }
-  };
-
-  // Update handlers to use paginate
-  const handleContinue = () => paginate(1);
-  const handleBack = () => paginate(-1);
 
   const calculateTotalPrice = () => {
     const daysMultiplier = requirements.frequencyUnit === 'day' ? 1 
@@ -124,22 +220,7 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
   };
 
   const renderRequirementsContent = () => (
-    <Stack spacing={3} className="h-full flex flex-col">
-      {/* Description with custom scrollbar - max 3 lines on mobile before scrolling */}
-      <div className="max-h-[4.5em] overflow-y-auto text-theme-text-secondary mb-4
-        scrollbar-thin scrollbar-thumb-theme-border-primary 
-        scrollbar-track-transparent hover:scrollbar-thumb-theme-border-secondary
-        [&::-webkit-scrollbar]:w-1.5
-        [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-theme-border-primary
-        [&::-webkit-scrollbar-thumb:hover]:bg-theme-border-secondary
-        [&::-webkit-scrollbar-track]:bg-transparent
-        md:max-h-none md:overflow-y-visible">
-        <Typography>
-          {agent.description}
-        </Typography>
-      </div>
-
+    <Stack spacing={2} className="h-full flex flex-col">
       <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary flex-1">
         <Stack spacing={3}>
           <TextField
@@ -242,35 +323,18 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
           </div>
         </Stack>
       </div>
-
-      <Button
-        variant="contained"
-        size="medium"
-        className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white mt-auto"
-        onClick={handleContinue}
-      >
-        Continue to Review
-      </Button>
     </Stack>
   );
 
   const renderReviewContent = () => (
-    <Stack spacing={2} className="text-theme-text-primary h-full flex flex-col justify-between">
+    <Stack spacing={3} className="h-full flex flex-col">
       {/* Top section with welcome text */}
       <div>
         <Typography className="mt-4 mb-6 text-theme-text-secondary text-xl">
-          You are about to hire{' '}
-          <a 
-            href={agent.websiteLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent font-medium hover:opacity-80 transition-opacity"
-          >
-            {agent.name}
-          </a>
-          {' '}for a social media campaign, below are the details!
+         How does everything
         </Typography>
 
+        {/* Campaign Details */}
         <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary">
           <Typography variant="h6" className="mb-3 text-sm font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
             Timeline
@@ -329,49 +393,23 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
             </div>
           </Stack>
         </div>
-      </div>
 
-      {/* Bottom section with price and actions */}
-      <div className="mt-auto">
-        <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary mb-3">
+        {/* Price Display */}
+        <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary mt-3">
           <Typography variant="h6" className="text-right mb-0 text-lg font-medium tracking-tight">
             Total Price: <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">{calculateTotalPrice()} USDC</span>
           </Typography>
-        </div>
-
-        <div className="flex justify-between gap-3">
-          <Button
-            variant="outlined"
-            size="large"
-            onClick={handleBack}
-            className="flex-1 border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
-          >
-            Back
-          </Button>
-          <Button
-            variant="contained"
-            size="large"
-            className="flex-1 bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
-            onClick={handlePayClick}
-          >
-            {address ? 'Pay Now' : 'Connect Wallet'}
-          </Button>
         </div>
       </div>
     </Stack>
   );
 
   return (
-    <BaseModal
-      open={open}
-      onClose={onClose}
-      title={agent.name}
-      tags={agent.tags}
-    >
+    <BaseModal open={open} onClose={onClose} title={agent.name}>
       <div className="relative flex items-center justify-center h-full overflow-hidden">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
-            key={step}
+            key={currentStep}
             custom={direction}
             variants={slideVariants}
             initial="enter"
@@ -381,20 +419,56 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 }
             }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x);
-              if (swipe < -swipeConfidenceThreshold) {
-                paginate(1);
-              } else if (swipe > swipeConfidenceThreshold) {
-                paginate(-1);
-              }
-            }}
             className="absolute inset-0 w-full px-4"
           >
-            {step === 'requirements' ? renderRequirementsContent() : renderReviewContent()}
+            {currentStep === 'requirements' && (
+              <Stack spacing={3} className="h-full flex flex-col">
+                {renderRequirementsContent()}
+                <div className="flex justify-between mt-auto">
+                  <Button
+                    variant="outlined"
+                    onClick={onBack}
+                    className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    variant="contained"
+                    onClick={() => {
+                      setDirection(1);
+                      setCurrentStep('review');
+                    }}
+                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
+                  >
+                    Review
+                  </Button>
+                </div>
+              </Stack>
+            )}
+            {currentStep === 'review' && (
+              <Stack spacing={3} className="h-full flex flex-col">
+                {renderReviewContent()}
+                <div className="flex justify-between mt-auto">
+                  <Button
+                    variant="outlined"
+                    onClick={() => {
+                      setDirection(-1);
+                      setCurrentStep('requirements');
+                    }}
+                    className="border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    variant="contained"
+                    onClick={handlePayClick}
+                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
+                  >
+                    {address ? 'Pay Now' : 'Connect Wallet'}
+                  </Button>
+                </div>
+              </Stack>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -402,4 +476,4 @@ const AgentConfigModal = memo(function AgentConfigModal({ open, onClose, agent }
   );
 });
 
-export default AgentConfigModal;
+export { AgentInfoModal, AgentConfigModal };

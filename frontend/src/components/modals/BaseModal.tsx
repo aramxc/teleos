@@ -1,99 +1,55 @@
-import { Modal, Box, IconButton, Typography, Fade } from '@mui/material';
+import { Modal, Box, IconButton, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import { Code } from '@mui/icons-material';
+import Image from 'next/image';
 
 interface BaseModalProps {
   open: boolean;
   onClose: () => void;
   title: string;
-  tags?: string[];
+  icon?: string;
   children: React.ReactNode;
 }
 
-const BaseModal = ({ open, onClose, title, tags, children }: BaseModalProps) => {
+const BaseModal = ({ open, onClose, title, icon, children }: BaseModalProps) => {
   return (
     <Modal
       open={open}
       onClose={onClose}
-      aria-labelledby="modal-title"
       className="flex items-center justify-center"
       slotProps={{
         backdrop: {
           style: { 
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
             backdropFilter: 'blur(8px)',
-            WebkitBackdropFilter: 'blur(8px)'
-          },
-          TransitionComponent: Fade
+          }
         }
       }}
-      disableRestoreFocus
-      disableEnforceFocus={false}
-      disableAutoFocus
-      disablePortal={false}
-      style={{ position: 'fixed', zIndex: 200 }}
     >
       <Box 
         className="relative bg-theme-bg-primary backdrop-blur-xl
-          border border-theme-border-primary/20 rounded-lg w-[95%] h-[95%] md:w-[90%] max-w-xl" 
-        sx={{ 
-          position: 'relative',
-          height: { xs: '90vh', sm: '580px' }, // Adjusted height for mobile
-          maxHeight: { xs: '90vh', sm: '80vh' }, // Added max height constraint
-          display: 'flex',
-          flexDirection: 'column'
-        }}
+          border border-slate-700 rounded-lg w-[95%] md:w-[90%] max-w-xl
+          h-[90vh] sm:h-[580px] flex flex-col"
       >
-        {/* Background gradients */}
-        <div className="absolute inset-0 rounded-lg overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-primary via-theme-bg-secondary to-theme-bg-accent opacity-20" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(167,139,250,0.15),transparent_50%)]" />
+        {/* Header */}
+        <div className="flex justify-between items-center p-4">
+          <div className="flex items-center gap-3">
+            {icon && (
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image src={icon} alt={title} fill className="object-cover rounded-lg" />
+              </div>
+            )}
+            <Typography className="text-xl font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+              {title}
+            </Typography>
+          </div>
+          <IconButton onClick={onClose} className="text-theme-text-primary hover:text-theme-text-secondary">
+            <CloseIcon />
+          </IconButton>
         </div>
 
-        {/* Content Container */}
-        <div className="relative z-200 flex flex-col h-full">
-          {/* Header - Fixed height */}
-          <div className="flex justify-between items-start p-3 pb-2">
-            <div className="flex items-center gap-3">
-              <Code className="text-2xl text-theme-button-primary" />
-              <div>
-                <Typography variant="h5" className="text-xl font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-                  {title}
-                </Typography>
-                {tags && (
-                  <div className="flex flex-wrap gap-1 mt-1">
-                    {tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-0.5 text-xs rounded-full bg-gradient-to-r from-theme-button-primary to-theme-button-hover text-white"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-            <IconButton 
-              onClick={onClose} 
-              className="text-theme-text-primary hover:text-theme-text-secondary -mt-1 -mr-2"
-              size="small"
-            >
-              <CloseIcon fontSize="small" />
-            </IconButton>
-          </div>
-
-          {/* Scrollable Content Area */}
-          <div className="flex-1 overflow-y-auto px-4 pb-4 
-            scrollbar-thin scrollbar-thumb-theme-border-primary 
-            scrollbar-track-transparent hover:scrollbar-thumb-theme-border-secondary
-            [&::-webkit-scrollbar]:w-1.5
-            [&::-webkit-scrollbar-thumb]:rounded-full
-            [&::-webkit-scrollbar-thumb]:bg-theme-border-primary
-            [&::-webkit-scrollbar-thumb:hover]:bg-theme-border-secondary
-            [&::-webkit-scrollbar-track]:bg-transparent">
-            {children}
-          </div>
+        {/* Content */}
+        <div className="flex-1 overflow-y-auto px-4 pb-4">
+          {children}
         </div>
       </Box>
     </Modal>
