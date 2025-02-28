@@ -53,7 +53,7 @@ COPY --from=builder /app/pnpm-lock.yaml /app/
 COPY --from=builder /app/chromaConfig.js /app/
 COPY --from=builder /app/lib /app/lib
 
-EXPOSE 3000
+EXPOSE 3001
 # Set the command to run the application
 CMD ["pnpm", "start", "--non-interactive"]
 # CMD ["node", "dist/index.js"]
