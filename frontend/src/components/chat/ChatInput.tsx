@@ -43,6 +43,8 @@ export default function ChatInput() {
         placeholder="Ask me anything..."
         disabled={isLoading}
         className="w-full bg-theme-bg-secondary text-sm text-theme-text-primary pl-5 pr-14 py-3 rounded-full border border-theme-border-primary placeholder:text-theme-text-accent focus:outline-none focus:border-theme-button-primary focus:ring-1 focus:ring-theme-button-primary/20 transition-all duration-200 disabled:opacity-50"
+        style={{ fontSize: "16px" }}
+        autocomplete="off"
       />
       <button
         onClick={handleSend}

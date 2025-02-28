@@ -34,6 +34,10 @@ export default function RootLayout({
       <head>
         <title>teleos - AI blockchain assistant</title>
         <meta name="description" content="Your AI blockchain assistant" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-theme-bg-primary`}

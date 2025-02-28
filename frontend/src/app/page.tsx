@@ -46,19 +46,21 @@ export default function Home() {
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isModalOpen]);
 
   return (
     <div
-      className={`min-h-screen bg-theme-bg-primary text-theme-text-primary transition-all duration-300 ${spaceGrotesk.className} ${isModalOpen ? 'overflow-hidden' : ''}`}
+      className={`min-h-screen bg-theme-bg-primary text-theme-text-primary transition-all duration-300 ${
+        spaceGrotesk.className
+      } ${isModalOpen ? "overflow-hidden" : ""}`}
     >
       {/* Background gradients */}
       <div className="fixed inset-0">

@@ -4,20 +4,20 @@
 
 :root[data-theme="dark"] {
   --background-primary: #111827;
-  --background-secondary: #1F2937;
+  --background-secondary: #1f2937;
   --background-accent: #374151;
-  --text-primary: #F9FAFB;
-  --text-secondary: #E5E7EB;
-  --text-accent: #9CA3AF;
-  --text-dark: #6B7280;
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-accent: #9ca3af;
+  --text-dark: #6b7280;
   --border-primary: rgba(75, 85, 99, 0.5);
   --border-secondary: rgba(75, 85, 99, 0.3);
   --panel-background: rgba(17, 24, 39, 0.7);
   --panel-border: rgba(75, 85, 99, 0.8);
-  --button-primary: #3B82F6;
-  --button-secondary: #6B7280;
-  --button-hover: #2563EB;
-  --button-accent: #1D4ED8;
+  --button-primary: #3b82f6;
+  --button-secondary: #6b7280;
+  --button-hover: #2563eb;
+  --button-accent: #1d4ed8;
 }
 
 html,
@@ -106,13 +106,13 @@ body {
     margin: 0 auto !important;
     max-width: 1200px;
   }
-  
+
   .center-carousel .slick-slide > div {
     display: flex;
     justify-content: center;
     padding: 0 1rem;
   }
-  
+
   .center-carousel .slick-current {
     opacity: 1;
     transform: scale(1);
@@ -140,7 +140,7 @@ body {
   .slick-prev {
     left: 50px !important;
   }
-  
+
   .slick-next {
     right: 50px !important;
   }
@@ -151,7 +151,7 @@ body {
   .slick-prev {
     left: 10px !important;
   }
-  
+
   .slick-next {
     right: 10px !important;
   }
@@ -310,5 +310,19 @@ body {
   }
   .slick-next {
     right: -30px !important;
+  }
+}
+
+input,
+textarea,
+select {
+  font-size: 16px; /* Minimum font size to prevent zoom on iOS */
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
   }
 }
