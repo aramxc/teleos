@@ -99,7 +99,7 @@ export default function ChatWindow({
       {error && (
         <div className="flex justify-center">
           <div className="max-w-[85%] sm:max-w-[75%] rounded-lg p-3 bg-red-100 border border-red-300 text-red-700">
-            {error.message}
+            {error}
           </div>
         </div>
       )}
