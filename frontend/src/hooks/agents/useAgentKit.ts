@@ -34,7 +34,9 @@ export function useAgentChat() {
     try {
       const response = await fetch('/api/agents/agentKit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json',
+          'Authorization': 'Bearer token'
+         },
         body: JSON.stringify({ 
           messages: [...messages, userMessage],
           walletAddress: address

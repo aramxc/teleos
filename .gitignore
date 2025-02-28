@@ -2,4 +2,12 @@
 .env
 **/.env
 
-/node_modules
+**/node_modules
+
+.gitignore
+
+.env.local
+
+agents/eliza/cache/
+agents/eliza/content_cache/
+agents/eliza/data

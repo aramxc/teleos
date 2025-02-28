@@ -43,7 +43,7 @@ async function initializeAgent(walletAddress: string) {
     
     // Initialize OpenAI chat model
     const llm = new ChatOpenAI({
-      modelName: "gpt-4",
+      modelName: "gpt-3.5-turbo",
       temperature: 0,
       openAIApiKey: process.env.OPENAI_API_KEY,
     });
@@ -77,8 +77,8 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { messages, walletAddress } = body;
 
-    if (!messages?.length || !walletAddress) {
-      throw new Error('Invalid request format: missing messages or wallet address');
+    if (!messages?.length) {
+      throw new Error('Invalid request format: missing messages');
     }
 
     // Initialize agent if not already done

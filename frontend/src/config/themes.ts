@@ -10,7 +10,7 @@ export const themes: Record<string, Theme> = {
         accent: '#F3F4F6',
       },
       text: {
-        primary: '#111827',
+        primary: '#000000',
         secondary: '#374151',
         accent: '#6B7280',
         dark: '#4B5563',
@@ -20,7 +20,7 @@ export const themes: Record<string, Theme> = {
         secondary: 'rgba(209, 213, 219, 0.3)',
       },
       panel: {
-        background: 'rgba(249, 250, 251, 0.97)',
+        background: 'rgba(249, 250, 251, 1)',
         border: 'rgba(209, 213, 219, 0.8)',
       },
       button: {
@@ -28,6 +28,17 @@ export const themes: Record<string, Theme> = {
         secondary: '#6D28D9',
         hover: '#7C3AED',
         accent: '#A78BFA',
+      },
+    
+      chat: {
+        userBubble: {
+          background: '#8B5CF6',
+          gradient: 'from-[#8B5CF6] to-[#7C3AED]',
+        },
+        agentBubble: {
+          background: 'rgba(139, 92, 246, 0.1)',
+          gradient: 'from-[#8B5CF6]/10 via-[#8B5CF6]/5 to-[#8B5CF6]/2',
+        },
       },
     },
   },
@@ -50,7 +61,7 @@ export const themes: Record<string, Theme> = {
         secondary: 'rgba(75, 85, 99, 0.3)',
       },
       panel: {
-        background: 'rgba(17, 24, 39, 0.7)',
+        background: 'rgba(17, 24, 39, 1)',
         border: 'rgba(75, 85, 99, 0.8)',
       },
       button: {
@@ -58,6 +69,16 @@ export const themes: Record<string, Theme> = {
         secondary: '#6B7280',
         hover: '#2563EB',
         accent: '#1D4ED8',
+      },
+      chat: {
+        userBubble: {
+          background: '#3B82F6',
+          gradient: 'from-[#3B82F6] to-[#2563EB]',
+        },
+        agentBubble: {
+          background: 'rgba(31, 41, 55, 0.8)',
+          gradient: 'from-[#1F2937]/80 via-[#374151]/70 to-[#4B5563]/60',
+        },
       },
     },
   },
@@ -80,7 +101,7 @@ export const themes: Record<string, Theme> = {
         secondary: 'rgba(51, 65, 85, 0.3)',
       },
       panel: {
-        background: 'rgba(30, 27, 46, 0.7)',
+        background: 'rgba(30, 27, 46, 1)',
         border: 'rgba(51, 65, 85, 0.8)',
       },
       button: {
@@ -88,6 +109,16 @@ export const themes: Record<string, Theme> = {
         secondary: '#6D28D9',
         hover: '#7C3AED',
         accent: '#5B21B6',
+      },
+      chat: {
+        userBubble: {
+          background: '#8B5CF6',
+          gradient: 'from-[#8B5CF6] to-[#7C3AED]',
+        },
+        agentBubble: {
+          background: 'rgba(45, 38, 64, 0.8)',
+          gradient: 'from-[#2D2640]/80 via-[#453A67]/70 to-[#574D84]/60',
+        },
       },
     },
   },

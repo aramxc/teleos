@@ -21,7 +21,8 @@ import {
   parseArguments,
 } from "./config/index.ts";
 import { initializeDatabase } from "./database/index.ts";
-
+import { noneAction } from "./actions/none.ts";
+import { findAgents } from "./actions/findAgents/findAgents.ts";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -55,7 +56,7 @@ export function createAgent(
     character,
     plugins: [].filter(Boolean),
     providers: [],
-    actions: [],
+    actions: [noneAction, findAgents],
     services: [],
     managers: [],
     cacheManager: cache,
@@ -122,7 +123,7 @@ const checkPortAvailable = (port: number): Promise<boolean> => {
 
 const startAgents = async () => {
   const directClient = new DirectClient();
-  let serverPort = parseInt(settings.SERVER_PORT || "3000");
+  let serverPort = parseInt(settings.SERVER_PORT || "3001");
   const args = parseArguments();
 
   let charactersArg = args.characters || args.character;

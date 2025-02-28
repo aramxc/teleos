@@ -1,16 +1,21 @@
 {
-    "name": "teleos",
-    "private": true,
-    "workspaces": [
-      "frontend"
-    ],
-    "scripts": {
-      "dev": "npm run dev --workspace=frontend",
-      "build": "npm run build --workspace=frontend",
-      "install:all": "npm install"
-    },
-    "devDependencies": {
-      "typescript": "^5.4.5",
-      "turbo": "^2.3.3"
-    }
-  }
+  "name": "teleos",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "agents/eliza"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"frontend,agent\" --colors \"blue,green\" \"npm run dev:frontend\" \"npm run dev:eliza\"",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:eliza": "npm run start --workspace=agents/eliza -- --characters=\"characters/aria.character.json\"",
+    "build": "turbo run build",
+    "install:all": "npm install && cd agents/eliza && pnpm install"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "turbo": "^2.3.3",
+    "concurrently": "^8.2.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

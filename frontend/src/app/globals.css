@@ -29,6 +29,134 @@ body {
   padding: 0;
 }
 
+.center-carousel {
+  margin: 0 auto;
+  width: 100% !important;
+  position: relative;
+  padding: 0 !important;
+  overflow: visible !important;
+  z-index: 10;
+}
+
+.center-carousel .slick-slide {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+  padding: 0;
+  z-index: 1;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.center-carousel .slick-track {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.center-carousel .slick-current {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Ensure side slides are partially visible and centered */
+.center-carousel .slick-list {
+  overflow: visible !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+/* Navigation arrows */
+.slick-prev,
+.slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 500 !important;
+  background: var(--panel-background) !important;
+  border: 1px solid var(--border-primary) !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  display: block !important;
+}
+
+.slick-prev {
+  left: 10px !important;
+}
+
+.slick-next {
+  right: 10px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px !important;
+  opacity: 1 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Update media queries for better centering on larger screens */
+@media (min-width: 769px) {
+  .center-carousel .slick-list {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    max-width: 1200px;
+  }
+  
+  .center-carousel .slick-slide > div {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  
+  .center-carousel .slick-current {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .center-carousel .slick-track {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .center-carousel .slick-slide > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-carousel .slick-list {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .slick-prev {
+    left: 50px !important;
+  }
+  
+  .slick-next {
+    right: 50px !important;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 10px !important;
+  }
+  
+  .slick-next {
+    right: 10px !important;
+  }
+}
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 6px;
@@ -131,4 +259,56 @@ body {
 .fade-in {
   opacity: 1;
   transition: opacity 0.3s ease-in;
+}
+
+/* Carousel slide styles */
+.slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  scale: 0.9;
+}
+
+.slick-current {
+  opacity: 1;
+  scale: 1;
+}
+
+/* Navigation arrows */
+.slick-prev,
+.slick-next {
+  width: 20px !important;
+  height: 20px !important;
+  z-index: 50 !important;
+}
+
+.slick-prev {
+  left: -40px !important;
+}
+
+.slick-next {
+  right: -20px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px !important;
+  opacity: 0.7 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Track alignment */
+.center-carousel .slick-track {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .slick-prev {
+    left: -30px !important;
+  }
+  .slick-next {
+    right: -30px !important;
+  }
 }

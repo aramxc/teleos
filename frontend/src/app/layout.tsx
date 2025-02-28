@@ -1,13 +1,17 @@
-'use client';
+"use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from '@/contexts/ThemeContext';
-import { ChatProvider } from '@/contexts/ChatContext';
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ChatProvider } from "@/contexts/ChatContext";
 import { ThirdwebProvider } from "thirdweb/react";
-import { WalletProvider } from '@/contexts/WalletContext';
+import { WalletProvider } from "@/contexts/WalletContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { TooltipProvider } from "@/components/chat/Tooltip";
+import { AgentProvider } from "@/contexts/AgentContext";
 
-
+// Create a client
+const queryClient = new QueryClient();
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,18 +37,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-theme-bg-primary`}
         style={{
-          backgroundColor: '#111827', // Dark theme background color
-          color: '#F9FAFB' // Dark theme text color
+          backgroundColor: "#111827", // Dark theme background color
+          color: "#F9FAFB", // Dark theme text color
         }}
       >
         <ThirdwebProvider>
-          <WalletProvider>
-            <ThemeProvider>
-              <ChatProvider>
-                {children}
-              </ChatProvider>
-            </ThemeProvider>
-          </WalletProvider>
+          <QueryClientProvider client={queryClient}>
+            <TooltipProvider delayDuration={0}>
+              <WalletProvider>
+                <ThemeProvider>
+                  <AgentProvider>
+                    <ChatProvider>{children}</ChatProvider>
+                  </AgentProvider>
+                </ThemeProvider>
+              </WalletProvider>
+            </TooltipProvider>
+          </QueryClientProvider>
         </ThirdwebProvider>
       </body>
     </html>
