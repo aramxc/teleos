@@ -10,8 +10,10 @@ import { useChatContext } from "@/contexts/ChatContext";
 import SuggestionBubbles from "@/components/chat/InitialSuggestions";
 import WalletConnectionButton from "@/components/wallet/WalletConnectionButton";
 import ConnectionStatus from "@/components/chat/ConnectionStatus";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useModal } from "@/contexts/ModalContext";
+import Link from "next/link";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -30,6 +32,8 @@ export default function Home() {
   } = useChatContext();
 
   const { isModalOpen } = useModal();
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const suggestions = [
     "What can Teleos do?",
@@ -76,11 +80,29 @@ export default function Home() {
         className="fixed top-0 w-full border-b border-theme-border-primary bg-theme-panel-bg backdrop-blur-xl z-50"
       >
         <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <TerminalIcon className="w-5 h-5 text-theme-button-primary" />
-            <h1 className="text-lg font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-              _teleos
-            </h1>
+          <div className="flex items-center gap-3 relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+            >
+              <TerminalIcon className="w-5 h-5 text-theme-button-primary" />
+              <h1 className="text-lg font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
+                _teleos
+              </h1>
+              <KeyboardArrowDownIcon className="w-4 h-4 text-theme-button-primary" />
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 rounded-md shadow-lg bg-theme-panel-bg border border-theme-border-primary">
+                <Link
+                  href="/upload-agent"
+                  className="block px-4 py-2 text-sm text-theme-text-primary hover:bg-theme-bg-secondary transition-colors"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  Upload Contract
+                </Link>
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-4">
             <WalletConnectionButton />
@@ -128,7 +150,7 @@ export default function Home() {
                 messages={messages}
                 currentResponse={currentResponse}
                 isLoading={isLoading}
-                error={error ? new Error(error) : null}
+                error={error}
               />
             )}
           </motion.div>

@@ -27,10 +27,9 @@ export function PayWithCBWallet({
         return;
       }
 
-      // Get contract instance
+      if (!coinbaseProvider) throw new Error("Wallet provider not initialized");
       const network = process.env.NODE_ENV === 'development' ? 'localhost' : 'baseSepolia';
-      const ethersProvider = new ethers.BrowserProvider(coinbaseProvider);
-      const contract = getAgentMarketplaceContract(ethersProvider, network);
+      const contract = getAgentMarketplaceContract(coinbaseProvider, network);
 
       // First approve USDC spending
       const usdcAddress = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
@@ -40,7 +39,7 @@ export function PayWithCBWallet({
       const usdcContract = new ethers.Contract(
         usdcAddress,
         ['function approve(address spender, uint256 amount) returns (bool)'],
-        ethersProvider
+        coinbaseProvider
       );
 
       // Approve marketplace contract to spend USDC

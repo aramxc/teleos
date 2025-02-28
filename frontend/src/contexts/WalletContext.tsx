@@ -45,14 +45,10 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
         throw new Error('Coinbase Wallet provider not initialized');
       }
 
-      const accounts = await coinbaseProvider.request({ 
-        method: 'eth_requestAccounts' 
-      }) as string[];
+      const accounts = await coinbaseProvider.send('eth_requestAccounts', []) as string[];
       
       if (accounts[0]) {
-        const chainId = await coinbaseProvider.request({ 
-          method: 'eth_chainId' 
-        }) as string;
+        const chainId = await coinbaseProvider.send('eth_chainId', []) as string;
 
         setState({
           address: accounts[0],
