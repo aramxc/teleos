@@ -63,6 +63,6 @@ jobs:
           docker push 438465133266.dkr.ecr.us-east-2.amazonaws.com/coachsam:latest
           docker push 438465133266.dkr.ecr.us-east-2.amazonaws.com/coachsam:${{ steps.get-tag.outputs.TAG }}
 
-      # - name: Force new ECS deployment
-      #   run: |
-      #     aws ecs update-service --cluster teleos-cluster --service teleos-coach-service --force-new-deployment --region us-east-2
+      - name: Force new ECS deployment
+        run: |
+          aws ecs update-service --cluster teleos-cluster --service teleos-coach-service --force-new-deployment --region us-east-2
