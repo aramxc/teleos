@@ -1,24 +1,20 @@
 import { Button } from '@mui/material';
 import { useWallet } from '@/contexts/WalletContext';
-import { coinbaseProvider } from '@/lib/coinbaseWallet';
-import { ethers } from 'ethers';
-import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
-import { AGENT_MARKETPLACE_ADDRESS } from '@/contracts/addresses/contracts';
+import { useSmartContracts } from '@/hooks/useSmartContracts';
 
 interface PayWithCBWalletProps {
-  amount: number;
   agentId: string;
   onSuccess?: (txHash: string) => void;
   onError?: (error: Error) => void;
 }
 
 export function PayWithCBWallet({ 
-  amount, 
   agentId,
   onSuccess, 
   onError 
 }: PayWithCBWalletProps) {
   const { address, connectWallet } = useWallet();
+  const { purchaseAgent, getContracts } = useSmartContracts();
 
   const handlePayment = async () => {
     try {
@@ -27,40 +23,20 @@ export function PayWithCBWallet({
         return;
       }
 
-      if (!coinbaseProvider) throw new Error("Wallet provider not initialized");
-      const network = process.env.NODE_ENV === 'development' ? 'localhost' : 'baseSepolia';
-      const contract = getAgentMarketplaceContract(coinbaseProvider, network);
-
-      // First approve USDC spending
-      const usdcAddress = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
-      const amountInWei = BigInt(amount * 1_000_000).toString();
-
-      // USDC approve function
-      const usdcContract = new ethers.Contract(
-        usdcAddress,
-        ['function approve(address spender, uint256 amount) returns (bool)'],
-        coinbaseProvider
-      );
-
-      // Approve marketplace contract to spend USDC
-      const approveTx = await usdcContract.approve(
-        AGENT_MARKETPLACE_ADDRESS[network],
-        amountInWei
-      );
-      await approveTx.wait();
-
-      // Purchase agent through marketplace
-      const purchaseTx = await contract.purchaseAgent(agentId);
-      const receipt = await purchaseTx.wait();
-
-      const txHash = receipt.transactionHash;
+      // First get the contract instance
+      const { marketplaceContract } = await getContracts();
       
-      // Base Sepolia block explorer URL
-      const explorerUrl = `https://sepolia.basescan.org/tx/${txHash}`;
-      console.log('Transaction submitted:', explorerUrl);
+      // Get the agent details from the contract
+      const agentDetails = await marketplaceContract.agents(agentId);
+      
+      // Verify the agent is active and has a valid price
+      if (!agentDetails.isActive) {
+        throw new Error('Agent is not active');
+      }
 
-      onSuccess?.(txHash);
-      return txHash;
+      const receipt = await purchaseAgent(agentId);
+      onSuccess?.(receipt.transactionHash);
+      return receipt.transactionHash;
     } catch (error) {
       console.error('Payment failed:', error);
       onError?.(error instanceof Error ? error : new Error('Payment failed'));

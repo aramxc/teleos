@@ -56,4 +56,10 @@ contract AgentMarketplace is Ownable, ReentrancyGuard {
         require(agents[agentId].owner == msg.sender, "Not agent owner");
         agents[agentId].isActive = !agents[agentId].isActive;
     }
+    
+    function bulkSetAgentStatus(string[] memory agentIds, bool status) external onlyOwner {
+        for(uint i = 0; i < agentIds.length; i++) {
+            agents[agentIds[i]].isActive = status;
+        }
+    }
 }

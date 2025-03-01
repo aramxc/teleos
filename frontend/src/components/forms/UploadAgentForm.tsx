@@ -1,16 +1,10 @@
-import { useState } from "react";
-import {
-  TextField,
-  Button,
-  Box,
-  Alert,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { coinbaseProvider } from "@/lib/coinbaseWallet";
-import { getAgentMarketplaceContract } from "@/contracts/types/AgentMarketPlace";
-import { motion } from "framer-motion";
-import { useAgentSubmission } from "@/hooks/useAgentSubmission";
+import { useState } from 'react';
+import { TextField, Button, Box, Alert, Stack, Typography } from '@mui/material';
+import { coinbaseProvider } from '@/lib/coinbaseWallet';
+import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
+import { motion } from 'framer-motion';
+import { useAgentSubmission } from '@/hooks/useAgentSubmission';
+
 
 interface AgentFormData {
   name: string;
@@ -59,10 +53,11 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
 
       // Get signer from provider
       const signer = await coinbaseProvider.getSigner();
-      const contract = getAgentMarketplaceContract(signer, "localhost");
-
+      const contract = getAgentMarketplaceContract(signer, 'localhost');
+      
       const agentId = `agent-${Date.now()}`;
-      const priceInUSDC = formData.price * 1_000_000;
+      // Convert price to USDC decimals (6 decimals)
+      const priceInUSDC = ethers.parseUnits(formData.price.toString(), 6);
 
       const tx = await contract.registerAgent(agentId, priceInUSDC);
       const receipt = await tx.wait();

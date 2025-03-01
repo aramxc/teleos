@@ -16,8 +16,10 @@ async function main() {
   const marketplace = await AgentMarketplace.deploy(USDC_ADDRESS);
   await marketplace.waitForDeployment();
 
-  const address = await marketplace.getAddress();
-  console.log("AgentMarketplace deployed to:", address);
+  const marketplaceAddress = await marketplace.getAddress();
+  console.log("AgentMarketplace deployed to:", marketplaceAddress);
+  console.log("\nView contract on Base Sepolia Explorer:");
+  console.log(`https://sepolia.basescan.org/address/${marketplaceAddress}`);
 
   // Save the contract address
   const fs = require('fs');
@@ -26,8 +28,8 @@ async function main() {
   
   const addressContent = `
 export const AGENT_MARKETPLACE_ADDRESS = {
-  baseSepolia: "${process.env.HARDHAT_NETWORK === 'baseSepolia' ? address : ''}",
-  localhost: "${process.env.HARDHAT_NETWORK === 'localhost' ? address : ''}"
+  baseSepolia: "${process.env.HARDHAT_NETWORK === 'baseSepolia' ? marketplaceAddress : ''}",
+  localhost: "${process.env.HARDHAT_NETWORK === 'localhost' ? marketplaceAddress : ''}"
 } as const;
 `;
 
