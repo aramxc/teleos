@@ -47,7 +47,6 @@ const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
   );
 });
 
-
 const AgentConfigModal = memo(function AgentConfigModal({
   open,
   onClose,
@@ -360,12 +359,10 @@ const AgentConfigModal = memo(function AgentConfigModal({
           >
             {currentStep === "info" && (
               <Stack spacing={2} className="h-full flex flex-col">
-                
                 <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-theme-border-primary flex-1">
                   <Stack spacing={4}>
                     {/* Description Section */}
                     <div>
-                     
                       <Typography className="text-theme-text-secondary leading-relaxed">
                         {agent.description}
                       </Typography>
@@ -373,7 +370,6 @@ const AgentConfigModal = memo(function AgentConfigModal({
 
                     {/* Tags Section */}
                     <div>
-                  
                       <TagsSection tags={agent.tags} />
                     </div>
                   </Stack>
@@ -388,7 +384,9 @@ const AgentConfigModal = memo(function AgentConfigModal({
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
                     >
-                      <span className="mr-2">Learn more about {agent.name}</span>
+                      <span className="mr-2">
+                        Learn more about {agent.name}
+                      </span>
                       <svg
                         className="w-4 h-4"
                         fill="none"
@@ -469,7 +467,9 @@ const AgentConfigModal = memo(function AgentConfigModal({
                   </Button>
                   <PayWithCBWallet
                     amount={0.01}
-                    agentId={agent.id || agent.name.toLowerCase().replace(/\s+/g, '-')}
+                    agentId={
+                      agent.id || agent.name.toLowerCase().replace(/\s+/g, "-")
+                    }
                     onSuccess={(txHash) => {
                       console.log(`Agent purchased! Transaction: ${txHash}`);
                       onClose();
@@ -488,4 +488,4 @@ const AgentConfigModal = memo(function AgentConfigModal({
   );
 });
 
-export {  AgentConfigModal };
+export { AgentConfigModal };
