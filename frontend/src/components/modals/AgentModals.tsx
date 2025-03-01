@@ -16,6 +16,7 @@ import BaseModal from "./BaseModal";
 import { PayWithCBWallet } from "@/components/wallet/PayWithCBWallet";
 import TagBubble from "@/components/shared/TagBubble";
 import { Agent } from "@/types/agents";
+import { useElizaApi } from "@/hooks/agents/useEliza";
 
 export interface AgentRequirements {
   duration: number;
@@ -39,6 +40,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
   onClose,
   agent,
 }: AgentConfigModalProps) {
+  const { sendMessage } = useElizaApi();
   const [currentStep, setCurrentStep] = useState<ModalStep>("info");
   const [direction, setDirection] = useState(0);
 
@@ -388,7 +390,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
         <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-4 border border-theme-border-primary mt-3">
           <Typography
             variant="h6"
-            className="text-right mb-0 text-lg font-medium tracking-tight"
+            className="text-right mb-0 text-lg text-theme-text-secondary font-medium tracking-tight"
           >
             Total Price:{" "}
             <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
@@ -477,8 +479,12 @@ const AgentConfigModal = memo(function AgentConfigModal({
                   <PayWithCBWallet
                     amount={0.01}
                     agentId={agent.id || agent.name.toLowerCase().replace(/\s+/g, '-')}
-                    onSuccess={(txHash) => {
+                    onSuccess={async (txHash) => {
                       console.log(`Agent purchased! Transaction: ${txHash}`);
+                      await sendMessage(
+                        agent.id || agent.name.toLowerCase().replace(/\s+/g, '-'),
+                        `🎉 Purchase successful! View transaction: https://sepolia.basescan.org/tx/${txHash}`
+                      );
                       onClose();
                     }}
                     onError={(error) => {
