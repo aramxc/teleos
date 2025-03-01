@@ -89,17 +89,19 @@ const AgentConfigModal = memo(function AgentConfigModal({
 
   const renderInfoContent = () => (
     <Stack spacing={2} className="h-full flex flex-col">
-      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-black/20 shadow-lg flex-1">
+      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-black/20 shadow-lg sm:max-h-[80vh] flex-1">
         <Stack spacing={4}>
-          {/* Description Section */}
-          <div className="overflow-y-auto sm:max-h-[220px] md:max-h-full">
-            <Typography
+        <Typography
               variant="h6"
-              className="mb-3 text-Large font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent"
+              className="mb-3 text-Large font-medium  tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent"
             >
               About
             </Typography>
-            <hr className="border-theme-border-primary pb-4"></hr>
+            <hr className="border-theme-border-primary"></hr>
+          {/* Description Section */}
+          <div className="overflow-y-auto max-h-[400px] md:max-h-full">
+           
+            
             <Typography className="text-theme-text-secondary leading-relaxed">
               {agent.description}
             </Typography>
@@ -255,7 +257,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
               sx={{
                 color: "var(--button-primary)",
                 "& .MuiSlider-thumb": {
-                  backgroundColor: "var(--text-primary)",
+                  backgroundColor: "var(--button-primary)",
                 },
                 "& .MuiSlider-track": {
                   backgroundColor: "var(--button-primary)",
@@ -280,7 +282,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
               sx={{
                 color: "var(--button-primary)",
                 "& .MuiSlider-thumb": {
-                  backgroundColor: "var(--text-primary)",
+                  backgroundColor: "var(--button-primary)",
                 },
                 "& .MuiSlider-track": {
                   backgroundColor: "var(--button-primary)",
@@ -418,7 +420,11 @@ const AgentConfigModal = memo(function AgentConfigModal({
             }}
             className="absolute inset-0 w-full px-4"
           >
-            {currentStep === "info" && renderInfoContent()}
+            {currentStep === "info" && (
+              <Stack spacing={2} className="h-full flex flex-col">
+                {renderInfoContent()}
+              </Stack>
+            )}
             {currentStep === "requirements" && (
               <Stack
                 spacing={3}
@@ -468,8 +474,8 @@ const AgentConfigModal = memo(function AgentConfigModal({
                     Back
                   </Button>
                   <PayWithCBWallet
-                    amount={0.001}
-                    agentId={agent.id}
+                    amount={0.01}
+                    agentId={agent.id || agent.name.toLowerCase().replace(/\s+/g, '-')}
                     onSuccess={(txHash) => {
                       console.log(`Agent purchased! Transaction: ${txHash}`);
                       onClose();
