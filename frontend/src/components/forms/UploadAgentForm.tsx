@@ -3,6 +3,7 @@ import { TextField, Button, Box, Alert, Stack, Typography } from '@mui/material'
 import { coinbaseProvider } from '@/lib/coinbaseWallet';
 import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
 import { motion } from 'framer-motion';
+import { useAgentSubmission } from '@/hooks/useAgentSubmission';
 
 
 interface AgentFormData {
@@ -12,6 +13,13 @@ interface AgentFormData {
   walletAddress: string;
   url: string;
   tags: string;
+}
+
+interface StatusState {
+  message: string;
+  type: 'success' | 'error' | 'info' | null;
+  txHash?: string;
+  step?: 'blockchain' | 'backend' | null;
 }
 
 export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
@@ -24,19 +32,29 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
     url: '',
     tags: ''
   });
-  const [status, setStatus] = useState<{
-    message: string;
-    type: 'success' | 'error' | 'info' | null;
-    txHash?: string;
-  }>({ message: '', type: null });
+  const [status, setStatus] = useState<StatusState>({ 
+    message: '', 
+    type: null, 
+    step: null 
+  });
+
+  const { submitAgent, error: submitError } = useAgentSubmission();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ message: 'Uploading agent...', type: 'info' });
+    setStatus({ 
+      message: 'Registering agent on blockchain...', 
+      type: 'info',
+      step: 'blockchain' 
+    });
 
     try {
+      // First, register on the blockchain
       if (!coinbaseProvider) throw new Error("Wallet provider not initialized");
-      const contract = getAgentMarketplaceContract(coinbaseProvider, 'localhost');
+      
+      // Get signer from provider
+      const signer = await coinbaseProvider.getSigner();
+      const contract = getAgentMarketplaceContract(signer, 'localhost');
       
       const agentId = `agent-${Date.now()}`;
       const priceInUSDC = formData.price * 1_000_000;
@@ -44,16 +62,38 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
       const tx = await contract.registerAgent(agentId, priceInUSDC);
       const receipt = await tx.wait();
 
+      // Update status for backend submission
+      setStatus({ 
+        message: 'Uploading agent details...', 
+        type: 'info',
+        step: 'backend',
+        txHash: receipt.transactionHash 
+      });
+
+      // Then, submit to our backend
+      await submitAgent({
+        name: formData.name,
+        description: formData.description,
+        websiteLink: formData.url,
+        icon: '/default-icon.png',
+        url: formData.url,
+        tags: formData.tags.split(',').map(tag => tag.trim()),
+        price: formData.price,
+        address: formData.walletAddress,
+      });
+
       setStatus({ 
         message: 'Agent registered successfully!', 
         type: 'success',
-        txHash: receipt.transactionHash 
+        txHash: receipt.transactionHash,
+        step: null
       });
     } catch (error) {
       console.error('Upload failed:', error);
       setStatus({ 
-        message: 'Failed to register agent', 
-        type: 'error' 
+        message: submitError || 'Failed to register agent', 
+        type: 'error',
+        step: null
       });
     }
   };
@@ -202,19 +242,39 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
             severity={status.type} 
             className="mt-4 bg-theme-panel-bg border border-theme-border-primary text-sm sm:text-base"
           >
-            {status.message}
-            {status.txHash && (
-              <div className="mt-2">
-                <a 
-                  href={`https://sepolia.basescan.org/tx/${status.txHash}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-theme-button-primary hover:text-theme-button-hover underline text-sm sm:text-base"
-                >
-                  View transaction
-                </a>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                {status.step && (
+                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-theme-button-primary border-t-transparent" />
+                )}
+                {status.message}
               </div>
-            )}
+              
+              {status.step === 'blockchain' && (
+                <div className="text-sm text-theme-text-secondary">
+                  Step 1/2: Registering on blockchain...
+                </div>
+              )}
+              
+              {status.step === 'backend' && (
+                <div className="text-sm text-theme-text-secondary">
+                  Step 2/2: Uploading agent details...
+                </div>
+              )}
+
+              {status.txHash && (
+                <div className="mt-2">
+                  <a 
+                    href={`https://sepolia.basescan.org/tx/${status.txHash}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-theme-button-primary hover:text-theme-button-hover underline text-sm sm:text-base"
+                  >
+                    View transaction
+                  </a>
+                </div>
+              )}
+            </div>
           </Alert>
         )}
       </Box>
