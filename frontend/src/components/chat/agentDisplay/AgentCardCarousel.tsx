@@ -42,7 +42,7 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          centerPadding: "0",
+          centerPadding: "4px",
         },
       },
     ],

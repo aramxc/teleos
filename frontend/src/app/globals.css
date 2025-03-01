@@ -70,33 +70,7 @@ body {
 /* Navigation arrows */
 .slick-prev,
 .slick-next {
-  width: 40px !important;
-  height: 40px !important;
-  z-index: 500 !important;
-  background: var(--panel-background) !important;
-  border: 1px solid var(--border-primary) !important;
-  border-radius: 50% !important;
-  position: absolute !important;
-  transform: translateY(-50%) !important;
-  top: 50% !important;
-  opacity: 1 !important;
-  cursor: pointer !important;
-  display: block !important;
-}
-
-.slick-prev {
-  left: 10px !important;
-}
-
-.slick-next {
-  right: 10px !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 24px !important;
-  opacity: 1 !important;
-  color: var(--text-primary) !important;
+  display: none !important;
 }
 
 /* Update media queries for better centering on larger screens */
@@ -107,15 +81,29 @@ body {
     max-width: 1200px;
   }
 
-  .center-carousel .slick-slide > div {
-    display: flex;
-    justify-content: center;
-    padding: 0 1rem;
+  .center-carousel .slick-slide {
+    margin: 0 auto;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
   }
 
   .center-carousel .slick-current {
     opacity: 1;
     transform: scale(1);
+    position: relative;
+    z-index: 2;
+  }
+
+  .center-carousel .slick-track {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .slick-next {
+    right: -10px !important;
   }
 }
 
@@ -148,12 +136,16 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+  .center-carousel {
+    margin-right: 6rem !important; /* Add right margin on mobile */
+  }
+  
   .slick-prev {
-    left: 10px !important;
+    left: -30px !important;
   }
 
   .slick-next {
-    right: 10px !important;
+    right: -30px !important;
   }
 }
 
@@ -273,44 +265,11 @@ body {
   scale: 1;
 }
 
-/* Navigation arrows */
-.slick-prev,
-.slick-next {
-  width: 20px !important;
-  height: 20px !important;
-  z-index: 50 !important;
-}
-
-.slick-prev {
-  left: -40px !important;
-}
-
-.slick-next {
-  right: -20px !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 20px !important;
-  opacity: 0.7 !important;
-  color: var(--text-primary) !important;
-}
-
 /* Track alignment */
 .center-carousel .slick-track {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-}
-
-/* Mobile adjustments */
-@media (max-width: 640px) {
-  .slick-prev {
-    left: -30px !important;
-  }
-  .slick-next {
-    right: -30px !important;
-  }
 }
 
 input,

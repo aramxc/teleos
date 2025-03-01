@@ -81,7 +81,7 @@ export default function ChatWindow({
                 message.role === "user"
                   ? "max-w-[85%] sm:max-w-[75%] bg-gradient-to-r from-theme-chat-userBubble-background to-theme-button-hover text-theme-text-secondary shadow-lg rounded-2xl border border-black/20"
                   : isCarousel
-                  ? "w-full"
+                  ? "w-full overflow-visible px-4"
                   : "inline-block max-w-[85%] sm:max-w-[75%] bg-gradient-to-br from-theme-chat-agentBubble-background via-theme-bg-accent/70 to-theme-bg-accent/60 backdrop-blur-sm rounded-2xl border border-black/20"
               } ${!isCarousel ? "shadow-[0_8px_16px_-6px_rgba(0,0,0,0.2)] p-4" : ""} break-words overflow-wrap-anywhere word-break-break-word`}
             >
