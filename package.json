@@ -7,7 +7,7 @@
     "contracts"
   ],
   "scripts": {
-    "dev": "concurrently -n \"contracts,frontend,agent\" --colors \"yellow,blue,green\" \"npm run dev:contracts\" \"npm run dev:frontend\" \"npm run dev:eliza\"",
+    "dev": "concurrently -n \"contracts,frontend,agent\" --colors \"yellow,blue,green\" \"npm run dev:contracts && npm run contracts:seed\" \"npm run dev:frontend\" \"npm run dev:eliza\"",
     "dev:frontend": "npm run dev --workspace=frontend",
     "dev:eliza": "npm run start --workspace=agents/eliza -- --characters=\"characters/aria.character.json\"",
     "dev:contracts": "npm run contracts:compile && npm run contracts:copy-abi && npm run contracts:deploy:local",
@@ -15,8 +15,9 @@
     "install:all": "npm install && cd agents/eliza && pnpm install",
     "contracts:compile": "cd contracts && npx hardhat compile",
     "contracts:copy-abi": "cd contracts && npm run copy-abi",
-    "contracts:deploy:local": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia",
-    "contracts:deploy:sepolia": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia",
+    "contracts:deploy:local": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia && cd .. && npx ts-node scripts/blockchain/verifyAgentStatus.ts",
+    "contracts:deploy:sepolia": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia && cd .. && npx ts-node scripts/blockchain/verifyAgentStatus.ts",
+    "contracts:seed": "npx ts-node scripts/blockchain/verifyAgentStatus.ts",
     "setup:prod": "npm run contracts:compile && npm run contracts:copy-abi && npm run contracts:deploy:sepolia"
   },
   "devDependencies": {
