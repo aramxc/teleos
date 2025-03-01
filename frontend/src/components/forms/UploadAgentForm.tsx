@@ -3,7 +3,8 @@ import { TextField, Button, Box, Alert, Stack, Typography } from '@mui/material'
 import { coinbaseProvider } from '@/lib/coinbaseWallet';
 import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
 import { motion } from 'framer-motion';
-import { useAgentSubmission } from '@/hooks/useAgentSubmission';
+import { useAgentSubmission } from '@/hooks/agents/useAgentSubmission';
+import { ethers } from 'ethers';
 
 
 interface AgentFormData {
@@ -53,7 +54,7 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
 
       // Get signer from provider
       const signer = await coinbaseProvider.getSigner();
-      const contract = getAgentMarketplaceContract(signer, 'localhost');
+      const contract = await getAgentMarketplaceContract(signer, 'baseSepolia');
       
       const agentId = `agent-${Date.now()}`;
       // Convert price to USDC decimals (6 decimals)
