@@ -181,6 +181,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
             onChange={(e) =>
               handleRequirementChange("duration", Number(e.target.value))
             }
+            autoFocus
             autoComplete="off"
             fullWidth
             type="number"
