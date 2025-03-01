@@ -55,5 +55,5 @@ COPY --from=builder /app/lib /app/lib
 
 EXPOSE 3001
 # Set the command to run the application
-CMD ["pnpm", "start", "--non-interactive"]
+CMD ["pnpm", "start", "--non-interactive", "--", "--characters=\"characters/aria.character.json\""]
 # CMD ["node", "dist/index.js"]
