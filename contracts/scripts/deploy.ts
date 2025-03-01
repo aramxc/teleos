@@ -5,15 +5,10 @@ async function main() {
   const [deployer] = await ethers.getSigners();
   console.log("Deploying contracts with the account:", deployer.address);
 
-  // USDC address (use local or Base Sepolia address based on network)
-  const USDC_ADDRESS = process.env.HARDHAT_NETWORK === 'baseSepolia' 
-    ? "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
-    : "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Local hardhat USDC address
-
   const AgentMarketplace = await ethers.getContractFactory("AgentMarketplace");
   console.log("Deploying AgentMarketplace...");
   
-  const marketplace = await AgentMarketplace.deploy(USDC_ADDRESS);
+  const marketplace = await AgentMarketplace.deploy();
   await marketplace.waitForDeployment();
 
   const marketplaceAddress = await marketplace.getAddress();

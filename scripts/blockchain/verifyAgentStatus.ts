@@ -14,6 +14,9 @@ if (!PRIVATE_KEY) {
 }
 const formattedPrivateKey = PRIVATE_KEY.startsWith('0x') ? PRIVATE_KEY : `0x${PRIVATE_KEY}`;
 
+const OWNER_WALLET_ADDRESS = "0x8E1de3b958434dBb3a0fd53D3413A6A0c0C263F1"; // Wallet Address # 3 in chrome CB wallet
+
+
 async function verifyAgentStatus(agentId: string) {
     try {
         const provider = new ethers.JsonRpcProvider(RPC_URL);
@@ -41,31 +44,22 @@ async function verifyAgentStatus(agentId: string) {
 }
 
 // Function to set price and activate agent
-async function setAgentPriceAndActivate(agentId: string) {
+async function setAgentPriceAndActivate(agentId: string, price: number) {
     const provider = new ethers.JsonRpcProvider(RPC_URL);
     const wallet = new ethers.Wallet(formattedPrivateKey, provider);
-    
-    const contractAddress = AGENT_MARKETPLACE_ADDRESS['baseSepolia'];
     const contract = new ethers.Contract(
-        contractAddress,
+        AGENT_MARKETPLACE_ADDRESS['baseSepolia'],
         AgentMarketplaceAbi,
         wallet
     );
 
     try {
-        // Generate random price between 0.01-0.05 USDC (very small for testnet)
-        const randomPrice = (Math.random() * 0.04 + 0.01).toFixed(6);
-        const priceInUSDC = ethers.parseUnits(randomPrice, 6);
-
-        console.log(`Setting price for agent ${agentId} to ${randomPrice} USDC...`);
-        
-        const tx = await contract.registerAgent(agentId, priceInUSDC);
+        const priceInUSDC = BigInt(Math.floor(price * 1_000_000));
+        const tx = await contract.registerAgent(agentId, priceInUSDC, OWNER_WALLET_ADDRESS);
         await tx.wait();
-        console.log('Price set and activation successful!');
-        
-        await verifyAgentStatus(agentId);
+        console.log(`Successfully registered agent ${agentId}`);
     } catch (error) {
-        console.error('Failed to set price and activate agent:', error);
+        console.error('Failed to setup agent:', error);
         const functions = Object.keys(contract.interface.format()).map(key => contract.interface.getFunction(key).name);
         console.log('Available contract functions:', functions);
     }
@@ -192,7 +186,7 @@ async function checkNextAgent() {
     // If not active or price is 0, set new price and activate
     if (!isActive || price === 0n) {
         console.log('Agent needs update, setting price and activating...');
-        await setAgentPriceAndActivate(agentId);
+        await setAgentPriceAndActivate(agentId, 0.01);
     }
 
     currentIndex++;

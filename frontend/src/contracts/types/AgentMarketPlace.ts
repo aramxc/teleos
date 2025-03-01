@@ -14,3 +14,4 @@ export const getAgentMarketplaceContract = async (
 
   return new ethers.Contract(contractAddress, AgentMarketPlaceABI, provider);
 };
+

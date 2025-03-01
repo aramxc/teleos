@@ -8,7 +8,6 @@ export const useSmartContracts = () => {
     
     const signer = await coinbaseProvider.getSigner();
     const marketplaceContract = await getAgentMarketplaceContract(signer, 'baseSepolia');
-
     return { marketplaceContract };
   };
 
@@ -19,11 +18,19 @@ export const useSmartContracts = () => {
     return await purchaseTx.wait();
   };
 
-  const registerAgent = async (agentId: string, price: number) => {
+  const registerAgent = async (
+    agentId: string, 
+    price: number, 
+    ownerAddress?: string
+  ) => {
     const { marketplaceContract } = await getContracts();
     const priceInUSDC = ethers.parseUnits(price.toString(), 6); // USDC has 6 decimals
     
-    const tx = await marketplaceContract.registerAgent(agentId, priceInUSDC);
+    const tx = await marketplaceContract.registerAgent(
+      agentId, 
+      priceInUSDC,
+      ownerAddress || ethers.ZeroAddress // If no address provided, contract will use DEMO_WALLET
+    );
     return await tx.wait();
   };
 

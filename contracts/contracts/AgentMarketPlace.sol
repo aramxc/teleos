@@ -1,13 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 contract AgentMarketplace is Ownable, ReentrancyGuard {
-    IERC20 public usdcToken;
-    
     struct Agent {
         address payable owner;
         uint256 price;
@@ -19,32 +16,36 @@ contract AgentMarketplace is Ownable, ReentrancyGuard {
     event AgentRegistered(string agentId, address owner, uint256 price);
     event AgentPurchased(string agentId, address buyer, uint256 amount);
     
-    constructor(address _usdcAddress) Ownable(msg.sender) {
-        usdcToken = IERC20(_usdcAddress);
-    }
+    address payable public constant DEMO_WALLET = payable(0x8E1de3b958434dBb3a0fd53D3413A6A0c0C263F1);
     
-    function registerAgent(string memory agentId, uint256 price) external {
+    constructor() Ownable(msg.sender) {}
+    
+    function registerAgent(
+        string memory agentId, 
+        uint256 price,
+        address payable ownerAddress
+    ) external {
         require(agents[agentId].owner == address(0), "Agent already registered");
+        // if ownerAddress is not set, use the demo wallet
+        address payable actualOwner = ownerAddress == address(0) ? DEMO_WALLET : ownerAddress;
         
         agents[agentId] = Agent({
-            owner: payable(msg.sender),
+            owner: actualOwner,
             price: price,
             isActive: true
         });
         
-        emit AgentRegistered(agentId, msg.sender, price);
+        emit AgentRegistered(agentId, actualOwner, price);
     }
     
-    function purchaseAgent(string memory agentId) external nonReentrant {
+    function purchaseAgent(string memory agentId) external payable nonReentrant {
         Agent storage agent = agents[agentId];
-        require(agent.isActive, "Agent not active");
+        require(msg.value == agent.price, "Incorrect payment amount");
         
-        uint256 price = agent.price;
-        address payable owner = agent.owner;
+        (bool success, ) = agent.owner.call{value: msg.value}("");
+        require(success, "Transfer failed");
         
-        require(usdcToken.transferFrom(msg.sender, owner, price), "Payment failed");
-        
-        emit AgentPurchased(agentId, msg.sender, price);
+        emit AgentPurchased(agentId, msg.sender, msg.value);
     }
     
     function updateAgentPrice(string memory agentId, uint256 newPrice) external {
@@ -62,4 +63,10 @@ contract AgentMarketplace is Ownable, ReentrancyGuard {
             agents[agentIds[i]].isActive = status;
         }
     }
+
+    function setAgentOwner(string memory agentId, address newOwner) public {
+    Agent storage agent = agents[agentId];
+    agent.owner = payable(newOwner);
+    }
+    
 }

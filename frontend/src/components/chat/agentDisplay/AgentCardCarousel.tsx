@@ -2,16 +2,7 @@ import Slider from "react-slick";
 import AgentCard from "./AgentCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-interface Agent {
-  name: string;
-  description: string;
-  websiteLink: string;
-  tags: string[];
-  icon: string;
-  price: number;
-  address: string;
-}
+import { Agent } from "@/types/agents";
 
 interface AgentCardCarouselProps {
   agents: Agent[];

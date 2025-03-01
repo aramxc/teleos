@@ -41,6 +41,7 @@ export async function POST(request: NextRequest) {
 
     // Create the agent object
     const agent: Agent = {
+      id: body.id,
       name: body.name,
       description: body.description,
       websiteLink: body.websiteLink,

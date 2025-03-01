@@ -37,7 +37,17 @@ export default function ChatWindow({
         jsonContent.description &&
         jsonContent.tags
       ) {
-        return <AgentCard agent={jsonContent} />;
+        // Generate id from URL if not present
+        const urlParts = jsonContent.url?.split('/') || [];
+        const id = jsonContent.id || urlParts[urlParts.length - 1];
+        
+        // Create agent object with id
+        const agent = {
+          ...jsonContent,
+          id: id || jsonContent.name.toLowerCase().replace(/\s+/g, '-')
+        };
+        
+        return <AgentCard agent={agent} />;
       }
     } catch {
       // If content is not JSON, render as regular text
@@ -46,7 +56,7 @@ export default function ChatWindow({
   };
 
   return (
-    <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8">
+    <div className="flex-1 overflow-y-auto overflow-x-hidden h-full w-full max-w-[1400px] mx-auto space-y-8 px-4 md:px-0">
       {messages.map((message, index) => {
         const isCarousel = (() => {
           try {
@@ -63,7 +73,7 @@ export default function ChatWindow({
             className={`${
               message.role === "user" ? "justify-end" : "justify-start"
             } flex ${
-              isCarousel ? "w-screen -mx-4 md:-mx-8 lg:-mx-16" : "w-full"
+              isCarousel ? "w-full md:w-screen md:-mx-4 lg:-mx-16" : "w-full"
             }`}
           >
             <div
@@ -71,13 +81,9 @@ export default function ChatWindow({
                 message.role === "user"
                   ? "max-w-[85%] sm:max-w-[75%] bg-gradient-to-r from-theme-chat-userBubble-background to-theme-button-hover text-theme-text-secondary shadow-lg rounded-2xl border border-black/20"
                   : isCarousel
-                  ? "w-full md:w-[95%] lg:w-[90%]"
+                  ? "w-full"
                   : "inline-block max-w-[85%] sm:max-w-[75%] bg-gradient-to-br from-theme-chat-agentBubble-background via-theme-bg-accent/70 to-theme-bg-accent/60 backdrop-blur-sm rounded-2xl border border-black/20"
-              } ${
-                !isCarousel
-                  ? "shadow-[0_8px_16px_-6px_rgba(0,0,0,0.2)] p-4"
-                  : ""
-              } break-words overflow-wrap-anywhere word-break-break-word`}
+              } ${!isCarousel ? "shadow-[0_8px_16px_-6px_rgba(0,0,0,0.2)] p-4" : ""} break-words overflow-wrap-anywhere word-break-break-word`}
             >
               {renderMessage(message.content)}
             </div>

@@ -25,16 +25,9 @@ export interface AgentRequirements {
   creativity: number;
 }
 
-interface AgentConfigModalProps {
+export interface AgentConfigModalProps {
   open: boolean;
   onClose: () => void;
-  agent: Agent;
-}
-
-interface InfoModalProps {
-  open: boolean;
-  onClose: () => void;
-  onHire: () => void;
   agent: Agent;
 }
 
@@ -43,7 +36,7 @@ type ModalStep = "info" | "requirements" | "review";
 const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
   return (
     <div className="py-2">
-      <div className="overflow-x-auto md:overflow-x-visible pb-2">
+      <div className="overflow-x-auto md:overflow-x-visible">
         <div className="flex flex-nowrap md:flex-wrap gap-2">
           {tags.map((tag, index) => (
             <TagBubble key={index} tag={tag} />
@@ -54,56 +47,6 @@ const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
   );
 });
 
-const AgentInfoModal = memo(function AgentInfoModal({
-  open,
-  onClose,
-  onHire,
-  agent,
-}: InfoModalProps) {
-  return (
-    <BaseModal
-      open={open}
-      onClose={onClose}
-      title={agent.name}
-      icon={agent.icon}
-    >
-      <div className="relative flex items-center justify-center h-full overflow-hidden">
-        <motion.div
-          initial={{ x: 0, opacity: 1 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -1000, opacity: 0 }}
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
-          }}
-          className="absolute inset-0 w-full px-4"
-        >
-          <Stack spacing={3} className="h-full flex flex-col justify-between">
-            <div className="flex-1 space-y-6">
-              <div className="bg-theme-panel-bg backdrop-blur-xl shadow-lg rounded-lg p-6 border border-theme-border-primary shadow-xl shadow-black/10">
-                <Typography className="text-theme-text-secondary">
-                  {agent.description}
-                </Typography>
-              </div>
-
-              <TagsSection tags={agent.tags} />
-            </div>
-
-            <div className="flex items-center justify-between mt-auto">
-              <Button
-                variant="contained"
-                onClick={onHire}
-                className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
-              >
-                Hire Now
-              </Button>
-            </div>
-          </Stack>
-        </motion.div>
-      </div>
-    </BaseModal>
-  );
-});
 
 const AgentConfigModal = memo(function AgentConfigModal({
   open,
@@ -134,16 +77,16 @@ const AgentConfigModal = memo(function AgentConfigModal({
     setRequirements((prev) => ({ ...prev, [field]: value }));
   };
 
-  const calculateTotalPrice = () => {
-    const daysMultiplier =
-      requirements.frequencyUnit === "day"
-        ? 1
-        : requirements.frequencyUnit === "hour"
-        ? 24
-        : 1440;
-    const postsPerDay = requirements.frequency * daysMultiplier;
-    return agent.price * requirements.duration * postsPerDay;
-  };
+  // const calculateTotalPrice = () => {
+  //   const daysMultiplier =
+  //     requirements.frequencyUnit === "day"
+  //       ? 1
+  //       : requirements.frequencyUnit === "hour"
+  //       ? 24
+  //       : 1440;
+  //   const postsPerDay = requirements.frequency * daysMultiplier;
+  //   return agent.price * requirements.duration * postsPerDay;
+  // };
 
   const inputStyles = {
     "& .MuiInputLabel-root": {
@@ -391,7 +334,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
           >
             Total Price:{" "}
             <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-              {calculateTotalPrice()} USDC
+              {0.01} ETH
             </span>
           </Typography>
         </div>
@@ -416,31 +359,38 @@ const AgentConfigModal = memo(function AgentConfigModal({
             className="absolute inset-0 w-full px-4"
           >
             {currentStep === "info" && (
-              <Stack
-                spacing={3}
-                className="h-full flex flex-col justify-between"
-              >
-                <div className="flex-1 space-y-6">
-                  <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-theme-border-primary shadow-xl shadow-black/10">
-                    <Typography className="text-theme-text-secondary">
-                      {agent.description}
-                    </Typography>
-                  </div>
+              <Stack spacing={2} className="h-full flex flex-col">
+                
+                <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-theme-border-primary flex-1">
+                  <Stack spacing={4}>
+                    {/* Description Section */}
+                    <div>
+                     
+                      <Typography className="text-theme-text-secondary leading-relaxed">
+                        {agent.description}
+                      </Typography>
+                    </div>
 
-                  <TagsSection tags={agent.tags} />
+                    {/* Tags Section */}
+                    <div>
+                  
+                      <TagsSection tags={agent.tags} />
+                    </div>
+                  </Stack>
                 </div>
 
-                <div className="flex items-center justify-between mt-auto">
-                  {agent.websiteLink && (
+                {/* Action Buttons Row */}
+                <div className="flex items-center justify-between mt-4">
+                  {agent.websiteLink ? (
                     <a
                       href={agent.websiteLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
                     >
-                      Visit Website
+                      <span className="mr-2">Learn more about {agent.name}</span>
                       <svg
-                        className="ml-2 w-4 h-4"
+                        className="w-4 h-4"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -453,6 +403,8 @@ const AgentConfigModal = memo(function AgentConfigModal({
                         />
                       </svg>
                     </a>
+                  ) : (
+                    <div></div> // Empty div to maintain spacing when no website link
                   )}
                   <Button
                     variant="contained"
@@ -460,7 +412,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
                       setDirection(1);
                       setCurrentStep("requirements");
                     }}
-                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
+                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white px-8"
                   >
                     Continue
                   </Button>
@@ -516,8 +468,8 @@ const AgentConfigModal = memo(function AgentConfigModal({
                     Back
                   </Button>
                   <PayWithCBWallet
-                    amount={calculateTotalPrice()}
-                    agentId={agent.id || ""}
+                    amount={0.01}
+                    agentId={agent.id || agent.name.toLowerCase().replace(/\s+/g, '-')}
                     onSuccess={(txHash) => {
                       console.log(`Agent purchased! Transaction: ${txHash}`);
                       onClose();
@@ -536,4 +488,4 @@ const AgentConfigModal = memo(function AgentConfigModal({
   );
 });
 
-export { AgentInfoModal, AgentConfigModal };
+export {  AgentConfigModal };

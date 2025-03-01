@@ -10,7 +10,13 @@ interface AgentCardProps {
 }
 
 export default function AgentCard({ agent: initialAgent }: AgentCardProps) {
-  const agent = { ...initialAgent, price: 10, address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '' };
+  
+  const agent = { 
+    ...initialAgent,
+    id: initialAgent.id ,
+    price: 10, 
+    address: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || '' 
+  };
   const { setModalOpen } = useModal();
   const [isModalOpen, setIsModalOpen] = useState(false);
 

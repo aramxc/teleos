@@ -60,7 +60,11 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
       // Convert price to USDC decimals (6 decimals)
       const priceInUSDC = ethers.parseUnits(formData.price.toString(), 6);
 
-      const tx = await contract.registerAgent(agentId, priceInUSDC);
+      const tx = await contract.registerAgent(
+        agentId, 
+        priceInUSDC,
+        formData.walletAddress
+      );
       const receipt = await tx.wait();
 
       // Update status for backend submission

@@ -1,20 +1,23 @@
+import { ethers } from 'ethers';
 import { Button } from '@mui/material';
 import { useWallet } from '@/contexts/WalletContext';
 import { useSmartContracts } from '@/hooks/useSmartContracts';
 
 interface PayWithCBWalletProps {
   agentId: string;
+  amount: number;
   onSuccess?: (txHash: string) => void;
   onError?: (error: Error) => void;
 }
 
 export function PayWithCBWallet({ 
   agentId,
+  amount,
   onSuccess, 
   onError 
 }: PayWithCBWalletProps) {
   const { address, connectWallet } = useWallet();
-  const { purchaseAgent, getContracts } = useSmartContracts();
+  const { getContracts, registerAgent } = useSmartContracts();
 
   const handlePayment = async () => {
     try {
@@ -23,20 +26,55 @@ export function PayWithCBWallet({
         return;
       }
 
-      // First get the contract instance
-      const { marketplaceContract } = await getContracts();
+      const finalAgentId = agentId || `agent-${Date.now()}`;
+      const contracts = await getContracts();
       
-      // Get the agent details from the contract
-      const agentDetails = await marketplaceContract.agents(agentId);
-      
-      // Verify the agent is active and has a valid price
-      if (!agentDetails.isActive) {
-        throw new Error('Agent is not active');
+      if (!contracts?.marketplaceContract) {
+        throw new Error('Contract not initialized');
       }
 
-      const receipt = await purchaseAgent(agentId);
-      onSuccess?.(receipt.transactionHash);
-      return receipt.transactionHash;
+      const { marketplaceContract } = contracts;
+      
+      console.log('Attempting to purchase agent:', finalAgentId);
+      
+      // Use the passed in amount
+      const amountInWei = ethers.parseEther(amount.toString());
+      
+      // Register agent if needed
+      const agentDetails = await marketplaceContract.agents(finalAgentId).catch((error: Error) => {
+        console.error('Error fetching agent details:', error);
+        return null;
+      });
+
+      if (!agentDetails?.isActive) {
+        console.log('Agent not registered, registering first...');
+        try {
+          await registerAgent(
+            finalAgentId,
+            amount, // Use the same passed in amount
+            process.env.NEXT_PUBLIC_DEMO_WALLET_ADDRESS
+          );
+          console.log('Agent registered successfully');
+        } catch (regError) {
+          console.error('Failed to register agent:', regError);
+          throw new Error('Failed to register agent before purchase');
+        }
+      }
+
+      // Execute the purchase
+      console.log('Executing purchase with amount:', amount, 'ETH');
+      const purchaseTx = await marketplaceContract.purchaseAgent(finalAgentId, {
+        value: amountInWei
+      });
+      const receipt = await purchaseTx.wait();
+      
+      const txHash = receipt.transactionHash;
+      const explorerUrl = `https://sepolia.basescan.org/tx/${txHash}`;
+      
+      console.log('Purchase successful! View transaction:', explorerUrl);
+      onSuccess?.(txHash);
+      
+      return txHash;
     } catch (error) {
       console.error('Payment failed:', error);
       onError?.(error instanceof Error ? error : new Error('Payment failed'));
@@ -49,7 +87,7 @@ export function PayWithCBWallet({
       onClick={handlePayment}
       className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
     >
-      {address ? 'Pay Now' : 'Connect Wallet'}
+      {address ? `Pay ${amount} ETH` : 'Connect Wallet'}
     </Button>
   );
 }

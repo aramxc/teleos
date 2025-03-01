@@ -10,6 +10,7 @@ export interface AgentResponse {
 }
 
 export interface Agent {
+  id: string;
   name: string;
   description: string;
   tags: string[];
@@ -17,5 +18,4 @@ export interface Agent {
   icon: string;
   price: number;
   address: string;
-  id?: string;
 }
