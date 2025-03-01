@@ -4,12 +4,14 @@
   "workspaces": [
     "frontend",
     "agents/eliza",
+    "agents/coach",
     "contracts"
   ],
   "scripts": {
     "dev": "concurrently -n \"contracts,frontend,agent\" --colors \"yellow,blue,green\" \"npm run dev:contracts && npm run contracts:seed\" \"npm run dev:frontend\" \"npm run dev:eliza\"",
     "dev:frontend": "npm run dev --workspace=frontend",
     "dev:eliza": "npm run start --workspace=agents/eliza -- --characters=\"characters/aria.character.json\"",
+    "dev:coach": "npm run start --workspace=agents/coach -- --characters=\"characters/sam.character.json\"",
     "dev:contracts": "npm run contracts:compile && npm run contracts:copy-abi && npm run contracts:deploy:local",
     "build": "turbo run build",
     "install:all": "npm install && cd agents/eliza && pnpm install",
