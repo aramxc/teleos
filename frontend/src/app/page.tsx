@@ -38,8 +38,8 @@ export default function Home() {
 
   const suggestions = [
     "What can Teleos do?",
-    "Deploy an ERC-20 Token",
-    "USDC contract address on Ethereum",
+    "Show me a list of Twitter-specific agents for marketing",
+    "What is the current price of ETH?",
     "Analyze WETH smart contract",
     "Transfer 0.001 ETH to aramxc.ethdenver.com",
   ];
