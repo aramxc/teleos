@@ -16,7 +16,9 @@ import BaseModal from "./BaseModal";
 import { PayWithCBWallet } from "@/components/wallet/PayWithCBWallet";
 import TagBubble from "@/components/shared/TagBubble";
 import { Agent } from "@/types/agents";
-import { useElizaApi } from "@/hooks/agents/useEliza";
+import { useChatContext } from "@/contexts/ChatContext";
+
+const DEMO_AMOUNT = 0.00;
 
 export interface AgentRequirements {
   duration: number;
@@ -40,7 +42,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
   onClose,
   agent,
 }: AgentConfigModalProps) {
-  const { sendMessage } = useElizaApi();
+  const { sendMessage } = useChatContext();
   const [currentStep, setCurrentStep] = useState<ModalStep>("info");
   const [direction, setDirection] = useState(0);
 
@@ -91,7 +93,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
 
   const renderInfoContent = () => (
     <Stack spacing={2} className="h-full flex flex-col">
-      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-black/20 shadow-lg sm:max-h-[80vh] flex-1">
+      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-black/20 shadow-lg sm:max-h-[80vh] flex-1 overflow-y-hidden">
         <Stack spacing={4}>
         <Typography
               variant="h6"
@@ -113,17 +115,17 @@ const AgentConfigModal = memo(function AgentConfigModal({
         </Stack>
       </div>
       <div className="flex flex-wrap gap-2 items-center">
-        {agent.tags.slice(0, 3).map((tag, index) => (
+        {agent.tags.slice(0, 2).map((tag, index) => (
           <TagBubble key={index} tag={tag} />
         ))}
-        {agent.tags.length > 3 && (
+        {agent.tags.length > 2 && (
           <div className="group relative">
             <span className="text-sm text-theme-text-secondary cursor-pointer">
-              +{agent.tags.length - 3} more
+              +{agent.tags.length - 2} more
             </span>
             <div className="absolute left-0 sm:bottom-20 md:bottom-10 bottom-full mb-2 hidden group-hover:flex flex-wrap gap-2 rounded-lg p-2 z-10">
-              {agent.tags.slice(3).map((tag, index) => (
-                <TagBubble key={index + 3} tag={tag} />
+              {agent.tags.slice(2).map((tag, index) => (
+                <TagBubble key={index + 2} tag={tag} />
               ))}
             </div>
           </div>
@@ -394,7 +396,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
           >
             Total Price:{" "}
             <span className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent">
-              {0.01} ETH
+              {DEMO_AMOUNT} ETH
             </span>
           </Typography>
         </div>
@@ -402,7 +404,10 @@ const AgentConfigModal = memo(function AgentConfigModal({
     </Stack>
   );
 
+
+
   return (
+    
     <BaseModal 
       open={open} 
       onClose={onClose} 
@@ -477,15 +482,25 @@ const AgentConfigModal = memo(function AgentConfigModal({
                     Back
                   </Button>
                   <PayWithCBWallet
-                    amount={0.01}
+                    amount={DEMO_AMOUNT}
                     agentId={agent.id || agent.name.toLowerCase().replace(/\s+/g, '-')}
+                    onClose={onClose}
                     onSuccess={async (txHash) => {
+                      if (!txHash) {
+                        console.error('No transaction hash received');
+                        return;
+                      }
+                      
                       console.log(`Agent purchased! Transaction: ${txHash}`);
-                      await sendMessage(
-                        agent.id || agent.name.toLowerCase().replace(/\s+/g, '-'),
-                        `🎉 Purchase successful! View transaction: https://sepolia.basescan.org/tx/${txHash}`
-                      );
-                      onClose();
+                      
+                      try {
+                        const message = `🎉 Purchase successful! View transaction: https://sepolia.basescan.org/tx/${txHash}`;
+                        await sendMessage(message);
+                        onClose();
+                      } catch (error) {
+                        console.error('Failed to send success message:', error);
+                        onClose();
+                      }
                     }}
                     onError={(error) => {
                       console.error("Purchase failed:", error);

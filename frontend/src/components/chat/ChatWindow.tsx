@@ -28,8 +28,33 @@ export default function ChatWindow({
   }, [messages, currentResponse]);
 
   const renderMessage = (content: string) => {
+    // Helper function to make URLs clickable
+    const formatTextWithLinks = (text: string) => {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      return text.split(urlRegex).map((part, i) => {
+        if (part.match(urlRegex)) {
+          return (
+            <a
+              key={i}
+              href={part}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-theme-button-primary hover:text-theme-button-hover underline"
+            >
+              {part}
+            </a>
+          );
+        }
+        return part;
+      });
+    };
+
     try {
       const jsonContent = JSON.parse(content);
+      if (Array.isArray(jsonContent)) {
+        // Handle array of message objects with clickable links
+        return jsonContent.map(msg => formatTextWithLinks(msg.text));
+      }
       if (Array.isArray(jsonContent.results)) {
         return <AgentCardCarousel agents={jsonContent.results} />;
       } else if (
@@ -49,9 +74,11 @@ export default function ChatWindow({
         
         return <AgentCard agent={agent} />;
       }
+      // If JSON but not matching other formats, stringify it
+      return JSON.stringify(jsonContent);
     } catch {
-      // If content is not JSON, render as regular text
-      return content;
+      // If content is not JSON, render as regular text with clickable links
+      return formatTextWithLinks(content);
     }
   };
 

@@ -40,10 +40,13 @@ contract AgentMarketplace is Ownable, ReentrancyGuard {
     
     function purchaseAgent(string memory agentId) external payable nonReentrant {
         Agent storage agent = agents[agentId];
+        require(agent.isActive, "Agent is not active");
         require(msg.value == agent.price, "Incorrect payment amount");
         
-        (bool success, ) = agent.owner.call{value: msg.value}("");
-        require(success, "Transfer failed");
+        if (msg.value > 0) {
+            (bool success, ) = agent.owner.call{value: msg.value}("");
+            require(success, "Transfer failed");
+        }
         
         emit AgentPurchased(agentId, msg.sender, msg.value);
     }

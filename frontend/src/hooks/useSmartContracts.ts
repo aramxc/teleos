@@ -24,11 +24,12 @@ export const useSmartContracts = () => {
     ownerAddress?: string
   ) => {
     const { marketplaceContract } = await getContracts();
-    const priceInUSDC = ethers.parseUnits(price.toString(), 6); // USDC has 6 decimals
+    // Set price to 0
+    const priceInWei = ethers.parseEther("0"); // Set price to 0 for demo
     
     const tx = await marketplaceContract.registerAgent(
       agentId, 
-      priceInUSDC,
+      priceInWei,
       ownerAddress || ethers.ZeroAddress // If no address provided, contract will use DEMO_WALLET
     );
     return await tx.wait();

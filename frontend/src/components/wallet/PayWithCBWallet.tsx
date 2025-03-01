@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { Button } from '@mui/material';
+import { Button, CircularProgress } from '@mui/material';
 import { useSmartContracts } from '@/hooks/useSmartContracts';
 import { coinbaseProvider } from '@/lib/coinbaseWallet';
 import { useState, useEffect } from 'react';
@@ -9,15 +9,18 @@ interface PayWithCBWalletProps {
   amount: number;
   onSuccess?: (txHash: string) => void;
   onError?: (error: Error) => void;
+  onClose?: () => void;
 }
 
 export function PayWithCBWallet({ 
   agentId,
   amount,
   onSuccess, 
-  onError 
+  onError,
+  onClose 
 }: PayWithCBWalletProps) {
   const [address, setAddress] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
   const { getContracts, registerAgent } = useSmartContracts();
 
   useEffect(() => {
@@ -45,9 +48,11 @@ export function PayWithCBWallet({
   };
 
   const handlePayment = async () => {
+    setLoading(true);
     try {
       if (!address) {
         await connectWallet();
+        setLoading(false);
         return;
       }
 
@@ -60,12 +65,7 @@ export function PayWithCBWallet({
 
       const { marketplaceContract } = contracts;
       
-      console.log('Attempting to purchase agent:', finalAgentId);
-      
-      // Use the passed in amount
-      const amountInWei = ethers.parseEther(amount.toString());
-      
-      // Register agent if needed
+      // Check if agent exists
       const agentDetails = await marketplaceContract.agents(finalAgentId).catch((error: Error) => {
         console.error('Error fetching agent details:', error);
         return null;
@@ -74,35 +74,66 @@ export function PayWithCBWallet({
       if (!agentDetails?.isActive) {
         console.log('Agent not registered, registering first...');
         try {
-          await registerAgent(
+          const regTx = await registerAgent(
             finalAgentId,
-            amount, // Use the same passed in amount
+            0,
             process.env.NEXT_PUBLIC_DEMO_WALLET_ADDRESS
           );
-          console.log('Agent registered successfully');
+          console.log('Registration transaction sent:', regTx);
+          
+          // Wait for registration to be confirmed
+          const regReceipt = await regTx.wait();
+          console.log('Registration confirmed:', regReceipt);
         } catch (regError) {
           console.error('Failed to register agent:', regError);
-          throw new Error('Failed to register agent before purchase');
+          throw new Error(`Failed to register agent: ${regError instanceof Error ? regError.message : 'Unknown error'}`);
         }
       }
 
-      // Execute the purchase
-      console.log('Executing purchase with amount:', amount, 'ETH');
-      const purchaseTx = await marketplaceContract.purchaseAgent(finalAgentId, {
-        value: amountInWei
-      });
-      const receipt = await purchaseTx.wait();
+      // Execute the purchase with zero value
+      console.log('Executing purchase with 0 ETH');
+      let purchaseTx;
+      try {
+        purchaseTx = await marketplaceContract.purchaseAgent(finalAgentId, {
+          value: ethers.parseEther("0")
+        });
+        console.log('Purchase transaction sent:', purchaseTx);
+      } catch (purchaseError) {
+        console.error('Failed to send purchase transaction:', purchaseError);
+        throw new Error(`Failed to send purchase transaction: ${purchaseError instanceof Error ? purchaseError.message : 'Unknown error'}`);
+      }
       
-      const txHash = receipt.transactionHash;
+      // Wait for transaction confirmation
+      let receipt;
+      try {
+        receipt = await purchaseTx.wait();
+        console.log('Purchase receipt received:', receipt);
+      } catch (waitError) {
+        console.error('Failed while waiting for transaction confirmation:', waitError);
+        throw new Error(`Failed to confirm transaction: ${waitError instanceof Error ? waitError.message : 'Unknown error'}`);
+      }
+      
+      // Access hash from receipt (it's a property, not a method)
+      const txHash = receipt.hash;
+      if (!txHash) {
+        console.error('Receipt received but no hash found:', receipt);
+        throw new Error('Transaction completed but hash was not found in receipt');
+      }
+      
       const explorerUrl = `https://sepolia.basescan.org/tx/${txHash}`;
-      
       console.log('Purchase successful! View transaction:', explorerUrl);
+      
+      // Only call onSuccess if we have a valid hash
       onSuccess?.(txHash);
+      onClose?.();
       
       return txHash;
     } catch (error) {
       console.error('Payment failed:', error);
       onError?.(error instanceof Error ? error : new Error('Payment failed'));
+      throw error;
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -110,9 +141,14 @@ export function PayWithCBWallet({
     <Button
       variant="contained"
       onClick={handlePayment}
+      disabled={loading}
       className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white"
     >
-      {address ? `Pay ${amount} ETH` : 'Connect Wallet'}
+      {loading ? (
+        <CircularProgress size={24} color="inherit" />
+      ) : (
+        address ? `Pay ${amount} ETH` : 'Connect Wallet'
+      )}
     </Button>
   );
 }
