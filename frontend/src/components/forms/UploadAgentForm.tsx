@@ -1,11 +1,17 @@
-import { useState } from 'react';
-import { TextField, Button, Box, Alert, Stack, Typography } from '@mui/material';
-import { coinbaseProvider } from '@/lib/coinbaseWallet';
-import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
-import { motion } from 'framer-motion';
-import { useAgentSubmission } from '@/hooks/agents/useAgentSubmission';
-import { ethers } from 'ethers';
-
+import { useState } from "react";
+import {
+  TextField,
+  Button,
+  Box,
+  Alert,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { coinbaseProvider } from "@/lib/coinbaseWallet";
+import { getAgentMarketplaceContract } from "@/contracts/types/AgentMarketPlace";
+import { motion } from "framer-motion";
+import { useAgentSubmission } from "@/hooks/agents/useAgentSubmission";
+import { ethers } from "ethers";
 
 interface AgentFormData {
   name: string;
@@ -14,6 +20,7 @@ interface AgentFormData {
   walletAddress: string;
   url: string;
   tags: string;
+  icon: string;
 }
 
 interface StatusState {
@@ -23,7 +30,13 @@ interface StatusState {
   step?: "blockchain" | "backend" | null;
 }
 
-export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
+export function UploadAgentForm({
+  onComplete,
+  onCancel,
+}: {
+  onComplete: () => void;
+  onCancel: () => void;
+}) {
   const [formData, setFormData] = useState<AgentFormData>({
     name: "",
     description: "",
@@ -31,17 +44,20 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
     walletAddress: "",
     url: "",
     tags: "",
+    icon: "",
   });
   const [status, setStatus] = useState<StatusState>({
     message: "",
     type: null,
     step: null,
   });
+  const [submittingAgent, setSubmittingAgent] = useState(false);
 
   const { submitAgent, error: submitError } = useAgentSubmission();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmittingAgent(true);
     setStatus({
       message: "Registering agent on blockchain...",
       type: "info",
@@ -54,14 +70,14 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
 
       // Get signer from provider
       const signer = await coinbaseProvider.getSigner();
-      const contract = await getAgentMarketplaceContract(signer, 'baseSepolia');
-      
+      const contract = await getAgentMarketplaceContract(signer, "baseSepolia");
+
       const agentId = `agent-${Date.now()}`;
       // Convert price to USDC decimals (6 decimals)
       const priceInUSDC = ethers.parseUnits(formData.price.toString(), 6);
 
       const tx = await contract.registerAgent(
-        agentId, 
+        agentId,
         priceInUSDC,
         formData.walletAddress
       );
@@ -80,7 +96,7 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
         name: formData.name,
         description: formData.description,
         websiteLink: formData.url,
-        icon: "/default-icon.png",
+        icon: formData.icon,
         url: formData.url,
         tags: formData.tags.split(",").map((tag) => tag.trim()),
         price: formData.price,
@@ -93,6 +109,8 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
         txHash: receipt.transactionHash,
         step: null,
       });
+      setSubmittingAgent(false);
+      onComplete();
     } catch (error) {
       console.error("Upload failed:", error);
       setStatus({
@@ -100,6 +118,7 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
         type: "error",
         step: null,
       });
+      setSubmittingAgent(false);
     }
   };
 
@@ -208,6 +227,18 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
 
             <TextField
               fullWidth
+              label="Icon URL"
+              value={formData.icon}
+              onChange={(e) =>
+                setFormData({ ...formData, icon: e.target.value })
+              }
+              placeholder="Hosted image ..."
+              required
+              sx={inputStyles}
+            />
+
+            <TextField
+              fullWidth
               label="Tags"
               value={formData.tags}
               onChange={(e) =>
@@ -240,8 +271,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
             variant="contained"
             fullWidth
             className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white h-10 text-base font-medium"
+            disabled={submittingAgent}
           >
-            Submit
+            {submittingAgent ? "Submitting..." : "Submit"}
           </Button>
 
           <Button
@@ -249,6 +281,7 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
             fullWidth
             onClick={onCancel}
             className="h-10 text-base font-medium border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
+            disabled={submittingAgent}
           >
             Cancel
           </Button>

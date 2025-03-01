@@ -15,7 +15,6 @@ import { useModal } from "@/contexts/ModalContext";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { UploadAgentForm } from "@/components/forms/UploadAgentForm";
 
-
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
@@ -120,7 +119,8 @@ export default function Home() {
         initial={{ height: "100vh", display: "flex", alignItems: "center" }}
         animate={{
           height: isInitialState && !showUploadForm ? "100vh" : "100%",
-          alignItems: isInitialState && !showUploadForm ? "center" : "flex-start",
+          alignItems:
+            isInitialState && !showUploadForm ? "center" : "flex-start",
         }}
         transition={{ duration: 0.5 }}
         className={`container mx-auto px-4 width:[80%] ${
@@ -135,7 +135,10 @@ export default function Home() {
             className="relative z-10"
           >
             {showUploadForm ? (
-              <UploadAgentForm onCancel={() => setShowUploadForm(false)} />
+              <UploadAgentForm
+                onComplete={() => setShowUploadForm(false)}
+                onCancel={() => setShowUploadForm(false)}
+              />
             ) : (
               <>
                 {isInitialState ? (
@@ -173,7 +176,8 @@ export default function Home() {
         animate={{ y: isInitialState ? 0 : "0" }}
         transition={{ duration: 0.5 }}
         className={`fixed bottom-0 w-full ${
-          (!isInitialState || showUploadForm) && "border-t border-theme-border-primary"
+          (!isInitialState || showUploadForm) &&
+          "border-t border-theme-border-primary"
         } bg-theme-panel-bg backdrop-blur-xl z-50`}
       >
         <div className="container mx-auto px-4 py-4">
