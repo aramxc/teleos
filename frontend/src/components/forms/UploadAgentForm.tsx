@@ -1,10 +1,16 @@
-import { useState } from 'react';
-import { TextField, Button, Box, Alert, Stack, Typography } from '@mui/material';
-import { coinbaseProvider } from '@/lib/coinbaseWallet';
-import { getAgentMarketplaceContract } from '@/contracts/types/AgentMarketPlace';
-import { motion } from 'framer-motion';
-import { useAgentSubmission } from '@/hooks/useAgentSubmission';
-
+import { useState } from "react";
+import {
+  TextField,
+  Button,
+  Box,
+  Alert,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { coinbaseProvider } from "@/lib/coinbaseWallet";
+import { getAgentMarketplaceContract } from "@/contracts/types/AgentMarketPlace";
+import { motion } from "framer-motion";
+import { useAgentSubmission } from "@/hooks/useAgentSubmission";
 
 interface AgentFormData {
   name: string;
@@ -17,45 +23,44 @@ interface AgentFormData {
 
 interface StatusState {
   message: string;
-  type: 'success' | 'error' | 'info' | null;
+  type: "success" | "error" | "info" | null;
   txHash?: string;
-  step?: 'blockchain' | 'backend' | null;
+  step?: "blockchain" | "backend" | null;
 }
 
 export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
-
   const [formData, setFormData] = useState<AgentFormData>({
-    name: '',
-    description: '',
+    name: "",
+    description: "",
     price: 0,
-    walletAddress: '',
-    url: '',
-    tags: ''
+    walletAddress: "",
+    url: "",
+    tags: "",
   });
-  const [status, setStatus] = useState<StatusState>({ 
-    message: '', 
-    type: null, 
-    step: null 
+  const [status, setStatus] = useState<StatusState>({
+    message: "",
+    type: null,
+    step: null,
   });
 
   const { submitAgent, error: submitError } = useAgentSubmission();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ 
-      message: 'Registering agent on blockchain...', 
-      type: 'info',
-      step: 'blockchain' 
+    setStatus({
+      message: "Registering agent on blockchain...",
+      type: "info",
+      step: "blockchain",
     });
 
     try {
       // First, register on the blockchain
       if (!coinbaseProvider) throw new Error("Wallet provider not initialized");
-      
+
       // Get signer from provider
       const signer = await coinbaseProvider.getSigner();
-      const contract = getAgentMarketplaceContract(signer, 'localhost');
-      
+      const contract = getAgentMarketplaceContract(signer, "localhost");
+
       const agentId = `agent-${Date.now()}`;
       const priceInUSDC = formData.price * 1_000_000;
 
@@ -63,11 +68,11 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
       const receipt = await tx.wait();
 
       // Update status for backend submission
-      setStatus({ 
-        message: 'Uploading agent details...', 
-        type: 'info',
-        step: 'backend',
-        txHash: receipt.transactionHash 
+      setStatus({
+        message: "Uploading agent details...",
+        type: "info",
+        step: "backend",
+        txHash: receipt.transactionHash,
       });
 
       // Then, submit to our backend
@@ -75,46 +80,46 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
         name: formData.name,
         description: formData.description,
         websiteLink: formData.url,
-        icon: '/default-icon.png',
+        icon: "/default-icon.png",
         url: formData.url,
-        tags: formData.tags.split(',').map(tag => tag.trim()),
+        tags: formData.tags.split(",").map((tag) => tag.trim()),
         price: formData.price,
         address: formData.walletAddress,
       });
 
-      setStatus({ 
-        message: 'Agent registered successfully!', 
-        type: 'success',
+      setStatus({
+        message: "Agent registered successfully!",
+        type: "success",
         txHash: receipt.transactionHash,
-        step: null
+        step: null,
       });
     } catch (error) {
-      console.error('Upload failed:', error);
-      setStatus({ 
-        message: submitError || 'Failed to register agent', 
-        type: 'error',
-        step: null
+      console.error("Upload failed:", error);
+      setStatus({
+        message: submitError || "Failed to register agent",
+        type: "error",
+        step: null,
       });
     }
   };
 
   const inputStyles = {
-    '& .MuiInputLabel-root': {
-      color: 'var(--text-secondary)',
+    "& .MuiInputLabel-root": {
+      color: "var(--text-secondary)",
     },
-    '& .MuiInputLabel-root.Mui-focused': {
-      color: 'var(--text-secondary)',
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "var(--text-secondary)",
     },
-    '& .MuiOutlinedInput-root': {
-      color: 'var(--text-primary)',
-      '& fieldset': {
-        borderColor: 'var(--border-primary)',
+    "& .MuiOutlinedInput-root": {
+      color: "var(--text-primary)",
+      "& fieldset": {
+        borderColor: "var(--border-primary)",
       },
-      '&:hover fieldset': {
-        borderColor: 'var(--border-secondary)',
+      "&:hover fieldset": {
+        borderColor: "var(--border-secondary)",
       },
-      '&.Mui-focused fieldset': {
-        borderColor: 'var(--button-primary)',
+      "&.Mui-focused fieldset": {
+        borderColor: "var(--button-primary)",
       },
     },
   };
@@ -127,21 +132,21 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
       transition={{ duration: 0.3 }}
       className="md:pt-20 flex items-center"
     >
-      <Box 
-        component="form" 
-        onSubmit={handleSubmit} 
-        sx={{ 
-          width: '100%',
-          maxWidth: { xs: '100%', sm: '600px', md: '900px' },
-          mx: 'auto',
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        sx={{
+          width: "100%",
+          maxWidth: { xs: "100%", sm: "600px", md: "900px" },
+          mx: "auto",
           py: { xs: 2, sm: 3, md: 1 },
-          px: { xs: 1, sm: 2 }
+          px: { xs: 1, sm: 2 },
         }}
       >
-        <Typography 
-          variant="h4" 
+        <Typography
+          variant="h4"
           className="text-theme-text-primary font-bold mb-2 text-center sm:text-left"
-          sx={{ fontSize: { xs: '1.75rem', sm: '2rem' } }}
+          sx={{ fontSize: { xs: "1.75rem", sm: "2rem" } }}
         >
           Submit an Agent
         </Typography>
@@ -155,7 +160,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
                 fullWidth
                 label="Enter your agent's name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 required
                 sx={inputStyles}
                 placeholder="Enter your agent's name"
@@ -166,7 +173,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
                 label="Price (USDC)"
                 type="number"
                 value={formData.price}
-                onChange={(e) => setFormData({ ...formData, price: Number(e.target.value) })}
+                onChange={(e) =>
+                  setFormData({ ...formData, price: Number(e.target.value) })
+                }
                 required
                 sx={inputStyles}
                 placeholder="0.00"
@@ -176,7 +185,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
                 fullWidth
                 label="Wallet Address"
                 value={formData.walletAddress}
-                onChange={(e) => setFormData({ ...formData, walletAddress: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, walletAddress: e.target.value })
+                }
                 required
                 sx={inputStyles}
                 placeholder="0x..."
@@ -186,7 +197,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
                 fullWidth
                 label="Agent URL"
                 value={formData.url}
-                onChange={(e) => setFormData({ ...formData, url: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, url: e.target.value })
+                }
                 required
                 sx={inputStyles}
                 placeholder="https://..."
@@ -197,7 +210,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
               fullWidth
               label="Tags"
               value={formData.tags}
-              onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, tags: e.target.value })
+              }
               placeholder="AI, Writing, Analysis"
               required
               sx={inputStyles}
@@ -207,7 +222,9 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
               fullWidth
               label="Description"
               value={formData.description}
-              onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, description: e.target.value })
+              }
               multiline
               rows={3}
               required
@@ -218,17 +235,17 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
         </div>
 
         <div className="flex flex-col md:flex-row gap-3 mt-3">
-          <Button 
-            type="submit" 
-            variant="contained" 
+          <Button
+            type="submit"
+            variant="contained"
             fullWidth
             className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white h-10 text-base font-medium"
           >
             Submit
           </Button>
 
-          <Button 
-            variant="outlined" 
+          <Button
+            variant="outlined"
             fullWidth
             onClick={onCancel}
             className="h-10 text-base font-medium border-theme-button-primary text-theme-button-primary hover:border-theme-button-hover hover:bg-theme-button-primary/5"
@@ -238,8 +255,8 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
         </div>
 
         {status.type && (
-          <Alert 
-            severity={status.type} 
+          <Alert
+            severity={status.type}
             className="mt-4 bg-theme-panel-bg border border-theme-border-primary text-sm sm:text-base"
           >
             <div className="flex flex-col gap-2">
@@ -249,14 +266,14 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
                 )}
                 {status.message}
               </div>
-              
-              {status.step === 'blockchain' && (
+
+              {status.step === "blockchain" && (
                 <div className="text-sm text-theme-text-secondary">
                   Step 1/2: Registering on blockchain...
                 </div>
               )}
-              
-              {status.step === 'backend' && (
+
+              {status.step === "backend" && (
                 <div className="text-sm text-theme-text-secondary">
                   Step 2/2: Uploading agent details...
                 </div>
@@ -264,7 +281,7 @@ export function UploadAgentForm({ onCancel }: { onCancel: () => void }) {
 
               {status.txHash && (
                 <div className="mt-2">
-                  <a 
+                  <a
                     href={`https://sepolia.basescan.org/tx/${status.txHash}`}
                     target="_blank"
                     rel="noopener noreferrer"

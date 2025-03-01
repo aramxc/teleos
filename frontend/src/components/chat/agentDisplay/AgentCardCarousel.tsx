@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import AgentCard from './AgentCard';
+import AgentCard from "./AgentCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -10,6 +10,7 @@ interface Agent {
   tags: string[];
   icon: string;
   price: number;
+  address: string;
 }
 
 interface AgentCardCarouselProps {
@@ -25,7 +26,7 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
     slidesToScroll: 1,
     arrows: true,
     centerMode: true,
-    centerPadding: '0',
+    centerPadding: "0",
     focusOnSelect: true,
     className: "center-carousel",
     responsive: [
@@ -34,26 +35,26 @@ export default function AgentCardCarousel({ agents }: AgentCardCarouselProps) {
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          centerPadding: '20%',
-        }
+          centerPadding: "20%",
+        },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          centerPadding: '15%',
-        }
+          centerPadding: "15%",
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           centerMode: true,
-          centerPadding: '0',
-        }
-      }
-    ]
+          centerPadding: "0",
+        },
+      },
+    ],
   };
 
   return (
