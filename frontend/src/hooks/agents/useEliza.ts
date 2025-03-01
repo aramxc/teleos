@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { type UUID, type Character } from "@elizaos/core";
+import { coinbaseProvider } from '@/lib/coinbaseWallet';
 
 const BASE_URL = process.env.NEXT_PUBLIC_ELIZA_URL ?? "http://localhost:3001";
 
@@ -25,6 +26,20 @@ export const useElizaApi = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error] = useState<string | null>(null);
   const [currentResponse, setCurrentResponse] = useState<string>("");
+  const [address, setAddress] = useState<string | null>(null);
+
+  // Get wallet address on mount
+  useEffect(() => {
+    if (!coinbaseProvider) return;
+    
+    coinbaseProvider.send('eth_accounts', [])
+      .then((accounts: string[]) => {
+        if (accounts[0]) {
+          setAddress(accounts[0]);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   // Helper function for API requests
   const fetchApi = async (endpoint: string, options: RequestInit = {}) => {
@@ -65,6 +80,7 @@ export const useElizaApi = () => {
       const requestBody = {
         text: message,
         user: "user",
+        walletAddress: address, // Include the wallet address in the request
       };
 
       const response = await fetchApi(`/${agentId}/message`, {
@@ -104,5 +120,6 @@ export const useElizaApi = () => {
     error, // Error state
     sendMessage, // Function to send messages
     getAgents, // Function to get agents
+    address, // Expose the address
   };
 };

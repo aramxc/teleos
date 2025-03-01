@@ -33,19 +33,6 @@ export interface AgentConfigModalProps {
 
 type ModalStep = "info" | "requirements" | "review";
 
-const TagsSection = memo(function TagsSection({ tags }: { tags: string[] }) {
-  return (
-    <div className="py-2">
-      <div className="overflow-x-auto md:overflow-x-visible">
-        <div className="flex flex-nowrap md:flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <TagBubble key={index} tag={tag} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-});
 
 const AgentConfigModal = memo(function AgentConfigModal({
   open,
@@ -75,18 +62,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
   ) => {
     setRequirements((prev) => ({ ...prev, [field]: value }));
   };
-
-  // const calculateTotalPrice = () => {
-  //   const daysMultiplier =
-  //     requirements.frequencyUnit === "day"
-  //       ? 1
-  //       : requirements.frequencyUnit === "hour"
-  //       ? 24
-  //       : 1440;
-  //   const postsPerDay = requirements.frequency * daysMultiplier;
-  //   return agent.price * requirements.duration * postsPerDay;
-  // };
-
+  
   const inputStyles = {
     "& .MuiInputLabel-root": {
       color: "var(--text-secondary)",
@@ -110,6 +86,86 @@ const AgentConfigModal = memo(function AgentConfigModal({
       color: "var(--text-primary)",
     },
   };
+
+  const renderInfoContent = () => (
+    <Stack spacing={2} className="h-full flex flex-col">
+      <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-black/20 shadow-lg flex-1">
+        <Stack spacing={4}>
+          {/* Description Section */}
+          <div className="overflow-y-auto sm:max-h-[220px] md:max-h-full">
+            <Typography
+              variant="h6"
+              className="mb-3 text-Large font-medium tracking-tight bg-gradient-to-r from-theme-button-primary to-theme-button-hover bg-clip-text text-transparent"
+            >
+              About
+            </Typography>
+            <hr className="border-theme-border-primary pb-4"></hr>
+            <Typography className="text-theme-text-secondary leading-relaxed">
+              {agent.description}
+            </Typography>
+          </div>
+
+          
+        </Stack>
+      </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        {agent.tags.slice(0, 3).map((tag, index) => (
+          <TagBubble key={index} tag={tag} />
+        ))}
+        {agent.tags.length > 3 && (
+          <div className="group relative">
+            <span className="text-sm text-theme-text-secondary cursor-pointer">
+              +{agent.tags.length - 3} more
+            </span>
+            <div className="absolute left-0 sm:bottom-20 md:bottom-10 bottom-full mb-2 hidden group-hover:flex flex-wrap gap-2 rounded-lg p-2 z-10">
+              {agent.tags.slice(3).map((tag, index) => (
+                <TagBubble key={index + 3} tag={tag} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Action Buttons Row */}
+      <div className="flex items-center justify-between mt-4">
+        {agent.websiteLink ? (
+          <a
+            href={agent.websiteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
+          >
+            <span className="mr-0">Learn more about {agent.name}</span>
+            <svg
+              className="w-3.5 h-3.5 transform transition-transform group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        ) : (
+          <div /> 
+        )}
+        <Button
+          variant="contained"
+          onClick={() => {
+            setDirection(1);
+            setCurrentStep("requirements");
+          }}
+          className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white px-8 py-2 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+        >
+          Continue
+        </Button>
+      </div>
+    </Stack>
+  );
 
   const renderRequirementsContent = () => (
     <Stack spacing={2} className="h-full flex flex-col">
@@ -342,8 +398,13 @@ const AgentConfigModal = memo(function AgentConfigModal({
   );
 
   return (
-    <BaseModal open={open} onClose={onClose} title={agent.name}>
-      <div className="relative flex items-center justify-center h-full overflow-hidden">
+    <BaseModal 
+      open={open} 
+      onClose={onClose} 
+      title={agent.name}
+      icon={agent.icon}
+    >
+      <div className="relative flex items-center justify-center h-full overflow-x-hidden">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentStep}
@@ -357,66 +418,7 @@ const AgentConfigModal = memo(function AgentConfigModal({
             }}
             className="absolute inset-0 w-full px-4"
           >
-            {currentStep === "info" && (
-              <Stack spacing={2} className="h-full flex flex-col">
-                <div className="bg-theme-panel-bg backdrop-blur-xl rounded-lg p-6 border border-theme-border-primary flex-1">
-                  <Stack spacing={4}>
-                    {/* Description Section */}
-                    <div>
-                      <Typography className="text-theme-text-secondary leading-relaxed">
-                        {agent.description}
-                      </Typography>
-                    </div>
-
-                    {/* Tags Section */}
-                    <div>
-                      <TagsSection tags={agent.tags} />
-                    </div>
-                  </Stack>
-                </div>
-
-                {/* Action Buttons Row */}
-                <div className="flex items-center justify-between mt-4">
-                  {agent.websiteLink ? (
-                    <a
-                      href={agent.websiteLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors duration-200"
-                    >
-                      <span className="mr-2">
-                        Learn more about {agent.name}
-                      </span>
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </a>
-                  ) : (
-                    <div></div> // Empty div to maintain spacing when no website link
-                  )}
-                  <Button
-                    variant="contained"
-                    onClick={() => {
-                      setDirection(1);
-                      setCurrentStep("requirements");
-                    }}
-                    className="bg-gradient-to-r from-theme-button-primary to-theme-button-hover hover:from-theme-button-hover hover:to-theme-button-primary text-white px-8"
-                  >
-                    Continue
-                  </Button>
-                </div>
-              </Stack>
-            )}
+            {currentStep === "info" && renderInfoContent()}
             {currentStep === "requirements" && (
               <Stack
                 spacing={3}
@@ -466,10 +468,8 @@ const AgentConfigModal = memo(function AgentConfigModal({
                     Back
                   </Button>
                   <PayWithCBWallet
-                    amount={0.01}
-                    agentId={
-                      agent.id || agent.name.toLowerCase().replace(/\s+/g, "-")
-                    }
+                    amount={0.001}
+                    agentId={agent.id}
                     onSuccess={(txHash) => {
                       console.log(`Agent purchased! Transaction: ${txHash}`);
                       onClose();

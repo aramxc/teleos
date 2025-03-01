@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react';
-import { useWallet } from '@/contexts/WalletContext';
+import { useState, useCallback, useEffect } from 'react';
+import { coinbaseProvider } from '@/lib/coinbaseWallet';
 
 export type Message = {
   role: 'user' | 'assistant';
@@ -17,7 +17,20 @@ export function useAgentChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentResponse, setCurrentResponse] = useState<string>('');
-  const { address } = useWallet();
+  const [address, setAddress] = useState<string | null>(null);
+
+  // Get wallet address on mount and when provider changes
+  useEffect(() => {
+    if (!coinbaseProvider) return;
+    
+    coinbaseProvider.send('eth_accounts', [])
+      .then((accounts: string[]) => {
+        if (accounts[0]) {
+          setAddress(accounts[0]);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const sendMessage = useCallback(async (content: string) => {
     setIsLoading(true);
@@ -34,12 +47,13 @@ export function useAgentChat() {
     try {
       const response = await fetch('/api/agents/agentKit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json',
+        headers: { 
+          'Content-Type': 'application/json',
           'Authorization': 'Bearer token'
-         },
+        },
         body: JSON.stringify({ 
           messages: [...messages, userMessage],
-          walletAddress: address
+          walletAddress: address // Pass the connected wallet address
         })
       });
 
@@ -84,7 +98,7 @@ export function useAgentChat() {
 
     } catch (err) {
       console.error('Streaming error:', err);
-      setError(err instanceof Error ? err.message : 'An error occurred while processing your request');
+      setError(err instanceof Error ? err.message : 'An error occurred');
       setMessages(prev => [...prev, {
         role: 'assistant',
         content: 'Sorry, I encountered an error while processing your request.',
@@ -102,5 +116,6 @@ export function useAgentChat() {
     error,
     currentResponse,
     sendMessage,
+    address, // Expose the address so components can use it
   };
 }

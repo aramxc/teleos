@@ -1,7 +1,8 @@
 import { ethers } from 'ethers';
 import { Button } from '@mui/material';
-import { useWallet } from '@/contexts/WalletContext';
 import { useSmartContracts } from '@/hooks/useSmartContracts';
+import { coinbaseProvider } from '@/lib/coinbaseWallet';
+import { useState, useEffect } from 'react';
 
 interface PayWithCBWalletProps {
   agentId: string;
@@ -16,8 +17,32 @@ export function PayWithCBWallet({
   onSuccess, 
   onError 
 }: PayWithCBWalletProps) {
-  const { address, connectWallet } = useWallet();
+  const [address, setAddress] = useState<string | null>(null);
   const { getContracts, registerAgent } = useSmartContracts();
+
+  useEffect(() => {
+    // Check if already connected
+    coinbaseProvider?.send('eth_accounts', [])
+      .then((accounts: string[]) => {
+        if (accounts[0]) {
+          setAddress(accounts[0]);
+        }
+      })
+      .catch(console.error);
+  }, []);
+
+  const connectWallet = async () => {
+    try {
+      if (!coinbaseProvider) throw new Error('Wallet provider not initialized');
+      const accounts = await coinbaseProvider.send('eth_requestAccounts', []) as string[];
+      if (accounts[0]) {
+        setAddress(accounts[0]);
+      }
+    } catch (error) {
+      console.error('Failed to connect wallet:', error);
+      onError?.(error instanceof Error ? error : new Error('Failed to connect wallet'));
+    }
+  };
 
   const handlePayment = async () => {
     try {

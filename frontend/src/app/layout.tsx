@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { ChatProvider } from "@/contexts/ChatContext";
-import { WalletProvider } from "@/contexts/WalletContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/chat/Tooltip";
 import { AgentProvider } from "@/contexts/AgentContext";
@@ -47,15 +46,13 @@ export default function RootLayout({
       >
         <QueryClientProvider client={queryClient}>
           <TooltipProvider delayDuration={0}>
-            <WalletProvider>
-              <ThemeProvider>
-                <AgentProvider>
-                  <ModalProvider>
-                    <ChatProvider>{children}</ChatProvider>
-                  </ModalProvider>
-                </AgentProvider>
-              </ThemeProvider>
-            </WalletProvider>
+            <ThemeProvider>
+              <AgentProvider>
+                <ModalProvider>
+                  <ChatProvider>{children}</ChatProvider>
+                </ModalProvider>
+              </AgentProvider>
+            </ThemeProvider>
           </TooltipProvider>
         </QueryClientProvider>
       </body>

@@ -1,17 +1,43 @@
 'use client';
 
-import { useWallet } from "@/contexts/WalletContext";
+import { useEffect, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { coinbaseProvider } from '@/lib/coinbaseWallet';
 
 export default function WalletConnect() {
-  const { 
-    connectWallet, 
-    disconnectWallet, 
-    isConnecting, 
-    isConnected,
-    address 
-  } = useWallet();
+  const [address, setAddress] = useState<string | null>(null);
+  const [isConnecting, setIsConnecting] = useState(false);
+  
+  useEffect(() => {
+    // Check if already connected
+    coinbaseProvider?.send('eth_accounts', [])
+      .then((accounts: string[]) => {
+        if (accounts[0]) {
+          setAddress(accounts[0]);
+        }
+      })
+      .catch(console.error);
+  }, []);
+
+  const connectWallet = async () => {
+    if (!coinbaseProvider) return;
+    setIsConnecting(true);
+    try {
+      const accounts = await coinbaseProvider.send('eth_requestAccounts', []);
+      if (accounts[0]) {
+        setAddress(accounts[0]);
+      }
+    } catch (error) {
+      console.error('Failed to connect wallet:', error);
+    } finally {
+      setIsConnecting(false);
+    }
+  };
+
+  const disconnectWallet = async () => {
+    setAddress(null);
+  };
   
   const shortenAddress = (address: string | null) => {
     if (!address) return '';
@@ -20,7 +46,7 @@ export default function WalletConnect() {
   
   return (
     <button
-      onClick={isConnected ? disconnectWallet : connectWallet}
+      onClick={address ? disconnectWallet : connectWallet}
       disabled={isConnecting}
       className="
         group h-9
@@ -43,7 +69,7 @@ export default function WalletConnect() {
     >
       {isConnecting ? (
         "Connecting..."
-      ) : isConnected ? (
+      ) : address ? (
         <span className="flex items-center gap-2 relative pr-4">
           <FiberManualRecordIcon 
             className="text-green-400" 
