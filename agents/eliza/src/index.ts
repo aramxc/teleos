@@ -23,6 +23,8 @@ import {
 import { initializeDatabase } from "./database/index.ts";
 import { noneAction } from "./actions/none.ts";
 import { findAgents } from "./actions/findAgents/findAgents.ts";
+import { agentKitPlugin } from "@elizaos/plugin-agentkit";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -54,7 +56,7 @@ export function createAgent(
     modelProvider: character.modelProvider,
     evaluators: [],
     character,
-    plugins: [].filter(Boolean),
+    plugins: [agentKitPlugin].filter(Boolean),
     providers: [],
     actions: [noneAction, findAgents],
     services: [],
