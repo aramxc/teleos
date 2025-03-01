@@ -77,7 +77,7 @@ export default function ChatWindow({
                 !isCarousel
                   ? "shadow-[0_8px_16px_-6px_rgba(0,0,0,0.2)] p-4"
                   : ""
-              }`}
+              } break-words overflow-wrap-anywhere word-break-break-word`}
             >
               {renderMessage(message.content)}
             </div>
