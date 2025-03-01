@@ -65,4 +65,4 @@ jobs:
 
       - name: Force new ECS deployment
         run: |
-          aws ecs update-service --cluster teleos-cluster --service teleos-agent-service --force-new-deployment --region us-east-2
+          aws ecs update-service --cluster teleos-cluster --service teleos-eliza-service --force-new-deployment --region us-east-2
