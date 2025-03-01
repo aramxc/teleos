@@ -1,10 +1,15 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import dotenv from "dotenv";
+import { resolve } from "path";
 
-dotenv.config();
+// Load .env from root directory
+dotenv.config({ path: resolve(__dirname, "../.env") });
 
-const PRIVATE_KEY = process.env.PRIVATE_KEY || "0000000000000000000000000000000000000000000000000000000000000000";
+const PRIVATE_KEY = process.env.DEPLOYMENT_WALLET_PRIVATE_KEY;
+if (!PRIVATE_KEY) {
+  throw new Error("DEPLOYMENT_WALLET_PRIVATE_KEY not set in environment");
+}
 
 const config: HardhatUserConfig = {
   solidity: {

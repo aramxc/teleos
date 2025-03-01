@@ -1,5 +1,4 @@
 
 export const AGENT_MARKETPLACE_ADDRESS = {
-  baseSepolia: "",
-  localhost: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  baseSepolia: "0xE5C00C6d09B7EFCd152098105FdaA3f0494Dad14",
 } as const;

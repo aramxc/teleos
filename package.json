@@ -15,7 +15,7 @@
     "install:all": "npm install && cd agents/eliza && pnpm install",
     "contracts:compile": "cd contracts && npx hardhat compile",
     "contracts:copy-abi": "cd contracts && npm run copy-abi",
-    "contracts:deploy:local": "cd contracts && npx hardhat run scripts/deploy.ts --network localhost",
+    "contracts:deploy:local": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia",
     "contracts:deploy:sepolia": "cd contracts && npx hardhat run scripts/deploy.ts --network baseSepolia",
     "setup:prod": "npm run contracts:compile && npm run contracts:copy-abi && npm run contracts:deploy:sepolia"
   },

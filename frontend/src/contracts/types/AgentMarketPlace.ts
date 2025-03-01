@@ -2,23 +2,19 @@ import { ethers } from 'ethers';
 import AgentMarketplaceAbi from '../abis/AgentMarketplace.json';
 import { AGENT_MARKETPLACE_ADDRESS } from '../addresses/contracts';
 
-export const getAgentMarketplaceContract = (
+export const getAgentMarketplaceContract = async (
   provider: ethers.Provider | ethers.Signer,
   network: keyof typeof AGENT_MARKETPLACE_ADDRESS
 ) => {
-  // If we received a Provider, try to get the signer
-  let signer: ethers.Signer | null = null;
-  if ('getSigner' in provider) {
-    try {
-      signer = provider.getSigner();
-    } catch (error) {
-      console.warn('Could not get signer from provider:', error);
-    }
+  const contractAddress = AGENT_MARKETPLACE_ADDRESS[network];
+  
+  if (!contractAddress) {
+    throw new Error(`No contract address for network: ${network}`);
   }
 
   return new ethers.Contract(
-    AGENT_MARKETPLACE_ADDRESS[network],
+    contractAddress,
     AgentMarketplaceAbi,
-    signer || provider
+    provider
   );
 };

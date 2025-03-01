@@ -66,12 +66,19 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
   };
 
   const disconnectWallet = async () => {
+    // Clear local storage
+    localStorage.clear();
+    
+    // Reset state
     setState({
       address: null,
       isConnected: false,
       chainId: null,
       ensName: null,
     });
+
+    // Force page refresh to clear provider state
+    window.location.reload();
   };
 
   const value = {
