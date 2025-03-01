@@ -73,7 +73,7 @@ export default function ChatWindow({
             className={`${
               message.role === "user" ? "justify-end" : "justify-start"
             } flex ${
-              isCarousel ? "w-full md:w-screen md:-mx-4 lg:-mx-16" : "w-full"
+              isCarousel ? "w-full" : "w-full"
             }`}
           >
             <div

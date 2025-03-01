@@ -76,7 +76,6 @@ export const useElizaApi = () => {
       setMessages((prev) => [...prev, { role: "user", content: message }]);
       setCurrentResponse("");
 
-      // Use JSON instead of FormData
       const requestBody = {
         text: message,
         user: "user",
