@@ -1,4 +1,7 @@
 # Teleos AI
+
+> *From the greek work Telos, meaning "end", "purpose", or "goal"* 
+
 An intuitive, mobile-friendly, LLM interface allowing users to seamlessly purchase AI agents and perform other meaningful actions onchain. This project was conceptualized and *mostly* built out within 5 days for ETH Denver's Buildathon in 2025. The project eventually went on to get top 10 out of nearly 200 projects submitted, in the Infrastructure and Scalability category.
 
 ## Key Features of MVP
